@@ -22,14 +22,12 @@ const InteractionMessage = () => {
       <Base title={"Categorias Aztecas"}>
         <section className="section pt-0">
           {markdownify(
-            " Religión",
+            " Economia",
             "h1",
             "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
           )}
           <div className="sketchfab-embed-wrapper">
-            <p style={{ fontSize: '43px', fontWeight: 'normal', margin: '5px', color: '#000' }}>
-            Economía
-            </p>
+           
 
             <iframe
             style={{ width: '40%', height: '400px' }}
