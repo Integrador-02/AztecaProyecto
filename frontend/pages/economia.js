@@ -2,7 +2,8 @@ import React from 'react';
 import { markdownify } from "@lib/utils/textConverter";
 import { FaInfoCircle } from 'react-icons/fa';
 import Base from "@layouts/Baseof";
-
+import { FaQuestionCircle } from 'react-icons/fa';
+import { useState } from 'react';
 const Economia = ({ data }) => {
 
 const InteractionMessage = () => {
@@ -27,19 +28,17 @@ const InteractionMessage = () => {
           )}
           <div className="sketchfab-embed-wrapper">
             <p style={{ fontSize: '43px', fontWeight: 'normal', margin: '5px', color: '#000' }}>
-              Coyolxauhqui
+            Economía
             </p>
 
             <iframe
-              title="COL: Coyolxauhqui"
-              frameBorder="0"
-              allowFullScreen
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              src="https://sketchfab.com/models/73dff65bf4654de08d8db64298adc6ae/embed"
-              style={{ width: '40%', height: '400px' }}
-            ></iframe>
+            style={{ width: '40%', height: '400px' }}
+            title="Pirate's-Aztec-Gold-Coin"
+            frameBorder="0"
+            allowFullScreen
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            src="https://sketchfab.com/models/8a72e7d50c0d45efa902adbdc6ceb6a5/embed"
+          ></iframe>
 
             <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
               <a
@@ -57,7 +56,7 @@ const InteractionMessage = () => {
                 rel="noreferrer noopener"
                 style={{ fontWeight: 'bold', color: '#1CAAD9' }}
               >
-                Text Database and Dictionary of Classic Mayan
+                Banendu
               </a>{' '}
               on{' '}
               <a
