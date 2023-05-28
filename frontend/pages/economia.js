@@ -65,8 +65,8 @@ const Economia = ({ data }) => {
 
         <MasInformacion />
       </section>
-    </Base>
-  );*/
+    </Base>*/
+  );
 };
 
 export default Economia;
