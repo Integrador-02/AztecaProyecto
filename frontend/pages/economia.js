@@ -8,8 +8,7 @@ const Economia = ({ data }) => {
     return (
       <div className="center-container">
         <FaInfoCircle size={50} />
-        <span style={{ marginLeft: &apos; 5px& apos; }}>Más información próximamente</span>
-
+        <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
       </div>
     );
   };
