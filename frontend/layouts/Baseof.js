@@ -89,7 +89,8 @@ const Base = ({
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header />
+      
+          <Header/>
       {/* main site */}
       <main>{children}</main>
       <Footer />
