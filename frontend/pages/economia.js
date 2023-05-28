@@ -6,43 +6,43 @@ import Base from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
 //clase culrura
 const Economia = ({ data }) => {
-  
-  
+
+
     return (
         <Base title={"Categorias Aztecas"}>
-            
+
       <section className="section pt-0">
       {markdownify(
           " Economía",
           "h1",
           "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
         )}
-        
-         
+
+
         <div class="sketchfab-embed-wrapper">
-            
-        
-            <iframe style={{width: '40%', height: '400px'}} title="Pirate's-Aztec-Gold-Coin" frameborder="0" 
-                allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" 
-                allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking 
-                execution-while-out-of-viewport execution-while-not-rendered web-share 
-                src="https://sketchfab.com/models/8a72e7d50c0d45efa902adbdc6ceb6a5/embed"> 
-            </iframe> 
+
+
+            <iframe style={{width: '40%', height: '400px'}} title="Pirate's-Aztec-Gold-Coin" frameborder="0"
+                allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                execution-while-out-of-viewport execution-while-not-rendered web-share
+                src="https://sketchfab.com/models/8a72e7d50c0d45efa902adbdc6ceb6a5/embed">
+            </iframe>
 
 
 
         <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
-            <a href="https://sketchfab.com/3d-models/pirates-aztec-gold-coin-8a72e7d50c0d45efa902adbdc6ceb6a5?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5" 
-                target="_blank" rel="nofollow" style={{ fontWeight: 'bold', color: '#1CAAD9' }}> 
-            Pirate's-Aztec-Gold-Coin 
-            </a> 
-            by 
-            <a href="https://sketchfab.com/bsmeher1986?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5" 
-            target="_blank" rel="nofollow" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
-                 Banendu 
+            <a href="https://sketchfab.com/3d-models/pirates-aztec-gold-coin-8a72e7d50c0d45efa902adbdc6ceb6a5?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5"
+                target="_blank" rel="noreferrer" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+            Pirate's-Aztec-Gold-Coin
+            </a>
+            by
+            <a href="https://sketchfab.com/bsmeher1986?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5"
+            target="_blank" rel="noreferrer" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+                 Banendu
                  </a>
-                  on 
-                  <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5" target="_blank" rel="nofollow" 
+                  on
+                  <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5" target="_blank" rel="noreferrer"
                   style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
                     Sketchfab</a>
                 </p>
@@ -71,8 +71,8 @@ const Economia = ({ data }) => {
             como era el grano de cacao o las plumas de quetzal.
             </p>
          </div>
-        
-        
+
+
 <MasInformacion />
 
     </section>
@@ -80,7 +80,7 @@ const Economia = ({ data }) => {
     </Base>
     );
   };
-  
+
 
 
 // get 404 page data

@@ -6,20 +6,20 @@ import Base from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
 //clase culrura
 const Arte = ({ data }) => {
-  
+
   
     return (
         <Base title={"Categorias Aztecas"}>
-            
+
       <section className="section pt-0">
       {markdownify(
           " Arte",
           "h1",
           "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
         )}
-        
+
         <div className="sketchfab-embed-wrapper">
-            
+
             <iframe
                 width="560"
                 height="315"
@@ -46,7 +46,7 @@ const Arte = ({ data }) => {
     </Base>
     );
   };
-  
+
 
 
 // get 404 page data
