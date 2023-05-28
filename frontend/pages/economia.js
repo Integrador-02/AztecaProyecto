@@ -4,9 +4,7 @@ import { FaInfoCircle } from 'react-icons/fa';
 import Base from "@layouts/Baseof";
 
 const Economia = ({ data }) => {
-
   const MasInformacion = () => {
-
     return (
       <div className="center-container">
         <FaInfoCircle size={50} />
@@ -14,6 +12,7 @@ const Economia = ({ data }) => {
       </div>
     );
   };
+
   return (
     <Base title={"Categorias Aztecas"}>
       <section className="section pt-0">
@@ -77,4 +76,3 @@ const Economia = ({ data }) => {
 };
 
 export default Economia;
-

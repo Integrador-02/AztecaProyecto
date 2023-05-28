@@ -2,7 +2,6 @@ import React from 'react';
 import { markdownify } from "@lib/utils/textConverter";
 import Base from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
-
 import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
 
@@ -13,20 +12,18 @@ const Religion = () => {
     const showMessage = () => {
       alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
     };
-
-
+  
     return (
       <div className="interaction-message">
         <FaQuestionCircle className="help-icon" onClick={showMessage} />
         <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
       </div>
     );
-
-  };
-
+  }; 
+  
   return (
     <Base title={"Categorias Aztecas"}>
-
+       
       <section className="section pt-0">
         {markdownify(
           " Religión",
@@ -37,7 +34,7 @@ const Religion = () => {
           <p style={{ fontSize: '43px', fontWeight: 'normal', margin: '5px', color: '#000' }}>
             Coyolxauhqui
           </p>
-
+         
           <iframe
             title="COL: Coyolxauhqui"
             frameBorder="0"
@@ -48,7 +45,7 @@ const Religion = () => {
             src="https://sketchfab.com/models/73dff65bf4654de08d8db64298adc6ae/embed"
             style={{ width: '40%', height: '400px' }}
           ></iframe>
-
+          
           <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
             <a
               href="https://sketchfab.com/3d-models/col-coyolxauhqui-73dff65bf4654de08d8db64298adc6ae?utm_medium=embed&utm_campaign=share-popup&utm_content=73dff65bf4654de08d8db64298adc6ae"
@@ -76,9 +73,9 @@ const Religion = () => {
             >
               Sketchfab
             </a>
-
+            
           </p>
-          < InteractionMessage
+          < InteractionMessage 
            />
           <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
             Coyolxauhqui (pron. Koy-ol-shauw-kee) fue la diosa azteca de la luna o la vía láctea quien fue masacrada
@@ -90,9 +87,9 @@ const Religion = () => {
             la capital azteca, Tenochtitlan.<br />
           </p>
         </div>
-
+        
         <MasInformacion />
-
+       
       </section>
     </Base>
   );
@@ -109,4 +106,3 @@ const MasInformacion = () => {
     </div>
   );
 };
-

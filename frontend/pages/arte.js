@@ -7,33 +7,31 @@ import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 //clase culrura
 const Arte = ({ data }) => {
-
-
+  
   const InteractionMessage = () => {
     const showMessage = () => {
       alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
     };
-
-
+  
     return (
       <div className="interaction-message">
         <FaQuestionCircle className="help-icon" onClick={showMessage} />
         <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
       </div>
     );
-  };
+  }; 
     return (
         <Base title={"Categorias Aztecas"}>
-
+            
       <section className="section pt-0">
       {markdownify(
           " Arte",
           "h1",
           "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
         )}
-
+        
         <div className="sketchfab-embed-wrapper">
-
+            
             <iframe
                 width="560"
                 height="315"
@@ -43,11 +41,11 @@ const Arte = ({ data }) => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 >
-
+               
 
 
             </iframe>
-            < InteractionMessage
+            < InteractionMessage 
            />
             <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
             A la hora de hablar del arte azteca tenemos que destacar que este pueblo era un gran escultor ya que desarrollaba y<br />
@@ -64,7 +62,7 @@ const Arte = ({ data }) => {
     </Base>
     );
   };
-
+  
 
 
 // get 404 page data
