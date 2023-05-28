@@ -14,7 +14,7 @@ const Economia = ({ data }) => {
   };
 
   return (
-    <Base title={"Categorias Aztecas"}>
+    <Base title="Categorias Aztecas">
       <section className="section pt-0">
         {markdownify(
           "Economía",
@@ -36,7 +36,7 @@ const Economia = ({ data }) => {
             <a
               href="https://sketchfab.com/3d-models/pirates-aztec-gold-coin-8a72e7d50c0d45efa902adbdc6ceb6a5?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5"
               target="_blank"
-              rel="nofollow"
+              rel="noreferrer noopener"
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               Pirate's-Aztec-Gold-Coin
@@ -45,7 +45,7 @@ const Economia = ({ data }) => {
             <a
               href="https://sketchfab.com/bsmeher1986?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5"
               target="_blank"
-              rel="nofollow"
+              rel="noreferrer noopener"
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               Banendu
@@ -54,7 +54,7 @@ const Economia = ({ data }) => {
             <a
               href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5"
               target="_blank"
-              rel="nofollow"
+              rel="noreferrer noopener"
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               Sketchfab
@@ -65,7 +65,7 @@ const Economia = ({ data }) => {
         <div>
           <p className="text-justify" style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
             El comercio en el mundo azteca fue indispensable para su economía, lo que les permitía comercializar con otras ciudades los productos con los cuales no se contaba, entre los productos más demandados por ellos se encontraba el cacao, la vainilla, el algodón, el caucho, la miel, las plumas, los metales y las piedras preciosas. Los aztecas utilizaban el cacao como moneda. Las caravanas comerciales y los mercados en cada ciudad eran controlados por la poderosa clase de mercaderes llamados pochtecas.
-            Un elemento que causó gran admiración cuando los españoles llegaron a Tenochtitlan fue el mercado de Tlatelolco, en este lugar se comercializaba todo tipo de mercancías como, por ejemplo; verduras, hierbas medicinales, maíz, algodón, aves, tejidos, cerámica, adornos de plumas, herramientas de piedra, productos marinos, etc. Estos productos eran intercambiados por medio del trueque y si no alcanzaban a cubrir la diferencia que existía se recurría a una forma de moneda como era el grano de cacao o las plumas de quetzal.
+            Un elemento que causó gran admiración cuando los españoles llegaron a Tenochtitlan fue el mercado de Tlatelolco, en este lugar se comercializaba todo tipo de mercancías como, por ejemplo, verduras, hierbas medicinales, maíz, algodón, aves, tejidos, cerámica, adornos de plumas, herramientas de piedra, productos marinos, etc. Estos productos eran intercambiados por medio del trueque y si no alcanzaban a cubrir la diferencia que existía se recurría a una forma de moneda como era el grano de cacao o las plumas de quetzal.
           </p>
         </div>
 
