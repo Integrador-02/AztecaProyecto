@@ -7,7 +7,8 @@ const Economia = ({ data }) => {
 
 
   return (
-    <Base title="Categorias Aztecas">
+    <h1>hola mundo</h1>
+    /*<Base title="Categorias Aztecas">
       <section className="section pt-0">
         {markdownify(
           "Economía",
@@ -65,17 +66,17 @@ const Economia = ({ data }) => {
         <MasInformacion />
       </section>
     </Base>
-  );
+  );*/
 };
 
 export default Economia;
 
 // Componente de información adicional
-const MasInformacion = () => {
+/*const MasInformacion = () => {
   return (
     <div className="center-container">
       <FaInfoCircle size={50} />
       <span style={{ marginLeft: '&apos;5px&apos;'}}>Más información próximamente</span>
     </div>
   );
-};
+};*/
