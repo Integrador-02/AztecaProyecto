@@ -33,8 +33,8 @@ const Economia = ({ data }) => {
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               Pirate's-Aztec-Gold-Coin
-            </a>{' '}
-            by{' '}
+            </a>
+            by
             <a
               href="https://sketchfab.com/bsmeher1986?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5"
               target="_blank"
@@ -42,8 +42,8 @@ const Economia = ({ data }) => {
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               Banendu
-            </a>{' '}
-            on{' '}
+            </a>
+            on
             <a
               href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8a72e7d50c0d45efa902adbdc6ceb6a5"
               target="_blank"
@@ -75,7 +75,7 @@ const MasInformacion = () => {
   return (
     <div className="center-container">
       <FaInfoCircle size={50} />
-      <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
+      <span style={{ marginLeft: '&apos;5px&apos;'}}>Más información próximamente</span>
     </div>
   );
 };
