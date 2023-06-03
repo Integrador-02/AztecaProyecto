@@ -53,28 +53,29 @@ const confirmar = async (req, res) => {
 
 };
 
-const autenticar = async(req, res) => {
-    const {email, password} = req.body
 
-    //Comprobar si el usuario existe
-    const usuario = await Usuario.findOne({email});
-    console.log(usuario);
-    if (!usuario) {
-        const error = new Error('El usuario no existe');
-        return res.status(404).json({msg: error.message});
-    }
+const autenticar = async (req, res, next) => {
+    const { email, password } = req.body;
 
-    //Revisar Password
-    if (usuario.password === password) {
-        // Autenticar
-        
-        res.json('ok');
+    try {
+        // Comprobar si el usuario existe
+        const usuario = await Usuario.findOne({ email });
+
+        if (!usuario) {
+            return res.status(401).json('Credenciales inválidas');
+        }
+
+        // Revisar Password
+        if (usuario.password === password) {
+            req.usuario = usuario; // Agregar el objeto de usuario a la solicitud
+            next(); // Llamar al siguiente middleware
+        } else {
+            return res.status(400).json('Contraseña incorrecta');
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(500).json('Error interno del servidor');
     }
-    else {
-        const error = new Error('El password es incorrecto');
-        return res.json('no');
-        //return res.status(403).json({msg: error.message});
-    }
 };
 
 const olvidePassword = async (req, res) => {

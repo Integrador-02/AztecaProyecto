@@ -3,7 +3,7 @@ import { markdownify } from "@lib/utils/textConverter";
 import { FaInfoCircle } from 'react-icons/fa';
 import Base from "@layouts/Baseof";
 import { FaQuestionCircle } from 'react-icons/fa';
-import { useState } from 'react';
+
 const Economia = ({ data }) => {
 
 const InteractionMessage = () => {
@@ -27,7 +27,7 @@ const InteractionMessage = () => {
             "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
           )}
           <div className="sketchfab-embed-wrapper">
-           
+
 
             <iframe
             style={{ width: '40%', height: '400px' }}
