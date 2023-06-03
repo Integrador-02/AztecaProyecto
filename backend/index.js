@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from "mongoose";
 import cors from 'cors';
 import conectarDB from "./config/db.js";
+import usuarioRoutes from './routes/usuarioRoutes.js'
 
 const app = express();
 
@@ -16,7 +17,7 @@ conectarDB();
 // Habilitar CORS
 app.use(cors());
 
-
+app.use("/api", usuarioRoutes);
 
 const PORT = process.env.PORT || 4000;
 
