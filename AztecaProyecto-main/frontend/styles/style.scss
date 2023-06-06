@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import "base";
+}
+
+@layer components {
+  @import "components";
+  @import "navigation";
+  @import "buttons";
+}
+
+@layer utilities {
+  @import "utilities";
+}
+
+.card-game {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  perspective: 800px;
+  transition: transform 0.5s;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  background-color: #aaffaa;
+  cursor: default;
+}
+
+.card-front,
+.card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #f2f2f2;
+}
+
+.card-back {
+  background-color: #e0e0e0;
+  transform: rotateY(180deg);
+}
+
+.card span {
+  font-size: 48px;
+}
+.quiz {
+  text-align: center;
+  padding: 20px;
+}
+
+.question-section {
+  margin-bottom: 20px;
+}
+
+.answer-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.answer-option {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.score-section {
+  font-size: 20px;
+}
+
+.comment-content {
+  word-wrap: break-word;
+}
+
+
+
+
+//--------------
+.comment-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #f4faf8;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.comment-container .avatar-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.comment-container .comment-content {
+  flex: 1;
+}
+
+.comment-container .comment-username {
+  margin-bottom: 5px;
+}
+
+.comment-container .reply-info {
+  margin-bottom: 5px;
+}
+
+.comment-container .comment-text {
+  margin-bottom: 10px;
+}
+
+.comment-container .comment-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Otros estilos CSS que desees aplicar */
