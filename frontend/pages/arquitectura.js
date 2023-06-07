@@ -2,19 +2,21 @@ import React from 'react';
 import { markdownify } from "@lib/utils/textConverter";
 import Base from "@layouts/Baseof";
 import { FaQuestionCircle } from 'react-icons/fa';
+
 const Arquitectura = () => {
     const InteractionMessage = () => {
         const showMessage = () => {
           alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
         };
-      
+
         return (
           <div className="interaction-message">
             <FaQuestionCircle className="help-icon" onClick={showMessage} />
             <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
           </div>
         );
-      }; 
+      };
+
   return (
     <Base title="Categorias Aztecas">
       <section className="section pt-0">
@@ -41,7 +43,7 @@ const Arquitectura = () => {
             <a
               href="https://sketchfab.com/3d-models/templo-365e637944d84d48837ffdd96163287e?utm_medium=embed&utm_campaign=share-popup&utm_content=365e637944d84d48837ffdd96163287e"
               target="_blank"
-              rel="nofollow"
+              rel="noreferrer noopener"
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               Templo
@@ -50,7 +52,7 @@ const Arquitectura = () => {
             <a
               href="https://sketchfab.com/rivas.lina?utm_medium=embed&utm_campaign=share-popup&utm_content=365e637944d84d48837ffdd96163287e"
               target="_blank"
-              rel="nofollow"
+              rel="noreferrer noopener"
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               rivas.lina
@@ -59,20 +61,17 @@ const Arquitectura = () => {
             <a
               href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=365e637944d84d48837ffdd96163287e"
               target="_blank"
-              rel="nofollow"
+              rel="noreferrer noopener"
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               Sketchfab
             </a>
           </p>
-          < InteractionMessage 
-           />
+          <InteractionMessage />
           <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
             El Templo Mayor de Tenochtitlán, también conocido como Templo Mayor Azteca, era uno de los principales templos y centros religiosos de la antigua ciudad azteca de Tenochtitlán, que actualmente se encuentra en el corazón de la Ciudad de México.
           </p>
         </div>
-
-        
       </section>
     </Base>
   );

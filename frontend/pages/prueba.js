@@ -3,8 +3,7 @@ import shortcodes from "@shortcodes/all";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import Base from "@layouts/Baseof";
-import { FaInfoCircle } from 'react-icons/fa';
-import { FaQuestionCircle } from 'react-icons/fa';
+import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
 
 const Prueba = ({ data }) => {
   const MasInformacion = () => {
@@ -15,28 +14,29 @@ const Prueba = ({ data }) => {
       </div>
     );
   };
+
   const InteractionMessage = () => {
     const showMessage = () => {
       alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
     };
-  
+
     return (
       <div className="interaction-message">
         <FaQuestionCircle className="help-icon" onClick={showMessage} />
         <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
       </div>
     );
-  }; 
+  };
 
   return (
-    <Base title={"Categorias Aztecas"}>
+    <Base title="Categorias Aztecas">
       <section className="section pt-0">
         {markdownify(
           "Agricultura",
           "h1",
           "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
         )}
-        
+
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <iframe
             title="Cultura"
@@ -55,7 +55,7 @@ const Prueba = ({ data }) => {
             <a
               href="https://sketchfab.com/3d-models/cultura-3be2b0a37a6d40e8860b7bff46c94179?utm_medium=embed&utm_campaign=share-popup&utm_content=3be2b0a37a6d40e8860b7bff46c94179"
               target="_blank"
-              rel="nofollow"
+              rel="noreferrer noopener"
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               Cultura
@@ -64,7 +64,7 @@ const Prueba = ({ data }) => {
             <a
               href="https://sketchfab.com/rivas.lina?utm_medium=embed&utm_campaign=share-popup&utm_content=3be2b0a37a6d40e8860b7bff46c94179"
               target="_blank"
-              rel="nofollow"
+              rel="noreferrer noopener"
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               rivas.lina
@@ -73,21 +73,17 @@ const Prueba = ({ data }) => {
             <a
               href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=3be2b0a37a6d40e8860b7bff46c94179"
               target="_blank"
-              rel="nofollow"
+              rel="noreferrer noopener"
               style={{ fontWeight: 'bold', color: '#1CAAD9' }}
             >
               Sketchfab
             </a>
-          </p>< InteractionMessage 
-           />
+          </p>
+          <InteractionMessage />
         </div>
-        
+
         <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000', textAlign: 'center' }}>
-          La agricultura azteca, también conocida como agricultura mesoamericana, fue
-          <br />
-          una práctica fundamental en la sociedad azteca. Los aztecas desarrollaron  <br />
-          sistemas agrícolas sofisticados que les permitieron cultivar una amplia variedad <br />
-          de alimentos para alimentar a su población en constante crecimiento.
+          La agricultura azteca, también conocida como agricultura mesoamericana, fue una práctica fundamental en la sociedad azteca. Los aztecas desarrollaron sistemas agrícolas sofisticados que les permitieron cultivar una amplia variedad de alimentos para alimentar a su población en constante crecimiento.
         </p>
         <MasInformacion />
       </section>

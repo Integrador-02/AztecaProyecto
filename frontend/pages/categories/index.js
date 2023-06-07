@@ -1,5 +1,6 @@
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
+import { Base1 } from "@layouts/Baseof";
 import { getTaxonomy } from "@lib/taxonomyParser";
 import { humanize, markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
@@ -9,6 +10,26 @@ import { FaFolder ,FaSeedling ,FaPrayingHands,FaPalette,FaBuilding ,FaMoneyBillA
 import { slugify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import { FaPaintBrush } from 'react-icons/fa';
+// CLASE QUE CONTINEN LOS ELEMENTOS DE LA CATEGORIAS
+//TITULO DE LA PAGINA
+const Titulo = () => {
+  return (
+    <div className="relative h-80 font-text">
+      <img
+        className="absolute inset-0 w-full h-full object-cover brightness-50"
+        src={"/images/60ececdb1ab3bd00957e108ed2f27ec6.gif"}
+        alt="Imagen de fondo"
+      />
+      <div className="relative z-12 flex items-center justify-center h-full">
+  <h1 className="font-bold text-4xl">
+    <span className="text-green-500">Categorias Aztecas</span>
+  </h1>
+</div>
+
+      </div>
+   
+  );
+};
 
 
 
@@ -16,147 +37,165 @@ import { FaPaintBrush } from 'react-icons/fa';
 const Categories = ({ categories }) => {
   return (
 
-    <Base title={"Categorias Aztecas"}>
+    <Base1 title={"Categorias Aztecas"}>
+      <Titulo/>
 
       <section className="section pt-0">
-
-        {markdownify(
-          "Categorias Azteca",
-          "h2",
-          "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[30px]"
-        )}
-        <div className="container pt-12 text-center">
-        <img src="/images/images-removebg-preview.png" alt="Estatua de coatlicue"style={{ display: 'block', margin: '0 auto' }}  className="img-size"/>
-          
-        <div className="text-center">
-        <div className="grid grid-cols-1 gap-1 items-center">
-
-    
-    </div>  
-    
-    <div>
-     
-           
-    
-  </div>
-          </div>
-            
-            <p className="text-xl text-[#49B675] mb-2">
+      
+        <div className="container pt-12 text-center"> <p className="text-xl text-[#49B675] mb-2">
   Explora la fascinante civilización azteca. Haz clic en la categoría que más te interese para obtener información relevante sobre el tema. Descubre sus creencias religiosas, sumérgete en su cultura, conoce su economía y admira su arquitectura. ¡Sumérgete en el mundo de los aztecas y despierta tu curiosidad histórica!
 </p>
-<ul className="row" style={{ margin: 0, padding: 0, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
-  
-
-<li
+        <header style={{ textAlign: 'center' }}>
+       
+     
+     
+    </header>
+    <ul className="grid grid-cols-5 gap-1" style={{ margin: 0, padding: 0 }}>
+  <li
     key={`1`}
-    className="mt-4 block lg:col-4 xl:col-3 "
-    style={{ margin: 0, padding: 0 }}
+    className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+    style={{
+      margin: 0,
+      padding: 0,
+      position: 'relative',
+      backgroundImage: 'url("/images/agricultura.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
   >
     <Link
       href={`/prueba`}
-      className="flex w-full items-center justify-center rounded-full bg-theme-light px-4 py-4 font-bold text-dark transition hover:bg-primary hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+      className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-primary hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
       style={{
-        width: '75px',
-        height: '75px',
-        borderRadius: '50%',
+        width: '100%',
+        height: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
       }}
     >
-      <FaSeedling className="mr-1.5" />
+      <span>Agricultura</span>
     </Link>
-    <span>Agricultura</span>
   </li>
 
   <li
     key={`2`}
-    className="mt-4 block lg:col-4 xl:col-3"
-    style={{ margin: 0, padding: 0 }}
+    className="block rounded-lg overflow-hidden transition transform hover:scale-105"
+    style={{
+      margin: 0,
+      padding: 0,
+      position: 'relative',
+      backgroundImage: 'url("/images/religion-azteca.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
   >
     <Link
       href={`/religion`}
-      className="flex w-full items-center justify-center rounded-full bg-theme-light px-4 py-4 font-bold text-dark transition hover:bg-primary hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+      className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
       style={{
-        width: '75px',
-        height: '75px',
-        borderRadius: '50%',
+        width: '100%',
+        height: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
       }}
     >
-      <FaPrayingHands className="mr-1.5" />
+      <span>Religión</span>
     </Link>
-    <span>Religión</span>
   </li>
 
   <li
     key={`3`}
-    className="mt-4 block lg:col-4 xl:col-3"
-    style={{ margin: 0, padding: 0 }}
+    className="block rounded-lg overflow-hidden transition transform hover:scale-105"
+    style={{
+      margin: 0,
+      padding: 0,
+      position: 'relative',
+      backgroundImage: 'url("/images/arte.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
   >
     <Link
       href={`/arte`}
-      className="flex w-full items-center justify-center rounded-full bg-theme-light px-4 py-4 font-bold text-dark transition hover:bg-primary hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+      className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
       style={{
-        width: '75px',
-        height: '75px',
-        borderRadius: '50%',
+        width: '100%',
+        height: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
       }}
     >
-      <FaPalette className="mr-1.5" />
+      <span>Arte</span>
     </Link>
-    <span>Arte</span>
   </li>
 
   <li
     key={`4`}
-    className="mt-4 block lg:col-4 xl:col-3"
-    style={{ margin: 0, padding: 0 }}
+    className="block rounded-lg overflow-hidden transition transform hover:scale-105"
+    style={{
+      margin: 0,
+      padding: 0,
+      position: 'relative',
+      backgroundImage: 'url("/images/arquitectura.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
   >
     <Link
       href={`/arquitectura`}
-      className="flex w-full items-center justify-center rounded-full bg-theme-light px-4 py-4 font-bold text-dark transition hover:bg-primary hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+      className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
       style={{
-        width: '75px',
-        height: '75px',
-        borderRadius: '50%',
+        width: '100%',
+        height: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
       }}
     >
-      <FaBuilding className="mr-1.5" />
+      <span>Arquitectura</span>
     </Link>
-    <span>Arquitectura</span>
   </li>
 
   <li
     key={`5`}
-    className="mt-4 block lg:col-4 xl:col-3"
-    style={{ margin: 0, padding: 0 }}
+    className="block rounded-lg overflow-hidden transition transform hover:scale-105"
+    style={{
+      margin: 0,
+      padding: 0,
+      position: 'relative',
+      backgroundImage: 'url("/images/economia.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    }}
   >
     <Link
       href={`/economia`}
-      className="flex w-full items-center justify-center rounded-full bg-theme-light px-4 py-4 font-bold text-dark transition hover:bg-primary hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+      className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
       style={{
-        width: '75px',
-        height: '75px',
-        borderRadius: '50%',
+        width: '100%',
+        height: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
       }}
     >
-    <FaMoneyBillAlt className="mr-1.5" />
+      <span>Economía</span>
     </Link>
-    <span>Economía</span>
   </li>
 </ul>
+
+
+
+
 
         </div>
         
@@ -167,7 +206,7 @@ const Categories = ({ categories }) => {
           
     
       </section>
-    </Base>
+    </Base1>
   );
 };
 
