@@ -2,17 +2,21 @@
 
 # dependencies
 
+node_modules
+
+
 /node_modules
 /.pnp
 .pnp.js
 yarn.lock
 package-lock.json
 
+.env
+
+
 /frontend/node_modules/
 /backend/node_modules/
 /backend/.env
-
-
 # testing
 /coverage
 
@@ -35,6 +39,10 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 .env.local
 .env*.local

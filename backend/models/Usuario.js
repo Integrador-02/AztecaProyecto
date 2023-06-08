@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+
 const usuarioSchema = new mongoose.Schema({
     nombre: String,
     password: String,

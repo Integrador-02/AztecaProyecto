@@ -2,6 +2,7 @@ import express from 'express'
 import {
     registrar,
     confirmar,
+
     autenticar,
     guardarComentario
 } from '../controllers/usuarioController.js'

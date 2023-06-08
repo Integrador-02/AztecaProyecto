@@ -1,7 +1,5 @@
 # Proyecto Integrador: Cultura Azteca
 
-
-
 ![AZTECA-removebg-preview-removebg-preview](https://github.com/Integrador-02/AztecaProyecto/assets/92823297/f5e4182f-8da6-4b6b-8318-57f0629018ad)
 
 
@@ -46,6 +44,7 @@ En este repositorio encontrarás:
 3. Realiza tus modificaciones y mejoras.
 4. Haz commit y empuja los cambios a tu repositorio: `git commit -m "Descripción de los cambios"` y `git push origin nombre-de-la-rama`.
 5. Crea una pull request en este repositorio y describe tus cambios.
+
 
 
 ## Soporte
