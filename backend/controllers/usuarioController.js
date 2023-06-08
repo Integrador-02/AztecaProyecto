@@ -1,7 +1,5 @@
 import Usuario from "../models/Usuario.js";
 
-import Comentario  from "../models/Usuario.js";
-
 const registrar = async (req, res) => {
     const {email} = req.body
 
@@ -79,60 +77,9 @@ const autenticar = async (req, res, next) => {
 };
 
 
-const guardarComentario = async (req, res) => {
-  const { texto, usuarioId, respuestaA } = req.body;
-
-  try {
-    // Crear un nuevo comentario
-    const comentario = new Comentario({
-      texto,
-      usuario: usuarioId,
-      respuestaA
-    });
-
-    // Guardar el comentario en la base de datos
-    const comentarioGuardado = await comentario.save();
-
-    res.json(comentarioGuardado);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: 'Error al guardar el comentario' });
-  }
-};
-
-
-
-
 export {
     registrar,
     perfil,
     confirmar,
-    autenticar,
-    guardarComentario 
+    autenticar
 }
-
-import fetch from 'node-fetch';
-
-/*
-const url = 'http://localhost:4000/comentarios'; // URL del endpoint para crear comentarios
-const datos = {
-  texto: 'Este es un comentario de ejemplo',
-  usuarioId: '123456789', // ID del usuario que realiza el comentario
-  respuestaA: '987654321', // ID del comentario al que se está respondiendo (opcional)
-};
-
-fetch(url, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(datos),
-})
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data); // Respuesta del servidor con el comentario guardado
-  })
-  .catch((error) => {
-    console.error(error); // Manejo de errores en caso de falla en la solicitud
-  });
-*/
