@@ -10,6 +10,11 @@
       "name": "Login",
       "url": "/contact"
       
+    },
+    
+    {
+      "name": "Register",
+      "url": "/register"
     }
     
     

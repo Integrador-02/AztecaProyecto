@@ -12,7 +12,6 @@
     "start": "next start"
   },
   "dependencies": {
-
     "@giscus/react": "^2.2.8",
     "axios": "^1.4.0",
     "disqus-react": "^1.1.5",
@@ -27,7 +26,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-gtm-module": "^2.0.11",
-
     "react-icons": "^4.8.0",
     "react-lite-youtube-embed": "^2.3.52",
     "react-mailchimp-subscribe": "^2.1.3",
