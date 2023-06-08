@@ -4,10 +4,7 @@
       "name": "Home",
       "url": "/"
     },
-    {
-      "name": "About",
-      "url": "/about"
-    },
+    
    
     {
       "name": "Login",
@@ -47,6 +44,16 @@
     {
       "name": "Iniciar sesion con Google",
       "url": "/categories"
+    }
+  ],
+  "logeado": [
+    {
+      "name": "cerrar sesion",
+      "url": "/"
+    },
+    {
+      "name": "Perfil",
+      "url": "/"
     }
   ]
 

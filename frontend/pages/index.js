@@ -13,6 +13,9 @@ import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 import { FaRegCalendar } from "react-icons/fa";
+import Quiz from "./quiz";
+import PostSingle from "./comentarios";
+
 
 const { blog_folder, pagination } = config.settings;
 
@@ -89,11 +92,9 @@ const Home = ({
               
 
             
-              <RegistrationMessage/>
-              <Pagination
-                totalPages={Math.ceil(posts.length / showPosts)}
-                currentPage={1}
-              />
+            {/*  <Quiz/> */}
+              <PostSingle/>
+              
             </div>
             
           </div>
@@ -145,6 +146,7 @@ export const getStaticProps = async () => {
   const RegistrationMessage = () => {
     return (
       <div>
+        
         <p>
           Para registrarte en la web, por favor, ponte en contacto con alguno de nuestros desarrolladores para que te puedan ayudar a crear y proporcionar tus credenciales.
         </p>

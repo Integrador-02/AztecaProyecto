@@ -2,7 +2,9 @@ import express from 'express'
 import {
     registrar,
     confirmar,
-    autenticar
+
+    autenticar,
+    guardarComentario
 } from '../controllers/usuarioController.js'
 import cors from 'cors';
 
@@ -17,6 +19,7 @@ router.post('/login', autenticar, (req, res) => {
     // Se llega a este punto solo si la autenticación fue exitosa
     res.status(200).json('ok');
 });
+router.post('/comentarios', guardarComentario);
 //area privada
 //router.get('/perfil', checkAuth, perfil);
 
