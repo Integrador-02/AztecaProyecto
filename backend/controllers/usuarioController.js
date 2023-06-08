@@ -113,7 +113,7 @@ export {
 
 import fetch from 'node-fetch';
 
-
+/*
 const url = 'http://localhost:4000/comentarios'; // URL del endpoint para crear comentarios
 const datos = {
   texto: 'Este es un comentario de ejemplo',
@@ -135,3 +135,4 @@ fetch(url, {
   .catch((error) => {
     console.error(error); // Manejo de errores en caso de falla en la solicitud
   });
+*/
