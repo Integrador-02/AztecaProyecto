@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Base from "@layouts/Baseof";
+import axios from 'axios';
+
 
 const Register = () => {
   const [fullName, setFullName] = useState("");
@@ -43,6 +45,23 @@ const Register = () => {
       alert("La contraseña y la confirmación de contraseña no coinciden");
       return;
     }
+
+    const nombre = fullName;
+
+    axios.post("http://localhost:4000/api/register", { nombre, password, email })
+      .then(async () => {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("registrado correctamente");
+        window.location.href = "/categories";
+
+      })
+      .catch(async (error) => {
+        console.log(error);
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      });
+
+
 
     // Aquí puedes realizar la lógica para enviar los datos de registro al backend
     // por ejemplo, usando una función de envío o una llamada a la API
