@@ -1,18 +1,14 @@
 import config from "@config/config.json";
 import { FaSpinner } from 'react-icons/fa';
-
 import Base from "@layouts/Baseof";
 import ImageFallback from "@layouts/components/ImageFallback";
-import Pagination from "@layouts/components/Pagination";
-import Post from "@layouts/partials/Post";
-import Sidebar from "@layouts/partials/Sidebar";
 import { getListPage, getSinglePage } from "@lib/contentParser";
 import { getTaxonomy } from "@lib/taxonomyParser";
-import dateFormat from "@lib/utils/dateFormat";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
-import { FaRegCalendar } from "react-icons/fa";
+import PostSingle from "./comentarios";
+
 
 const { blog_folder, pagination } = config.settings;
 
@@ -88,6 +84,10 @@ const Home = ({
 
 
 
+
+            {/*  <Quiz/> */}
+              <PostSingle/>
+
             </div>
 
           </div>
@@ -130,4 +130,26 @@ export const getStaticProps = async () => {
 
 ;
 
+  const LoadingIcon = () => {
+    return (
+      <FaSpinner className="loading-icon" />
+    );
+  };
 
+  const RegistrationMessage = () => {
+    return (
+      <div>
+
+        <p>
+          Para registrarte en la web, por favor, ponte en contacto con alguno de nuestros desarrolladores para que te puedan ayudar a crear y proporcionar tus credenciales.
+        </p>
+        <p>
+          Próximamente se abrirá la sesión de registro para que puedas crear tu cuenta de forma autónoma.
+        </p>
+        <p>
+          Agradecemos tu paciencia y te invitamos a estar atento a las actualizaciones y novedades de nuestro sitio web. ¡Estamos emocionados de tenerte como parte de nuestra comunidad!
+        </p>
+        <LoadingIcon />
+      </div>
+    );
+  };

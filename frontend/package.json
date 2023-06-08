@@ -12,6 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@giscus/react": "^2.2.8",
     "axios": "^1.4.0",
     "disqus-react": "^1.1.5",
     "github-slugger": "^2.0.0",
