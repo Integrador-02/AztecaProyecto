@@ -1,27 +1,27 @@
 import Usuario from "../models/Usuario.js";
-
 import Comentario  from "../models/Usuario.js";
 
+
 const registrar = async (req, res) => {
-    const {email} = req.body
+  const {email} = req.body
 
-    //prevenir usuarios duplicados
-    const existeUsuario = await Usuario.findOne({email})
+  //prevenir usuarios duplicados
+  const existeUsuario = await Usuario.findOne({email})
 
-    if (existeUsuario) {
-        const error = new Error('Usuario ya registrado');
-        return res.status(400).json({msg: error.message});
-    }
+  if (existeUsuario) {
+      const error = new Error('Usuario ya registrado');
+      return res.status(400).json({msg: error.message});
+  }
 
-    try {
-        //Guardar un nuevo Usuario
-        const usuario = new Usuario(req.body);
-        const usuarioGuardado = await usuario.save();
+  try {
+      //Guardar un nuevo Usuario
+      const usuario = new Usuario(req.body);
+      const usuarioGuardado = await usuario.save();
 
-        res.json(usuarioGuardado);
-    } catch (error) {
-        console.log(error)
-    }
+      res.json(usuarioGuardado);
+  } catch (error) {
+      console.log(error)
+  }
 };
 
 const perfil = (req, res) => {
