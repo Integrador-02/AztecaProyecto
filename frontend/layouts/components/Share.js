@@ -12,8 +12,8 @@ const Share = ({ title, description, slug, className }) => {
 
   return (
     <ul className={`${className}`}>
-      <li className="inline-block">
-        <a
+     {/*  <li className="inline-block">
+      <a
           aria-label="facebook share button"
           href={`https://facebook.com/sharer/sharer.php?u=${base_url}/${slug}`}
           target="_blank"
@@ -54,7 +54,7 @@ const Share = ({ title, description, slug, className }) => {
         >
           <IoLogoPinterest />
         </a>
-      </li>
+      </li>*/}
     </ul>
   );
 };
