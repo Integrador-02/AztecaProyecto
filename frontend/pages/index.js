@@ -31,7 +31,7 @@ const Home = ({
 
   return (
     <Base>
-    
+
       {/* Banner */}
       <section className="section banner relative pb-0">
         <ImageFallback
@@ -84,18 +84,12 @@ const Home = ({
           <div className="row items-start">
             <div className="mb-12 lg:mb-0 lg:col-8">
               {/* Featured posts */}
-              
 
-              
 
-            
-              <RegistrationMessage/>
-              <Pagination
-                totalPages={Math.ceil(posts.length / showPosts)}
-                currentPage={1}
-              />
+
+
             </div>
-            
+
           </div>
         </div>
       </section>
@@ -127,7 +121,7 @@ export const getStaticProps = async () => {
     props: {
       banner: banner,
       posts: posts,
-      
+
       categories: categoriesWithPostsCount,
     },
   };
@@ -136,25 +130,4 @@ export const getStaticProps = async () => {
 
 ;
 
-  const LoadingIcon = () => {
-    return (
-      <FaSpinner className="loading-icon" />
-    );
-  };
-  
-  const RegistrationMessage = () => {
-    return (
-      <div>
-        <p>
-          Para registrarte en la web, por favor, ponte en contacto con alguno de nuestros desarrolladores para que te puedan ayudar a crear y proporcionar tus credenciales.
-        </p>
-        <p>
-          Próximamente se abrirá la sesión de registro para que puedas crear tu cuenta de forma autónoma.
-        </p>
-        <p>
-          Agradecemos tu paciencia y te invitamos a estar atento a las actualizaciones y novedades de nuestro sitio web. ¡Estamos emocionados de tenerte como parte de nuestra comunidad!
-        </p>
-        <LoadingIcon />
-      </div>
-    );
-  };
+

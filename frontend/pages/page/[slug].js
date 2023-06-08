@@ -9,29 +9,12 @@ const { blog_folder, summary_length } = config.settings;
 
 // blog pagination
 const BlogPagination = ({ postIndex, posts, currentPage, pagination }) => {
-  const indexOfLastPost = currentPage * pagination;
-  const indexOfFirstPost = indexOfLastPost - pagination;
-  const orderedPosts = sortByDate(posts);
-  const currentPosts = orderedPosts.slice(indexOfFirstPost, indexOfLastPost);
-  const { frontmatter } = postIndex;
+const { frontmatter } = postIndex;
   const { title } = frontmatter;
-  const totalPages = Math.ceil(posts.length / pagination);
 
   return (
     <Base title={title}>
-      <section className="section">
-        <div className="container">
-          {markdownify(title, "h1", "h2 mb-8 text-center")}
-          <div className="row mb-16">
-            {currentPosts.map((post, i) => (
-              <div className="mt-16 lg:col-6" key={post.slug}>
-                <Post post={post} />
-              </div>
-            ))}
-          </div>
-          <Pagination totalPages={totalPages} currentPage={currentPage} />
-        </div>
-      </section>
+
     </Base>
   );
 };
