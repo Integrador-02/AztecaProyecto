@@ -12,11 +12,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@giscus/react": "^2.2.8",
     "axios": "^1.4.0",
     "disqus-react": "^1.1.5",
-    "fs-extra": "^11.1.1",
-    "giscus": "^1.2.8",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "marked": "^4.2.12",

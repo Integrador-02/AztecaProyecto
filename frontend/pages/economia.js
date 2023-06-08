@@ -4,7 +4,6 @@ import { FaInfoCircle } from 'react-icons/fa';
 import Base from "@layouts/Baseof";
 import { FaQuestionCircle } from 'react-icons/fa';
 
-import { useState } from 'react';
 const Economia = ({ data }) => {
 
 const InteractionMessage = () => {
@@ -28,11 +27,7 @@ const InteractionMessage = () => {
             "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
           )}
           <div className="sketchfab-embed-wrapper">
-<<<<<<< HEAD
 
-=======
-
->>>>>>> f79bc7564fb206ed6d8372c24cdf0a9fd2eb5a07
 
             <iframe
             style={{ width: '40%', height: '400px' }}

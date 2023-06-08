@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         {markdownify(footer_content, "p", "max-w-[638px] mx-auto")}
 
-        {/* menu de la barra (home y login)*/}
+        {/* footer menu */}
         <ul className="mb-12 mt-6 flex-wrap space-x-2 lg:space-x-4">
           {menu.footer.map((menu) => (
             <li className="inline-block" key={menu.name}>
@@ -37,7 +37,9 @@ const Footer = () => {
           ))}
         </ul>
         {/* social icons */}
-       
+        <div className="inline-flex">
+          <Social source={social} className="socials mb-12 justify-center" />
+        </div>
         {/* copyright */}
         {markdownify(copyright, "p")}
       </div>
