@@ -84,7 +84,7 @@ const Arquitectura = () => {
           <div>
           <ul className="grid grid-cols-3 gap-1" style={{  margin: 100, padding: 0 }}>
             <li
-            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-90 hover:bg-green-400"
             style={{
               margin: 0,
               padding: 0,
@@ -112,7 +112,7 @@ const Arquitectura = () => {
                   
             </li>
             <li
-              className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-90 hover:bg-green-400"
               style={{
                 margin: 0,
                 padding: 0,
@@ -141,7 +141,7 @@ const Arquitectura = () => {
             </li>
 
             <li
-            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-90 hover:bg-green-400"
             style={{
               margin: 0,
               padding: 0,
