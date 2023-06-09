@@ -58,7 +58,7 @@ const Arte = ({ data }) => {
             <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
               Varios aspectos que podemos resaltar de el arte azteca son los siguientes
             </p>
-            <ul className="grid grid-cols-5 gap-1" style={{ margin: 0, padding: 0 }}>
+            <ul className="grid grid-cols-4 gap-1" style={{ margin: 0, padding: 0 }}>
               <li
               className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
               style={{
