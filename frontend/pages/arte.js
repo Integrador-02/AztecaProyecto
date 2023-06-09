@@ -5,6 +5,7 @@ import Image from "next/image";
 import Base from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
+import Link from "next/link";
 //clase culrura
 const Arte = ({ data }) => {
   
@@ -45,8 +46,7 @@ const Arte = ({ data }) => {
 
 
             </iframe>
-            < InteractionMessage 
-           />
+            < InteractionMessage/>
             <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
             A la hora de hablar del arte azteca tenemos que destacar que este pueblo era un gran escultor ya que desarrollaba y<br />
             creaba esculturas de diferentes dimensiones, lo único que no cambiaba de ellas era los temas ya que todos estaban<br />
@@ -54,8 +54,141 @@ const Arte = ({ data }) => {
             un lenguaje utilizado por la sociedad para transmitir su visión del mundo, reforzando su propia identidad, frente<br />
             a las de las culturas foráneas.<br />
             </p>
+            
+            <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
+              Varios aspectos que podemos resaltar de el arte azteca son los siguientes
+            </p>
+            <ul className="grid grid-cols-5 gap-1" style={{ margin: 0, padding: 0 }}>
+              <li
+              className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }} 
+              >
+              
+              <Link
+                    href={`./textiles`}
+                    className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    }}
+                  >
+                    <span>Textiles</span>
+                  </Link>
+                                
+                  
+
+
+              </li>
+
+              
+                <li
+                className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: 'relative',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }} 
+                >
+                
+                <Link
+                      href={`./ceramica`}
+                      className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                      }}
+                    >
+                      <span>Ceramica</span>
+                    </Link>
+                                  
+                    
+  
+  
+                
+
+
+
+                </li>
+                <li
+                className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: 'relative',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }} 
+                >
+                
+                <Link
+                      href={`./ceramica`}
+                      className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                      }}
+                    >
+                      <span>Música</span>
+                    </Link>
+                                  
+                    
+  
+  
+                
+                </li>
+                <li
+                className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: 'relative',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }} 
+                >
+                
+                <Link
+                      href={`./ceramica`}
+                      className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                      }}
+                    >
+                      <span>Murales y Pinturas</span>
+                    </Link>
+                                  
+                    
+  
+                </li>
+            </ul>
+            
         </div>
-<MasInformacion />
+
 
     </section>
 
