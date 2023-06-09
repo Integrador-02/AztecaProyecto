@@ -42,8 +42,6 @@ const Arte = ({ data }) => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 >
-               
-
 
             </iframe>
             < InteractionMessage/>
@@ -116,14 +114,6 @@ const Arte = ({ data }) => {
                     >
                       <span>Ceramica</span>
                     </Link>
-                                  
-                    
-  
-  
-                
-
-
-
                 </li>
                 <li
                 className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
