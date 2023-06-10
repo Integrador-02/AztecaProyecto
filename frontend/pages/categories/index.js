@@ -10,6 +10,7 @@ import { FaFolder ,FaSeedling ,FaPrayingHands,FaPalette,FaBuilding ,FaMoneyBillA
 import { slugify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import { FaPaintBrush } from 'react-icons/fa';
+import Cookies from 'js-cookie';
 // CLASE QUE CONTINEN LOS ELEMENTOS DE LA CATEGORIAS
 //TITULO DE LA PAGINA
 const Titulo = () => {
@@ -27,28 +28,30 @@ const Titulo = () => {
 </div>
 
       </div>
-   
+
   );
 };
 
 
-
-
 const Categories = ({ categories }) => {
+ const valor = Cookies.get('miCookie');
+ console.log(valor);
+
+
   return (
 
     <Base1 title={"Categorias Aztecas"}>
       <Titulo/>
 
       <section className="section pt-0">
-      
+
         <div className="container pt-12 text-center"> <p className="text-xl text-[#49B675] mb-2">
   Explora la fascinante civilización azteca. Haz clic en la categoría que más te interese para obtener información relevante sobre el tema. Descubre sus creencias religiosas, sumérgete en su cultura, conoce su economía y admira su arquitectura. ¡Sumérgete en el mundo de los aztecas y despierta tu curiosidad histórica!
 </p>
         <header style={{ textAlign: 'center' }}>
-       
-     
-     
+
+
+
     </header>
     <ul className="grid grid-cols-5 gap-1" style={{ margin: 0, padding: 0 }}>
   <li
@@ -198,13 +201,13 @@ const Categories = ({ categories }) => {
 
 
         </div>
-        
-      
-    
 
-          
-          
-    
+
+
+
+
+
+
       </section>
     </Base1>
   );
