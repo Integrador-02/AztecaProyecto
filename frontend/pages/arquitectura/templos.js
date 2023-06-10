@@ -1,9 +1,17 @@
 import Base from "@layouts/Baseof";
+import { markdownify } from "@lib/utils/textConverter";
 const Templos=()=>{
 
     return (
         <Base>
         <div>
+        {markdownify(
+          "Templos",
+          "h1",
+          "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-8 text-center lg:text-[40px]"
+        )}
+        
+
         <div class="sketchfab-embed-wrapper"> 
         <iframe 
         style={{ width: '40%', height: '400px' }}

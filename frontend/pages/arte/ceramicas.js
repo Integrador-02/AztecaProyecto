@@ -1,11 +1,17 @@
 import Base from "@layouts/Baseof";
+import { markdownify } from "@lib/utils/textConverter";
 
 
 const Ceramicas = ()=>{
     return (
         <Base title="Vasijas y Ceramicas">
+            {markdownify(
+          "Ceramicas",
+          "h1",
+          "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-8 text-center lg:text-[40px]"
+        )}
 
-<div class="sketchfab-embed-wrapper"> 
+        <div class="sketchfab-embed-wrapper"> 
         <iframe style={{ width: '40%', height: '400px' }} title="Aztec Ceramic Figures" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7758b157084c49cabf7c30a27c1e1527/embed"> 
         </iframe> 
         <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}> 

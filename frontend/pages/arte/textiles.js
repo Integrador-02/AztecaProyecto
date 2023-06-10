@@ -5,6 +5,9 @@ const Textiles=()=>{
     return (
         <Base>
         <div>
+            <img style={{marginLeft:'auto', marginRight:'auto'}} width="300"  src="https://ae01.alicdn.com/kf/Hf9be0b1eca7345489c81df96d5c4aeb6V/Dragon-azteca-FireworkPolyester-Cotton-4-way-Stretch-tela-Patchwork-coseing-Kid-Home-Textile-Cloth-Quilting-Dress.jpg" ></img>
+        </div>
+        <div>
         <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
         Para los pueblos nahuas, los textiles eran una forma de arte extremadamente importante, pero de la que en realidad sabemos relativamente poco. ¿Por qué? Bueno, el clima cálido y húmedo de México no es exactamente propicio para la preservación de la tela, tanto se ha perdido en la historia. Aún así, los nahuas registraron gran parte de su historia, y los sacerdotes españoles registraron aún más, así que tenemos una buena idea.
         </p>
@@ -24,7 +27,7 @@ const Textiles=()=>{
         <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
             Con tanta importancia otorgada a los textiles, también es importante considerar quién los hizo. El tejido en las sociedades nahuas era una forma de arte principalmente reservada para las mujeres. En las casas de la gente común, las mujeres aprendían a tejer desde muy jóvenes y confeccionaban textiles para sus hogares y posiblemente los vendían en los mercados públicos. Los mejores textiles fueron hechos por mujeres nobles. Los nobles no tenían esclavos o sirvientes que hicieran su ropa, sino mujeres de familias nobles que trataban esta forma de arte con extrema reverencia. Incluso se registró que la habilidad para tejer y bordar era esencial para mantener el estatus social. Esto le dio a la mujer noble nahua un grado de poder en los hogares y economías nahuas, ya que sus textiles eran literalmente una forma de moneda.
         </p>
-        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        <p style={{marginBottom:'100px',textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
         Después de que España derrocó al Imperio Azteca y reclamó a Tenochtitlán como propia, mucho cambió, pero no la importancia de los textiles. Las tradiciones del tejido se transmitieron de generación en generación durante siglos. De hecho, hasta la gran industrialización de México a fines del siglo XIX, casi todos los textiles eran producidos por mujeres de etnia nahua usando técnicas tradicionales. Hasta el día de hoy, la producción textil es un oficio importante practicado por muchas familias que afirman tener ascendencia nahua. Durante gran parte del siglo XX, las mujeres mexicanas adoptaron técnicas modernas de tejido y tintes sintéticos, pero con el creciente interés internacional en el arte textil, muchas están regresando a las técnicas tradicionales que aún mantienen la tradición. Esta forma de arte no solo sobrevivió al imperio indígena más poderoso de Mesoamérica.
         </p>
         </div>

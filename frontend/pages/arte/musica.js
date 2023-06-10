@@ -6,7 +6,7 @@ const Musica=()=>{
     return(
         <Base>
         <div>
-        <iframe style={{justifyContent:'center',margin:' 100px',marginTop:'10px'}} width="720" height="480" src="https://www.youtube.com/embed/Jca78Q_E-Uc" title="Música Prehispánica | Jorge Reyes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe style={{justifyContent:'center',margin:' auto',marginTop:'10px'}} width="720" height="480" src="https://www.youtube.com/embed/Jca78Q_E-Uc" title="Música Prehispánica | Jorge Reyes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
         </div>

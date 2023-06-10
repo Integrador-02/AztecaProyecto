@@ -1,9 +1,26 @@
 import Base from "@layouts/Baseof";
+import { markdownify } from "@lib/utils/textConverter";
 const Chinampas=()=>{
     return (
-        <Base>
-        <div>
-        <iframe style={{justifyContent:'center',margin:' 100px',marginTop:'10px'}} width="720" height="480" src="https://www.youtube.com/embed/F0B2ynEV77Q" title="Chinampas prehispánicas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <Base title={"Chinampas"}>
+            {markdownify(
+          "Chinampas",
+          "h1",
+          "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-8 text-center lg:text-[40px]"
+        )}
+        
+
+        <div >
+        <iframe 
+        style={{justifyContent:'center',marginLeft:'auto', marginRight:'auto' ,margin:'auto',marginTop:'10px'}} 
+        width="720" 
+        height="480" src="https://www.youtube.com/embed/F0B2ynEV77Q" 
+        title="Chinampas prehispánicas" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen
+        >
+        </iframe>
 
 
             
