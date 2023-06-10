@@ -1,11 +1,14 @@
-
+import { markdownify } from "@lib/utils/textConverter";
+import shortcodes from "@shortcodes/all";
+import { MDXRemote } from "next-mdx-remote";
+import Image from "next/image";
 import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 import Link from "next/link";
 
 
-const Titular = () => {
+const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
       <img
@@ -29,7 +32,7 @@ const Religion = ({ data }) => {
     <Base1 title={"Categorias Aztecas"}>
 
     <section className="section pt-0">
-    <Titular/>
+    <Titulo/>
 
       <div>
 
