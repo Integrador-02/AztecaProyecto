@@ -8,7 +8,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
-
+import Cookies from "js-cookie";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 const Header = () => {
   // distructuring the main menu from menu object
   const { main } = menu;
@@ -34,6 +36,7 @@ const Header = () => {
       <nav className="navbar container px-1 sm:px-7">
         <div className="order-0">
           <Logo />
+         
         </div>
         <div className="flex items-center space-x-4 xl:space-x-8">
           <div
@@ -242,6 +245,7 @@ export const Header2 = ({repuesta}) => {
 };
 
 
+
 export const Header3 = () => {
   // distructuring the main menu from menu object
   const { main } = menu;
@@ -249,7 +253,9 @@ export const Header3 = () => {
   // states declaration
   const [searchModal, setSearchModal] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-
+  
+  const [email, setEmail] = useState('');
+  
   // Router
   const router = useRouter();
 
@@ -261,14 +267,27 @@ export const Header3 = () => {
       document.body.classList.remove("menu-open");
     }
   }, [showMenu]);
-
+  useEffect(() => {
+    const user = Cookies.get('clave');
+    setEmail(user);
+  }, []);
+  const handleLogout = () => {
+    Cookies.remove('clave');
+    router.push('/');
+  
+  };
   return (
     <header className="header">
       <nav className="navbar container px-1 sm:px-7">
         <div className="order-0">
           <Logo />
+        
         </div>
         <div className="flex items-center space-x-4 xl:space-x-8">
+        <FontAwesomeIcon icon={faUser}  />
+
+
+          <p>{email}</p>
           <div
             className={`collapse-menu ${
               !showMenu && "translate-x-full"
@@ -340,7 +359,11 @@ export const Header3 = () => {
                     </li>
                   )}
                 </React.Fragment>
-              ))}
+              ))}<li className="nav-item">
+      <button className="nav-link block" onClick={handleLogout}>
+        Cerrar sesión
+      </button>
+    </li>
             </ul> 
           </div>
           

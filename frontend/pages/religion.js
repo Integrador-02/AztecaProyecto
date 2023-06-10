@@ -1,11 +1,157 @@
-import React from 'react';
 import { markdownify } from "@lib/utils/textConverter";
-import Base from "@layouts/Baseof";
+import shortcodes from "@shortcodes/all";
+import { MDXRemote } from "next-mdx-remote";
+import Image from "next/image";
+import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
-import { useState } from 'react';
+import Link from "next/link";
 
-const Religion = () => {
+
+const Titulo = () => {
+  return (
+    <div className="relative h-80 font-text">
+      <img
+        className="absolute inset-0 w-full h-full object-cover brightness-50"
+        src={"https://www.mexicodesconocido.com.mx/wp-content/uploads/2018/10/dioses-aztecas-o-mexicas.jpg"}
+        alt="Imagen de fondo"
+      />
+      <div className="relative z-12 flex items-center justify-center h-full">
+        <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <span className="text-green-600">Religion</span>
+        </h1>
+      </div>
+    </div>
+  );
+};
+
+
+const Religion = ({ data }) => {
+
+  return (
+    <Base1 title={"Categorias Aztecas"}>
+
+    <section className="section pt-0">
+    <Titulo/>
+
+      <div>
+
+        <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' , marginTop: '40px'}}>
+        Los aztecas tenian un sistema de creencias complejo donde adoraban una amplia variedad de dioses y deidades. Entre sus caracteristicas mas destacables, eran politeistas, constantemente hacian una division entre fuerzas opuestas.
+        <br/>
+        Asi como tambien se veian envueltos en festividades y rituales religiosos.
+        </p>
+
+        <ul className="grid grid-cols-3 gap-1" style={{ margin: 0, padding: 0 }}>
+
+          <li
+            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://4.bp.blogspot.com/-TPo9OJEW0Bk/VfZAU6uZ0WI/AAAAAAAAEq0/E8MFbZHRCUM/s1600/dioses%2Baztecas.JPG")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(70%)',
+            }}
+          >
+
+            <Link
+              href={`./religion/dioses`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+              >
+              <span>Dioses</span>
+            </Link>
+          </li>
+
+          <li
+            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://aventurateamexico.com/wp-content/uploads/2022/12/Religion_Azteca-1280x720-1.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(70%)',
+            }}
+          >
+
+            <Link
+              href={`./religion/ritos`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+                <span>Ritos</span>
+            </Link>
+
+          </li>
+
+          <li
+            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://hablemosdeculturas.com/wp-content/uploads/2017/11/Cultura-azteca-5.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(70%)',
+            }}
+          >
+
+          <Link
+            href={`./religion/creencias`}
+            className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+            style={{
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            }}
+          >
+              <span>Creencias</span>
+          </Link>
+
+        </li>
+        </ul>
+      </div>
+
+    </section>
+
+    </Base1>
+  );
+};
+// get 404 page data
+
+export default Religion;
+
+const MasInformacion = () => {
+    return (
+      <div className="center-container">
+        <FaInfoCircle size={50} />
+        <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
+      </div>
+    );
+  };
 
   const InteractionMessage = () => {
     const showMessage = () => {
@@ -19,87 +165,3 @@ const Religion = () => {
       </div>
     );
   };
-
-  return (
-    <Base title={"Categorias Aztecas"}>
-      <section className="section pt-0">
-        {markdownify(
-          " Religión",
-          "h1",
-          "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
-        )}
-        <div className="sketchfab-embed-wrapper">
-          <p style={{ fontSize: '43px', fontWeight: 'normal', margin: '5px', color: '#000' }}>
-            Coyolxauhqui
-          </p>
-
-          <iframe
-            title="COL: Coyolxauhqui"
-            frameBorder="0"
-            allowFullScreen
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            src="https://sketchfab.com/models/73dff65bf4654de08d8db64298adc6ae/embed"
-            style={{ width: '40%', height: '400px' }}
-          ></iframe>
-
-          <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
-            <a
-              href="https://sketchfab.com/3d-models/col-coyolxauhqui-73dff65bf4654de08d8db64298adc6ae?utm_medium=embed&utm_campaign=share-popup&utm_content=73dff65bf4654de08d8db64298adc6ae"
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ fontWeight: 'bold', color: '#1CAAD9' }}
-            >
-              COL: Coyolxauhqui
-            </a>{' '}
-            by{' '}
-            <a
-              href="https://sketchfab.com/idiom-project?utm_medium=embed&utm_campaign=share-popup&utm_content=73dff65bf4654de08d8db64298adc6ae"
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ fontWeight: 'bold', color: '#1CAAD9' }}
-            >
-              Text Database and Dictionary of Classic Mayan
-            </a>{' '}
-            on{' '}
-            <a
-              href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=73dff65bf4654de08d8db64298adc6ae"
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ fontWeight: 'bold', color: '#1CAAD9' }}
-            >
-              Sketchfab
-            </a>
-
-          </p>
-          <InteractionMessage />
-          <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
-            Coyolxauhqui (pron. Koy-ol-shauw-kee) fue la diosa azteca de la luna o la vía láctea quien fue masacrada
-            <br />
-            por su hermano Huitzilopochtli, el dios de la guerra, en la mitología azteca. Esta historia fue conmemorada
-            <br />
-            en una célebre piedra de gran relieve encontrada al pie de la pirámide de los sacrificios, el Templo Mayor de
-            <br />
-            la capital azteca, Tenochtitlan.<br />
-          </p>
-        </div>
-
-        <MasInformacion />
-
-      </section>
-    </Base>
-  );
-};
-
-export default Religion;
-
-// Componente de información adicional
-const MasInformacion = () => {
-  return (
-    <div className="center-container">
-      <FaInfoCircle size={50} />
-      <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
-    </div>
-  );
-};

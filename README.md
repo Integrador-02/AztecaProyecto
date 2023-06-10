@@ -31,9 +31,9 @@ En este repositorio encontrarás:
 
 ## Instalación y Uso
 1. Clona este repositorio en tu máquina local.
-2. Navega al directorio del proyecto: `frontend`.
+2. Navega al directorio del proyecto: `cd nombre-del-proyecto`.
 3. Instala las dependencias: `npm install`.
-4. Inicia la aplicación: `npm run dev`.
+4. Inicia la aplicación: `npm start`.
 5. Abre tu navegador y visita `http://localhost:3000` para ver el proyecto en acción.
 
 

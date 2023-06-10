@@ -15,6 +15,7 @@ import Link from "next/link";
 import { FaRegCalendar } from "react-icons/fa";
 import Quiz from "./quiz";
 import PostSingle from "./comentarios";
+import AhorcadoAzteca from "./minijuego1";
 
 
 const { blog_folder, pagination } = config.settings;
@@ -31,6 +32,9 @@ const Home = ({
     (post) => post.frontmatter.featured
   );
   const showPosts = pagination;
+
+
+
 
   return (
     <Base>
@@ -77,29 +81,14 @@ const Home = ({
                 </div>
             )}
           </div>
+     
+         <PostSingle/>
 
-        </div>
+        </div> 
       </section>
 
-      {/* Home main */}
-      <section className="section">
-        <div className="container">
-          <div className="row items-start">
-            <div className="mb-12 lg:mb-0 lg:col-8">
-              {/* Featured posts */}
-              
-
-              
-
-            
-            {/*  <Quiz/> */}
-              <PostSingle/>
-              
-            </div>
-            
-          </div>
-        </div>
-      </section>
+     
+    
     </Base>
   );
 };

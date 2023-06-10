@@ -10,7 +10,7 @@ import { FaFolder ,FaSeedling ,FaPrayingHands,FaPalette,FaBuilding ,FaMoneyBillA
 import { slugify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import { FaPaintBrush } from 'react-icons/fa';
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
 // CLASE QUE CONTINEN LOS ELEMENTOS DE LA CATEGORIAS
 //TITULO DE LA PAGINA
 const Titulo = () => {
@@ -28,15 +28,13 @@ const Titulo = () => {
 </div>
 
       </div>
-
+   
   );
 };
+ 
 
-
-const Categories = ({ categories }) => {
- const valor = Cookies.get('miCookie');
- console.log(valor);
-
+const Categories = ({ categories }) => {const  a = Cookies.get('clave');
+ console.log(a);
 
   return (
 
@@ -44,16 +42,17 @@ const Categories = ({ categories }) => {
       <Titulo/>
 
       <section className="section pt-0">
-
+      
         <div className="container pt-12 text-center"> <p className="text-xl text-[#49B675] mb-2">
-  Explora la fascinante civilización azteca. Haz clic en la categoría que más te interese para obtener información relevante sobre el tema. Descubre sus creencias religiosas, sumérgete en su cultura, conoce su economía y admira su arquitectura. ¡Sumérgete en el mundo de los aztecas y despierta tu curiosidad histórica!
+        Explora la fascinante civilización azteca. Haz clic en la categoría que más te interese para obtener información relevante sobre el tema. Descubre sus creencias religiosas, sumérgete en su cultura, conoce su economía y admira su arquitectura. ¡Sumérgete en el mundo de los aztecas y despierta tu curiosidad histórica!
+
 </p>
         <header style={{ textAlign: 'center' }}>
-
-
-
+       
+     
+     
     </header>
-    <ul className="grid grid-cols-5 gap-1" style={{ margin: 0, padding: 0 }}>
+    <ul className="grid grid-cols-3 gap-2" style={{ margin: 0, padding: 0 }}>
   <li
     key={`1`}
     className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
@@ -61,13 +60,14 @@ const Categories = ({ categories }) => {
       margin: 0,
       padding: 0,
       position: 'relative',
-      backgroundImage: 'url("/images/agricultura.jpg")',
+      backgroundImage: 'url("https://aventurateamexico.com/wp-content/uploads/2022/12/gobernantes-aztecas.jpg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
     }}
   >
     <Link
-      href={`/prueba`}
+      href={`/jerarquia`}
       className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-primary hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
       style={{
         width: '100%',
@@ -78,7 +78,7 @@ const Categories = ({ categories }) => {
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
       }}
     >
-      <span>Agricultura</span>
+      <span>Jeraquia</span>
     </Link>
   </li>
 
@@ -92,6 +92,7 @@ const Categories = ({ categories }) => {
       backgroundImage: 'url("/images/religion-azteca.jpg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
     }}
   >
     <Link
@@ -104,6 +105,7 @@ const Categories = ({ categories }) => {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        
       }}
     >
       <span>Religión</span>
@@ -120,6 +122,7 @@ const Categories = ({ categories }) => {
       backgroundImage: 'url("/images/arte.jpg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
     }}
   >
     <Link
@@ -148,6 +151,7 @@ const Categories = ({ categories }) => {
       backgroundImage: 'url("/images/arquitectura.jpg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
     }}
   >
     <Link
@@ -177,6 +181,7 @@ const Categories = ({ categories }) => {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
     }}
   >
     <Link
@@ -194,6 +199,41 @@ const Categories = ({ categories }) => {
       <span>Economía</span>
     </Link>
   </li>
+
+
+  <li
+    key={`6`}
+    className="block rounded-lg overflow-hidden transition transform hover:scale-105"
+    style={{
+      margin: 0,
+      padding: 0,
+      position: 'relative',
+      backgroundImage: 'url("/images/Tlachtli.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
+    }}
+  >
+    <Link
+      href={`/minijuegos`}
+      className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+      style={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      }}
+    >
+      <span>Minijuegos/Quiz</span>
+    </Link>
+  </li>
+
+
+
+  
 </ul>
 
 
@@ -201,13 +241,13 @@ const Categories = ({ categories }) => {
 
 
         </div>
+        
+      
+    
 
-
-
-
-
-
-
+          
+          
+    
       </section>
     </Base1>
   );

@@ -47,13 +47,10 @@
     }
   ],
   "logeado": [
-    {
-      "name": "cerrar sesion",
-      "url": "/"
-    },
+  
     {
       "name": "Perfil",
-      "url": "/"
+      "url": "/profile"
     }
   ]
 
