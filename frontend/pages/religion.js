@@ -5,7 +5,7 @@ import { FaQuestionCircle } from 'react-icons/fa';
 import Link from "next/link";
 
 
-const Titulo = () => {
+const Titular = () => {
   return (
     <div className="relative h-80 font-text">
       <img
@@ -29,7 +29,7 @@ const Religion = ({ data }) => {
     <Base1 title={"Categorias Aztecas"}>
 
     <section className="section pt-0">
-    <Titulo/>
+    <Titular/>
 
       <div>
 
