@@ -10,23 +10,23 @@ const Templos=()=>{
           "h1",
           "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-8 text-center lg:text-[40px]"
         )}
-        
 
-        <div class="sketchfab-embed-wrapper"> 
-        <iframe 
+
+        <div class="sketchfab-embed-wrapper">
+        <iframe
         style={{ width: '40%', height: '400px' }}
         title="Aztec Temple" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/40f6f12130ef4fdaad6a9d2a28a7250e/embed">
-             </iframe> 
-             <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}> 
-             <a href="https://sketchfab.com/3d-models/aztec-temple-40f6f12130ef4fdaad6a9d2a28a7250e?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="nofollow" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
-                 Aztec Temple 
-                 </a> 
-                 by 
-                 <a href="https://sketchfab.com/Chrismartinartist?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="nofollow" style={{ fontWeight: 'bold', color: '#1CAAD9' }}> 
-                 Chrismartinartist 
-                 </a> 
-                 on 
-                 <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="nofollow" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+             </iframe>
+             <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
+             <a href="https://sketchfab.com/3d-models/aztec-temple-40f6f12130ef4fdaad6a9d2a28a7250e?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+                 Aztec Temple
+                 </a>
+                 by
+                 <a href="https://sketchfab.com/Chrismartinartist?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+                 Chrismartinartist
+                 </a>
+                 on
+                 <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
                     Sketchfab
                     </a>
                     </p>
