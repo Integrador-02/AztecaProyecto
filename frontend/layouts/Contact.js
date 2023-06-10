@@ -1,10 +1,5 @@
 import { useState } from 'react';
-import { Header2 } from "./partials/Header";
-import Image from "next/image";
 import axios from 'axios';
-import Link from 'next/link';
-import Base from './Baseof';
-import { HiOutlineUserCircle } from "react-icons/hi";
 import { AiOutlineUser } from "react-icons/ai";
 import Cookies from 'js-cookie';
 
@@ -83,13 +78,13 @@ const handleSubmit = async (e) => {
   try {
     const url = "http://localhost:4000/api/login";
     const respuest = await axios.post(url, { email, password });
-    
-   console.log( usuario); 
-    const isAuthorized = respuest.data.respuesta === "ok";
-   
-    
 
-    
+   console.log( usuario);
+    const isAuthorized = respuest.data.respuesta === "ok";
+
+
+
+
     if (isAuthorized) {
       ;
       // Si la autenticación es exitosa, redirige al usuario a la página de categorías

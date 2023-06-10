@@ -1,15 +1,10 @@
 import config from "@config/config.json";
-import Base from "@layouts/Baseof";
 import { Base1 } from "@layouts/Baseof";
 import { getTaxonomy } from "@lib/taxonomyParser";
-import { humanize, markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 const { blog_folder } = config.settings;
 import { getSinglePage } from "@lib/contentParser";
-import { FaFolder ,FaSeedling ,FaPrayingHands,FaPalette,FaBuilding ,FaMoneyBillAlt} from "react-icons/fa";
 import { slugify } from "@lib/utils/textConverter";
-import Image from "next/image";
-import { FaPaintBrush } from 'react-icons/fa';
 import Cookies from "js-cookie";
 // CLASE QUE CONTINEN LOS ELEMENTOS DE LA CATEGORIAS
 //TITULO DE LA PAGINA
@@ -28,10 +23,10 @@ const Titulo = () => {
 </div>
 
       </div>
-   
+
   );
 };
- 
+
 
 const Categories = ({ categories }) => {const  a = Cookies.get('clave');
  console.log(a);
@@ -42,15 +37,15 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
       <Titulo/>
 
       <section className="section pt-0">
-      
+
         <div className="container pt-12 text-center"> <p className="text-xl text-[#49B675] mb-2">
         Explora la fascinante civilización azteca. Haz clic en la categoría que más te interese para obtener información relevante sobre el tema. Descubre sus creencias religiosas, sumérgete en su cultura, conoce su economía y admira su arquitectura. ¡Sumérgete en el mundo de los aztecas y despierta tu curiosidad histórica!
 
 </p>
         <header style={{ textAlign: 'center' }}>
-       
-     
-     
+
+
+
     </header>
     <ul className="grid grid-cols-3 gap-2" style={{ margin: 0, padding: 0 }}>
   <li
@@ -105,7 +100,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        
+
       }}
     >
       <span>Religión</span>
@@ -233,7 +228,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
 
 
 
-  
+
 </ul>
 
 
@@ -241,13 +236,13 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
 
 
         </div>
-        
-      
-    
 
-          
-          
-    
+
+
+
+
+
+
       </section>
     </Base1>
   );

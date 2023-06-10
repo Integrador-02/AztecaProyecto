@@ -1,5 +1,4 @@
-import { Base1 } from "@layouts/Baseof";
-import { markdownify } from "@lib/utils/textConverter";
+import  Base1  from "@layouts/Baseof";
 
 const Titulo = () => {
     return (
@@ -21,23 +20,23 @@ const Chinampas=()=>{
     return (
         <Base1 title={"Chinampas"}>
            <Titulo/>
-        
 
-           <div class="sketchfab-embed-wrapper" style={{margin:30,position :10 }} > 
-            
-        <iframe 
-        style={{justifyContent:'center',marginLeft:'auto', marginRight:'auto' ,margin:'auto',marginTop:'10px'}} 
-        width="720" 
-        height="480" src="https://www.youtube.com/embed/F0B2ynEV77Q" 
-        title="Chinampas prehispánicas" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+
+           <div class="sketchfab-embed-wrapper" style={{margin:30,position :10 }} >
+
+        <iframe
+        style={{justifyContent:'center',marginLeft:'auto', marginRight:'auto' ,margin:'auto',marginTop:'10px'}}
+        width="720"
+        height="480" src="https://www.youtube.com/embed/F0B2ynEV77Q"
+        title="Chinampas prehispánicas"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
         >
         </iframe>
 
 
-            
+
         </div>
 
 
@@ -52,10 +51,10 @@ const Chinampas=()=>{
             fontFamily: 'Arial, sans-serif',
           }}>               La chinampa es un método de cultivo que se utilizaba por los mexicas para ampliar el territorio en lagos y lagunas del Valle de México y en las que cultivaban flores y verduras.
             La palabra chinampa, proviene del náhuatl chinampan, que significa “en la cerca de cañas”, es un sistema artificial de cultivo, construido en zonas donde el agua es el principal recurso natural presente en el medio. Se construyen con el fin de cultivar plantas, verduras y hortalizas para el autoconsumo y mercado local.
-            Se cree que es una técnica iniciada en la época de los toltecas, aunque fue en 1519 que este método de cultivo se popularizó y ocupó casi el 100 por ciento del lago Xochimilco, gracias a ello, una amplia población se pudo desarrollorar a sus orillas. 
+            Se cree que es una técnica iniciada en la época de los toltecas, aunque fue en 1519 que este método de cultivo se popularizó y ocupó casi el 100 por ciento del lago Xochimilco, gracias a ello, una amplia población se pudo desarrollorar a sus orillas.
 
         </p>
-        
+
         </div>
         </Base1>
     );
