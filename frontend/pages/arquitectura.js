@@ -2,6 +2,7 @@ import React from 'react';
 import { markdownify } from "@lib/utils/textConverter";
 import Base from "@layouts/Baseof";
 import { FaQuestionCircle } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Arquitectura = () => {
     const InteractionMessage = () => {
@@ -68,10 +69,117 @@ const Arquitectura = () => {
             </a>
           </p>
           <InteractionMessage />
-          <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
-            El Templo Mayor de Tenochtitlán, también conocido como Templo Mayor Azteca, era uno de los principales templos y centros religiosos de la antigua ciudad azteca de Tenochtitlán, que actualmente se encuentra en el corazón de la Ciudad de México.
+          <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '100px', color: '#000' }}>
+          La arquitectura azteca era simple y elegante, audaz y poderosa, y mezclaba colores y símbolos que ayudaron a crear un estilo único. 
+          Los templos poderosos y dominantes fueron, por supuesto, las obras maestras del imperio azteca, pero hay mucho más en la arquitectura azteca que solo estos templos poderosos.
           </p>
-        </div>
+          <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '10px', color: '#000' }} >
+          La arquitectura azteca se basó en gran medida en la cosmología, la astronomía y la religión, sus ciudades masivas reflejaron sus creencias y es una clave importante 
+          para comprender su historia y cultura, y cómo esto afecta sus edificios y construcciones. Por supuesto, como mencionamos anteriormente, las piezas arquitectónicas 
+          más dominantes son los templos de los aztecas. Estos templos representan perfectamente cómo la arquitectura azteca es impulsada por su deseo de sacrificar a sus dioses 
+          y su religión y creencias.
+          </p>
+          </div>
+
+          <div>
+          <ul className="grid grid-cols-3 gap-1" style={{  margin: 100, padding: 0 }}>
+            <li
+            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-90 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }} 
+            >
+            
+            <Link
+                  href={`./arquitectura/chinampas`}
+                  className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                  }}
+                >
+                  <span>Chinampas</span>
+                </Link>
+                             
+                  
+            </li>
+            <li
+              className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-90 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }} 
+              >
+              
+              <Link
+                    href={`./arquitectura/palacios`}
+                    className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    }}
+                  >
+                    <span>Palacios</span>
+                  </Link>
+
+
+            </li>
+
+            <li
+            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-90 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }} 
+            >
+            
+            <Link
+                  href={`./arquitectura/templos`}
+                  className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                  }}
+                >
+                  <span>Piramides y Templos</span>
+                </Link>
+
+            </li>
+          </ul>
+
+          </div>
+
+
+
+
+
+
+        
+        
+          
+
       </section>
     </Base>
   );
