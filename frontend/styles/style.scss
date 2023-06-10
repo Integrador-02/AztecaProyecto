@@ -16,6 +16,14 @@
   @import "utilities";
 }
 
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
 .card-game {
   text-align: center;
 }
