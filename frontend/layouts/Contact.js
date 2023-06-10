@@ -3,9 +3,16 @@ import { Header2 } from "./partials/Header";
 import axios from 'axios';
 import Link from 'next/link';
 
+import Base from './Baseof';
+import { HiOutlineUserCircle } from "react-icons/hi";
+import { AiOutlineUser } from "react-icons/ai";
+import Cookies from 'js-cookie';
+
 const Contact = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -15,14 +22,17 @@ const Contact = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit11 = async (e) => {
     e.preventDefault();
 
+
     // Validar los campos de correo electrónico y contraseña
+
     if (!email || !password) {
       alert("Por favor, completa todos los campos");
       return;
     }
+
 
     try {
       const url = "https://happy-fly-loincloth.cyclic.app/api/login";
@@ -30,14 +40,16 @@ const Contact = () => {
       const isAuthorized = respuesta.data === "ok";
 
       if (isAuthorized) {
-        // Si la autenticación es exitosa, redirige al usuario a la página de categorías
         window.location.href = "/categories";
+        Cookies.set('miCookie', 'miValorCookies');
+
       } else {
-        // Si las credenciales son incorrectas, muestra un mensaje de error
+
         alert("Credenciales incorrectas");
       }
     } catch (error) {
       console.log(error);
+
       // Manejo de errores en caso de que falle la solicitud al backend
       alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
     }
@@ -80,11 +92,13 @@ const Contact = () => {
           <div className="flex flex-col my-4">
             <button
               className="text-white my-2 bg-[#49B675] rounded-md py-3 px-4 text-center"
+
               onClick={handleSubmit}
             >
               Iniciar sesión
             </button>
           </div>
+
           <div className="flex items-center justify-center">
             <p className="text-sm font-normal text-[#49B675]">
               ¿No tienes cuenta?{" "}
