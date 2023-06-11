@@ -48,7 +48,7 @@ const Register = () => {
 
     const nombre = fullName;
 
-    axios.post("http://localhost:4000/api/register", { nombre, password, email })
+    axios.post("https://happy-fly-loincloth.cyclic.app/api/register", { nombre, password, email })
       .then(async () => {
         // Manejo de errores en caso de que falle la solicitud al backend
         alert("registrado correctamente");
