@@ -11,6 +11,7 @@ import { IoSearch } from "react-icons/io5";
 import Cookies from "js-cookie";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FaUser } from 'react-icons/fa';
 const Header = () => {
   // distructuring the main menu from menu object
   const { main } = menu;
@@ -284,8 +285,7 @@ export const Header3 = () => {
         
         </div>
         <div className="flex items-center space-x-4 xl:space-x-8">
-        <FontAwesomeIcon icon={faUser}  />
-
+        <FaUser size={15} />
 
           <p>{email}</p>
           <div

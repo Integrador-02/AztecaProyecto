@@ -176,6 +176,7 @@ const Religion = ({ data }) => {
           </li>
         </ul>
       </div>
+     
         
     </section>
 

@@ -1,8 +1,6 @@
-import React from 'react';
-import { Base1 } from '@layouts/Baseof';
-import { FaQuestionCircle } from 'react-icons/fa';
-import Link from 'next/link';
-
+import { Base1 } from "@layouts/Baseof";
+import { markdownify } from "@lib/utils/textConverter";
+import Link from "next/link";
 const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
@@ -20,174 +18,106 @@ const Titulo = () => {
   );
 };
 
-const Arquitectura = () => {
-    const InteractionMessage = () => {
-        const showMessage = () => {
-          alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
-        };
+const Templos=()=>{
 
-        return (
-          <div className="interaction-message">
-            <FaQuestionCircle className="help-icon" onClick={showMessage} />
-            <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
-          </div>
-        );
-      };
-
-  return (
-    <Base1>
-      <section className="section pt-0">
+    return (
+        <Base1>  
         <Titulo/>
+        <div style={{padding:50}}>
+      
 
-        <div className="sketchfab-embed-wrapper">
-          <iframe
-            style={{ width: '40%', height: '400px' , marginTop: '40px'}}
-            title="Templo"
-            frameBorder="0"
-            allowFullScreen
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            xr-spatial-tracking="true"
-            execution-while-out-of-viewport="true"
-            execution-while-not-rendered="true"
-            web-share="true"
-            src="https://sketchfab.com/models/365e637944d84d48837ffdd96163287e/embed?ui_theme=dark"
-          ></iframe>
-          <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
-            <a
-              href="https://sketchfab.com/3d-models/templo-365e637944d84d48837ffdd96163287e?utm_medium=embed&utm_campaign=share-popup&utm_content=365e637944d84d48837ffdd96163287e"
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ fontWeight: 'bold', color: '#1CAAD9' }}
-            >
-              Templo
-            </a>{' '}
-            by{' '}
-            <a
-              href="https://sketchfab.com/rivas.lina?utm_medium=embed&utm_campaign=share-popup&utm_content=365e637944d84d48837ffdd96163287e"
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ fontWeight: 'bold', color: '#1CAAD9' }}
-            >
-              rivas.lina
-            </a>{' '}
-            on{' '}
-            <a
-              href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=365e637944d84d48837ffdd96163287e"
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ fontWeight: 'bold', color: '#1CAAD9' }}
-            >
-              Sketchfab
-            </a>
-          </p>
-          <InteractionMessage />
-          <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '100px', color: '#000' }}>
-          La arquitectura azteca era simple y elegante, audaz y poderosa, y mezclaba colores y símbolos que ayudaron a crear un estilo único.
-          Los templos poderosos y dominantes fueron, por supuesto, las obras maestras del imperio azteca, pero hay mucho más en la arquitectura azteca que solo estos templos poderosos.
-          </p>
+        <div class="sketchfab-embed-wrapper">
+        <iframe
+        style={{ width: '40%', height: '400px' }}
+        title="Aztec Temple" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/40f6f12130ef4fdaad6a9d2a28a7250e/embed">
+             </iframe>
+             <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
+             <a href="https://sketchfab.com/3d-models/aztec-temple-40f6f12130ef4fdaad6a9d2a28a7250e?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+                 Aztec Temple
+                 </a>
+                 by
+                 <a href="https://sketchfab.com/Chrismartinartist?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+                 Chrismartinartist
+                 </a>
+                 on
+                 <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+                    Sketchfab
+                    </a>
+                    </p>
+        </div>
 
-          </div>
-
-          <div style={{ marginTop: '-150px' }}>
-          <ul className="grid grid-cols-3 gap-1" style={{  margin: 100, padding: 0 }}>
-            <li
-            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-90 hover:bg-green-400"
-            style={{
-              margin: 0,
-              padding: 0,
-              position: 'relative',
-              backgroundImage: 'url("https://www.lacapital.com.mx/files/news/2018-07-16-115413CHINAMPAS.jpg")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              filter: 'brightness(70%)',
-            }}
-            >
-
-            <Link
-                  href={`./arquitectura/chinampas`}
-                  className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                  }}
-                >
-                  <span>Chinampas</span>
-                </Link>
-
-
-            </li>
-            <li
-              className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-90 hover:bg-green-400"
-              style={{
-                margin: 0,
-                padding: 0,
-                position: 'relative',
-                backgroundImage: 'url("https://www.arkiplus.com/wp-content/uploads/2011/10/Tenochtitlan-Mexico.jpg")',
-                backgroundSize: 'cover',
+        </div>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        Conformando la religión un aspecto muy importante en la vida de esta cultura, los templos aztecas sirvieron para adorar a diversas deidades que gobernaban las actividades humanas y los fenómenos naturales.
+        </p>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        Básicamente los templos aztecas se encontraban sobre sólidas estructuras piramidales, aunque algunas veces se localizaban alrededor de la pirámide o en una pequeña cámara debajo de ésta. Ciertamente, las pirámides aztecas eran enterradas bajo la construcción de unas nuevas estructuras, cada cierto tiempo. Así, la reconstrucción permitía que los gobernantes o tlatoanis, celebraran sus logros y colocaran nuevas esculturas en los santuarios.
+        </p>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        En su interior, como una manera de mantener la santidad de los dioses, los santuarios se mantenían a oscuras con humo de incienso o quema de ofrendas, y aunque eran lugares pequeños sus techos eran altos pero tallados. A la vez, escondidas detrás de cortinas de plumas y campanas, contenían imágenes sagradas sobre un pedestal con reliquias y joyas, también el piso era cubierto con flores. Por otra parte, a su alrededor se extendía una gran plaza y una plataforma usada para los rituales de sacrificios.
+        </p>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        Los aztecas utilizaban este altar para los rituales de sacrificios, incluyendo el sacrificio humano en honor a los numerosos dioses que los aztecas adoraban. Los miembros del sacerdocio azteca mataban a la víctima (a veces niños) en el altar. Luego arrojaban el cadáver por los escalones y presentaban el corazón de la víctima en el santuario del dios.
+        </p>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        Los constructores levantaban los templos aztecas usando ladrillos y los cubrían con piedra y yeso. Las crónicas los describen como edificios blancos pintados con colores brillantes. Las excavaciones en algunos templos confirman estas descripciones. Mientras que los aztecas dedicaban la mayoría de sus templos a una sola deidad, dedicaban algunos templos a dos dioses separados. Algunos de los centros de adoración principales de los aztecas están en Teotihuacán, Cholula y Tenochtitlán.
+        </p>
+        <h3 style={{ fontSize: '40px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>El Templo Mayor</h3>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        En el Templo Mayor los aztecas adoraban a los mismos dioses que adoraban en el templo de Tlatelolco. Este templo azteca tenía dos tramos de escalones empinados; los constructores diseñaron los escalones para asegurarse de que un cuerpo lanzado hacia abajo cayera directamente al fondo.
+        </p>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        Las excavaciones arqueológicas revelaron siete etapas distintas dentro del Templo Mayor. Los investigadores encontraron una de las primeras etapas casi intacta. Esta etapa tiene dos santuarios, los cuales se ajustan a la descripción del Templo Mayor proveniente de fuentes españolas. Los excavadores encontraron restos de ofrendas en la base del templo. Los arqueólogos también encontraron restos de sacrificios humanos en el área que rodea al Templo Mayor.
+        </p>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        Las excavaciones revelaron indicios sobre la decoración de los templos aztecas. Las estatuas descritas como soportes estándar estaban en los escalones de una de las etapas del templo. La excavación de la plataforma reveló estatuas de ranas y serpientes emplumadas. Los arqueólogos encontraron estatuas de otras deidades y un calendario de piedra en la base del templo.
+        </p>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        Los santuarios de la etapa intacta tienen dos habitaciones, de lado a lado. Cada habitación tenía vigas de madera rodeando la entrada. Los tallados en la pared representan al dios adorado en el santuario. Dentro de cada santuario había un ídolo de la deidad. El color de la pintura en las paredes reflejaba los atributos de la deidad que se adoraba allí.
+        </p>
+        <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        El Templo Mayor fue el centro simbólico de la gran red tributaria del Imperio Mexica, un lugar en donde se reunían las ofrendas sagradas y depósitos funerarios; un adoratorio a las deidades de la guerra y la lluvia; un símbolo de los logros de los aztecas ante sus enemigos.
+        </p>
+        <p style={{textAlign:'justify', fontSize: '23px', marginBottom:'100px',fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
+        En el Recinto del Templo Mayor confluían los aspectos más importantes de la vida política, religiosa su mitología y económica de los mexicas, aquí tenían lugar desde las fiestas que el tonalpohualli marcaba hasta la entronización de tlatoanis y funerales de viejos gobernantes.
+        </p>
+        <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 50 }}>
+                  <li
+                      key={`7`}
+                      className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+                      style={{
+                        margin: 0,
+                        padding: 0,
+                        position: 'relative',
+                        backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+                       backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: 'brightness(70%)',
-              }}
-              >
+                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                      }}>
+                  
+                  
+                      <Link
+                        href={`/categories`}
+                        className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                        }}
+                      >
+                       <span style={{ fontSize: '1.9em', color: '#006400' }}>Pagina Principal</span>
+                      </Link>
+                  
+                  </li>
 
-              <Link
-                    href={`./arquitectura/palacios`}
-                    className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                    }}
-                  >
-                    <span>Palacios</span>
-                  </Link>
+                  
+              
+              </ul>
 
-
-            </li>
-
-            <li
-            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-90 hover:bg-green-400"
-            style={{
-              margin: 0,
-              padding: 0,
-              position: 'relative',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundImage: 'url("https://human.libretexts.org/@api/deki/files/18443/image23.jpg")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              filter: 'brightness(70%)',
-            }}
-            >
-
-            <Link
-                  href={`./arquitectura/templos`}
-                  className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                  }}
-                >
-                  <span>Piramides y Templos</span>
-                </Link>
-            </li>
-          </ul>
-
-         </div>
-
-      </section>
-    </Base1>
-  );
-};
-
-export default Arquitectura
+        </Base1>
+    );
+}
+export default Templos;

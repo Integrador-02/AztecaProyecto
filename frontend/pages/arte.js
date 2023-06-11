@@ -86,7 +86,7 @@ const Arte = ({ data }) => {
                 backgroundImage: 'url("/images/textura.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
+                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
               }}
             >
               <Link
@@ -101,7 +101,7 @@ const Arte = ({ data }) => {
                   backgroundColor: 'rgba(255, 255, 255, 0.8)',
                 }}
               >
-                <span>Textiles</span>
+                <span style={{ fontSize: '1.9em', color: '#006400' }}>Textiles</span>
               </Link>
 
 
@@ -120,7 +120,7 @@ const Arte = ({ data }) => {
                 backgroundImage: 'url("/images/ceramica.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
+                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
               }}
             >
 
@@ -136,7 +136,7 @@ const Arte = ({ data }) => {
                   backgroundColor: 'rgba(255, 255, 255, 0.8)',
                 }}
               >
-                <span>Ceramica</span>
+                <span style={{ fontSize: '1.9em', color: '#006400' }}>Ceramica</span>
               </Link>
             </li>
             <li
@@ -149,7 +149,7 @@ const Arte = ({ data }) => {
                 backgroundImage: 'url("/images/Musica-azteca-2.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
+                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
               }}
 
             >
@@ -166,7 +166,7 @@ const Arte = ({ data }) => {
                   backgroundColor: 'rgba(255, 255, 255, 0.8)',
                 }}
               >
-                <span>Música</span>
+                <span style={{ fontSize: '1.9em', color: '#006400' }}>Música</span>
               </Link>
 
 
@@ -185,7 +185,7 @@ const Arte = ({ data }) => {
                 backgroundImage: 'url("/images/muralesypinturas.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
+                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
               }}
             >
 
@@ -201,7 +201,7 @@ const Arte = ({ data }) => {
                   backgroundColor: 'rgba(255, 255, 255, 0.8)',
                 }}
               >
-                <span>Arquitectura</span>
+                <span style={{ fontSize: '1.9em', color: '#006400' }}>Arquitectura</span>
               </Link>
 
 
@@ -212,6 +212,68 @@ const Arte = ({ data }) => {
 
 
         </div>
+        <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 10 }}>
+                  <li
+                      key={`7`}
+                      className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+                      style={{
+                        margin: 0,
+                        padding: 0,
+                        position: 'relative',
+                        backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+                       backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                      }}>
+                  
+                  
+                      <Link
+                        href={`/categories`}
+                        className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                        }}
+                      >
+                       <span style={{ fontSize: '1.9em', color: '#006400' }}>Pagina Principal</span>
+                      </Link>
+                  
+                  </li>
+
+                  
+                  <li
+            key={`4`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("/images/arquitectura.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}
+          >
+            <Link
+              href={`/arquitectura`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+               <span style={{ fontSize: '1.9em', color: '#006400' }}>Arquitectura</span>
+            </Link>
+          </li>
+                  </ul>
 
         
 

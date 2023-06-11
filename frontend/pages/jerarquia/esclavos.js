@@ -4,6 +4,7 @@ import { Base1 } from '@layouts/Baseof';
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
+import Link from 'next/link';
 const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
@@ -29,9 +30,10 @@ const Esclavos = () => {
        <Titulo/>
 
         <div class="sketchfab-embed-wrapper"style={{margin :10, padding :30}}> 
-        
+        <div className="grid grid-cols-2 gap-1">
+
           <iframe 
-          style={{width:'40%', height :'380px'}}
+          style={{width:'100%', height :'500px'}}
             title="Les Esclaves" 
             frameborder="0" 
             allowfullscreen 
@@ -46,7 +48,7 @@ const Esclavos = () => {
             
           </iframe> 
          
-          <InteractionMessage />
+          
           <p style={{
             fontSize: '23px',
             fontWeight: 'normal',
@@ -61,8 +63,45 @@ const Esclavos = () => {
             <br/>Los esclavos eran considerados la clase más baja puesto que carecían de libertad; sin embargo una ventaja era que los esclavos podían a su vez tener esclavos.
           </p>
         </div>
-
+        </div>
+<InteractionMessage />
         <MasInformacion />
+        <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
+          <li
+            key={`7`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/jerarquia`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Regresar a Jerarquía</span>
+            </Link>
+
+          </li>
+
+
+
+        </ul>
+
 
       </section>
     </Base1>

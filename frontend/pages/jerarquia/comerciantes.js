@@ -4,24 +4,25 @@ import { Base1 } from '@layouts/Baseof';
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Comerciantes = () => {
-  const Titulo = () => {
-    return (
-      <div className="relative h-80 font-text">
-        <img
-          className="absolute inset-0 w-full h-full object-cover brightness-50"
-          src={"https://www.socialhizo.com/images/edad_antigua/aztecas/economia/tianguis-azteca.jpg"}
-          alt="Imagen de fondo"
-        />
-        <div className="relative z-12 flex items-center justify-center h-full">
-          <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Comerciantes</span>
-          </h1>
+    const Titulo = () => {
+      return (
+        <div className="relative h-80 font-text">
+          <img
+            className="absolute inset-0 w-full h-full object-cover brightness-50"
+            src={"https://www.socialhizo.com/images/edad_antigua/aztecas/economia/tianguis-azteca.jpg"}
+            alt="Imagen de fondo"
+          />
+          <div className="relative z-12 flex items-center justify-center h-full">
+            <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+              <span className="text-green-600">Comerciantes</span>
+            </h1>
+          </div>
         </div>
-      </div>
-    );
-  };
+      );
+    };
 
   return (
     <Base1 title={"Categorias Aztecas"}>
@@ -34,6 +35,7 @@ const Comerciantes = () => {
               Pochtecatl
             </span>
           </p>
+          <div className="grid grid-cols-2 gap-1">
 
           <iframe
             title="COL: Coyolxauhqui"
@@ -43,39 +45,13 @@ const Comerciantes = () => {
             webkitallowfullscreen="true"
             allow="autoplay; fullscreen; xr-spatial-tracking"
             src="https://sketchfab.com/models/73dff65bf4654de08d8db64298adc6ae/embed"
-            style={{ width: '40%', height: '400px' }}
+            style={{ width: '100%', height: '500px' }}
           ></iframe>
 
-          <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
-            <a
-              href="https://sketchfab.com/3d-models/col-coyolxauhqui-73dff65bf4654de08d8db64298adc6ae?utm_medium=embed&utm_campaign=share-popup&utm_content=73dff65bf4654de08d8db64298adc6ae"
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ fontWeight: 'bold', color: '#1CAAD9' }}
-            >
-              COL: Coyolxauhqui
-            </a>{' '}
-            by{' '}
-            <a
-              href="https://sketchfab.com/idiom-project?utm_medium=embed&utm_campaign=share-popup&utm_content=73dff65bf4654de08d8db64298adc6ae"
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ fontWeight: 'bold', color: '#1CAAD9' }}
-            >
-              Text Database and Dictionary of Classic Mayan
-            </a>{' '}
-            on{' '}
-            <a
-              href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=73dff65bf4654de08d8db64298adc6ae"
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ fontWeight: 'bold', color: '#1CAAD9' }}
-            >
-              Sketchfab
-            </a>
+          
 
-          </p>
-          <InteractionMessage />
+        
+          
           <p style={{
             fontSize: '23px',
             fontWeight: 'normal',
@@ -91,8 +67,44 @@ const Comerciantes = () => {
           Además de su papel económico, los pochtecatl también tenían una influencia significativa en la vida social y política. Algunos comerciantes exitosos lograban acumular riquezas y poder, lo que les permitía ascender en la jerarquía social y participar en la política del imperio azteca.
           </p>
         </div>
-
+        </div>
+<InteractionMessage />
         <MasInformacion />
+        <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
+          <li
+            key={`7`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/jerarquia`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Regresar a Jerarquía</span>
+            </Link>
+
+          </li>
+
+
+
+        </ul>
 
       </section>
     </Base1>

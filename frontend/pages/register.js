@@ -86,10 +86,10 @@ const Register = () => {
       />
       <div className="mx-auto max-w-lg rounded-lg bg-white p-4 shadow-lg">
         <h1
-          className="mb-4 text-center text-3xl font-semibold text-[#49B675] md:text-5xl"
+          className="mb-4 text-left text-3xl font-semibold text-[#49B675] md:text-5xl"
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
         >
-          Crea tu cuenta
+          !Crea tu cuenta!
         </h1>
         <form onSubmit={handleSubmit}>
           <div></div>

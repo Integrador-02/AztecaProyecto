@@ -43,8 +43,9 @@ const Minijuegos = () => {
                   padding: 0,
                   position: "relative",
                   backgroundImage: 'url("/images/agricultura.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -59,7 +60,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span>Ahorcado</span>
+                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Ahorcado</span>
                 </Link>
               </li>
 
@@ -71,8 +72,9 @@ const Minijuegos = () => {
                   padding: 0,
                   position: "relative",
                   backgroundImage: 'url("/images/quiz.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -87,7 +89,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span>Quiz</span>
+                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz</span>
                 </Link>
               </li>
 
@@ -99,8 +101,9 @@ const Minijuegos = () => {
                   padding: 0,
                   position: "relative",
                   backgroundImage: 'url("/images/TicTacToe.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -115,7 +118,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span>Tic Tac Toe</span>
+                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Tic Tac Toe</span>
                 </Link>
               </li>
             </ul>
