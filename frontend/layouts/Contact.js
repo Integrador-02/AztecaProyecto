@@ -159,7 +159,7 @@ const handleSubmit = async (e) => {
           <p className="text-sm font-normal text-[#49B675]">
             ¿No tienes cuenta?{" "}
             <span className="font-semibold underline underline-offset-2 cursor-pointer">
-              <Link href="/registro">Regístrate</Link>
+              <Link href="/register">Regístrate</Link>
             </span>
           </p>
         </div>
