@@ -37,6 +37,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
+    "styled-components": "^6.0.0-rc.3",
     "sweetalert2": "^11.7.12"
   },
   "devDependencies": {

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+
 
 const TicTacToe = () => {
     const [board, setBoard] = useState(Array(9).fill(''));
@@ -205,44 +207,111 @@ const TicTacToe = () => {
             }
         }
     };
-
+   
+    const StyledTicTacToe = styled.div`
+    text-align: center;
+    margin-top: 50px;
+  `;
+  
+  const Board = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+  `;
+  
+  const Square = styled.div`
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 36px;
+  `;
+  
+  const Thinking = styled.div`
+    margin-top: 10px;
+    font-weight: bold;
+  `;
+  
+  const Result = styled.div`
+    margin-top: 10px;
+    font-weight: bold;
+  `;
+  
+  const Draw = styled.div`
+    margin-top: 10px;
+    font-weight: bold;
+  `;
+  
+  const Winner = styled.div`
+    margin-top: 10px;
+    font-weight: bold;
+  `;
+  
+  const GiveFactButton = styled.button`
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+  `;
+  
+  const DrawMessage = styled.div`
+    margin-top: 10px;
+    font-weight: bold;
+  `;
+  
+  const FactWrapper = styled.div`
+    margin-top: 10px;
+    border: 1px solid #000;
+    padding: 10px;
+  `;
+  
+  const Fact = styled.div`
+    margin-top: 10px;
+  `;
+  
+  const ResetButton = styled.button`
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+  `;
     return (
-        <div>
-            <div className="tic-tac-toe">
-                <div className="board">
-                    {board.map((_, index) => renderSquare(index))}
-                </div>
-                {isComputerTurn && <div className="thinking">Azteca pensando...</div>}
-                {winner && (
-                    <div className="result">
-                        {winner === 'Empate' ? (
-                            <div className="draw">{winner}</div>
-                        ) : (
-                            <>
-                                <div className="winner">¡{winner} ha ganado el juego!</div>
-                                {winner === 'O' && (
-                                    <button className="give-fact" onClick={handleGiveFact}>
-                                        Dato curioso
-                                    </button>
-                                )}
-                            </>
-                        )}
-                    </div>
-                )}
-                {!winner && board.every((cell) => cell !== '') && (
-                    <div className="draw">¡Empate!</div>
-                )}
-            </div>
-            {userFact && (
-                <div className="fact">
-                    <div>Tu dato curioso:</div>
-                    <div>{userFact}</div>
-                </div>
-            )}
-            <button className="reset" onClick={handleReset}>
-                Reiniciar
-            </button>
+        <StyledTicTacToe>
+        <div className="tic-tac-toe">
+          <Board>
+            {board.map((_, index) => renderSquare(index))}
+          </Board>
+          {isComputerTurn && <Thinking>Azteca pensando...</Thinking>}
+          {winner && (
+            <Result>
+              {winner === 'Empate' ? (
+                <Draw>{winner}</Draw>
+              ) : (
+                <>
+                  <Winner>¡{winner} ha ganado el juego!</Winner>
+                  {winner === 'O' && (
+                    <GiveFactButton onClick={handleGiveFact}>
+                      Dato curioso
+                    </GiveFactButton>
+                  )}
+                </>
+              )}
+            </Result>
+          )}
+          {!winner && board.every((cell) => cell !== '') && (
+            <DrawMessage>¡Empate!</DrawMessage>
+          )}
         </div>
+        {userFact && (
+          <Fact>
+            <div>Tu dato curioso:</div>
+            <div>{userFact}</div>
+          </Fact>
+        )}
+        <ResetButton onClick={handleReset}>Reiniciar</ResetButton>
+      </StyledTicTacToe>
     );
 };
 
