@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
 const AhorcadoAzteca = () => {
   const [word, setWord] = useState('');
@@ -8,7 +9,7 @@ const AhorcadoAzteca = () => {
   const [attempts, setAttempts] = useState(6);
   const [incorrectGuesses, setIncorrectGuesses] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
-  const [hangmanImage, setHangmanImage] = useState('/path/to/hangman_0.png');
+  const [hangmanImage, setHangmanImage] = useState('');
 
   const words = [
     { word: 'calpulli', hint: 'Unidad social en la cultura azteca.' },
@@ -45,22 +46,7 @@ const AhorcadoAzteca = () => {
       setIsGameOver(true);
     }
   };
-  const Titulo = () => {
-    return (
-      <div className="relative h-80 font-text">
-        <img
-          className="absolute inset-0 w-full h-full object-cover brightness-50"
-          src={"https://www.infobae.com/new-resizer/OPVRxDKhnjBxdzzHS88fGpzOzDc=/1200x628/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/VY7HMNG5ARFEDLZOSGSHFPCIBI.jpg"}
-          alt="Imagen de fondo"
-        />
-        <div className="relative z-12 flex items-center justify-center h-full">
-          <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Ahorcado</span>
-          </h1>
-        </div>
-      </div>
-    );
-  };
+
   const resetGame = () => {
     const randomIndex = Math.floor(Math.random() * words.length);
     setWord(words[randomIndex].word);
@@ -70,7 +56,7 @@ const AhorcadoAzteca = () => {
     setAttempts(6);
     setIncorrectGuesses(0);
     setIsGameOver(false);
-    setHangmanImage('/images/0.jpg');
+    setHangmanImage('');
   };
 
   useEffect(() => {
@@ -82,37 +68,99 @@ const AhorcadoAzteca = () => {
 
   useEffect(() => {
     if (incorrectGuesses > 0 && incorrectGuesses < 7) {
-      setHangmanImage(`/images/${incorrectGuesses}.jpg`);
-      console.log(incorrectGuesses);
+      setHangmanImage(getHangmanImage(incorrectGuesses));
     }
   }, [incorrectGuesses]);
 
-  return ( 
-    <div className="relative z-12 flex items-center justify-center h-full">
-     
+  const getHangmanImage = (incorrectGuesses) => {
+    const hangmanImages = [
+      '   +---+\n   |   |\n       |\n       |\n       |\n       |\n=========', // 0
+      '   +---+\n   |   |\n   O   |\n       |\n       |\n       |\n=========', // 1
+      '   +---+\n   |   |\n   O   |\n   |   |\n       |\n       |\n=========', // 2
+      '   +---+\n   |   |\n   O   |\n  /|   |\n       |\n       |\n=========', // 3
+      '   +---+\n   |   |\n   O   |\n  /|\\  |\n       |\n       |\n=========', // 4
+      '   +---+\n   |   |\n   O   |\n  /|\\  |\n  /    |\n       |\n=========', // 5
+      '   +---+\n   |   |\n   O   |\n  /|\\  |\n  / \\  |\n       |\n=========', // 6
+    ];
 
-      {!isGameOver && attempts > 0 && (
-        <div>
-          <h3>Pista: {hint}</h3>
-          <p>Intentos restantes: {attempts}</p>
-          <p>Palabra: {guessedWord.join(' ')}</p>
-          <input type="text" value={guess} onChange={(e) => setGuess(e.target.value)} />
-          <button onClick={checkGuess}>Adivinar</button>
-        </div>
-      )}
-      <div className="absolute right-0 top-0">
-        <img src={hangmanImage} alt="Hangman" style={{ display: 'block', margin: 'auto' }} />
+    return hangmanImages[incorrectGuesses];
+  };
+
+  const renderGuessedWord = () => {
+    return guessedWord.map((letter, index) => (
+      <span key={index}>{letter === '' ? '_ ' : letter + ' '}</span>
+    ));
+  };
+
+  const styles = {
+    container: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '50vh',
+    },
+    gameContainer: {
+      display: 'flex ',
+      flexDirection: 'column',
+      alignItems: 'center',
+      marginRight: '40px',
+      width: '700px', // Tamaño fijo del recuadro del juego
+      border: '1px solid rgba(0, 0, 0, 0.8)',
+      borderRadius: '5px',
+      padding: '20px',
+      backgroundImage: 'url("https://qph.cf2.quoracdn.net/main-qimg-d48c1a577952f5a3020bb51c3fc09ab9-lq")', // Ruta de la imagen de fondo
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.8)',
+      color: 'white', // Cambiar el color del texto a blanco
+      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', // Agregar sombra al texto
+    },
+    resultContainer: {
+      display: 'float ',
+      flexDirection: 'column',
+      alignItems: 'center',
+      marginLeft: '40px',
+      width: '500px', // Tamaño fijo del recuadro del resultado
+      border: '1px solid rgba(0, 0, 0, 0.8)',
+      borderRadius: '5px',
+      padding: '20px',
+      backgroundImage: 'url("https://qph.cf2.quoracdn.net/main-qimg-d48c1a577952f5a3020bb51c3fc09ab9-lq")', // Ruta de la imagen de fondo
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.8)',
+      color: 'green', // Cambiar el color del texto a blanco
+      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', // Agregar sombra al texto
+    },
+    hangmanDrawing: {
+      fontFamily: 'monospace',
+      fontSize: '20px',
+      whiteSpace: 'pre',
+    },
+  };
+  
+  return (
+    <div style={styles.container}>
+    {!isGameOver && attempts > 0 && (
+      <div style={styles.gameContainer}>
+        <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Pista: {hint}</div>
+        <div style={{ fontSize: '1.8em', color: 'black', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Intentos restantes: {attempts}</div>
+        <div style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Palabra: {renderGuessedWord()}</div>
+        <input type="text"style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }} value={guess} onChange={(e) => setGuess(e.target.value)}  />
+        <button onClick={checkGuess} style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Adivinar</button>
       </div>
-      {(isGameOver || attempts === 0) && (
-        <div>
-          <h2 style={{ textAlign: 'center' }}>{guessedWord.join('') === word ? '¡Felicidades! Has adivinado la palabra.' : '¡Oh no! Has perdido.'}</h2>
-          {guessedWord.join('') !== word && <p style={{ textAlign: 'center' }}>La palabra correcta era: {word}</p>}
-          <button onClick={resetGame} style={{ display: 'block', margin: 'auto' }}>Jugar de nuevo</button>
-        </div>
-      )}
-    </div>
+    )}
+    {!isGameOver && attempts > 0 && (
+      <div style={styles.hangmanDrawing}>{hangmanImage}</div>
+    )}
+    {(isGameOver || attempts === 0) && (
+      <div style={styles.resultContainer}>
+        <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>{guessedWord.join('') === word ? '¡Felicidades! Has adivinado la palabra.' : '¡Oh no! Has perdido.'}</div>
+        {guessedWord.join('') !== word && <p style={{ fontSize: '1.9em', color: 'black', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>La palabra correcta era: {word}</p>}
+        <button onClick={resetGame}> Jugar de nuevo</button>
+      </div>
+    )}
+  </div>
   );
-};
+      };
 
 export default AhorcadoAzteca;
-
