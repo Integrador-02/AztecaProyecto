@@ -8,6 +8,7 @@ import TagManager from "react-gtm-module";
 import "styles/style.scss";
 
 
+
 const App = ({ Component, pageProps }) => {
   // default theme setup
   const { default_theme } = config.settings;
@@ -65,3 +66,4 @@ const App = ({ Component, pageProps }) => {
 };
 
 export default App;
+
