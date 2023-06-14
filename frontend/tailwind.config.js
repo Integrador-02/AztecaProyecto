@@ -53,7 +53,7 @@ module.exports = {
         "theme-light": theme.colors.default.theme_color.theme_light,
         "theme-dark": theme.colors.default.theme_color.theme_dark,
         darkmode: {
-           text: theme.colors.default.text_color.default,
+          text: theme.colors.default.text_color.default,
         dark: theme.colors.default.text_color.dark,
         primary: theme.colors.default.theme_color.primary,
         body: theme.colors.default.theme_color.body,
@@ -88,3 +88,4 @@ module.exports = {
     require("tailwind-bootstrap-grid")({ generateContainer: false }),
   ],
 };
+
