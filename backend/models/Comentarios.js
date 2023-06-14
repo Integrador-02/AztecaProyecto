@@ -4,9 +4,7 @@ import mongoose from "mongoose";
 const comentarioSchema = mongoose.Schema({
     comentario: String,
     comentadorID: ObjectId,
-    comentadoID: ObjectId,
-    fecha: Date,
-    hora: Number
+    fecha: Date
 });
 
 
