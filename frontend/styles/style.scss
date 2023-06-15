@@ -112,7 +112,7 @@
 
 
 
-//--------------
+//-------------- comentarios
 .comment-container {
   display: flex;
   align-items: flex-start;
@@ -125,8 +125,8 @@
 .comment-container .avatar-circle {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
+  border-radius: 100%;
+  overflow: flex;
   margin-right: 10px;
 }
 

@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Cookies from "js-cookie";
-
+import Avatar from "react-avatar";
 
 
 
@@ -108,12 +108,8 @@ const CommentSection = () => {
             <li key={comment.id}>
               <div className="comment-container">
                 <div className="avatar-circle">
-                  <img
-                    src={`https://avatars.dicebear.com/api/male/${comment.id}.svg`}
-                    alt="Avatar"
-                    width="40"
-                    height="40"
-                  />
+                <Avatar name={comment.username} size={50} round={true}/>
+
                 </div>
                 <div className="comment-content">
                   <p className="comment-username">

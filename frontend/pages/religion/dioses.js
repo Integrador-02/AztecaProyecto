@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { markdownify } from "@lib/utils/textConverter";
 import { Base1 } from '@layouts/Baseof';
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
-import { useState } from 'react';
 import Link from 'next/link';
+import Avatar from 'react-avatar';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Cookies from 'js-cookie';
+
 
 const Titulo = () => {
   return (
@@ -52,7 +60,8 @@ const Dioses = () => {
               alt="Centeotl - Diosa del maiz"
               width={200} >
             </img>
-            <figcaption> CENTEOTL (Dios del maiz) </figcaption>
+            <MenuComponent/>
+            
           </figure>
 
           <figure>
@@ -227,3 +236,75 @@ const InteractionMessage = () => {
       </div>
     );
   };
+
+  const MenuComponent = () => {
+    const [email, setEmail] = useState('');
+    const [showDialog, setShowDialog] = useState(false);
+    useEffect(() => {
+      const user = Cookies.get('clave');
+      setEmail(user);
+    }, []);
+  
+    const [anchorEl, setAnchorEl] = useState(null);
+  
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+  
+    const handleEmailClick = () => {
+      setShowDialog(true);
+    };
+  
+    const handleClose = () => {
+      setAnchorEl(null);
+      setShowDialog(false);
+    };
+    const titleStyle = {
+      fontSize: '50px',
+      color: 'green',
+      /* Agrega otros estilos según tus preferencias */
+    };
+  
+    return (
+      <div>
+        <MenuItem onClick={handleEmailClick}><figcaption> CENTEOTL (Dios del maiz) </figcaption></MenuItem>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleClose}>Configuración</MenuItem>
+          <MenuItem onClick={handleClose}>Estadísticas</MenuItem>
+          <MenuItem onClick={handleClose}>Cerrar sesión</MenuItem>
+        </Menu>
+        <Dialog
+          open={showDialog}
+          onClose={handleClose}
+          fullWidth
+          maxWidth="md"
+          PaperProps={{
+            style: {
+              height: '100vh',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            },
+          }}
+        >
+          <Card>
+            <CardContent>
+            <h3 style={titleStyle}>CENTEOTL (Dios del maíz)</h3>
+            <h3> Cintéotl (del náhuatl: Sinteotl ‘sintli, mazorca del maíz seco; teotl, dios o deidad’) o Centéotl1​ en la mitología mexica es el dios del maíz y el patrón de la ebriedad y la bebida en los rituales, es considerado en ocasiones como un dios dual, con identidad masculina y femenina.
+
+Su identidad masculina lleva los nombres de Cintéotl y Centeotecuhtli (tekohtli, “señor”) y su identidad femenina Chicomecóatl y Centeocíhuatl (siwatl, “mujer”). Según algunas fuentes es hijo de Xochiquétzal (diosa joven asociada a la belleza, la sexualidad y el placer, patrona de los partos, los bordadores, los tejedores, los trabajadores de plumas, los joyeros, los escultores, los artistas y artesanos) y Piltzintecuhtli (dios de los temporales).
+
+Otros autores afirman que Xochiquétzal era esposa de Centéotl 2​. Tras su nacimiento se escondió bajo la tierra convirtiendo su cuerpo en varios sustentos, entre ellos el maíz. Se celebra junto a Chicomecóatl, diosa de la agricultura y las cosechas en el mes Huey tozoztli del calendario azteca.3​ Le estaban supeditados los dioses Cinteteoh.</h3>
+            </CardContent>
+          </Card>
+        </Dialog>
+      </div>
+    );
+  };
+  
+
+  

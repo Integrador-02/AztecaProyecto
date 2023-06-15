@@ -48,8 +48,8 @@ const Emperador = () => {
           </p>
           <div className="grid grid-cols-2 gap-1">
             <iframe
-              width="780"
-              height="400"
+              width="100%"
+              height="100%"
               src="https://www.youtube.com/embed/MND2w63_wTc"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
