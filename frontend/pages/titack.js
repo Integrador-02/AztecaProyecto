@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Filter from 'bad-words-es';
 
 
 const TicTacToe = () => {
@@ -7,6 +8,10 @@ const TicTacToe = () => {
     const [player, setPlayer] = useState('X');
     const [winner, setWinner] = useState(null);
     const [isComputerTurn, setIsComputerTurn] = useState(false);
+    const wordFilter = new Filter();
+    const baneadas = ['', 'peluche', 'facha','zorra', 'cabrón', 'puta', 'gilipollas', 'cornudo', 'maricón','bollera','vago','boca de tarro'];
+    wordFilter.addWords(...baneadas);
+
     const [facts, setFacts] = useState([
         'El nombre original de los aztecas era "mexicas"',
 
@@ -196,17 +201,31 @@ const TicTacToe = () => {
     };
 
     const handleGiveFact = () => {
-        if (winner === 'X') {
-            const randomFact = facts[Math.floor(Math.random() * facts.length)];
-            setUserFact(randomFact);
-        } else if (winner === 'O') {
-            const userEnteredFact = prompt('Para seguir esparciendo conocimiento, por favor cuéntame un dato curioso sobre los aztecas.');
-            if (userEnteredFact) {
-                setFacts([...facts, userEnteredFact]);
-                setUserFact(userEnteredFact);
+      if (winner === 'X') {
+        const randomFact = facts[Math.floor(Math.random() * facts.length)];
+        setUserFact(randomFact);
+      } else if (winner === 'O') {
+        const userEnteredFact = prompt('Para seguir esparciendo conocimiento, por favor cuéntame un dato curioso sobre los aztecas.');
+    
+        if (userEnteredFact) {
+          const linkRegex = /(http|https):\/\/[^\s]+/gi; // Expresión regular para buscar enlaces
+          const scriptRegex = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi; // Expresión regular para buscar etiquetas de script
+    
+          if (linkRegex.test(userEnteredFact) || scriptRegex.test(userEnteredFact)) {
+            alert('No se permiten enlaces o scripts en el dato curioso ingresado.');
+          } else {
+            if (wordFilter.isProfane(userEnteredFact)) {
+              alert('Se ha detectado una violación de los términos y condiciones. Por favor, ingresa un dato apropiado.');
+            } else {
+              setFacts([...facts, userEnteredFact]);
+              setUserFact(userEnteredFact);
             }
+          }
         }
+      }
     };
+    
+    
    
     const StyledTicTacToe = styled.div`
     text-align: center;

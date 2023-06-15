@@ -18,6 +18,8 @@
     "@giscus/react": "^2.2.8",
     "@material-ui/core": "^4.12.4",
     "axios": "^1.4.0",
+    "bad-words": "^3.0.4",
+    "bad-words-es": "^1.0.0",
     "core-js-pure": "^3.31.0",
     "disqus-react": "^1.1.5",
     "fs-extra": "^11.1.1",
