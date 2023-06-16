@@ -9,6 +9,7 @@ import "styles/style.scss";
 
 
 
+
 const App = ({ Component, pageProps }) => {
   // default theme setup
   const { default_theme } = config.settings;

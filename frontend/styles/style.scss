@@ -369,3 +369,41 @@ button svg {
 .yellow {
   background-color: yellow;
 }
+
+
+
+///
+/* quiz.css */
+
+.quiz-container {
+  width: 500px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option {
+  margin-bottom: 0.5rem;
+}
+
+.option input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.submit-button {
+  background-color: #46b4a2;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}

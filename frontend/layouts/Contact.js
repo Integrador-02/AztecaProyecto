@@ -71,48 +71,6 @@ const Contact = () => {
 */}
 
 
-const handleSubmit1 = (e) => {
-  e.preventDefault();
-  // Aquí puedes realizar la lógica para enviar los datos al backend
-  // por ejemplo, usando una función de envío o una llamada a la API
-  // utilizando el valor de 'email' y 'password'
-  console.log('Email:', email);
-  console.log('Contraseña:', password);
-};
-
-
-
-const handleIncorrectCredentials = () => {
-  // Aquí puedes mostrar el cuadro de diálogo o realizar otras acciones necesarias
-  alert("Credenciales incorrectas");
-};
-
-{/*  const handleSubmit = async (e) => {
-  fetch('https://desback-backs.vercel.app/login', {
-method: 'POST',
-headers: {
-  'Content-Type': 'application/json'
-},
-body: JSON.stringify({ email, password })
-})
-.then(response => {
-  if (!response.ok) {
-    throw new Error(response.status);
-  }
-  return response.json();
-})
-.then(data => {
-  console.log(data);
-  window.location.href = "/categories";
-})
-.catch(error => {
-  console.error('Error en la solicitud:', error);
-  handleIncorrectCredentials();
-});
-}
-*/}
-
-
 const handleSubmit = async (e) => {
 e.preventDefault();
 
