@@ -33,6 +33,11 @@ const MenuComponent = () => {
     router.push('/');
   
   };
+  const handlePerfil= () => {
+   
+    router.push('/profile');
+  
+  };
 
   return (
     <div>
@@ -48,6 +53,7 @@ const MenuComponent = () => {
         <MenuItem onClick={handleClose}>configuracion</MenuItem>
         <MenuItem onClick={handleClose}>Estadistica</MenuItem>
         <MenuItem  onClick={handleLogout}>Logout</MenuItem>
+        <MenuItem  onClick={handlePerfil}>Perfil</MenuItem>
       </Menu>
     </div>
   );
