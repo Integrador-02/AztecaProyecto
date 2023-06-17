@@ -4,6 +4,13 @@ import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Link from 'next/link';
+import { Select, Button } from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import Popover from '@mui/material/Popover';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 
 const Emperador = () => {
   const Titulo = () => {
@@ -23,6 +30,19 @@ const Emperador = () => {
     );
   };
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'popover' : undefined;
+  
 
 
   return (
@@ -106,9 +126,51 @@ const Emperador = () => {
                   
                   </li>
 
+                  <li
+                      key={`8`}
+                      className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+                      style={{
+                        margin: 0,
+                        padding: 0,
+                        position: 'relative',
+                        backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+                       backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                      }}>
+                  
+                  
+                      <Link
+                        href={`/jerarquia/emparadores`}
+                        className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                        }}
+                      >
+                       <span style={{ fontSize: '1.9em', color: '#006400' }}>Lista de emperadores</span>
+                      </Link>
+                  
+                  </li>
+
+
                   
                   
                   </ul>
+
+                  
+
+
+
+
+                  <div>
+             
+    
+    </div>
 
       </section>
     </Base1>
@@ -141,3 +203,82 @@ const InteractionMessage = () => {
     </div>
   );
 };
+ /**/
+ 
+
+const Tenoch = () => {
+  const [flipped, setFlipped] = useState(false);
+
+  const handleCardClick = () => {
+    setFlipped(!flipped);
+  };
+
+  return (
+    <Card
+      onClick={handleCardClick}
+      style={{
+        width: '200px',
+        height: '300px',
+        perspective: '1000px',
+        transformStyle: 'preserve-3d',
+        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
+      }}
+    >
+      <CardContent
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          backfaceVisibility: 'hidden',
+          transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          backgroundColor: 'lightgreen', // Establecer el fondo verde claro
+
+        }}
+      >
+        <Typography
+          variant="body2"
+          color="textSecondary"
+          component="div"
+          style={{
+            transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
+          }}
+        >
+          Tenoch
+          Nombre	Reinado	Sucesión y notas	detalles de la vida
+
+        </Typography>
+      </CardContent>
+      <CardContent
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          backfaceVisibility: 'hidden',
+          transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          
+        }}
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Tenoch.jpg/80px-Tenoch.jpg"
+          alt="Front Image"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
+      </CardContent>
+    </Card>
+  );
+};
+
