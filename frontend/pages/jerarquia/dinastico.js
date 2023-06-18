@@ -3,14 +3,7 @@ import { markdownify } from "@lib/utils/textConverter";
 import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
-import Link from 'next/link';
-import { Select, Button } from '@mui/material';
-import MenuItem from '@mui/material/MenuItem';
-import Popover from '@mui/material/Popover';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import ReactCardFlip from 'react-card-flip';
 
 const Dinastico = () => {
     const Titulo = () => {
@@ -56,7 +49,7 @@ const Dinastico = () => {
                     <div >
                         <Huanitzin />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -67,7 +60,7 @@ const Dinastico = () => {
                                 }}
                             >
                                 Huanitzin
-                            </Button>
+                            </button>
                         </div>
                     </div>
 
@@ -76,7 +69,7 @@ const Dinastico = () => {
                     <div>
                         <Tehuetzquititzin />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -87,7 +80,7 @@ const Dinastico = () => {
                                 }}
                             >
                                 Tehuetzquititzin
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -95,7 +88,7 @@ const Dinastico = () => {
                     <div>
                         < Cecetzin />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -106,7 +99,7 @@ const Dinastico = () => {
                                 }}
                             >
                                 Cecetzin
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -114,7 +107,7 @@ const Dinastico = () => {
                     <div>
                         < Cipac />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -125,7 +118,7 @@ const Dinastico = () => {
                                 }}
                             >
                                 Cipac
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -151,77 +144,64 @@ export default Dinastico;
 
 /* Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)*/
 const Huanitzin = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000vh',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen',
-                    overflow: 'hidden', // Agregado para ocultar el desbordamiento
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                        fontSize: '16px', // Ajusta el tamaño de fuente según tus preferencias
-                        lineHeight: '1.5', // Ajusta el espaciado entre líneas según tus preferencias
-                        textAlign: 'center', // Ajusta el alineamiento del texto según tus preferencias
-                    }}
-                >
-                    Huanitzin (1538-1541): Diego de Alvarado Huanitzin, nieto de Axayácatl, fue designado por los españoles debido a su popularidad entre los nahuas y su habilidad para hablar español. Su reinado marcó la restauración de la línea real. Se le considera un destacado gobernante mexica del período colonial. Falleció por causas naturales.                </Typography>
-            </CardContent>
-            <CardContent
+                <div style={{ margin: 10 }}>
+                    <h2> Huanitzin (1538-1541)</h2>
+                    <p>
+                    Diego de Alvarado Huanitzin, nieto de Axayácatl, fue designado por los españoles debido a su popularidad entre los nahuas y su habilidad para hablar español. Su reinado marcó la restauración de la línea real. Se le considera un destacado gobernante mexica del período colonial. Falleció por causas naturales.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/1/18/Huanitzin2.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
@@ -229,235 +209,191 @@ const Huanitzin = () => {
 
 
 const Tehuetzquititzin = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000vh',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen',
-                    overflow: 'hidden', // Agregado para ocultar el desbordamiento
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
+                <div style={{ margin: 10 }}>
+                    <h2>Tehuetzquititzin (1541-1554)</h2>
+                    <p>
+                    Diego de San Francisco Tehuetzquititzin, nieto de Tizoc, fue nombrado por el virrey español a sugerencia de la nobleza nahua. Gozaba de gran popularidad entre sus súbditos y trabajó arduamente para proteger los recursos de su comunidad y la riqueza de su familia frente a los señores coloniales. Durante su reinado, una epidemia devastadora golpeó la región en la década de 1540. Falleció por causas naturales.
+                    </p>
+                </div>
+            </div>
 
-                    Tehuetzquititzin (1541-1554): Diego de San Francisco Tehuetzquititzin, nieto de Tizoc, fue nombrado por el virrey español a sugerencia de la nobleza nahua. Gozaba de gran popularidad entre sus súbditos y trabajó arduamente para proteger los recursos de su comunidad y la riqueza de su familia frente a los señores coloniales. Durante su reinado, una epidemia devastadora golpeó la región en la década de 1540. Falleció por causas naturales.                </Typography>
-            </CardContent>
-            <CardContent
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Tizoc.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
-
 
 
 
 const Cecetzin = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
+                <div style={{ margin: 10 }}>
+                    <h2>Cecetzin (1557-1562)</h2>
+                    <p>
+                    Cristóbal de Guzmán Cecetzin, hijo de Huanitzin, fue designado como gobernante por el virrey español, siguiendo la recomendación de la nobleza nahua. Se desconoce la razón del largo periodo interino que precedió a su ascenso al trono. Durante su reinado, se dedicó a gobernar y preservar los intereses de su comunidad. Falleció por causas naturales en el año 1562.
+                    </p>
+                </div>
+            </div>
 
-
-
-                    Cecetzin (1557-1562): Cristóbal de Guzmán Cecetzin, hijo de Huanitzin, fue designado como gobernante por el virrey español, siguiendo la recomendación de la nobleza nahua. Se desconoce la razón del largo periodo interino que precedió a su ascenso al trono. Durante su reinado, se dedicó a gobernar y preservar los intereses de su comunidad. Falleció por causas naturales en el año 1562.
-                </Typography>
-            </CardContent>
-            <CardContent
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/4/47/Cipac_%28Aubin_Codex%29.png"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
-
-const Cipac = () => {
-    const [flipped, setFlipped] = useState(false);
+const Cipac= () => {
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
+                <div style={{ margin: 10 }}>
+                    <h2>Cipac (1563-1565)</h2>
+                    <p>
+                    Luis de Santa María Cipac, también conocido como Nanacacipactzin, era nieto de Ahuitzotl y fue el último tlatoani. Fue designado como gobernante por el virrey español, siguiendo la recomendación de la nobleza nahua. Sin embargo, su mandato estuvo lleno de problemas legales y desacuerdos sobre impuestos con las autoridades coloniales. Lamentablemente, su salud se vio afectada debido al estrés de su cargo y falleció en diciembre de 1565.
+                    </p>
+                </div>
+            </div>
 
-
-
-                    Cipac (1563-1565): Luis de Santa María Cipac, también conocido como Nanacacipactzin, era nieto de Ahuitzotl y fue el último tlatoani. Fue designado como gobernante por el virrey español, siguiendo la recomendación de la nobleza nahua. Sin embargo, su mandato estuvo lleno de problemas legales y desacuerdos sobre impuestos con las autoridades coloniales. Lamentablemente, su salud se vio afectada debido al estrés de su cargo y falleció en diciembre de 1565.                </Typography>
-            </CardContent>
-            <CardContent
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Codex_Borbonicus.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
-
 
 
 

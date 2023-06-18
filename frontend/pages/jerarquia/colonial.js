@@ -3,14 +3,10 @@ import { markdownify } from "@lib/utils/textConverter";
 import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
-import Link from 'next/link';
-import { Select, Button } from '@mui/material';
-import MenuItem from '@mui/material/MenuItem';
-import Popover from '@mui/material/Popover';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import ReactCardFlip from 'react-card-flip';
+
+import Button from '@layouts/shortcodes/Button';
+
 
 const Colonial = () => {
     const Titulo = () => {
@@ -56,7 +52,7 @@ const Colonial = () => {
                     <div >
                         <Tlacotzin />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -67,7 +63,7 @@ const Colonial = () => {
                                 }}
                             >
                                 Tlacotzin
-                            </Button>
+                            </button>
                         </div>
                     </div>
 
@@ -76,7 +72,7 @@ const Colonial = () => {
                     <div>
                         <Motelchiuhtzin />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -87,7 +83,7 @@ const Colonial = () => {
                                 }}
                             >
                                 Motelchiuhtzin
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -95,7 +91,7 @@ const Colonial = () => {
                     <div>
                         < Xochiquentzin />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -105,17 +101,17 @@ const Colonial = () => {
                                     pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
                                 }}
                             >
-                                Huitzilihuitl
-                            </Button>
+                                Xochiquentzin
+                            </button>
                         </div>
 
                     </div>
 
 
 
-                    
 
-                   
+
+
                 </ul>
 
 
@@ -131,240 +127,190 @@ const Colonial = () => {
 export default Colonial;
 
 /* Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)*/
+
 const Tlacotzin = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000vh',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen',
-                    overflow: 'hidden', // Agregado para ocultar el desbordamiento
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                        fontSize: '16px', // Ajusta el tamaño de fuente según tus preferencias
-                        lineHeight: '1.5', // Ajusta el espaciado entre líneas según tus preferencias
-                        textAlign: 'center', // Ajusta el alineamiento del texto según tus preferencias
-                    }}
-                >
-                    Tlacotzin (1525-1526): Nombrado por Hernán Cortés, previamente ocupó un alto cargo político. Aunque disfrutó de una posición privilegiada, murió de una enfermedad en el camino a Tenochtitlán y nunca llegó a tomar el poder en la ciudad.
-                </Typography>
-            </CardContent>
-            <CardContent
+                <div style={{ margin: 10 }}>
+                    <h2>Tlacotzin (1525-1526)</h2>
+                    <p>
+                        Nombrado por Hernán Cortés, previamente ocupó un alto cargo político.
+                        Aunque disfrutó de una posición privilegiada, murió de una enfermedad en el camino a Tenochtitlán
+                        y nunca llegó a tomar el poder en la ciudad.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://www.noticonquista.unam.mx/sites/default/files/2020-06/cuauhcozcatzin.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
-
-
-
 const Motelchiuhtzin = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000vh',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen',
-                    overflow: 'hidden', // Agregado para ocultar el desbordamiento
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '9px',
+                    margin: '8px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
-                    Motelchiuhtzin (1525/1526-1530/1531): Andrés de Tapia Motelchiuh, un plebeyo de Tenochtitlán y destacado capitán militar, fue rápidamente designado por Hernán Cortés después de la muerte de Tlacotzin. Sin embargo, fue asesinado por una flecha durante una batalla con Colhuacan.
-                </Typography>
-            </CardContent>
-            <CardContent
+                <div style={{ margin: 10 }}>
+                    <h2> Motelchiuhtzin</h2>
+                    <p>
+                        Andrés de Tapia Motelchiuh, un plebeyo de Tenochtitlán y destacado capitán militar, fue rápidamente designado por Hernán Cortés después de la muerte de Tlacotzin. Sin embargo, fue asesinado por una flecha durante una batalla con Colhuacan.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Motelchiuhtzin.png"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
-
-
-
 const Xochiquentzin = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
+                <div style={{ margin: 10 }}>
+                    <h2>Xochiquentzin (1532-1536)</h2>
+                    <p>
+                        Pablo Xochiquentzin, un comunero que previamente había servido como calpixqui, gobernó durante 4 años. Falleció por causas naturales.
+                    </p>
+                </div>
+            </div>
 
-
-
-                    Xochiquentzin (1532-1536): Pablo Xochiquentzin, un comunero que previamente había servido como calpixqui, gobernó durante 4 años. Falleció por causas naturales.
-
-                </Typography>
-            </CardContent>
-            <CardContent
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Xochiquetzal.jpg/220px-Xochiquetzal.jpg"
-                    alt="Front Image"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Xochiquetzal.jpg/220px-Xochiquetzal.jpg" alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
-
-
-
-

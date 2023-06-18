@@ -3,15 +3,9 @@ import { markdownify } from "@lib/utils/textConverter";
 import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
-import Link from 'next/link';
-import { Select, Button } from '@mui/material';
-import MenuItem from '@mui/material/MenuItem';
-import Popover from '@mui/material/Popover';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import ReactCardFlip from 'react-card-flip';
 
+import Button from '@layouts/shortcodes/Button';
 const ImperioAzteca = () => {
     const Titulo = () => {
         return (
@@ -57,7 +51,7 @@ const ImperioAzteca = () => {
                     <div >
                         <Itzcóatl />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -68,7 +62,7 @@ const ImperioAzteca = () => {
                                 }}
                             >
                                 Itzcóatl
-                            </Button>
+                            </button>
                         </div>
                     </div>
 
@@ -77,7 +71,7 @@ const ImperioAzteca = () => {
                     <div>
                         <MoctezumaI />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -88,7 +82,7 @@ const ImperioAzteca = () => {
                                 }}
                             >
                                 Moctezuma I
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -96,7 +90,7 @@ const ImperioAzteca = () => {
                     <div>
                         <Atotoztli />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -107,7 +101,7 @@ const ImperioAzteca = () => {
                                 }}
                             >
                                 Atotoztli
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -115,7 +109,7 @@ const ImperioAzteca = () => {
                     <div>
                         <Axayacatl />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -126,7 +120,7 @@ const ImperioAzteca = () => {
                                 }}
                             >
                                 Axayacatl
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -136,7 +130,7 @@ const ImperioAzteca = () => {
                     <div>
                         <Tizoc />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -147,7 +141,7 @@ const ImperioAzteca = () => {
                                 }}
                             >
                                 Tizoc
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -155,7 +149,7 @@ const ImperioAzteca = () => {
                     <div>
                         <Ahuitzotl />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -166,7 +160,7 @@ const ImperioAzteca = () => {
                                 }}
                             >
                                 Ahuitzotl
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -174,7 +168,7 @@ const ImperioAzteca = () => {
                     <div>
                         <MoctezumaII />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -185,7 +179,7 @@ const ImperioAzteca = () => {
                                 }}
                             >
                                 Moctezuma II
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -193,7 +187,7 @@ const ImperioAzteca = () => {
  <div>
                         <Cuitláhuac />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -204,7 +198,7 @@ const ImperioAzteca = () => {
                                 }}
                             >
                                Cuitláhuac
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -229,80 +223,64 @@ export default ImperioAzteca;
 
 /* Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)*/
 const Itzcóatl = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000vh',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen',
-                    overflow: 'hidden', // Agregado para ocultar el desbordamiento
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                        fontSize: '16px', // Ajusta el tamaño de fuente según tus preferencias
-                        lineHeight: '1.5', // Ajusta el espaciado entre líneas según tus preferencias
-                        textAlign: 'center', // Ajusta el alineamiento del texto según tus preferencias
-                    }}
-                >
-                    Nombre: Itzcóatl
+                <div style={{ margin: 10 }}>
+                    <h2>Itzcóatl</h2>
+                    <p>
                     Reinado: 1427-1440 (13 años)
-                    Detalles: Hijo de Acamapichtli y esclavo. Derrotó y mató a Maxtla, gobernante tepaneca, y estableció la Triple Alianza con Tetzcoco y Tlacopan. Murió por causas naturales en 1440.                </Typography>
+                    Detalles: Hijo de Acamapichtli y esclavo. Derrotó y mató a Maxtla, gobernante tepaneca, y estableció la Triple Alianza con Tetzcoco y Tlacopan. Murió por causas naturales en 1440.                        </p>
+                </div>
+            </div>
 
-            </CardContent>
-            <CardContent
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://cdn1.matadornetwork.com/blogs/2/2018/05/portada-tlatoani.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
@@ -310,161 +288,128 @@ const Itzcóatl = () => {
 
 
 const MoctezumaI = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000vh',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen',
-                    overflow: 'hidden', // Agregado para ocultar el desbordamiento
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
-                    Nombre: Moctezuma I (Moteuczoma Ilhuicamina)
+                <div style={{ margin: 10 }}>
+                    <h2>Moctezuma I</h2>
+                    <p>
                     Reinado: 1440-1466 (26 años)
-                    Detalles: Hijo de Huitzilihuitl. A pesar de enfrentar desastres naturales, Moctezuma I lideró proyectos de construcción y conquistas significativas. Inició la guerra de las flores. Murió por causas naturales en 1466.
-                </Typography>
-            </CardContent>
-            <CardContent
+                    Detalles: Hijo de Huitzilihuitl. A pesar de enfrentar desastres naturales, Moctezuma I lideró proyectos de construcción y conquistas significativas. Inició la guerra de las flores. Murió por causas naturales en 1466.                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://www.biografiasyvidas.com/biografia/m/fotos/moctezuma_i.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
 
 
-
 const Atotoztli = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
-
-
-                    Nombre: Atotoztli
+                <div style={{ margin: 10 }}>
+                    <h2> Atotoztli</h2>
+                    <p>
                     Reinado: 1466-1472 (6 años)
-                    Detalles: Hija de Moctezuma I. Dos documentos indican que posiblemente gobernó como tlatoani por derecho propio entre los reinados de Moctezuma I y Axayácatl. Atotoztli fue la única mujer que gobernó como tlatoani en Tenochtitlán. Murió por causas naturales alrededor de 1472.
+                    Detalles: Hija de Moctezuma I. Dos documentos indican que posiblemente gobernó como tlatoani por derecho propio entre los reinados de Moctezuma I y Axayácatl. Atotoztli fue la única mujer que gobernó como tlatoani en Tenochtitlán. Murió por causas naturales alrededor de 1472.                    </p>
+                </div>
+            </div>
 
-
-                </Typography>
-            </CardContent>
-            <CardContent
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/2/24/G%C3%A9n%C3%A9alogie_des_seigneurs_de_Tenochtitlan_-_fragment_-_Atotoztli.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
@@ -473,378 +418,311 @@ const Atotoztli = () => {
 
 
 const Axayacatl = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
-                    Nombre: Axayacatl
+                <div style={{ margin: 10 }}>
+                    <h2>Axayacatl</h2>
+                    <p>
                     Reinado: 1472-1481 (9 años)
-                    Detalles: Axayacatl fue el nieto de Itzcóatl y es conocido como un famoso rey guerrero. Durante su reinado, continuó con la construcción de obras y la expansión del imperio. Sin embargo, su vida fue truncada por una enfermedad, falleciendo a la edad de 30 o 31 años.
-                </Typography>
-            </CardContent>
-            <CardContent
+                    Detalles: Axayacatl fue el nieto de Itzcóatl y es conocido como un famoso rey guerrero. Durante su reinado, continuó con la construcción de obras y la expansión del imperio. Sin embargo, su vida fue truncada por una enfermedad, falleciendo a la edad de 30 o 31 años.                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://www.infobae.com/new-resizer/BHCvPmPg5qItVSMwrNOZhLJqfqI=/1200x900/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/MMAE5VKGLZHFPITFBUKXL5IQIY.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
 
-
 const Tizoc = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >Nombre: Tizoc
+                <div style={{ margin: 10 }}>
+                    <h2>Tizoc</h2>
+                    <p>
                     Reinado: 1481-1486 (5 años)
                     Detalles: Tizoc fue el nieto de Itzcóatl y sucedió a su hermano Axayácatl como gobernante. A pesar de su salud delicada, Tizoc supervisó la expansión y embellecimiento de Tenochtitlan, así como el establecimiento de puestos de avanzada aztecas en territorios lejanos al centro imperial. Sin embargo, su reinado fue abruptamente interrumpido, ya que se sospecha que fue envenenado
+                    </p>
+                </div>
+            </div>
 
-                </Typography>
-            </CardContent>
-            <CardContent
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://pueblosoriginarios.com/biografias/imagenes/tizoc_mini.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
-
 
 
 
 const Ahuitzotl = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >Ahuitzotl (1486-1502): Nieto de Itzcóatl. Gobernó durante 16 años y fue conocido por su expansión militar y los numerosos sacrificios humanos. Murió en una inundación de Tenochtitlan.
-                </Typography>
-            </CardContent>
-            <CardContent
+                <div style={{ margin: 10 }}>
+                    <h2>Ahuitzotl (1486-1502)</h2>
+                    <p>
+                    Nieto de Itzcóatl. Gobernó durante 16 años y fue conocido por su expansión militar y los numerosos sacrificios humanos. Murió en una inundación de Tenochtitlan.                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://pueblosoriginarios.com/textos/tovar/imagenes/ahuitzotl.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
-
 const MoctezumaII = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
-                    Moctezuma II (1502-1520): Hijo de Axayácatl. Gobernó durante 18 años y fortaleció el Imperio Azteca. Sin embargo, su reinado se vio afectado por la llegada de los españoles en 1519, lo que condujo a la conquista del imperio. Su muerte tiene diferentes versiones, posiblemente estrangulado por los españoles o golpeado en la cabeza por una piedra lanzada por uno de sus súbditos durante un discurso.
-                </Typography>
-            </CardContent>
-            <CardContent
+                <div style={{ margin: 10 }}>
+                    <h2>Moctezuma II (1502-1520)</h2>
+                    <p>
+                    Hijo de Axayácatl. Gobernó durante 18 años y fortaleció el Imperio Azteca. Sin embargo, su reinado se vio afectado por la llegada de los españoles en 1519, lo que condujo a la conquista del imperio. Su muerte tiene diferentes versiones, posiblemente estrangulado por los españoles o golpeado en la cabeza por una piedra lanzada por uno de sus súbditos durante un discurso.                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://www.xlsemanal.com/wp-content/uploads/sites/3/2017/08/moctezuma-e1504075138432.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
-}; 
+};
 
 const Cuitláhuac = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
-Cuitláhuac (1520): Hijo de Axayácatl. Gobernó durante 80 días como tlatoani y lideró la resistencia contra los españoles en Tenochtitlán. Murió de viruela en diciembre de 1520.                </Typography>
-            </CardContent>
-            <CardContent
+                <div style={{ margin: 10 }}>
+                    <h2>Cuitláhuac (1520):</h2>
+                    <p>
+                    Hijo de Axayácatl. Gobernó durante 80 días como tlatoani y lideró la resistencia contra los españoles en Tenochtitlán. Murió de viruela en diciembre de 1520.                     </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/3/30/Cuitlahuac2.jpg"
-                    alt="Front Image"
+                    alt="Back Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };

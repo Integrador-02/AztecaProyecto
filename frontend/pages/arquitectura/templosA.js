@@ -3,14 +3,10 @@ import { markdownify } from "@lib/utils/textConverter";
 import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
-import Link from 'next/link';
-import { Select, Button } from '@mui/material';
-import MenuItem from '@mui/material/MenuItem';
-import Popover from '@mui/material/Popover';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import ReactCardFlip from 'react-card-flip';
+
+import Button from '@layouts/shortcodes/Button';
+
 
 const TemplosA = () => {
     const Titulo = () => {
@@ -56,7 +52,7 @@ const TemplosA = () => {
                     <div >
                         <Mayor />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -67,7 +63,7 @@ const TemplosA = () => {
                                 }}
                             >
                                 Templo Mayor – Ciudad de México
-                            </Button>
+                            </button>
                         </div>
                     </div>
 
@@ -76,7 +72,7 @@ const TemplosA = () => {
                     <div>
                         <Teopanzolco />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -87,7 +83,7 @@ const TemplosA = () => {
                                 }}
                             >
                                 Templos de Teopanzolco – Cuernavaca, Morelos
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -95,7 +91,7 @@ const TemplosA = () => {
                     <div>
                         < Teotihuacán />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -106,7 +102,7 @@ const TemplosA = () => {
                                 }}
                             >
                                 La Pirámide del Sol – Teotihuacán, Estado de México
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -114,7 +110,7 @@ const TemplosA = () => {
                     <div>
                         < Luna />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button
+                            <button
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -125,7 +121,7 @@ const TemplosA = () => {
                                 }}
                             >
                                 Pirámide de la Luna – San Martín de las Pirámides, Estado de México
-                            </Button>
+                            </button>
                         </div>
 
                     </div>
@@ -151,77 +147,62 @@ export default TemplosA;
 
 /* Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)*/
 const Mayor = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000vh',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen',
-                    overflow: 'hidden', // Agregado para ocultar el desbordamiento
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                        fontSize: '16px', // Ajusta el tamaño de fuente según tus preferencias
-                        lineHeight: '1.5', // Ajusta el espaciado entre líneas según tus preferencias
-                        textAlign: 'center', // Ajusta el alineamiento del texto según tus preferencias
-                    }}
-                >
-                    El Templo Mayor de México-Tenochtitlan era un complejo religioso central para los aztecas. Contenía construcciones piramidales y torres, siendo el Templo Mayor la principal estructura. Era el lugar sagrado donde se llevaban a cabo rituales y adoración.                </Typography>
-            </CardContent>
-            <CardContent
+                <div style={{ margin: 10 }}>
+                    <h2>El Templo Mayor</h2>
+                    <p>
+                    El Templo Mayor de México-Tenochtitlan era un complejo religioso central para los aztecas. Contenía construcciones piramidales y torres, siendo el Templo Mayor la principal estructura. Era el lugar sagrado donde se llevaban a cabo rituales y adoración.                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://curiosfera-historia.com/wp-content/uploads/Templo-Mayor-de-Tenochtitlan.jpg"
-                    alt="Front Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
@@ -229,155 +210,128 @@ const Mayor = () => {
 
 
 const Teopanzolco = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000vh',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '50vh',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen',
-                    overflow: 'hidden', // Agregado para ocultar el desbordamiento
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
-                    En el valle de Morelos, se encuentra el centro monumental construido en una colina de lava, resultado de la actividad volcánica que cerró el extremo sur de la cuenca de México. Esta región ha sido habitada desde al menos el año 2000 a.C. y ha experimentado un desarrollo regional, influenciado por la cultura teotihuacana durante el periodo Clásico.                </Typography>
-            </CardContent>
-            <CardContent
+                <div style={{ margin: 10 }}>
+                    <h2>Templos de Teopanzolco</h2>
+                    <p>
+                    En el valle de Morelos, se encuentra el centro monumental construido en una colina de lava, resultado de la actividad volcánica que cerró el extremo sur de la cuenca de México. Esta región ha sido habitada desde al menos el año 2000 a.C. y ha experimentado un desarrollo regional, influenciado por la cultura teotihuacana durante el periodo Clásico.               
+                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://contigoenladistancia.cultura.gob.mx/assets/uploads/blog/teopanzonco.JPG"
-                    alt="Front Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
 
 
 
-const Teotihuacán = () => {
-    const [flipped, setFlipped] = useState(false);
+
+const Teotihuacán= () => {
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
-
-
-
+                <div style={{ margin: 10 }}>
+                    <h2>La Pirámide del Sol en Teotihuacán</h2>
+                    <p>
                     La Pirámide del Sol en Teotihuacán, construida entre 1 y 150 d.C., es una impresionante estructura de 63,4 metros de altura. En su cúspide había un templo y una estatua, pero ahora solo queda una plataforma cuadrada. En 1971, se descubrió una gruta debajo de la pirámide, accesible a través de un pozo, con varias salas dispuestas como los pétalos de una flor
-                </Typography>
-            </CardContent>
-            <CardContent
+                    </p>
+                </div>
+            </div>
+
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://arqueologiamexicana.mx/sites/default/files/styles/arq1200x600/public/sarabiaiv_am92_1.jpg?itok=eqTPLekj"
-                    alt="Front Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
 
@@ -385,78 +339,62 @@ const Teotihuacán = () => {
 
 
 const Luna = () => {
-    const [flipped, setFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false);
 
     const handleCardClick = () => {
-        setFlipped(!flipped);
+        setIsFlipped(!isFlipped);
     };
 
     return (
-        <Card
-            onClick={handleCardClick}
-            style={{
-                width: '100%',
-                height: '50vh',
-                perspective: '1000px',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-            }}
-        >
-            <CardContent
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(0)' : 'rotateY(180deg)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-                    backgroundColor: 'lightgreen', // Establecer el fondo verde claro
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
-                <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="div"
-                    style={{
-                        transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
-                    }}
-                >
+                <div style={{ margin: 10 }}>
+                    <h2>Pirámide de la Luna</h2>
+                    <p>
+                    La Pirámide de la Luna en Teotihuacán es más pequeña que la Pirámide del Sol pero tiene una estructura más antigua. Se utilizaba para rituales religiosos, sacrificios y entierros. También servía como observatorio astronómico y centro ceremonial para honrar a la Gran Diosa de Teotihuacán.              
+                    </p>
+                </div>
+            </div>
 
-
-
-                    La Pirámide de la Luna en Teotihuacán es más pequeña que la Pirámide del Sol pero tiene una estructura más antigua. Se utilizaba para rituales religiosos, sacrificios y entierros. También servía como observatorio astronómico y centro ceremonial para honrar a la Gran Diosa de Teotihuacán.                </Typography>
-            </CardContent>
-            <CardContent
+            <div
+                onClick={handleCardClick}
                 style={{
-                    position: 'absolute',
                     width: '100%',
-                    height: '100%',
-                    backfaceVisibility: 'hidden',
-                    transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textAlign: 'center',
-
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
+                    borderRadius: '10px',
+                    margin: '10px',
                 }}
             >
                 <img
                     src="https://journeytomexico.com/wp-content/uploads/2022/12/Pyramid-of-the-Moon.jpg"
-                    alt="Front Image"
                     style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '10px',
                     }}
                 />
-            </CardContent>
-        </Card>
+            </div>
+        </ReactCardFlip>
     );
 };
-
