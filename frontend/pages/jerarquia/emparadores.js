@@ -27,7 +27,7 @@ const Emperador = () => {
         />
         <div className="relative z-12 flex items-center justify-center h-full">
           <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Emperador</span>
+            <span className="text-green-600">Lista de Gobernantes de Tenochtitlán: Períodos y Tlatoque destacados</span>
           </h1>
         </div>
       </div>
@@ -53,255 +53,158 @@ const Emperador = () => {
     <Base1 title={"Categorias Aztecas"}>
       <section className="section pt-0">
         <Titulo />
-        <p className="text-center">
-          <span style={{ fontSize: '40px', fontWeight: 'bold', margin: '0px', color: 'green' }}>
-            Temprano Tenochtitlan (1325-1375)  y Tlatoque preimperial (1375-1427)
-          </span>
-        </p>
+        <div className="text-center" style={{ padding: 30 }}>
+
+          <p style={{
+            fontSize: '23px',
+            fontWeight: 'normal',
+            margin: '20px',
+            color: '#000',
+            textAlign: 'justify',
+            lineHeight: '1.5',
+            fontFamily: 'Arial, sans-serif',
+          }}>
+
+            Tenochtitlán fue la capital del Imperio Azteca en la actual Ciudad de México.
+            Desde su fundación en 1325 hasta su destrucción en 1521, los gobernantes de Tenochtitlán,
+            conocidos como tlatoque, ejercieron el poder. Bajo el liderazgo de Moctezuma II,
+            alcanzaron la máxima autoridad en el imperio. Sin embargo, en 1521, Tenochtitlán fue conquistada 
+            por los españoles y el cargo de tlatoani fue abolido en 1565.
+          </p>
+        </div>
+        <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
+          <li
+            key={`7`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
 
 
-        <ul className="grid grid-cols-6 gap-1" style={{ margin: 0, padding: 0 }}>
-          <div >
-            <Tenoch />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Tenoch
-              </Button>
-            </div>
-          </div>
+            <Link
+              href={`/jerarquia/temprano`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)</span>
+            </Link>
+
+          </li>
+
+          <li
+            key={`8`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
 
 
+            <Link
+              href={`/jerarquia/imperioAzteca`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Imperio azteca (1427-1521) </span>
+            </Link>
 
-          <div>
-            <Acamapichtli />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Acamapichtli
-              </Button>
-            </div>
-
-          </div>
-
-          <div>
-            <Huītzilihhuitl />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Huitzilihuitl
-              </Button>
-            </div>
-
-          </div>
-
-          <div>
-            <Acamapichtli />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Acamapichtli
-              </Button>
-            </div>
-
-          </div>
-
-          <div>
-            <Chīmalpopōca />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Chīmalpopōca
-              </Button>
-            </div>
-
-          </div>
-          
+          </li>
 
          
-          <div>
-            <XīhuitlTēmoc/>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Xihuitl Temoc
-              </Button>
-            </div>
 
-          </div>
+
+
+          <li
+            key={`9`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/jerarquia/colonial`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Período colonial (1525-1565)</span>
+            </Link>
+
+          </li>
+          <li
+            key={`10`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/jerarquia/dinastico`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Reanudación del gobierno dinástico (1538-1565)</span>
+            </Link>
+
+          </li>
+
+
+
         </ul>
 
-        <p className="text-center">
-          <span style={{ fontSize: '40px', fontWeight: 'bold', margin: '0px', color: 'green' }}>
-          Imperio azteca (1427-1521)           </span>
-        </p>
 
-        <ul className="grid grid-cols-6 gap-2" style={{ margin: 0, padding: 0 }}>
-          <div >
-            <Tenoch />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Itzcóatl
-              </Button>
-            </div>
-          </div>
-
-
-
-          <div>
-            <Acamapichtli />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Acamapichtli
-              </Button>
-            </div>
-
-          </div>
-
-          <div>
-            <Huītzilihhuitl />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Huitzilihuitl
-              </Button>
-            </div>
-
-          </div>
-
-          <div>
-            <Acamapichtli />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Acamapichtli
-              </Button>
-            </div>
-
-          </div>
-
-          <div>
-            <Chīmalpopōca />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Chīmalpopōca
-              </Button>
-            </div>
-
-          </div>
-          
-
-         
-          <div>
-            <XīhuitlTēmoc/>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Button
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'green', // Establecer el color del texto en verde
-                  pointerEvents: 'none', // Desactivar la capacidad de hacer clic en el botón
-                }}
-              >
-                Xihuitl Temoc
-              </Button>
-            </div>
-
-          </div>
-        </ul>
 
 
 
@@ -315,32 +218,7 @@ const Emperador = () => {
 
 export default Emperador;
 
-// Componente de información adicional
-const MasInformacion = () => {
-  return (
-    <div className="center-container">
-      <FaInfoCircle size={50} />
-      <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
-    </div>
-  );
-};
-
-
-const InteractionMessage = () => {
-  const showMessage = () => {
-    alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
-  };
-
-  return (
-    <div className="interaction-message">
-      <FaQuestionCircle className="help-icon" onClick={showMessage} />
-      <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
-    </div>
-  );
-};
-/**/
-
-
+/* Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)*/
 const Tenoch = () => {
   const [flipped, setFlipped] = useState(false);
 
@@ -354,7 +232,7 @@ const Tenoch = () => {
       style={{
         width: '100%',
         height: '50vh',
-        perspective: '1000px',
+        perspective: '1000vh',
         transformStyle: 'preserve-3d',
         transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
       }}
@@ -381,22 +259,20 @@ const Tenoch = () => {
           component="div"
           style={{
             transform: flipped ? 'rotateY(180deg)' : 'rotateY(0)',
+            fontSize: '16px', // Ajusta el tamaño de fuente según tus preferencias
+            lineHeight: '1.5', // Ajusta el espaciado entre líneas según tus preferencias
+            textAlign: 'center', // Ajusta el alineamiento del texto según tus preferencias
           }}
         >
-
-          Resumen de Tenochtitlan (1325-1375)
-
-          - Nombre: Tenoch
-          - Reinado: C. 1325-1375 (?) [4]
-          - Sucesión y notas: Fundador legendario de Tenochtitlan; historicidad no confirmada. Según la leyenda, Tenoch fue el primer líder humano de los mexicas, sucediendo al dios sol Huītzilōpōchtli. [4]
-          - Detalles de la vida: Casi nada conocido [4]
+          Tenoch: Reinado aproximado de 1325-1375. Fundador legendario de Tenochtitlan. Pocos detalles conocidos sobre su vida.
         </Typography>
+
       </CardContent>
       <CardContent
         style={{
           position: 'absolute',
           width: '100%',
-          height: '100%',
+          height: '50vh',
           backfaceVisibility: 'hidden',
           transform: flipped ? 'rotateY(-180deg)' : 'rotateY(0)',
           display: 'flex',
@@ -577,6 +453,7 @@ const Huītzilihhuitl = () => {
     </Card>
   );
 };
+
 
 
 
