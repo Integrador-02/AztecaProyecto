@@ -5,7 +5,9 @@ import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 import Link from 'next/link';
 
+
 import Cookies from 'js-cookie';
+import AztecButton from 'components/AztecButton';
 
 
 const Titulo = () => {
@@ -63,7 +65,7 @@ const Dioses = () => {
               alt="Chalchiuhtlicue"
               width={200}>
             </img>
-            <figcaption> CHALCHIUHTLICUE (Diosa de los rios) </figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="hola" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>
 
           <figure>
