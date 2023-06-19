@@ -144,7 +144,7 @@ const handleSubmit = async (e) => {
         />
         <div className="flex justify-between">
           <p className="text-sm font-medium text-[#49B675] whitespace-nowrap cursor-pointer underline underline-offset-2">
-            Olvidé mi contraseña
+          <Link href="/forgotPassword">Olvidé mi contraseña</Link>
           </p>
         </div>
         <div className="flex flex-col my-4">
