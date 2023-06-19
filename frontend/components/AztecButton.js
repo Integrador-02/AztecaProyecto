@@ -5,6 +5,7 @@ const AztecButton =(props)=>{
   //imageURL: link de la imagen
   //texto: texto del boton
   //linkto: next Link a donde quieres que te redirija el boton
+  //textSize: tamaño del texto en unidades em (elemento padre), por default es 1.9
 
     return (
         <li
@@ -32,15 +33,9 @@ const AztecButton =(props)=>{
                   backgroundColor: 'rgba(255, 255, 255, 0.8)',
                 }}
               >
-                <span style={{ fontSize: '1.9em', color: '#006400' }}>{props.texto}</span>
+                <span style={{ fontSize: `${props.textSize ? props.textSize :1.9}em` , color: '#006400' }}>{props.texto}</span>
               </Link>
-
-
-
-
             </li>
-
-
     )
 }
 export default AztecButton;

@@ -56,7 +56,7 @@ const Dioses = () => {
               alt="Centeotl - Diosa del maiz"
               width={200} >
             </img>
-            
+            <figcaption style={{width:200}}> <AztecButton textSize='1.5' texto="Centeotl, Diosa del maiz" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>
 
           <figure>
