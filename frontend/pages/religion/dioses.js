@@ -1,12 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { markdownify } from "@lib/utils/textConverter";
+import React from 'react';
 import { Base1 } from '@layouts/Baseof';
-import { FaInfoCircle } from 'react-icons/fa';
-import { FaQuestionCircle } from 'react-icons/fa';
-import Link from 'next/link';
-
-
-import Cookies from 'js-cookie';
 import AztecButton from 'components/AztecButton';
 
 
@@ -48,7 +41,7 @@ const Dioses = () => {
           Entre ellos:
           </p>
 
-        <div className="grid grid-cols-3 gap-2 center" style={{ margin: 75, padding: 0 }} >
+        <div className="grid grid-cols-4 gap-1 center" style={{ margin:'15%', marginTop:'3%', justifyContent: 'center', padding: 0 }} >
           
           <figure>
             <img 
@@ -65,7 +58,7 @@ const Dioses = () => {
               alt="Chalchiuhtlicue"
               width={200}>
             </img>
-            <figcaption style={{width:200}}> <AztecButton texto="hola" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="Chalchiuhtlicue" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>
 
           <figure>
@@ -74,7 +67,7 @@ const Dioses = () => {
               alt="Huitzilopochtli - dios de la guerra"
               width={200}>
             </img>
-            <figcaption>HUITZILOPOCHTLI (Dios de la guerra y el sol)</figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="Huitzilopochtli" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>  
 
           <figure>
@@ -83,16 +76,16 @@ const Dioses = () => {
               alt="Mictecacihuatl"
               width={200}>
             </img>
-            <figcaption>MICTECACIHUATL (Diosa de los muertos)</figcaption> 
+            <figcaption style={{width:200}}> <AztecButton texto="Mictecacihuatl" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption> 
           </figure>
 
           <figure>
             <img 
               src="https://www.monstropedia.org/images/8/80/Mictecacihuatl.jpg"
               alt="Mictlantecuhtli"
-              height={200}>
+              width={200}>
             </img>
-            <figcaption>MICTLANTECUHTLI (Dios del inframundo)</figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="Mictlantecuhtli" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption> 
           </figure>
 
           <figure>
@@ -101,16 +94,16 @@ const Dioses = () => {
               alt="Quetzalcoatl"
               width={200}>
             </img>
-            <figcaption>QUETZALCOATL (Dios de la sabiduria, el viento y la fertilidad)</figcaption>  
+            <figcaption style={{width:200}}> <AztecButton texto="Quetzalcoatl" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption> 
           </figure>
 
           <figure>
             <img 
-              src="../public/../images/tezcatlipoca-min.jpg" 
+              src="https://cdn1.matadornetwork.com/blogs/2/2019/12/shutterstock_1211759326.jpg" 
               alt="Tezcatlipoca"
               width={200}>
             </img>
-            <figcaption>TEZCATLIPOCA (Dios de la noche)</figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="Tezcatlipoca" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>
 
           <figure>
@@ -119,7 +112,7 @@ const Dioses = () => {
               alt="Tlaloc"
               width={200}>
             </img>
-            <figcaption>TLALOC ((Dios de la lluvia)</figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="Tlaloc" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>
 
           <figure>
@@ -128,7 +121,7 @@ const Dioses = () => {
               alt="Tlaltecuhtli"
               width={200}>
             </img>
-            <figcaption>TLALTECUHTLI (Diosa de la tierra)</figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="Tlaltecuhtli" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>  
 
           <figure>
@@ -137,7 +130,7 @@ const Dioses = () => {
               alt="Tonatiuh"
               width={200}>
             </img>
-            <figcaption>TONATIUH (DIOS DEL SOL)</figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="Tonatiuh" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>
 
           <figure>
@@ -146,7 +139,7 @@ const Dioses = () => {
               alt="Xipe Totec"
               width={200}>
             </img>
-            <figcaption>XIPE TOTEC (Dios de la primavera)</figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="Xipe Totec" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>
 
           <figure>
@@ -155,7 +148,7 @@ const Dioses = () => {
               alt="Xochiquetzal"
               width={200}>
             </img>
-            <figcaption>XOCHIQUETZAL (Diosa del amor y la belleza)</figcaption>
+            <figcaption style={{width:200}}> <AztecButton texto="Xochiquetzal" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
           </figure>
 
           <figure>
@@ -164,71 +157,90 @@ const Dioses = () => {
               alt="Xolotl"
               width={200}>
             </img>
-            <figcaption>XOLOTL (Dios del inframundo)</figcaption>
-          </figure>  
+            <figcaption style={{width:200}}> <AztecButton texto="Xolotl" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+          </figure> 
+
+          <figure>
+            <img 
+              src="https://ih1.redbubble.net/image.616842481.7919/flat,750x,075,f-pad,750x1000,f8f8f8.u4.jpg" 
+              alt="Ixtlilton"
+              width={200}>
+            </img>
+            <figcaption style={{width:200}}> <AztecButton texto="Ixtlilton" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+          </figure> 
+          
+          <figure>
+            <img 
+              src="https://pbs.twimg.com/media/FGChkaoX0BELjh3.jpg" 
+              alt="Cihuacóatl"
+              width={200}>
+            </img>
+            <figcaption style={{width:200}}> <AztecButton texto="Cihuacóatl" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+          </figure>
+
+          <figure>
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Rabbit_1.jpg" 
+              alt="Metztli"
+              width={200}>
+            </img>
+            <figcaption style={{width:200}}> <AztecButton texto="Metztli" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+          </figure>
+          
+          <figure>
+            <img 
+              src="https://64.media.tumblr.com/42f29fd3a55a489f41dd9b91d831f1dc/bb848a390e8e196c-1f/s640x960/7378f61b3c000ee32e10298d5aa5ff69cc15341a.jpg" 
+              alt="Yacatecuhtli"
+              width={200}>
+            </img>
+            <figcaption style={{width:200}}> <AztecButton texto="Yacatecuhtli" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+          </figure>
+          <figure>
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Huehuecoyotl_CB.jpg" 
+              alt="Huehuecóyotl"
+              width={200}>
+            </img>
+            <figcaption style={{width:200}}> <AztecButton texto="Huehuecóyotl" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+          </figure>
+
+          <figure>
+            <img 
+              src="https://mythlok.com/wp-content/uploads/2022/09/Mythlok-Mixcoatl.png" 
+              alt="Mixcóatl"
+              width={200}>
+            </img>
+            <figcaption style={{width:200}}> <AztecButton texto="Mixcóatl" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+          </figure>
+
+          <figure>
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Macuiltonaleque_1.jpg" 
+              alt="ahuiateteo"
+              width={400}>
+            </img>
+            <figcaption style={{width:265}}> <AztecButton texto="ahuiateteo" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+          </figure>
+
+          <figure>
+            <img 
+              src="https://www.mitologia.info/wp-content/uploads/2017/11/ehecatl-dios-azteca-viento.jpg" 
+              alt="ehécatl"
+              width={200}>
+            </img>
+            <figcaption style={{width:200}}> <AztecButton texto="ehécatl" imageURL= '/images/textura.jpg' linkto='ses'/> </figcaption>
+          </figure>
+
         </div>
 
 
-        <MasInformacion/>
- <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
-           
-                  <li
-                      key={`2`}
-                      className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-                      style={{
-                        margin: 0,
-                        padding: 0,
-                        position: 'relative',
-                        backgroundImage: 'url(/images/religion-azteca.jpg)',
-                        backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
-                      }}>
-                    
-                    <Link
-                          href={`/religion`}
-                          className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                          }}
-                        >
-                          <span style={{ fontSize: '1.9em', color: '#006400' }}> Regresar a Religión</span>
-                        </Link>
-                  </li>
-                  </ul>
+
+        <ul className="grid grid-cols-1 gap-1" style={{ margin: 0, padding: 0 }}>
+           <AztecButton linkto="/religion" imageURL="/images/religion-azteca.jpg" texto="Regresar a Religión"/>
+        </ul>
       </section>
     </Base1>
   );
 };
 
 export default Dioses;
-
-// Componente de información adicional
-const MasInformacion = () => {
-  return (
-    <div className="center-container">
-      <FaInfoCircle size={50} />
-      <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
-    </div>
-  );
-};
-
-
-const InteractionMessage = () => {
-    const showMessage = () => {
-      alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
-    };
-
-    return (
-      <div className="interaction-message">
-        <FaQuestionCircle className="help-icon" onClick={showMessage} />
-        <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
-      </div>
-    );
-  };
-
