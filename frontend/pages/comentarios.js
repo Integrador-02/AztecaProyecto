@@ -10,6 +10,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Cookies from "js-cookie";
 import Avatar from "react-avatar";
+import axios from "axios";
 
 
 
@@ -17,12 +18,26 @@ import Avatar from "react-avatar";
 const CommentSection = () => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
+  console.log(comments);
   const [replyTo, setReplyTo] = useState(null);
   const [email, setEmail] = useState('');
 
   useEffect(() => {
     const user = Cookies.get('clave');
     setEmail(user);
+
+    axios.get("https://happy-fly-loincloth.cyclic.app/api/comentarios", { email })
+    .then((response) => {
+      // Manipula los datos obtenidos como desees
+      const comentarios = response.data;
+      console.log(comentarios);
+      // Resto de la lógica de manipulación de los comentarios
+    })
+    .catch((error) => {
+      // Manejo de errores en caso de que falle la solicitud al backend
+      console.log(error);
+      alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+    });
   }, []);
 
   const handleAddComment = () => {
@@ -38,10 +53,31 @@ const CommentSection = () => {
       timestamp: timestamp,
     };
 
+    const coment= newCommentObject.text
+    const correo = newCommentObject.username
+    const gusta = newCommentObject.likes
+    const responde = newCommentObject.replyTo
+    console.log(responde);
+    axios.post("https://happy-fly-loincloth.cyclic.app/api/commit", { coment, correo,responde,gusta })
+    .then(async () => {
+      // Manejo de errores en caso de que falle la solicitud al backend
+      alert("registrado correctamente");
+      
+
+    })
+    .catch(async (error) => {
+      console.log(error);
+      // Manejo de errores en caso de que falle la solicitud al backend
+      alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+    });
+
+ 
+    
+
     setComments([...comments, newCommentObject]);
     setNewComment('');
     setReplyTo(null);
-  };
+  };
 
   const handleReplyToComment = (commentId) => {
     const commentToReply = comments.find((comment) => comment.id === commentId);
