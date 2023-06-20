@@ -98,7 +98,7 @@ const Dioses = () => {
                   "Conocido como un dios multifacético con atributos de una serpiente emplumada. Representa una combinación entre lo terrenal y lo celestial, y se le considera el dios del conocimiento, la sabiduría, la cultura, la creación y el viento."
                  ) }
           
-          { Tios("Tezcatlipoca", "", "https://cdn1.matadornetwork.com/blogs/2/2019/12/shutterstock_1211759326.jpg", 
+          { TDios("Tezcatlipoca", "", "https://cdn1.matadornetwork.com/blogs/2/2019/12/shutterstock_1211759326.jpg", 
                   "Tezcatlipoca fue el dios azteca de la noche y todas las cosas materiales. Llevaba consigo un espejo de cualidades mágicas, que emanaba humo y era capaz de matar al enemigo, aspecto por el que también era llamado dios del espejo humeante."
                  ) }
           
