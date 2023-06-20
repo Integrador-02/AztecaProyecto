@@ -3,7 +3,7 @@ import Usuario from "../models/Usuario.js";
 
 const registrar = async (req, res) => {
     const {email} = req.body
-
+    console.log(email)
     //prevenir usuarios duplicados
     const existeUsuario = await Usuario.findOne({email})
 
