@@ -42,7 +42,7 @@ const CommentSection = () => {
     const correo = newCommentObject.username
     const gusta = newCommentObject.likes
     const responde = "Null"
-    axios.post("http://localhost:4000/api/commit", { coment, correo,responde,gusta })
+    axios.post("https://happy-fly-loincloth.cyclic.app/api/commit", { coment, correo,responde,gusta })
     .then(async () => {
       // Manejo de errores en caso de que falle la solicitud al backend
       alert("registrado correctamente");
@@ -55,7 +55,7 @@ const CommentSection = () => {
       alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
     });
 
-  axios.get("http://localhost:4000/api/comentarios", { email })
+  axios.get("https://happy-fly-loincloth.cyclic.app/api/comentarios", { email })
   .then((response) => {
     // Manipula los datos obtenidos como desees
     const comentarios = response.data;

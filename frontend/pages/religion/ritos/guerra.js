@@ -6,19 +6,19 @@ import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Link from 'next/link';
 
-const Ritos = () => {
+const Guerra = () => {
 
   const Titulo = () => {
     return (
       <div className="relative h-80 font-text">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
-          src={"https://wpcdn.zenger.news/wp-content/uploads/2021/01/26092505/5af02125-21b5-455a-81a9-44af0dd46f2f-e1611944587406.jpg"}
+          src={"https://pueblosoriginarios.com/recursos/colecciones/azteca/imagenes/2_big.jpg"}
           alt="Imagen de fondo"
         />
         <div className="relative z-12 flex items-center justify-center h-full">
           <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Ritos</span>
+            <span className="text-green-600">Ritos de Guerra</span>
           </h1>
         </div>
       </div>
@@ -31,12 +31,12 @@ return (
     <div class="sketchfab-embed-wrapper" style={{margin :20,padding :20}}> 
     <div className="grid grid-cols-2 gap-1">
 
+        <iframe style={{ width: '100%', height: '550px' }}  
+        title="Widowed Grounds" frameborder="0" 
+        allowfullscreen mozallowfullscreen="true" 
+        webkitallowfullscreen="true"  xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
+        src="https://2.bp.blogspot.com/-0z3SJhnOjIE/XrHNw4JDbBI/AAAAAAADNtU/1ior_MhXxQ86cn35yb578uXWXEgbAf8-QCLcBGAsYHQ/s1600/SMKZRD7NVNBENJX2DLJ7PHGCKM.jpg.webp"> </iframe> 
     
-    <iframe style={{ width: '100%', height: '550px' }}  title="Fantasy Garden - Aztec Lizardmen Ritual" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/774874b40ac043c78347a5c8ee943f74/embed"> 
-    </iframe> 
-    
-
-   
 
 
     <div>
@@ -49,16 +49,11 @@ return (
         lineHeight: '1.5',
         fontFamily: 'Arial, sans-serif',
       }}>     
-      Se practicaban 3 clases de rituales sangrientos relacionados con 
-      la persona: el autosacrificio o rituales de efusiones de sangre, 
-      los rituales asociados a las guerras y los sacrificios agrarios. 
-      No consideraron al sacrificio humano como una categoría específica, 
-      sino que formaban parte importante de un determinado ritual.
-      El ritual tenía como función la introducción del hombre en lo sagrado y 
-      servía para darle a conocer su introducción en un mundo diferente
-      como lo sería el correspondiente al cielo o al inframundo, y para
-      ello era necesario tener un recinto y tener un ritual
-
+      En los rituales de guerra participaban no solo los propios 
+      guerreros, sino también sus mujeres y los sacerdotes, los 
+      primeros prisioneros eran sacrificados en campo y los restantes 
+      eran llevados a la ciudad de Tenochtitlan,
+      y para recibirlos el rey y los guerreros se sangraban.
         </p>
         
 
@@ -106,28 +101,4 @@ return (
 );
 };
 
-export default Ritos;
-
-// Componente de información adicional
-const MasInformacion = () => {
-  return (
-    <div className="center-container">
-      <FaInfoCircle size={50} />
-      <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
-    </div>
-  );
-};
-
-
-const InteractionMessage = () => {
-    const showMessage = () => {
-      alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
-    };
-
-    return (
-      <div className="interaction-message">
-        <FaQuestionCircle className="help-icon" onClick={showMessage} />
-        <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
-      </div>
-    );
-  };
+export default Guerra;

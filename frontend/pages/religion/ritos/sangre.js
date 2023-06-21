@@ -6,19 +6,19 @@ import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Link from 'next/link';
 
-const Ritos = () => {
+const Sangre = () => {
 
   const Titulo = () => {
     return (
       <div className="relative h-80 font-text">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
-          src={"https://wpcdn.zenger.news/wp-content/uploads/2021/01/26092505/5af02125-21b5-455a-81a9-44af0dd46f2f-e1611944587406.jpg"}
+          src={"https://arqueologiamexicana.mx/sites/default/files/styles/arq750x375/public/imagen_100.jpg?itok=E6ttMHj8"}
           alt="Imagen de fondo"
         />
         <div className="relative z-12 flex items-center justify-center h-full">
           <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Ritos</span>
+            <span className="text-green-600">Ritos de Sangre</span>
           </h1>
         </div>
       </div>
@@ -31,11 +31,7 @@ return (
     <div class="sketchfab-embed-wrapper" style={{margin :20,padding :20}}> 
     <div className="grid grid-cols-2 gap-1">
 
-    
-    <iframe style={{ width: '100%', height: '550px' }}  title="Fantasy Garden - Aztec Lizardmen Ritual" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/774874b40ac043c78347a5c8ee943f74/embed"> 
-    </iframe> 
-    
-
+        <iframe style={{ width: '100%', height: '550px' }}  title="Widowed Grounds" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/cb3cc7eafa2c41a99919933523186dd3/embed"> </iframe> 
    
 
 
@@ -49,16 +45,15 @@ return (
         lineHeight: '1.5',
         fontFamily: 'Arial, sans-serif',
       }}>     
-      Se practicaban 3 clases de rituales sangrientos relacionados con 
-      la persona: el autosacrificio o rituales de efusiones de sangre, 
-      los rituales asociados a las guerras y los sacrificios agrarios. 
-      No consideraron al sacrificio humano como una categoría específica, 
-      sino que formaban parte importante de un determinado ritual.
-      El ritual tenía como función la introducción del hombre en lo sagrado y 
-      servía para darle a conocer su introducción en un mundo diferente
-      como lo sería el correspondiente al cielo o al inframundo, y para
-      ello era necesario tener un recinto y tener un ritual
-
+      Se iniciaba con una penitencia que asociaba varias clases de mortificaciones: 
+      ayuno, abstinencia sexual, reclusión, vigilia y efusiones de sangre. 
+      Se comía solamente determinados platillos hechos para esa ocasión.
+      Un fuego alumbrado debía arder durante la totalidad de este período. 
+      En el caso del rey este período de penitencia era previo a su instalación 
+      en el poder, y se repetía en compañía de guerreros y sacerdotes en las fiestas 
+      anuales y antes de las guerras, para ser favorecido por sus dioses. 
+      La gente común también practicaba abstinencia y mortificación sobre 
+      todo antes de las fiestas del dios Huitzilopochtli.
         </p>
         
 
@@ -106,7 +101,7 @@ return (
 );
 };
 
-export default Ritos;
+export default Sangre;
 
 // Componente de información adicional
 const MasInformacion = () => {
