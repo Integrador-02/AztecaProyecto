@@ -6,19 +6,19 @@ import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Link from 'next/link';
 
-const Guerra = () => {
+const Conducta = () => {
 
   const Titulo = () => {
     return (
       <div className="relative h-80 font-text">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
-          src={"https://pueblosoriginarios.com/recursos/colecciones/azteca/imagenes/2_big.jpg"}
+          src={"https://www.socialhizo.com/images/edad_antigua/aztecas/sociedad_vida_cotidiana/temazcal.jpg"}
           alt="Imagen de fondo"
         />
         <div className="relative z-12 flex items-center justify-center h-full">
           <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Ritos de Guerra</span>
+            <span className="text-green-600">Conducta</span>
           </h1>
         </div>
       </div>
@@ -32,13 +32,14 @@ return (
     <div className="grid grid-cols-2 gap-1">
 
         <iframe style={{ width: '100%', height: '550px' }}  
-        title="Widowed Grounds" frameborder="0" 
+        title="Aztec SkyBlock spawn | 630x630" frameborder="0" 
         allowfullscreen mozallowfullscreen="true" 
-        webkitallowfullscreen="true"  xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
-        src="https://2.bp.blogspot.com/-0z3SJhnOjIE/XrHNw4JDbBI/AAAAAAADNtU/1ior_MhXxQ86cn35yb578uXWXEgbAf8-QCLcBGAsYHQ/s1600/SMKZRD7NVNBENJX2DLJ7PHGCKM.jpg.webp"> </iframe> 
-    
-
-
+        webkitallowfullscreen="true" 
+        allow="autoplay; fullscreen; xr-spatial-tracking" 
+        xr-spatial-tracking execution-while-out-of-viewport 
+        execution-while-not-rendered web-share 
+        src="https://sketchfab.com/models/7d9c8a1d51ba474393faa844358bc657/embed"> </iframe>
+        
     <div>
     <p style={{
         fontSize: '23px',
@@ -49,14 +50,14 @@ return (
         lineHeight: '1.5',
         fontFamily: 'Arial, sans-serif',
       }}>     
-      En los rituales de guerra participaban no solo los propios 
-      guerreros, sino también sus mujeres y los sacerdotes, los 
-      primeros prisioneros eran sacrificados en campo y los restantes 
-      eran llevados a la ciudad de Tenochtitlan,
-      y para recibirlos el rey y los guerreros se sangraban.
-      Los prisioneros de guerra eran la ofren­da más estimada, tanto más 
-      si los cauti­vos habían demostrado bravura en los combates o si eran 
-      parte de sus más ele­vadas jerarquías.
+      La conducta social y religiosa entre los az­tecas estaba concebida para 
+      conservar la existencia humana y asegurar el bienes­tar del hombre. 
+      De ahí que para alcanzar tales fines ofrendaban el más preciado de 
+      todos los dones, la vida humana. Pensaban que para que el hombre 
+      sobreviviera, los dioses que permitían su existencia debían también 
+      vivir y for­talecerse. Estos dioses, sin embargo, recibían su mejor 
+      alimentación de los co­razones sangrantes de un hombre o hasta de un 
+      niño.
         </p>
         
 
@@ -104,4 +105,4 @@ return (
 );
 };
 
-export default Guerra;
+export default Conducta;
