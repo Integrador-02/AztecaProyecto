@@ -181,29 +181,6 @@ const Tenoch = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '10px',
-                    margin: '10px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2>Tenoch</h2>
-                    <p>
-                        Reinado aproximado de 1325-1375. Fundador legendario de Tenochtitlan. Pocos detalles conocidos sobre su vida.
-                    </p>
-                </div>
-            </div>
-
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
                     boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.3)',
                     borderRadius: '10px',
                     margin: '10px',
@@ -220,21 +197,6 @@ const Tenoch = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-
-const Acamapichtli = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -251,15 +213,30 @@ const Acamapichtli = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Acamapichtli</h2>
+                    <h2>Tenoch</h2>
                     <p>
-                        Reinado: C. 1375-1390 (15 años)
-                        Detalles: Fue un gobernante importante de Tenochtitlan. Ayudó a expandir el territorio y murió de causas naturales.
+                        Reinado aproximado de 1325-1375. Fundador legendario de Tenochtitlan. Pocos detalles conocidos sobre su vida.
                     </p>
                 </div>
             </div>
 
-            <div
+            
+        </ReactCardFlip>
+    );
+};
+
+
+
+const Acamapichtli = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+              <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -285,22 +262,6 @@ const Acamapichtli = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-
-
-const Huītzilihhuitl = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -317,16 +278,32 @@ const Huītzilihhuitl = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Huitzilihuitl</h2>
+                    <h2>Acamapichtli</h2>
                     <p>
-                        Reinado: C. 1391-1414 (23 años)
-                        Detalles: Hijo de Acamapichtli. Conquistó tierras en nombre de los tepanecas. Durante su reinado, los mexicas se militarizaron. Murió por causas naturales en torno al año 1410.
-
+                        Reinado: C. 1375-1390 (15 años)
+                        Detalles: Fue un gobernante importante de Tenochtitlan. Ayudó a expandir el territorio y murió de causas naturales.
                     </p>
                 </div>
             </div>
 
-            <div
+          
+        </ReactCardFlip>
+    );
+};
+
+
+
+
+const Huītzilihhuitl = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+              <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -352,6 +329,32 @@ const Huītzilihhuitl = () => {
                     }}
                 />
             </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2>Huitzilihuitl</h2>
+                    <p>
+                        Reinado: C. 1391-1414 (23 años)
+                        Detalles: Hijo de Acamapichtli. Conquistó tierras en nombre de los tepanecas. Durante su reinado, los mexicas se militarizaron. Murió por causas naturales en torno al año 1410.
+
+                    </p>
+                </div>
+            </div>
+
+          
         </ReactCardFlip>
     );
 };
@@ -369,32 +372,7 @@ const Chīmalpopōca = () => {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '10px',
-                    margin: '10px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2>Chīmalpopōca</h2>
-                    <p>
-                        Reinado: C. 1415-1427 (18 años)
-                        Detalles: Hijo de Acamapichtli. Realizó proyectos de edificación y urbanismo. Considerado el primer mártir mexicano. Se vio envuelto en conflictos sucesorios tepanecas, apoyó al bando equivocado, fue encarcelado y se ahorcó en cautiverio.
-
-                    </p>
-                </div>
-            </div>
-
-            <div
+               <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -420,20 +398,6 @@ const Chīmalpopōca = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-const XīhuitlTēmoc = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -450,15 +414,31 @@ const XīhuitlTēmoc = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Xihuitl Temoc</h2>
+                    <h2>Chīmalpopōca</h2>
                     <p>
-                        Reinado: 60 días en 1427
-                        Detalles: Hijo de Chimalpopoca. Joven en el momento de su adhesión. Su destino es incierto, posiblemente murió en batalla o fue asesinado por un pariente.
+                        Reinado: C. 1415-1427 (18 años)
+                        Detalles: Hijo de Acamapichtli. Realizó proyectos de edificación y urbanismo. Considerado el primer mártir mexicano. Se vio envuelto en conflictos sucesorios tepanecas, apoyó al bando equivocado, fue encarcelado y se ahorcó en cautiverio.
+
                     </p>
                 </div>
             </div>
 
-            <div
+         
+        </ReactCardFlip>
+    );
+};
+
+
+const XīhuitlTēmoc = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+                 <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -484,6 +464,31 @@ const XīhuitlTēmoc = () => {
                     }}
                 />
             </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2>Xihuitl Temoc</h2>
+                    <p>
+                        Reinado: 60 días en 1427
+                        Detalles: Hijo de Chimalpopoca. Joven en el momento de su adhesión. Su destino es incierto, posiblemente murió en batalla o fue asesinado por un pariente.
+                    </p>
+                </div>
+            </div>
+
+       
         </ReactCardFlip>
     );
 };

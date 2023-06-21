@@ -137,31 +137,7 @@ const Tlacotzin = () => {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '10px',
-                    margin: '10px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2>Tlacotzin (1525-1526)</h2>
-                    <p>
-                        Nombrado por Hernán Cortés, previamente ocupó un alto cargo político.
-                        Aunque disfrutó de una posición privilegiada, murió de una enfermedad en el camino a Tenochtitlán
-                        y nunca llegó a tomar el poder en la ciudad.
-                    </p>
-                </div>
-            </div>
-
+            
             <div
                 onClick={handleCardClick}
                 style={{
@@ -188,6 +164,31 @@ const Tlacotzin = () => {
                     }}
                 />
             </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2>Tlacotzin (1525-1526)</h2>
+                    <p>
+                        Nombrado por Hernán Cortés, previamente ocupó un alto cargo político.
+                        Aunque disfrutó de una posición privilegiada, murió de una enfermedad en el camino a Tenochtitlán
+                        y nunca llegó a tomar el poder en la ciudad.
+                    </p>
+                </div>
+            </div>
+
         </ReactCardFlip>
     );
 };
@@ -201,30 +202,7 @@ const Motelchiuhtzin = () => {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '9px',
-                    margin: '8px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2> Motelchiuhtzin</h2>
-                    <p>
-                        Andrés de Tapia Motelchiuh, un plebeyo de Tenochtitlán y destacado capitán militar, fue rápidamente designado por Hernán Cortés después de la muerte de Tlacotzin. Sin embargo, fue asesinado por una flecha durante una batalla con Colhuacan.
-                    </p>
-                </div>
-            </div>
-
-            <div
+               <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -250,6 +228,30 @@ const Motelchiuhtzin = () => {
                     }}
                 />
             </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '9px',
+                    margin: '8px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2> Motelchiuhtzin</h2>
+                    <p>
+                        Andrés de Tapia Motelchiuh, un plebeyo de Tenochtitlán y destacado capitán militar, fue rápidamente designado por Hernán Cortés después de la muerte de Tlacotzin. Sin embargo, fue asesinado por una flecha durante una batalla con Colhuacan.
+                    </p>
+                </div>
+            </div>
+
+         
         </ReactCardFlip>
     );
 };
@@ -263,30 +265,7 @@ const Xochiquentzin = () => {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '10px',
-                    margin: '10px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2>Xochiquentzin (1532-1536)</h2>
-                    <p>
-                        Pablo Xochiquentzin, un comunero que previamente había servido como calpixqui, gobernó durante 4 años. Falleció por causas naturales.
-                    </p>
-                </div>
-            </div>
-
-            <div
+              <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -311,6 +290,30 @@ const Xochiquentzin = () => {
                     }}
                 />
             </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2>Xochiquentzin (1532-1536)</h2>
+                    <p>
+                        Pablo Xochiquentzin, un comunero que previamente había servido como calpixqui, gobernó durante 4 años. Falleció por causas naturales.
+                    </p>
+                </div>
+            </div>
+
+          
         </ReactCardFlip>
     );
 };

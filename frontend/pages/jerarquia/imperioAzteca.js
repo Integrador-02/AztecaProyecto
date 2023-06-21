@@ -231,30 +231,7 @@ const Itzcóatl = () => {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '10px',
-                    margin: '10px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2>Itzcóatl</h2>
-                    <p>
-                    Reinado: 1427-1440 (13 años)
-                    Detalles: Hijo de Acamapichtli y esclavo. Derrotó y mató a Maxtla, gobernante tepaneca, y estableció la Triple Alianza con Tetzcoco y Tlacopan. Murió por causas naturales en 1440.                        </p>
-                </div>
-            </div>
-
-            <div
+              <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -280,22 +257,6 @@ const Itzcóatl = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-
-
-const MoctezumaI = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -312,14 +273,31 @@ const MoctezumaI = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Moctezuma I</h2>
+                    <h2>Itzcóatl</h2>
                     <p>
-                    Reinado: 1440-1466 (26 años)
-                    Detalles: Hijo de Huitzilihuitl. A pesar de enfrentar desastres naturales, Moctezuma I lideró proyectos de construcción y conquistas significativas. Inició la guerra de las flores. Murió por causas naturales en 1466.                    </p>
+                    Reinado: 1427-1440 (13 años)
+                    Detalles: Hijo de Acamapichtli y esclavo. Derrotó y mató a Maxtla, gobernante tepaneca, y estableció la Triple Alianza con Tetzcoco y Tlacopan. Murió por causas naturales en 1440.                        </p>
                 </div>
             </div>
 
-            <div
+          
+        </ReactCardFlip>
+    );
+};
+
+
+
+
+const MoctezumaI = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+              <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -345,21 +323,6 @@ const MoctezumaI = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-
-const Atotoztli = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -376,14 +339,30 @@ const Atotoztli = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2> Atotoztli</h2>
+                    <h2>Moctezuma I</h2>
                     <p>
-                    Reinado: 1466-1472 (6 años)
-                    Detalles: Hija de Moctezuma I. Dos documentos indican que posiblemente gobernó como tlatoani por derecho propio entre los reinados de Moctezuma I y Axayácatl. Atotoztli fue la única mujer que gobernó como tlatoani en Tenochtitlán. Murió por causas naturales alrededor de 1472.                    </p>
+                    Reinado: 1440-1466 (26 años)
+                    Detalles: Hijo de Huitzilihuitl. A pesar de enfrentar desastres naturales, Moctezuma I lideró proyectos de construcción y conquistas significativas. Inició la guerra de las flores. Murió por causas naturales en 1466.                    </p>
                 </div>
             </div>
 
-            <div
+          
+        </ReactCardFlip>
+    );
+};
+
+
+
+const Atotoztli = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+               <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -409,6 +388,30 @@ const Atotoztli = () => {
                     }}
                 />
             </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2> Atotoztli</h2>
+                    <p>
+                    Reinado: 1466-1472 (6 años)
+                    Detalles: Hija de Moctezuma I. Dos documentos indican que posiblemente gobernó como tlatoani por derecho propio entre los reinados de Moctezuma I y Axayácatl. Atotoztli fue la única mujer que gobernó como tlatoani en Tenochtitlán. Murió por causas naturales alrededor de 1472.                    </p>
+                </div>
+            </div>
+
+         
         </ReactCardFlip>
     );
 };
@@ -426,30 +429,7 @@ const Axayacatl = () => {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '10px',
-                    margin: '10px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2>Axayacatl</h2>
-                    <p>
-                    Reinado: 1472-1481 (9 años)
-                    Detalles: Axayacatl fue el nieto de Itzcóatl y es conocido como un famoso rey guerrero. Durante su reinado, continuó con la construcción de obras y la expansión del imperio. Sin embargo, su vida fue truncada por una enfermedad, falleciendo a la edad de 30 o 31 años.                    </p>
-                </div>
-            </div>
-
-            <div
+              <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -475,20 +455,6 @@ const Axayacatl = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-const Tizoc = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -505,15 +471,29 @@ const Tizoc = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Tizoc</h2>
+                    <h2>Axayacatl</h2>
                     <p>
-                    Reinado: 1481-1486 (5 años)
-                    Detalles: Tizoc fue el nieto de Itzcóatl y sucedió a su hermano Axayácatl como gobernante. A pesar de su salud delicada, Tizoc supervisó la expansión y embellecimiento de Tenochtitlan, así como el establecimiento de puestos de avanzada aztecas en territorios lejanos al centro imperial. Sin embargo, su reinado fue abruptamente interrumpido, ya que se sospecha que fue envenenado
-                    </p>
+                    Reinado: 1472-1481 (9 años)
+                    Detalles: Axayacatl fue el nieto de Itzcóatl y es conocido como un famoso rey guerrero. Durante su reinado, continuó con la construcción de obras y la expansión del imperio. Sin embargo, su vida fue truncada por una enfermedad, falleciendo a la edad de 30 o 31 años.                    </p>
                 </div>
             </div>
 
-            <div
+          
+        </ReactCardFlip>
+    );
+};
+
+
+const Tizoc = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+              <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -539,21 +519,6 @@ const Tizoc = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-
-const Ahuitzotl = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -570,13 +535,31 @@ const Ahuitzotl = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Ahuitzotl (1486-1502)</h2>
+                    <h2>Tizoc</h2>
                     <p>
-                    Nieto de Itzcóatl. Gobernó durante 16 años y fue conocido por su expansión militar y los numerosos sacrificios humanos. Murió en una inundación de Tenochtitlan.                    </p>
+                    Reinado: 1481-1486 (5 años)
+                    Detalles: Tizoc fue el nieto de Itzcóatl y sucedió a su hermano Axayácatl como gobernante. A pesar de su salud delicada, Tizoc supervisó la expansión y embellecimiento de Tenochtitlan, así como el establecimiento de puestos de avanzada aztecas en territorios lejanos al centro imperial. Sin embargo, su reinado fue abruptamente interrumpido, ya que se sospecha que fue envenenado
+                    </p>
                 </div>
             </div>
 
-            <div
+          
+        </ReactCardFlip>
+    );
+};
+
+
+
+const Ahuitzotl = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+               <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -602,18 +585,6 @@ const Ahuitzotl = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-const MoctezumaII = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -630,13 +601,26 @@ const MoctezumaII = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Moctezuma II (1502-1520)</h2>
+                    <h2>Ahuitzotl (1486-1502)</h2>
                     <p>
-                    Hijo de Axayácatl. Gobernó durante 18 años y fortaleció el Imperio Azteca. Sin embargo, su reinado se vio afectado por la llegada de los españoles en 1519, lo que condujo a la conquista del imperio. Su muerte tiene diferentes versiones, posiblemente estrangulado por los españoles o golpeado en la cabeza por una piedra lanzada por uno de sus súbditos durante un discurso.                    </p>
+                    Nieto de Itzcóatl. Gobernó durante 16 años y fue conocido por su expansión militar y los numerosos sacrificios humanos. Murió en una inundación de Tenochtitlan.                    </p>
                 </div>
             </div>
 
-            <div
+         
+        </ReactCardFlip>
+    );
+};
+const MoctezumaII = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+               <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -662,19 +646,6 @@ const MoctezumaII = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-const Cuitláhuac = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -691,13 +662,27 @@ const Cuitláhuac = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Cuitláhuac (1520):</h2>
+                    <h2>Moctezuma II (1502-1520)</h2>
                     <p>
-                    Hijo de Axayácatl. Gobernó durante 80 días como tlatoani y lideró la resistencia contra los españoles en Tenochtitlán. Murió de viruela en diciembre de 1520.                     </p>
+                    Hijo de Axayácatl. Gobernó durante 18 años y fortaleció el Imperio Azteca. Sin embargo, su reinado se vio afectado por la llegada de los españoles en 1519, lo que condujo a la conquista del imperio. Su muerte tiene diferentes versiones, posiblemente estrangulado por los españoles o golpeado en la cabeza por una piedra lanzada por uno de sus súbditos durante un discurso.                    </p>
                 </div>
             </div>
 
-            <div
+         
+        </ReactCardFlip>
+    );
+};
+
+const Cuitláhuac = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+                <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -723,6 +708,29 @@ const Cuitláhuac = () => {
                     }}
                 />
             </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2>Cuitláhuac (1520):</h2>
+                    <p>
+                    Hijo de Axayácatl. Gobernó durante 80 días como tlatoani y lideró la resistencia contra los españoles en Tenochtitlán. Murió de viruela en diciembre de 1520.                     </p>
+                </div>
+            </div>
+
+        
         </ReactCardFlip>
     );
 };

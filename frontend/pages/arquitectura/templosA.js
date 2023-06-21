@@ -155,29 +155,7 @@ const Mayor = () => {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '10px',
-                    margin: '10px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2>El Templo Mayor</h2>
-                    <p>
-                    El Templo Mayor de México-Tenochtitlan era un complejo religioso central para los aztecas. Contenía construcciones piramidales y torres, siendo el Templo Mayor la principal estructura. Era el lugar sagrado donde se llevaban a cabo rituales y adoración.                    </p>
-                </div>
-            </div>
-
-            <div
+               <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -202,22 +180,6 @@ const Mayor = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-
-
-const Teopanzolco = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -234,13 +196,30 @@ const Teopanzolco = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Templos de Teopanzolco</h2>
+                    <h2>El Templo Mayor</h2>
                     <p>
-                    En el valle de Morelos, se encuentra el centro monumental construido en una colina de lava, resultado de la actividad volcánica que cerró el extremo sur de la cuenca de México. Esta región ha sido habitada desde al menos el año 2000 a.C. y ha experimentado un desarrollo regional, influenciado por la cultura teotihuacana durante el periodo Clásico.               
-                    </p>
+                    El Templo Mayor de México-Tenochtitlan era un complejo religioso central para los aztecas. Contenía construcciones piramidales y torres, siendo el Templo Mayor la principal estructura. Era el lugar sagrado donde se llevaban a cabo rituales y adoración.                    </p>
                 </div>
             </div>
 
+         
+        </ReactCardFlip>
+    );
+};
+
+
+
+
+const Teopanzolco = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            
             <div
                 onClick={handleCardClick}
                 style={{
@@ -266,6 +245,29 @@ const Teopanzolco = () => {
                     }}
                 />
             </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2>Templos de Teopanzolco</h2>
+                    <p>
+                    En el valle de Morelos, se encuentra el centro monumental construido en una colina de lava, resultado de la actividad volcánica que cerró el extremo sur de la cuenca de México. Esta región ha sido habitada desde al menos el año 2000 a.C. y ha experimentado un desarrollo regional, influenciado por la cultura teotihuacana durante el periodo Clásico.               
+                    </p>
+                </div>
+            </div>
+
         </ReactCardFlip>
     );
 };
@@ -283,30 +285,7 @@ const Teotihuacán= () => {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '10px',
-                    margin: '10px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2>La Pirámide del Sol en Teotihuacán</h2>
-                    <p>
-                    La Pirámide del Sol en Teotihuacán, construida entre 1 y 150 d.C., es una impresionante estructura de 63,4 metros de altura. En su cúspide había un templo y una estatua, pero ahora solo queda una plataforma cuadrada. En 1971, se descubrió una gruta debajo de la pirámide, accesible a través de un pozo, con varias salas dispuestas como los pétalos de una flor
-                    </p>
-                </div>
-            </div>
-
-            <div
+             <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -331,22 +310,6 @@ const Teotihuacán= () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-
-
-const Luna = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -363,13 +326,31 @@ const Luna = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Pirámide de la Luna</h2>
+                    <h2>La Pirámide del Sol en Teotihuacán</h2>
                     <p>
-                    La Pirámide de la Luna en Teotihuacán es más pequeña que la Pirámide del Sol pero tiene una estructura más antigua. Se utilizaba para rituales religiosos, sacrificios y entierros. También servía como observatorio astronómico y centro ceremonial para honrar a la Gran Diosa de Teotihuacán.              
+                    La Pirámide del Sol en Teotihuacán, construida entre 1 y 150 d.C., es una impresionante estructura de 63,4 metros de altura. En su cúspide había un templo y una estatua, pero ahora solo queda una plataforma cuadrada. En 1971, se descubrió una gruta debajo de la pirámide, accesible a través de un pozo, con varias salas dispuestas como los pétalos de una flor
                     </p>
                 </div>
             </div>
 
+           
+        </ReactCardFlip>
+    );
+};
+
+
+
+
+const Luna = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+          
             <div
                 onClick={handleCardClick}
                 style={{
@@ -394,6 +375,28 @@ const Luna = () => {
                         borderRadius: '10px',
                     }}
                 />
+            </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2>Pirámide de la Luna</h2>
+                    <p>
+                    La Pirámide de la Luna en Teotihuacán es más pequeña que la Pirámide del Sol pero tiene una estructura más antigua. Se utilizaba para rituales religiosos, sacrificios y entierros. También servía como observatorio astronómico y centro ceremonial para honrar a la Gran Diosa de Teotihuacán.              
+                    </p>
+                </div>
             </div>
         </ReactCardFlip>
     );

@@ -152,30 +152,7 @@ const Huanitzin = () => {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div
-                onClick={handleCardClick}
-                style={{
-                    width: '100%',
-                    height: '50vh',
-                    backgroundColor: 'lightgreen',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
-                    borderRadius: '10px',
-                    margin: '10px',
-                }}
-            >
-                <div style={{ margin: 10 }}>
-                    <h2> Huanitzin (1538-1541)</h2>
-                    <p>
-                    Diego de Alvarado Huanitzin, nieto de Axayácatl, fue designado por los españoles debido a su popularidad entre los nahuas y su habilidad para hablar español. Su reinado marcó la restauración de la línea real. Se le considera un destacado gobernante mexica del período colonial. Falleció por causas naturales.
-                    </p>
-                </div>
-            </div>
-
-            <div
+             <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -201,22 +178,6 @@ const Huanitzin = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-
-
-const Tehuetzquititzin = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -233,14 +194,31 @@ const Tehuetzquititzin = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Tehuetzquititzin (1541-1554)</h2>
+                    <h2> Huanitzin (1538-1541)</h2>
                     <p>
-                    Diego de San Francisco Tehuetzquititzin, nieto de Tizoc, fue nombrado por el virrey español a sugerencia de la nobleza nahua. Gozaba de gran popularidad entre sus súbditos y trabajó arduamente para proteger los recursos de su comunidad y la riqueza de su familia frente a los señores coloniales. Durante su reinado, una epidemia devastadora golpeó la región en la década de 1540. Falleció por causas naturales.
+                    Diego de Alvarado Huanitzin, nieto de Axayácatl, fue designado por los españoles debido a su popularidad entre los nahuas y su habilidad para hablar español. Su reinado marcó la restauración de la línea real. Se le considera un destacado gobernante mexica del período colonial. Falleció por causas naturales.
                     </p>
                 </div>
             </div>
 
-            <div
+           
+        </ReactCardFlip>
+    );
+};
+
+
+
+
+const Tehuetzquititzin = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+             <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -266,21 +244,6 @@ const Tehuetzquititzin = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-
-
-
-const Cecetzin = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -297,14 +260,30 @@ const Cecetzin = () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Cecetzin (1557-1562)</h2>
+                    <h2>Tehuetzquititzin (1541-1554)</h2>
                     <p>
-                    Cristóbal de Guzmán Cecetzin, hijo de Huanitzin, fue designado como gobernante por el virrey español, siguiendo la recomendación de la nobleza nahua. Se desconoce la razón del largo periodo interino que precedió a su ascenso al trono. Durante su reinado, se dedicó a gobernar y preservar los intereses de su comunidad. Falleció por causas naturales en el año 1562.
+                    Diego de San Francisco Tehuetzquititzin, nieto de Tizoc, fue nombrado por el virrey español a sugerencia de la nobleza nahua. Gozaba de gran popularidad entre sus súbditos y trabajó arduamente para proteger los recursos de su comunidad y la riqueza de su familia frente a los señores coloniales. Durante su reinado, una epidemia devastadora golpeó la región en la década de 1540. Falleció por causas naturales.
                     </p>
                 </div>
             </div>
 
-            <div
+           
+        </ReactCardFlip>
+    );
+};
+
+
+
+const Cecetzin = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+              <div
                 onClick={handleCardClick}
                 style={{
                     width: '100%',
@@ -330,18 +309,6 @@ const Cecetzin = () => {
                     }}
                 />
             </div>
-        </ReactCardFlip>
-    );
-};
-const Cipac= () => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    return (
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div
                 onClick={handleCardClick}
                 style={{
@@ -358,13 +325,27 @@ const Cipac= () => {
                 }}
             >
                 <div style={{ margin: 10 }}>
-                    <h2>Cipac (1563-1565)</h2>
+                    <h2>Cecetzin (1557-1562)</h2>
                     <p>
-                    Luis de Santa María Cipac, también conocido como Nanacacipactzin, era nieto de Ahuitzotl y fue el último tlatoani. Fue designado como gobernante por el virrey español, siguiendo la recomendación de la nobleza nahua. Sin embargo, su mandato estuvo lleno de problemas legales y desacuerdos sobre impuestos con las autoridades coloniales. Lamentablemente, su salud se vio afectada debido al estrés de su cargo y falleció en diciembre de 1565.
+                    Cristóbal de Guzmán Cecetzin, hijo de Huanitzin, fue designado como gobernante por el virrey español, siguiendo la recomendación de la nobleza nahua. Se desconoce la razón del largo periodo interino que precedió a su ascenso al trono. Durante su reinado, se dedicó a gobernar y preservar los intereses de su comunidad. Falleció por causas naturales en el año 1562.
                     </p>
                 </div>
             </div>
 
+          
+        </ReactCardFlip>
+    );
+};
+const Cipac= () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
+    return (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            
             <div
                 onClick={handleCardClick}
                 style={{
@@ -391,6 +372,29 @@ const Cipac= () => {
                     }}
                 />
             </div>
+            <div
+                onClick={handleCardClick}
+                style={{
+                    width: '100%',
+                    height: '50vh',
+                    backgroundColor: 'lightgreen',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    boxShadow: '0px 0px 9px 6px rgba(0, 0, 0, 0.2)',
+                    borderRadius: '10px',
+                    margin: '10px',
+                }}
+            >
+                <div style={{ margin: 10 }}>
+                    <h2>Cipac (1563-1565)</h2>
+                    <p>
+                    Luis de Santa María Cipac, también conocido como Nanacacipactzin, era nieto de Ahuitzotl y fue el último tlatoani. Fue designado como gobernante por el virrey español, siguiendo la recomendación de la nobleza nahua. Sin embargo, su mandato estuvo lleno de problemas legales y desacuerdos sobre impuestos con las autoridades coloniales. Lamentablemente, su salud se vio afectada debido al estrés de su cargo y falleció en diciembre de 1565.
+                    </p>
+                </div>
+            </div>
+
         </ReactCardFlip>
     );
 };

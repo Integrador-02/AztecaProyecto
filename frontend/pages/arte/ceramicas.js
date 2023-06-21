@@ -31,7 +31,7 @@ const Ceramicas = ()=>{
         <div class="sketchfab-embed-wrapper" style={{margin :20,padding :20}}> 
         <div className="grid grid-cols-2 gap-1">
 
-        <iframe style={{ width: '100%', height: '550px' }} title="Aztec Ceramic Figures" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7758b157084c49cabf7c30a27c1e1527/embed"> 
+        <iframe style={{ width: '100%', height: '100%' }} title="Aztec Ceramic Figures" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7758b157084c49cabf7c30a27c1e1527/embed"> 
         </iframe> 
   
        
@@ -46,15 +46,7 @@ const Ceramicas = ()=>{
             textAlign: 'justify',
             lineHeight: '1.5',
             fontFamily: 'Arial, sans-serif',
-          }}>                Se hicieron copas bicónicas y en forma de cáliz para que los ancianos bebiesen pulque, una fuerte 
-                bebida alcohólica hecha de jugo de maguey fermentado.
-                La decoración, pintada con líneas negras, fue a menudo geométrica, 
-                aunque más tarde se incluyeron pájaros, animales y motivos florales.
-                La cerámica policroma mixteca fue una de las más finas y más apreciadas de las cerámicas aztecas. Se hizo en Cholula y está decorada con numerosos engobes coloreados. Se dice que ésta era la única cerámica que quería usar el rey Moctezuma.
-                Fue principalmente una cerámica de lujo en la que se utilizaban los colores crema, amarillo crema, ocre rojo, siena quemada, gris y negro.
-                Algunos de los diseños decorativos fueron figuras humanas, símbolos religiosos y seculares, plumas y volutas y los dibujos tenían una calidad de plenitud y minuciosidad.
-                Se comercializó mucha cerámica y el soldado español Bernardo Díaz informó haber visto «toda clase de objetos hechos en miles de formas, desde grandes tinajas para agua a pequeñas jarras» 
-                en el gran mercado de Tlatelolco, cerca de Tenochtitlan.
+          }}>                Durante el período azteca, se produjo una variedad de cerámica, incluyendo copas para beber pulque y cerámica policroma mixteca. Estas piezas presentaban decoraciones geométricas, figuras humanas, símbolos religiosos y motivos florales. La cerámica azteca era valorada por su belleza y se comercializaba ampliamente en el mercado de Tlatelolco.
 
             </p>
             
