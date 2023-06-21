@@ -15,6 +15,8 @@ import Link from "next/link";
 import { FaRegCalendar } from "react-icons/fa";
 import Quiz from "./quiz";
 import PostSingle from "./comentarios";
+import AhorcadoAzteca from "./minijuego1";
+import Menu from "./menu";
 
 
 const { blog_folder, pagination } = config.settings;
@@ -32,75 +34,62 @@ const Home = ({
   );
   const showPosts = pagination;
 
+
+
+
   return (
     <Base>
+  {/* Banner */}
+  <section className="section banner relative pb-0">
     
-      {/* Banner */}
-      <section className="section banner relative pb-0">
-        <ImageFallback
-          className="absolute bottom-0 left-0 z-[-1] w-full"
-          src={"/images/banner-bg-shape.svg"}
-          width={1905}
-          height={295}
-          alt="banner-shape"
-          priority
-        />
+    <ImageFallback
+      className="absolute bottom-0 left-0 z-[-1] w-full"
+      src={"/images/banner-bg-shape.svg"}
+      width={1905}
+      height={295}
+      alt="banner-shape"
+      priority
+    />
 
-        <div className="container">
-          <div className="row flex-wrap-reverse items-center justify-center lg:flex-row">
-            <div className={banner.image_enable ? "mt-12 text-center lg:mt-0 lg:text-left lg:col-6" : "mt-12 text-center lg:mt-0 lg:text-left lg:col-12"}>
-              <div className="banner-title">
-                {markdownify(banner.title, "h1")}
-                {markdownify(banner.title_small, "span")}
-              </div>
-              {markdownify(banner.content, "p", "mt-4")}
-              {banner.button.enable && (
-                  <Link
-                    className="btn btn-primary mt-6"
-                    href={banner.button.link}
-                    rel={banner.button.rel}
-                  >
-                    {banner.button.label}
-                  </Link>
-              )}
-            </div>
-            {banner.image_enable && (
-                <div className="col-9 lg:col-6">
-                  <ImageFallback
-                    className="mx-auto object-contain"
-                    src={banner.image}
-                    width={548}
-                    height={443}
-                    priority={true}
-                    alt="Banner Image"
-                  />
-                </div>
-            )}
+    <div className="container">
+      <div className="row flex-wrap-reverse items-center justify-center lg:flex-row">
+        <div className={banner.image_enable ? "mt-12 text-center lg:mt-0 lg:text-left lg:col-6" : "mt-12 text-center lg:mt-0 lg:text-left lg:col-12"}>
+          <div className="banner-title">
+            {markdownify(banner.title, "h1")}
           </div>
-
+          {markdownify(banner.content, "p", "mt-4")}
+          {banner.button.enable && (
+            <Link
+              className="btn btn-primary mt-6"
+              href={banner.button.link}
+              rel={banner.button.rel}
+            >
+              {banner.button.label}
+            </Link>
+          )}
         </div>
-      </section>
-
-      {/* Home main */}
-      <section className="section">
-        <div className="container">
-          <div className="row items-start">
-            <div className="mb-12 lg:mb-0 lg:col-8">
-              {/* Featured posts */}
-              
-
-              
-
-            
-            {/*  <Quiz/> */}
-              <PostSingle/>
-              
-            </div>
-            
+        {banner.image_enable && (
+          <div className="col-9 lg:col-6">
+            <ImageFallback
+              className="mx-auto object-contain"
+              src={banner.image}
+              width={548}
+              height={443}
+              priority={true}
+              alt="Banner Image"
+            />
           </div>
-        </div>
-      </section>
-    </Base>
+        )}
+      </div>
+
+      <div className="mt-1"style={{padding:40}}> {/* Agrega un margen superior de 8 unidades */}
+        <PostSingle />
+      </div>
+
+    </div>
+  </section>
+</Base>
+
   );
 };
 

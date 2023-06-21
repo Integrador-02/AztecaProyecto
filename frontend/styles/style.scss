@@ -112,7 +112,7 @@
 
 
 
-//--------------
+//-------------- comentarios
 .comment-container {
   display: flex;
   align-items: flex-start;
@@ -125,8 +125,8 @@
 .comment-container .avatar-circle {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
+  border-radius: 100%;
+  overflow: flex;
   margin-right: 10px;
 }
 
@@ -152,3 +152,283 @@
 }
 
 /* Otros estilos CSS que desees aplicar */
+/* tic tack*/
+.tic-tac-toe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  font-size: 32px;
+  color: black;
+  cursor: pointer;
+}
+
+.winner {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.draw {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.reset {
+  background-color: #008cba;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: #006b8c;
+}
+
+
+.my-title-style {
+  color: green;
+}
+
+.my-content-style {
+  color: white;
+}
+
+.my-confirm-button-style {
+  background-color: green;
+}
+
+
+
+
+.body {
+  margin: 0;
+  color: #fff;
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app2 {
+  background-color: #246d51;
+  max-width: 700px;
+  min-width: 450px;
+  height: min-content;
+  min-height: 200px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(236, 228, 228, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* PREGUNTAS */
+.lado-izquierdo2 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.pregunta-numero2 {
+  margin-bottom: 20px;
+}
+
+.pregunta-numero2 span {
+  font-size: 28px;
+}
+
+.pregunta-titulo2 {
+  margin-bottom: 12px;
+}
+
+.lado-derecho2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FINALIZADO */
+.juego-terminado2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* GRAL */
+.button2 {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #c6c9d4;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #218179;
+  cursor: pointer;
+}
+
+.tiempo-restante {
+  font-size: 14px;
+  color: #fc3d3d;
+  margin-bottom: 50px;
+}
+
+.correct,
+.correct:hover {
+  background-color: #2f922f;
+}
+
+.incorrect,
+.incorrect:hover {
+  background-color: #ff3333;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button:hover {
+  background-color: #e6ebf0;
+}
+
+button[disabled] {
+  background-color: #2d9780;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+//------ juegos
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  gap: 5px;
+}
+
+.row {
+  display: flex;
+}
+
+.candy {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+
+
+///
+/* quiz.css */
+
+.quiz-container {
+  width: 500px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option {
+  margin-bottom: 0.5rem;
+}
+
+.option input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.submit-button {
+  background-color: #46b4a2;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+
+//f
+.card {
+  display: inline-block;
+  margin: 5px;
+  height: calc(200px );
+  width: calc(250px);
+  cursor: pointer;
+}
+.cards-container{
+  width: 1000px;
+  height: 600px;
+}
+.card:hover {
+  transform: scale(0.98);
+}
+
+.card-image {
+  height: calc(200px - 10px);
+  width: calc(250px - 10px);
+}
+
+
+/**/

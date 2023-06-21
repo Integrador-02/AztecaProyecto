@@ -48,7 +48,7 @@ const Register = () => {
 
     const nombre = fullName;
 
-    axios.post("http://localhost:4000/api/register", { nombre, password, email })
+    axios.post("https://happy-fly-loincloth.cyclic.app/api/register", { nombre, password, email })
       .then(async () => {
         // Manejo de errores en caso de que falle la solicitud al backend
         alert("registrado correctamente");
@@ -86,10 +86,11 @@ const Register = () => {
       />
       <div className="mx-auto max-w-lg rounded-lg bg-white p-4 shadow-lg">
         <h1
-          className="mb-4 text-center text-3xl font-semibold text-[#49B675] md:text-5xl"
+          className="mb-4 text-left text-3xl font-semibold text-[#49B675] md:text-5xl"
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
         >
-          Crea tu cuenta
+          !Crea tu cuenta!
+
         </h1>
         <form onSubmit={handleSubmit}>
           <div></div>

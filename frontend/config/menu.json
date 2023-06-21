@@ -46,15 +46,16 @@
       "url": "/categories"
     }
   ],
-  "logeado": [
-    {
-      "name": "cerrar sesion",
-      "url": "/"
-    },
+  "logeado2": [
+  
     {
       "name": "Perfil",
       "url": "/profile"
     }
+  ],
+  "logeado": [
+  
+   
   ]
 
   

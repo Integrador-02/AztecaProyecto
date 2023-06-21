@@ -17,7 +17,4 @@ education:
       content: "victor.nanez@correounivalle.edu.co"
 
 ---
-
-¡Hola! Somos un grupo de estudiantes de la Universidad del Valle y estamos emocionados de presentarte nuestro proyecto sobre la cultura azteca. En este trabajo, exploramos diversos aspectos fascinantes de la civilización azteca y su legado histórico.
-
-Nuestro objetivo principal es profundizar en la comprensión de la cultura azteca y compartir ese conocimiento con nuestra comunidad. A través de investigaciones exhaustivas y el estudio de fuentes confiables, hemos recopilado información detallada sobre sus tradiciones, creencias, arte, arquitectura y mucho más.
+¡Hola! Somos un grupo de estudiantes de la Universidad del Valle y estamos emocionados de presentarte nuestro proyecto sobre la cultura azteca. En este trabajo, exploramos diversos aspectos fascinantes de la civilización azteca y su legado histórico. Nuestro objetivo principal es profundizar en la comprensión de la cultura azteca y compartir ese conocimiento con nuestra comunidad. A través de investigaciones exhaustivas y el estudio de fuentes confiables, hemos recopilado información detallada sobre sus tradiciones, creencias, arte, arquitectura y mucho más.
