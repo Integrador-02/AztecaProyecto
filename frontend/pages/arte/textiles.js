@@ -1,3 +1,4 @@
+
 import { Base1 } from "@layouts/Baseof";
 import Link from "next/link";
 import { useState } from 'react';
@@ -100,9 +101,11 @@ const Textiles = () => {
             </ul>
 
         </Base1>
+
     )
 
 }
+
 
 export default Textiles;
 
@@ -169,3 +172,4 @@ const Textile = () => {
         </ReactCardFlip>
     );
 };
+

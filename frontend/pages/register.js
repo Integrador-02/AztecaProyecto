@@ -90,6 +90,7 @@ const Register = () => {
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
         >
           !Crea tu cuenta!
+
         </h1>
         <form onSubmit={handleSubmit}>
           <div></div>

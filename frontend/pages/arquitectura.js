@@ -1,5 +1,6 @@
 import { Base1 } from "@layouts/Baseof";
 import { markdownify } from "@lib/utils/textConverter";
+
 import Link from "next/link";
 const Titulo = () => {
   return (
@@ -17,6 +18,7 @@ const Titulo = () => {
     </div>
   );
 };
+
 
 const Templos=()=>{
 
@@ -36,11 +38,13 @@ const Templos=()=>{
              </iframe>
              <p style={{textAlign:'justify', fontSize: '23px', fontWeight: 'normal',marginLeft:'125px',marginTop: '10px', marginRight: '125px', color: '#000' }}>
 
+
             
 Los templos aztecas eran estructuras piramidales utilizadas para adorar a las deidades. Se reconstruían periódicamente y en su interior se realizaban rituales de sacrificio, incluyendo sacrificios humanos. Eran construidos con ladrillos cubiertos de piedra y yeso, y a menudo estaban decorados con colores brillantes. Algunos de los principales centros de adoración aztecas eran Teotihuacán, Cholula y Tenochtitlán.   </p>
 
              
         </div>
+
 
        
         

@@ -1,4 +1,5 @@
 
+
 import { Base1 } from "@layouts/Baseof";
 import Link from "next/link";
 
@@ -87,11 +88,13 @@ const Ceramicas = ()=>{
           </li>
                   </ul>
 
+
             
 
 
 
         </Base1>
+
 
 
     );
