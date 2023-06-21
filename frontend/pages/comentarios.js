@@ -9,7 +9,9 @@ import { useTheme } from "next-themes";
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Cookies from "js-cookie";
+
 import Avatar from "react-avatar";
+
 import axios from "axios";
 
 
@@ -42,6 +44,7 @@ const CommentSection = () => {
       timestamp: timestamp,
     };
 
+
     const coment = newCommentObject.text
     const correo = newCommentObject.username
     const gusta = newCommentObject.likes
@@ -68,6 +71,8 @@ const CommentSection = () => {
     setReplyTo(null);
   };
 
+  
+  
   const handleReplyToComment = (commentId) => {
     const commentToReply = comments.find((comment) => comment.id === commentId);
 

@@ -1,24 +1,20 @@
 import React from 'react';
-import { markdownify } from "@lib/utils/textConverter";
 import Base1 from "@layouts/Baseof";
-import { FaInfoCircle } from 'react-icons/fa';
-import { FaQuestionCircle } from 'react-icons/fa';
-import { useState } from 'react';
 import Link from 'next/link';
 
-const Creencias = () => {
+const Sacerdocio = () => {
 
   const Titulo = () => {
     return (
       <div className="relative h-80 font-text">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
-          src={"https://i0.wp.com/www.turimexico.com/wp-content/uploads/2015/07/religion-y-dioses.jpg?resize=545%2C507&ssl=1"}
+          src={"https://www.lifeder.com/wp-content/uploads/2022/08/vestimenta-mexica-hombres-mujeres.jpg"}
           alt="Imagen de fondo"
         />
         <div className="relative z-12 flex items-center justify-center h-full">
           <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Creencias</span>
+            <span className="text-green-600">Sacerdocio</span>
           </h1>
         </div>
       </div>
@@ -31,19 +27,17 @@ return (
     <div class="sketchfab-embed-wrapper" style={{margin :20,padding :20}}> 
     <div className="grid grid-cols-2 gap-1">
 
-    <iframe style={{ width: '100%', height: '550px' }}
-    title="Aztec temple" 
-    frameborder="0" 
-    allowfullscreen mozallowfullscreen="true" 
-    webkitallowfullscreen="true" 
-    allow="autoplay; fullscreen; xr-spatial-tracking" 
-    xr-spatial-tracking execution-while-out-of-viewport 
-    execution-while-not-rendered web-share 
-    src="https://sketchfab.com/models/6dfe852b16bd4e0884be3cf2873c0492/embed"> 
-    </iframe> 
-    
-
-
+     <iframe 
+     style={{ width: '100%', height: '550px' }} 
+     title="Aztec Priest" 
+     frameborder="0" 
+     allowfullscreen mozallowfullscreen="true" 
+     webkitallowfullscreen="true" 
+     allow="autoplay; fullscreen; xr-spatial-tracking" 
+     xr-spatial-tracking execution-while-out-of-viewport 
+     execution-while-not-rendered web-share 
+     src="https://sketchfab.com/models/d5643b0c2e704abf92e3e45fcc9441ff/embed"> 
+     </iframe> 
     <div>
     <p style={{
         fontSize: '23px',
@@ -54,18 +48,17 @@ return (
         lineHeight: '1.5',
         fontFamily: 'Arial, sans-serif',
       }}>     
-      Los Aztecas eran politeístas. Los dioses Aztecas se consideraban 
-      polifacéticos ya que no tenían un lugar definido, ellos los ubicaban 
-      en el cielo y creían que tenían un carácter bondadoso o maléfico.
-      Para los aztecas el Universo fue originado por la Cipactli, una 
-      especie de serpiente-dragón que vivía sola en el cosmos. Según la 
-      mitología fue dividida en tres partes, de su cabeza nacieron los 13 
-      cielos, de su cuerpo nació el Tlalticpac o la Tierra y de su cola, 
-      los nueve inframundos.
-      El derramamiento de la propia san­gre era un procedimiento para procurar el favor divino. 
-
-
-
+      El sacerdocio y la autoridad civil estaban estrechamente vinculados 
+      en la sociedad azteca. Los líderes religiosos presidían las 
+      ceremonias y el sacerdocio seguía una estructura jerárquica similar 
+      a la del orden social. En Tenochtitlán, tanto el Jefe de los Hombres 
+      como la Mujer Serpiente tenían responsabilidades tanto en asuntos 
+      civiles como religiosos. El primero dirigía activamente los servicios 
+      religiosos, mientras que la última supervisaba los templos, 
+      los rituales y los asuntos relacionados con el sacerdocio.
+      Seguían en categoría los sacerdotes que tenían a su cargo el culto, 
+      el templo y el rito de cada dios o diosa en particular. También 
+      había sacerdotisas y escuelas creadas para su mejor instrucción.
         </p>
         
 
@@ -113,4 +106,4 @@ return (
 );
 };
 
-export default Creencias;
+export default Sacerdocio;

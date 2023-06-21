@@ -6,19 +6,19 @@ import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Link from 'next/link';
 
-const Creencias = () => {
+const Guerra = () => {
 
   const Titulo = () => {
     return (
       <div className="relative h-80 font-text">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
-          src={"https://i0.wp.com/www.turimexico.com/wp-content/uploads/2015/07/religion-y-dioses.jpg?resize=545%2C507&ssl=1"}
+          src={"https://pueblosoriginarios.com/recursos/colecciones/azteca/imagenes/2_big.jpg"}
           alt="Imagen de fondo"
         />
         <div className="relative z-12 flex items-center justify-center h-full">
           <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Creencias</span>
+            <span className="text-green-600">Ritos de Guerra</span>
           </h1>
         </div>
       </div>
@@ -31,16 +31,11 @@ return (
     <div class="sketchfab-embed-wrapper" style={{margin :20,padding :20}}> 
     <div className="grid grid-cols-2 gap-1">
 
-    <iframe style={{ width: '100%', height: '550px' }}
-    title="Aztec temple" 
-    frameborder="0" 
-    allowfullscreen mozallowfullscreen="true" 
-    webkitallowfullscreen="true" 
-    allow="autoplay; fullscreen; xr-spatial-tracking" 
-    xr-spatial-tracking execution-while-out-of-viewport 
-    execution-while-not-rendered web-share 
-    src="https://sketchfab.com/models/6dfe852b16bd4e0884be3cf2873c0492/embed"> 
-    </iframe> 
+        <iframe style={{ width: '100%', height: '550px' }}  
+        title="Widowed Grounds" frameborder="0" 
+        allowfullscreen mozallowfullscreen="true" 
+        webkitallowfullscreen="true"  xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
+        src="https://2.bp.blogspot.com/-0z3SJhnOjIE/XrHNw4JDbBI/AAAAAAADNtU/1ior_MhXxQ86cn35yb578uXWXEgbAf8-QCLcBGAsYHQ/s1600/SMKZRD7NVNBENJX2DLJ7PHGCKM.jpg.webp"> </iframe> 
     
 
 
@@ -54,18 +49,14 @@ return (
         lineHeight: '1.5',
         fontFamily: 'Arial, sans-serif',
       }}>     
-      Los Aztecas eran politeístas. Los dioses Aztecas se consideraban 
-      polifacéticos ya que no tenían un lugar definido, ellos los ubicaban 
-      en el cielo y creían que tenían un carácter bondadoso o maléfico.
-      Para los aztecas el Universo fue originado por la Cipactli, una 
-      especie de serpiente-dragón que vivía sola en el cosmos. Según la 
-      mitología fue dividida en tres partes, de su cabeza nacieron los 13 
-      cielos, de su cuerpo nació el Tlalticpac o la Tierra y de su cola, 
-      los nueve inframundos.
-      El derramamiento de la propia san­gre era un procedimiento para procurar el favor divino. 
-
-
-
+      En los rituales de guerra participaban no solo los propios 
+      guerreros, sino también sus mujeres y los sacerdotes, los 
+      primeros prisioneros eran sacrificados en campo y los restantes 
+      eran llevados a la ciudad de Tenochtitlan,
+      y para recibirlos el rey y los guerreros se sangraban.
+      Los prisioneros de guerra eran la ofren­da más estimada, tanto más 
+      si los cauti­vos habían demostrado bravura en los combates o si eran 
+      parte de sus más ele­vadas jerarquías.
         </p>
         
 
@@ -113,4 +104,4 @@ return (
 );
 };
 
-export default Creencias;
+export default Guerra;

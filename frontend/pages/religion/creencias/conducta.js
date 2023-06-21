@@ -6,19 +6,19 @@ import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Link from 'next/link';
 
-const Creencias = () => {
+const Conducta = () => {
 
   const Titulo = () => {
     return (
       <div className="relative h-80 font-text">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
-          src={"https://i0.wp.com/www.turimexico.com/wp-content/uploads/2015/07/religion-y-dioses.jpg?resize=545%2C507&ssl=1"}
+          src={"https://www.socialhizo.com/images/edad_antigua/aztecas/sociedad_vida_cotidiana/temazcal.jpg"}
           alt="Imagen de fondo"
         />
         <div className="relative z-12 flex items-center justify-center h-full">
           <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Creencias</span>
+            <span className="text-green-600">Conducta</span>
           </h1>
         </div>
       </div>
@@ -31,19 +31,15 @@ return (
     <div class="sketchfab-embed-wrapper" style={{margin :20,padding :20}}> 
     <div className="grid grid-cols-2 gap-1">
 
-    <iframe style={{ width: '100%', height: '550px' }}
-    title="Aztec temple" 
-    frameborder="0" 
-    allowfullscreen mozallowfullscreen="true" 
-    webkitallowfullscreen="true" 
-    allow="autoplay; fullscreen; xr-spatial-tracking" 
-    xr-spatial-tracking execution-while-out-of-viewport 
-    execution-while-not-rendered web-share 
-    src="https://sketchfab.com/models/6dfe852b16bd4e0884be3cf2873c0492/embed"> 
-    </iframe> 
-    
-
-
+        <iframe style={{ width: '100%', height: '550px' }}  
+        title="Aztec SkyBlock spawn | 630x630" frameborder="0" 
+        allowfullscreen mozallowfullscreen="true" 
+        webkitallowfullscreen="true" 
+        allow="autoplay; fullscreen; xr-spatial-tracking" 
+        xr-spatial-tracking execution-while-out-of-viewport 
+        execution-while-not-rendered web-share 
+        src="https://sketchfab.com/models/7d9c8a1d51ba474393faa844358bc657/embed"> </iframe>
+        
     <div>
     <p style={{
         fontSize: '23px',
@@ -54,18 +50,14 @@ return (
         lineHeight: '1.5',
         fontFamily: 'Arial, sans-serif',
       }}>     
-      Los Aztecas eran politeístas. Los dioses Aztecas se consideraban 
-      polifacéticos ya que no tenían un lugar definido, ellos los ubicaban 
-      en el cielo y creían que tenían un carácter bondadoso o maléfico.
-      Para los aztecas el Universo fue originado por la Cipactli, una 
-      especie de serpiente-dragón que vivía sola en el cosmos. Según la 
-      mitología fue dividida en tres partes, de su cabeza nacieron los 13 
-      cielos, de su cuerpo nació el Tlalticpac o la Tierra y de su cola, 
-      los nueve inframundos.
-      El derramamiento de la propia san­gre era un procedimiento para procurar el favor divino. 
-
-
-
+      La conducta social y religiosa entre los az­tecas estaba concebida para 
+      conservar la existencia humana y asegurar el bienes­tar del hombre. 
+      De ahí que para alcanzar tales fines ofrendaban el más preciado de 
+      todos los dones, la vida humana. Pensaban que para que el hombre 
+      sobreviviera, los dioses que permitían su existencia debían también 
+      vivir y for­talecerse. Estos dioses, sin embargo, recibían su mejor 
+      alimentación de los co­razones sangrantes de un hombre o hasta de un 
+      niño.
         </p>
         
 
@@ -113,4 +105,4 @@ return (
 );
 };
 
-export default Creencias;
+export default Conducta;

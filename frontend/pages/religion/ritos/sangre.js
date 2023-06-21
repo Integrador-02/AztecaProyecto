@@ -6,19 +6,19 @@ import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Link from 'next/link';
 
-const Creencias = () => {
+const Sangre = () => {
 
   const Titulo = () => {
     return (
       <div className="relative h-80 font-text">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
-          src={"https://i0.wp.com/www.turimexico.com/wp-content/uploads/2015/07/religion-y-dioses.jpg?resize=545%2C507&ssl=1"}
+          src={"https://arqueologiamexicana.mx/sites/default/files/styles/arq750x375/public/imagen_100.jpg?itok=E6ttMHj8"}
           alt="Imagen de fondo"
         />
         <div className="relative z-12 flex items-center justify-center h-full">
           <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <span className="text-green-600">Creencias</span>
+            <span className="text-green-600">Ritos de Sangre</span>
           </h1>
         </div>
       </div>
@@ -31,17 +31,8 @@ return (
     <div class="sketchfab-embed-wrapper" style={{margin :20,padding :20}}> 
     <div className="grid grid-cols-2 gap-1">
 
-    <iframe style={{ width: '100%', height: '550px' }}
-    title="Aztec temple" 
-    frameborder="0" 
-    allowfullscreen mozallowfullscreen="true" 
-    webkitallowfullscreen="true" 
-    allow="autoplay; fullscreen; xr-spatial-tracking" 
-    xr-spatial-tracking execution-while-out-of-viewport 
-    execution-while-not-rendered web-share 
-    src="https://sketchfab.com/models/6dfe852b16bd4e0884be3cf2873c0492/embed"> 
-    </iframe> 
-    
+        <iframe style={{ width: '100%', height: '550px' }}  title="Widowed Grounds" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/cb3cc7eafa2c41a99919933523186dd3/embed"> </iframe> 
+   
 
 
     <div>
@@ -54,18 +45,15 @@ return (
         lineHeight: '1.5',
         fontFamily: 'Arial, sans-serif',
       }}>     
-      Los Aztecas eran politeístas. Los dioses Aztecas se consideraban 
-      polifacéticos ya que no tenían un lugar definido, ellos los ubicaban 
-      en el cielo y creían que tenían un carácter bondadoso o maléfico.
-      Para los aztecas el Universo fue originado por la Cipactli, una 
-      especie de serpiente-dragón que vivía sola en el cosmos. Según la 
-      mitología fue dividida en tres partes, de su cabeza nacieron los 13 
-      cielos, de su cuerpo nació el Tlalticpac o la Tierra y de su cola, 
-      los nueve inframundos.
-      El derramamiento de la propia san­gre era un procedimiento para procurar el favor divino. 
-
-
-
+      Se iniciaba con una penitencia que asociaba varias clases de mortificaciones: 
+      ayuno, abstinencia sexual, reclusión, vigilia y efusiones de sangre. 
+      Se comía solamente determinados platillos hechos para esa ocasión.
+      Un fuego alumbrado debía arder durante la totalidad de este período. 
+      En el caso del rey este período de penitencia era previo a su instalación 
+      en el poder, y se repetía en compañía de guerreros y sacerdotes en las fiestas 
+      anuales y antes de las guerras, para ser favorecido por sus dioses. 
+      La gente común también practicaba abstinencia y mortificación sobre 
+      todo antes de las fiestas del dios Huitzilopochtli.
         </p>
         
 
@@ -113,4 +101,28 @@ return (
 );
 };
 
-export default Creencias;
+export default Sangre;
+
+// Componente de información adicional
+const MasInformacion = () => {
+  return (
+    <div className="center-container">
+      <FaInfoCircle size={50} />
+      <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
+    </div>
+  );
+};
+
+
+const InteractionMessage = () => {
+    const showMessage = () => {
+      alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
+    };
+
+    return (
+      <div className="interaction-message">
+        <FaQuestionCircle className="help-icon" onClick={showMessage} />
+        <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
+      </div>
+    );
+  };

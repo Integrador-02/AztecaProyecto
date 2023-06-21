@@ -88,3 +88,4 @@ module.exports = {
     require("tailwind-bootstrap-grid")({ generateContainer: false }),
   ],
 };
+
