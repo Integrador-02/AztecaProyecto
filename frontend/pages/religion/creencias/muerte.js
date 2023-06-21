@@ -59,7 +59,7 @@ return (
       Tláloc, se hallaba el paraíso. Por lo general, el viaje a Mictlán 
       era extenso, de ahí que se enterrara a los muertos con alguna jarra 
       de agua para ser utilizada en el largo viaje.
-      Los que marchaban a Tlalocan eran enterrados con una "vaina", para que, 
+      Los que marchaban a Tlalocan eran enterrados con una (vaina), para que, 
       una vez llegados, ésta se convirtiera en un nuevo árbol.
         </p>
         
