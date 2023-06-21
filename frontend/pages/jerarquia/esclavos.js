@@ -33,7 +33,7 @@ const Esclavos = () => {
         <div className="grid grid-cols-2 gap-1">
 
           <iframe 
-          style={{width:'100%', height :'500px'}}
+          style={{width:'100%', height :'100%'}}
             title="Les Esclaves" 
             frameborder="0" 
             allowfullscreen 

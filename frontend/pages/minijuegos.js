@@ -32,7 +32,7 @@ const Minijuegos = () => {
             </p>
             <header style={{ textAlign: "center" }}></header>
             <ul
-              className="grid grid-cols-3 gap-2"
+              className="grid grid-cols-4 gap-2"
               style={{ margin: 0, padding: 0 }}
             >
               <li
@@ -119,6 +119,149 @@ const Minijuegos = () => {
                   }}
                 >
                    <span style={{ fontSize: '1.9em', color: '#006400' }}>Tic Tac Toe</span>
+                </Link>
+              </li>
+
+              <li
+                key={`4`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://play-lh.googleusercontent.com/S91io1m21x1O9sFYjXku6b1N4mmBz4hxriNKPnagw9z5lTzmBbL9oCvLGY3n4nrvAUA")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/pulz`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                   <span style={{ fontSize: '1.9em', color: '#006400' }}>rompecabeza🧠</span>
+                </Link>
+              </li>
+              <li
+                key={`5`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://www.cinconoticias.com/wp-content/uploads/xolotl.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/quizDioses`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Dioses</span>
+                </Link>
+              </li>
+              <li
+                key={`6`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/quizReligion`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Religion</span>
+                </Link>
+              </li>
+
+              <li
+                key={`7`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/quizJeraquia`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Jerarquía</span>
+                </Link>
+              </li>
+
+              <li
+                key={`8`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/quizArte`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Arte</span>
                 </Link>
               </li>
             </ul>

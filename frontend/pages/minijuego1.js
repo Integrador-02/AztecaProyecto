@@ -97,10 +97,10 @@ const AhorcadoAzteca = () => {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '50vh',
+      height: '55vh',
     },
     gameContainer: {
-      display: 'flex ',
+      display: 'absolute',
       flexDirection: 'column',
       alignItems: 'center',
       marginRight: '40px',
@@ -111,16 +111,16 @@ const AhorcadoAzteca = () => {
       backgroundImage: 'url("https://qph.cf2.quoracdn.net/main-qimg-d48c1a577952f5a3020bb51c3fc09ab9-lq")', // Ruta de la imagen de fondo
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.8)',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
       color: 'white', // Cambiar el color del texto a blanco
-      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)', // Agregar sombra al texto
+      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', // Agregar sombra al texto
     },
     resultContainer: {
-      display: 'float ',
+      display: 'absolute',
       flexDirection: 'column',
       alignItems: 'center',
       marginLeft: '40px',
-      width: '500px', // Tamaño fijo del recuadro del resultado
+      width: '700px', // Tamaño fijo del recuadro del resultado
       border: '1px solid rgba(0, 0, 0, 0.8)',
       borderRadius: '5px',
       padding: '20px',
@@ -140,27 +140,48 @@ const AhorcadoAzteca = () => {
   
   return (
     <div style={styles.container}>
-    {!isGameOver && attempts > 0 && (
-      <div style={styles.gameContainer}>
-        <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Pista: {hint}</div>
-        <div style={{ fontSize: '1.8em', color: 'black', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Intentos restantes: {attempts}</div>
-        <div style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Palabra: {renderGuessedWord()}</div>
-        <input type="text"style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }} value={guess} onChange={(e) => setGuess(e.target.value)}  />
-        <button onClick={checkGuess} style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Adivinar</button>
-      </div>
-    )}
-    {!isGameOver && attempts > 0 && (
-      <div style={styles.hangmanDrawing}>{hangmanImage}</div>
-    )}
-    {(isGameOver || attempts === 0) && (
-      <div style={styles.resultContainer}>
-        <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>{guessedWord.join('') === word ? '¡Felicidades! Has adivinado la palabra.' : '¡Oh no! Has perdido.'}</div>
-        {guessedWord.join('') !== word && <p style={{ fontSize: '1.9em', color: 'black', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>La palabra correcta era: {word}</p>}
-        <button onClick={resetGame}> Jugar de nuevo</button>
-      </div>
-    )}
-  </div>
+      {!isGameOver && attempts > 0 && (
+        <>
+          <div style={styles.gameContainer}>
+            <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Pista: {hint}</div>
+            <div style={{ fontSize: '1.8em', color: 'black', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Intentos restantes: {attempts}</div>
+            <div style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Palabra: {renderGuessedWord()}</div>
+            <input
+              type="text"
+              style={{fontSize: '1.9em',color: 'green',fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)'}}
+              value={guess}
+              onChange={(e) => {
+                const inputValue = e.target.value;
+                if (inputValue.length <= 1) {
+                  setGuess(inputValue);
+                }
+              }}
+            />
+            <button
+              onClick={checkGuess}
+              style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+            >
+              Adivinar
+            </button>
+          </div>
+          <div style={styles.hangmanDrawing}>{hangmanImage}</div>
+        </>
+      )}
+      {(isGameOver || attempts === 0) && (
+        <div style={styles.resultContainer}>
+          <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+            {guessedWord.join('') === word ? '¡Felicidades! Has adivinado la palabra.' : '¡Oh no! Has perdido.'}
+          </div>
+          {guessedWord.join('') !== word && (
+            <p style={{ fontSize: '1.9em', color: 'black', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
+              La palabra correcta era: {word}
+            </p>
+          )}
+          <button onClick={resetGame}> Jugar de nuevo</button>
+        </div>
+      )}
+    </div>
   );
-      };
+};
 
 export default AhorcadoAzteca;

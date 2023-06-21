@@ -16,6 +16,7 @@ import { FaRegCalendar } from "react-icons/fa";
 import Quiz from "./quiz";
 import PostSingle from "./comentarios";
 import AhorcadoAzteca from "./minijuego1";
+import Menu from "./menu";
 
 
 const { blog_folder, pagination } = config.settings;
@@ -40,6 +41,7 @@ const Home = ({
     <Base>
   {/* Banner */}
   <section className="section banner relative pb-0">
+    
     <ImageFallback
       className="absolute bottom-0 left-0 z-[-1] w-full"
       src={"/images/banner-bg-shape.svg"}

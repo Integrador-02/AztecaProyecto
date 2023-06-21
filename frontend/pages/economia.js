@@ -34,21 +34,17 @@ const Economia = ({ data }) => {
         
          
         <div class="sketchfab-embed-wrapper" style={{margin:50,position :10 }} > 
-            
+        <div className="grid grid-cols-2 gap-1">
+
         
-            <iframe style={{width: '40%', height: '400px'}} title="Pirate's-Aztec-Gold-Coin" frameborder="0" 
+            <iframe style={{width: '100%', height: '100%'}} title="Pirate's-Aztec-Gold-Coin" frameborder="0" 
                 allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" 
                 allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking 
                 execution-while-out-of-viewport execution-while-not-rendered web-share 
                 src="https://sketchfab.com/models/8a72e7d50c0d45efa902adbdc6ceb6a5/embed"> 
             </iframe> 
 
-
-            < InteractionMessage />
-       
-        </div>
-         <div>
-         <p style={{
+            <p style={{
                     fontSize: '23px',
                     fontWeight: 'normal',
                     margin: '20px',
@@ -78,6 +74,10 @@ const Economia = ({ data }) => {
             como era el grano de cacao o las plumas de quetzal.
             </p>
             
+        </div></div>
+         <div>
+        
+            
                
          </div>
 
@@ -89,7 +89,7 @@ const Economia = ({ data }) => {
                 margin: 0,
                 padding: 0,
                 position: 'relative',
-                backgroundImage: 'url("/images/textura.jpg")',
+                backgroundImage: 'url(https://www.gob.mx/cms/uploads/article/main_image/25411/chinampa1.jpg)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
@@ -107,7 +107,7 @@ const Economia = ({ data }) => {
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
               }}
             >
-              <span>Chinampas</span>
+               <span style={{ fontSize: '1.9em', color: '#006400' }}>Chinampas</span>
             </Link>
                          
               
@@ -120,7 +120,7 @@ const Economia = ({ data }) => {
                 margin: 0,
                 padding: 0,
                 position: 'relative',
-                backgroundImage: 'url("/images/textura.jpg")',
+                backgroundImage: 'url("https://hablemosdeculturas.com/wp-content/uploads/2018/09/agricultura-azteca-11.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
@@ -139,7 +139,7 @@ const Economia = ({ data }) => {
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
               }}
             >
-              <span>Agricultura</span>
+               <span style={{ fontSize: '1.9em', color: '#006400' }}>Agricultura</span>
             </Link>
                          
               

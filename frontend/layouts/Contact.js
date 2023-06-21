@@ -72,45 +72,45 @@ const Contact = () => {
 
 
 const handleSubmit = async (e) => {
-  e.preventDefault();
+e.preventDefault();
 
-  // Validar los campos de correo electrónico y contraseña
-  if (!email || !password) {
-    alert("Por favor, completa todos los campos");
-    return;
+// Validar los campos de correo electrónico y contraseña
+if (!email || !password) {
+  alert("Por favor, completa todos los campos");
+  return;
+}
+
+try {
+  const url = "https://happy-fly-loincloth.cyclic.app/api/login";
+  const respuest = await axios.post(url, { email, password });
+
+ console.log( usuario);
+  const isAuthorized = respuest.data.respuesta === "ok";
+
+
+
+
+  if (isAuthorized) {
+    ;
+    // Si la autenticación es exitosa, redirige al usuario a la página de categorías
+    window.location.href = "/categories";
+    const token = respuest.data.t;
+  const [header, payload, signature] = token.split(".");
+  const decodedPayload = atob(payload);
+  const payloadObject = JSON.parse(decodedPayload);
+  const userId2 = payloadObject.userId;
+  const email2 = payloadObject.email;
+  usuario.userId2= String(userId2);
+  usuario.email2= String(email2);
+    Cookies.set('clave',email2);
+  } else {
+    // Si las credenciales son incorrectas, muestra un mensaje de error
+    alert("Credenciales incorrectas");
   }
-
-  try {
-    const url = "https://happy-fly-loincloth.cyclic.app/api/login";
-    const respuest = await axios.post(url, { email, password });
-
-   console.log( usuario);
-    const isAuthorized = respuest.data.respuesta === "ok";
-
-
-
-
-    if (isAuthorized) {
-      ;
-      // Si la autenticación es exitosa, redirige al usuario a la página de categorías
-      window.location.href = "/categories";
-      const token = respuest.data.t;
-    const [header, payload, signature] = token.split(".");
-    const decodedPayload = atob(payload);
-    const payloadObject = JSON.parse(decodedPayload);
-    const userId2 = payloadObject.userId;
-    const email2 = payloadObject.email;
-    usuario.userId2= String(userId2);
-    usuario.email2= String(email2);
-      Cookies.set('clave',email2);
-    } else {
-      // Si las credenciales son incorrectas, muestra un mensaje de error
-      alert("Credenciales incorrectas");
-    }
-  } catch (error) {
-    console.log(error);
-    // Manejo de errores en caso de que falle la solicitud al backend
-    alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+} catch (error) {
+  console.log(error);
+  // Manejo de errores en caso de que falle la solicitud al backend
+  alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
     }
   };
   return (
@@ -144,7 +144,8 @@ const handleSubmit = async (e) => {
         />
         <div className="flex justify-between">
           <p className="text-sm font-medium text-[#49B675] whitespace-nowrap cursor-pointer underline underline-offset-2">
-            Olvidé mi contraseña
+            
+          <Link href="/forgotPassword">Olvidé mi contraseña</Link>
           </p>
         </div>
         <div className="flex flex-col my-4">
