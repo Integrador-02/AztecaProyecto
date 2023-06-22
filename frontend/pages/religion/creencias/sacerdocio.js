@@ -1,5 +1,5 @@
 import React from 'react';
-import Base1 from "@layouts/Baseof";
+import {Base1} from "@layouts/Baseof";
 import Link from 'next/link';
 
 const Sacerdocio = () => {

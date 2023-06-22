@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Base from "@layouts/Baseof";
 import Image from "next/image";
+import axios from "axios";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -15,7 +16,19 @@ const ForgotPassword = () => {
       alert("Por favor, completa todos los campos");
       return;
     }
-    setIsCodeSubmitted(true);
+    axios.post("http://localhost:4000/api/resetPasword", { email })
+      .then(async () => {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("se envio un codigo a tu correo");
+        
+        setIsCodeSubmitted(true);
+      })
+      .catch(async (error) => {
+        console.log(error);
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      });
+    
   };
 
   const handleSubmitCode = (e) => {
@@ -25,6 +38,19 @@ const ForgotPassword = () => {
       alert("La contraseña y la confirmación de contraseña no coinciden");
       return;
     }
+    axios.post("http://localhost:4000/api/newPassword", { code,newPassword })
+      .then(async () => {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("se envio un codigo a tu correo");
+        
+        setIsCodeSubmitted(true);
+      })
+      .catch(async (error) => {
+        console.log(error);
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      });
+
   };
 
   const handleResetPassword = (e) => {

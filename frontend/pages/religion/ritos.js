@@ -1,6 +1,6 @@
 import React from 'react';
 import { markdownify } from "@lib/utils/textConverter";
-import Base1 from "@layouts/Baseof";
+import { Base1 } from '@layouts/Baseof';
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
@@ -33,7 +33,7 @@ return (
 
     
     <iframe style={{ width: '100%', height: '550px' }}  title="Fantasy Garden - Aztec Lizardmen Ritual" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/774874b40ac043c78347a5c8ee943f74/embed"> 
-    </iframe> e
+    </iframe> 
     
 
    
