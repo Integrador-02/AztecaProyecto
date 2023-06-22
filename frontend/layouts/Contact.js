@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Header2 } from "./partials/Header";
-import Image from "next/image";
 import axios from 'axios';
 import Link from 'next/link';
+
 import Base from './Baseof';
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { AiOutlineUser } from "react-icons/ai";
@@ -21,6 +21,7 @@ const Contact = () => {
   const [linkHref, setLinkHref] = useState("#");
   const [user,setUser] = useState('');
 
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -29,8 +30,9 @@ const Contact = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit1 = (e) => {
+  const handleSubmit11 = async (e) => {
     e.preventDefault();
+
     // Aquí puedes realizar la lógica para enviar los datos al backend
     // por ejemplo, usando una función de envío o una llamada a la API
     // utilizando el valor de 'email' y 'password'
@@ -165,6 +167,7 @@ try {
           </p>
         </div>
       </form>
+
     </div>
   </div>
   );

@@ -1,3 +1,4 @@
+
 import { Base1 } from "@layouts/Baseof";
 import { markdownify } from "@lib/utils/textConverter";
 
@@ -30,6 +31,7 @@ const Chinampas=()=>{
         style={{justifyContent:'center',marginLeft:'auto', marginRight:'auto' ,margin:'auto',marginTop:'10px'}} 
         width="100%" 
         height="100%" src="https://www.youtube.com/embed/F0B2ynEV77Q" 
+
         title="Chinampas prehispánicas" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,8 +39,6 @@ const Chinampas=()=>{
         >
         </iframe>
 
-
-            
 
 
       
@@ -59,6 +59,7 @@ const Chinampas=()=>{
           
         
         </Base1>
+
     );
 }
 export default Chinampas;
