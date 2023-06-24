@@ -1,20 +1,19 @@
-import config from "@config/config.json";
 import { Base1 } from "@layouts/Baseof";
 import Link from "next/link";
 
 const Titulo = () => {
   return (
     <div className="font-text relative h-80">
-    <img
-      className="absolute inset-0 h-full w-full object-cover brightness-50"
-      src={"/images/60ececdb1ab3bd00957e108ed2f27ec6.gif"}
-      alt="Imagen de fondo"
-    />
-    <div className="z-12 relative flex h-full items-center justify-center">
-      <h1 className="text-4xl font-bold">
-        <span className="text-green-500">Minijuegos Aztecas</span>
-      </h1>
-    </div>
+      <img
+        className="absolute inset-0 h-full w-full object-cover brightness-50"
+        src={"/images/60ececdb1ab3bd00957e108ed2f27ec6.gif"}
+        alt="Imagen de fondo"
+      />
+      <div className="z-12 relative flex h-full items-center justify-center">
+        <h1 className="text-4xl font-bold">
+          <span className="text-green-500">Minijuegos Aztecas</span>
+        </h1>
+      </div>
     </div>
   );
 };
@@ -60,7 +59,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Ahorcado</span>
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Ahorcado</span>
                 </Link>
               </li>
 
@@ -73,8 +72,8 @@ const Minijuegos = () => {
                   position: "relative",
                   backgroundImage: 'url("/images/quiz.jpg")',
                   backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -89,7 +88,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz</span>
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz</span>
                 </Link>
               </li>
 
@@ -118,7 +117,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Tic Tac Toe</span>
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Tic Tac Toe</span>
                 </Link>
               </li>
 
@@ -147,7 +146,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                   <span style={{ fontSize: '1.9em', color: '#006400' }}>rompecabeza🧠</span>
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>rompecabeza🧠</span>
                 </Link>
               </li>
               <li
@@ -175,7 +174,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Dioses</span>
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Dioses</span>
                 </Link>
               </li>
               <li
@@ -203,7 +202,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Religion</span>
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Religion</span>
                 </Link>
               </li>
 
@@ -232,7 +231,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Jerarquía</span>
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Jerarquía</span>
                 </Link>
               </li>
 
@@ -261,8 +260,155 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                   <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Arte</span>
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Arte</span>
                 </Link>
+
+
+
+                
+
+                
+              </li>
+
+
+              <li
+                key={`9`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/quizLeyendas`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz LEYENDA 1</span>
+                </Link>
+
+
+
+                
+
+                
+              </li>
+
+              <li
+                key={`10`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/quizLenyenda2`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz LEYENDA 2</span>
+                </Link>
+
+
+
+                
+
+                
+              </li>
+
+              <li
+                key={`11`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/quizEmparador`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Gobernantes</span>
+                </Link>
+
+
+
+                
+
+                
+              </li>
+
+              <li
+                key={`12`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/quizTextil`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Textil</span>
+                </Link>
+
+
+
+                
+
+                
               </li>
             </ul>
           </div>

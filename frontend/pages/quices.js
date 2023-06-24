@@ -23,11 +23,11 @@ const Quices = () => {
 
   return (
     <Base1>
-    <Titulo/>
-    <div   className="section pt-0" style={{margin:50}}>
-    <Quiz/>
-</div>
-      </Base1>
+      <Titulo />
+      <div className="section pt-0" style={{ margin: 50 }}>
+        <Quiz />
+      </div>
+    </Base1>
   );
 };
 

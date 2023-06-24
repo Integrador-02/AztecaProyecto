@@ -1,11 +1,4 @@
-import config from "@config/config.json";
-import Base from "@layouts/Baseof";
-import InnerPagination from "@layouts/components/InnerPagination";
-import dateFormat from "@lib/utils/dateFormat";
-import { markdownify } from "@lib/utils/textConverter";
-import { DiscussionEmbed } from "disqus-react";
-import { MDXRemote } from "next-mdx-remote";
-import { useTheme } from "next-themes";
+
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Cookies from "js-cookie";

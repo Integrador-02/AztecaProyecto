@@ -1,5 +1,4 @@
 import { Base1 } from "@layouts/Baseof";
-import { markdownify } from "@lib/utils/textConverter";
 
 import Link from "next/link";
 const Titulo = () => {

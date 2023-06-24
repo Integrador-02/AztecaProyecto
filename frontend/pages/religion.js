@@ -31,63 +31,126 @@ const Religion = ({ data }) => {
   return (
     <Base1 title={"Categorias Aztecas"}>
 
-    <section className="section pt-0">
-    <Titulo/>
+      <section className="section pt-0">
+        <Titulo />
 
-      <div>
+        <div>
 
-        <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' , marginTop: '40px'}}>
-        Los aztecas tenian un sistema de creencias complejo donde adoraban una amplia variedad de dioses y deidades. Entre sus caracteristicas mas destacables, eran politeistas, constantemente hacian una division entre fuerzas opuestas.
-        <br/>
-        Asi como tambien se veian envueltos en festividades y rituales religiosos.
-        </p>
+          <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000', marginTop: '40px' }}>
+            Los aztecas tenian un sistema de creencias complejo donde adoraban una amplia variedad de dioses y deidades. Entre sus caracteristicas mas destacables, eran politeistas, constantemente hacian una division entre fuerzas opuestas.
+            <br />
+            Asi como tambien se veian envueltos en festividades y rituales religiosos.
+          </p>
 
-        <ul className="grid grid-cols-3 gap-1" style={{ margin: 0, padding: 0 }}>
+          <ul className="grid grid-cols-3 gap-1" style={{ margin: 0, padding: 0 }}>
 
-          <li
-            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            <li
+              className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
               style={{
-              margin: 0,
-              padding: 0,
-              position: 'relative',
-              backgroundImage: 'url("https://4.bp.blogspot.com/-TPo9OJEW0Bk/VfZAU6uZ0WI/AAAAAAAAEq0/E8MFbZHRCUM/s1600/dioses%2Baztecas.JPG")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              filter: 'brightness(70%)',
-            }}
-          >
-
-            <Link
-              href={`./religion/dioses`}
-              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-              style={{
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundImage: 'url("https://4.bp.blogspot.com/-TPo9OJEW0Bk/VfZAU6uZ0WI/AAAAAAAAEq0/E8MFbZHRCUM/s1600/dioses%2Baztecas.JPG")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(70%)',
               }}
-              >
-            <span style={{ fontSize: '1.9em', color: '#006400' }}>Dioses</span>
-            </Link>
-          </li>
+            >
 
+              <Link
+                href={`./religion/dioses`}
+                className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                }}
+              >
+                <span style={{ fontSize: '1.9em', color: '#006400' }}>Dioses</span>
+              </Link>
+            </li>
+
+            <li
+              className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundImage: 'url("https://aventurateamexico.com/wp-content/uploads/2022/12/Religion_Azteca-1280x720-1.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(70%)',
+              }}
+            >
+
+              <Link
+                href={`./religion/ritos`}
+                className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                }}
+              >
+                <span style={{ fontSize: '1.9em', color: '#006400' }}>Ritos</span>
+              </Link>
+
+            </li>
+
+            <li
+              className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundImage: 'url("https://hablemosdeculturas.com/wp-content/uploads/2017/11/Cultura-azteca-5.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(70%)',
+              }}
+            >
+
+              <Link
+                href={`./religion/creencias`}
+                className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                }}
+              >
+                <span style={{ fontSize: '1.9em', color: '#006400' }}>Creencias</span>
+              </Link>
+
+            </li>
+          </ul>
+        </div>
+        <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 10 }}>
           <li
-            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            key={`7`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
             style={{
               margin: 0,
               padding: 0,
               position: 'relative',
-              backgroundImage: 'url("https://aventurateamexico.com/wp-content/uploads/2022/12/Religion_Azteca-1280x720-1.jpg")',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(70%)',
-            }}
-          >
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
 
             <Link
-              href={`./religion/ritos`}
+              href={`/categories`}
               className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',
@@ -98,76 +161,13 @@ const Religion = ({ data }) => {
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
               }}
             >
-                <span style={{ fontSize: '1.9em', color: '#006400' }}>Ritos</span>
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Pagina Principal</span>
             </Link>
 
           </li>
 
+
           <li
-            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-            style={{
-              margin: 0,
-              padding: 0,
-              position: 'relative',
-              backgroundImage: 'url("https://hablemosdeculturas.com/wp-content/uploads/2017/11/Cultura-azteca-5.jpg")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              filter: 'brightness(70%)',
-            }}
-          >
-
-          <Link
-            href={`./religion/creencias`}
-            className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-            style={{
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: 'rgba(255, 255, 255, 0.8)',
-            }}
-          >
-              <span style={{ fontSize: '1.9em', color: '#006400' }}>Creencias</span>
-          </Link>
-
-        </li>
-        </ul>
-      </div>
-      <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 10 }}>
-                  <li
-                      key={`7`}
-                      className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-                      style={{
-                        margin: 0,
-                        padding: 0,
-                        position: 'relative',
-                        backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
-                       backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
-                      }}>
-                  
-                  
-                      <Link
-                        href={`/categories`}
-                        className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                        }}
-                      >
-                       <span style={{ fontSize: '1.9em', color: '#006400' }}>Pagina Principal</span>
-                      </Link>
-                  
-                  </li>
-
-                  
-                  <li
             key={`3`}
             className="block rounded-lg overflow-hidden transition transform hover:scale-105"
             style={{
@@ -195,10 +195,10 @@ const Religion = ({ data }) => {
               <span style={{ fontSize: '1.9em', color: '#006400' }}>Arte</span>
             </Link>
           </li>
-                  </ul>
+        </ul>
 
 
-    </section>
+      </section>
 
     </Base1>
   );
@@ -208,23 +208,23 @@ const Religion = ({ data }) => {
 export default Religion;
 
 const MasInformacion = () => {
-    return (
-      <div className="center-container">
-        <FaInfoCircle size={50} />
-        <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
-      </div>
-    );
+  return (
+    <div className="center-container">
+      <FaInfoCircle size={50} />
+      <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
+    </div>
+  );
+};
+
+const InteractionMessage = () => {
+  const showMessage = () => {
+    alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
   };
 
-  const InteractionMessage = () => {
-    const showMessage = () => {
-      alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
-    };
-
-    return (
-      <div className="interaction-message">
-        <FaQuestionCircle className="help-icon" onClick={showMessage} />
-        <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
-      </div>
-    );
-  };
+  return (
+    <div className="interaction-message">
+      <FaQuestionCircle className="help-icon" onClick={showMessage} />
+      <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
+    </div>
+  );
+};

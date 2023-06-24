@@ -3,46 +3,58 @@ import { Base1 } from '@layouts/Baseof';
 import Link from 'next/link';
 
 const questions = [
-  {
-    question: '¿Quién es el dios azteca del sol?',
-    options: ['Huitzilopochtli', 'Quetzalcoatl', 'Tlaloc', 'Tezcatlipoca'],
-    answer: 'Huitzilopochtli'
-  },
-  {
-    question: '¿Quién es la diosa azteca de la luna?',
-    options: ['Tonantzin', 'Coyolxauhqui', 'Xochiquetzal', 'Chalchiuhtlicue'],
-    answer: 'Coyolxauhqui'
-  },
-  {
-    question: '¿Mixcóatl era el dios de las enfermedades?',
-    options: ['Verdadero', 'Falso'],
-    answer: 'Falso'
-  },
-  {
-    question: 'Cintéotl es el dios de la mazorca madura.',
-    options: ['Verdadero', 'Falso'],
-    answer: 'Verdadero'
-  },
-  {
-    question: 'Xiuhtecuhtli es...',
-    options: ['el dios del agua', 'el dios del viento', 'el dios del fuego', 'la diosa de la vegetació'],
-    answer: 'el dios del fuego'
-  },
-  {
-    question: '¿La religión de los aztecas era monoteísta o politeísta?',
-    options: ['Monoteísta', 'Politeísta'],
-    answer: 'Politeísta'
-  },
-  {
-    question: '¿Quién es el dios del hielo y el frío?',
-    options: ['Mayahuel', 'Politeísta', 'Coatlicue', 'Ixquimilli', 'Coatlicue'],
-    answer: 'Ixquimilli'
-  },
-
-
-
-
-];
+    {
+      question: '¿Quién fue el primer emperador del Imperio Azteca?',
+      options: ['Moctezuma I', 'Itzcoatl', 'Axayácatl', 'Cuitláhuac'],
+      answer: 'Itzcoatl'
+    },
+    {
+      question: '¿Qué emperador azteca gobernó durante la llegada de los españoles y la conquista de México?',
+      options: ['Moctezuma II', 'Tizoc', 'Ahuitzotl', 'Montezuma I'],
+      answer: 'Moctezuma II'
+    },
+    {
+      question: '¿Cuál fue el emperador azteca conocido por su construcción del Gran Templo de Tenochtitlán?',
+      options: ['Nezahualcóyotl', 'Moctezuma I', 'Tizoc', 'Ahuitzotl'],
+      answer: 'Ahuitzotl'
+    },
+    {
+      question: '¿Quién fue el emperador azteca que gobernó durante la fundación de la ciudad de Tenochtitlán?',
+      options: ['Itzcoatl', 'Cuitláhuac', 'Moctezuma I', 'Axayácatl'],
+      answer: 'Cuitláhuac'
+    },
+    {
+      question: '¿Cuál fue el emperador azteca que estableció el culto al dios Huitzilopochtli?',
+      options: ['Tizoc', 'Nezahualcóyotl', 'Moctezuma I', 'Axayácatl'],
+      answer: 'Axayácatl'
+    },
+    {
+      question: '¿Quién fue el emperador azteca conocido por su poesía y promoción de las artes?',
+      options: ['Moctezuma II', 'Itzcoatl', 'Nezahualcóyotl', 'Cuitláhuac'],
+      answer: 'Nezahualcóyotl'
+    },
+    {
+      question: '¿Cuál fue el emperador azteca que construyó el acueducto de Chapultepec?',
+      options: ['Ahuitzotl', 'Tizoc', 'Axayácatl', 'Montezuma I'],
+      answer: 'Tizoc'
+    },
+    {
+      question: '¿Quién fue el emperador azteca que gobernó durante la expansión territorial del Imperio Azteca?',
+      options: ['Moctezuma I', 'Itzcoatl', 'Cuitláhuac', 'Ahuitzotl'],
+      answer: 'Moctezuma I'
+    },
+    {
+      question: '¿Cuál fue el emperador azteca que impulsó la construcción de obras hidráulicas y sistemas de riego?',
+      options: ['Nezahualcóyotl', 'Axayácatl', 'Tizoc', 'Cuitláhuac'],
+      answer: 'Nezahualcóyotl'
+    },
+    {
+      question: '¿Quién fue el último emperador azteca que murió durante la conquista española?',
+      options: ['Moctezuma II', 'Itzcoatl', 'Tizoc', 'Cuitláhuac'],
+      answer: 'Moctezuma II'
+    },
+  ];
+  
 const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
@@ -53,7 +65,7 @@ const Titulo = () => {
       />
       <div className="relative z-12 flex items-center justify-center h-full">
         <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-          <span className="text-green-600">QUIZ DIOSES</span>
+          <span className="text-green-600">QUIZ Gobernantes</span>
         </h1>
       </div>
     </div>

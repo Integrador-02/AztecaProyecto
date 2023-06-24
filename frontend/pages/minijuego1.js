@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+
 
 const AhorcadoAzteca = () => {
   const [word, setWord] = useState('');
@@ -137,18 +137,18 @@ const AhorcadoAzteca = () => {
       whiteSpace: 'pre',
     },
   };
-  
+
   return (
     <div style={styles.container}>
       {!isGameOver && attempts > 0 && (
         <>
           <div style={styles.gameContainer}>
-            <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Pista: {hint}</div>
-            <div style={{ fontSize: '1.8em', color: 'black', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Intentos restantes: {attempts}</div>
-            <div style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Palabra: {renderGuessedWord()}</div>
+            <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Pista: {hint}</div>
+            <div style={{ fontSize: '1.8em', color: 'black', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Intentos restantes: {attempts}</div>
+            <div style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Palabra: {renderGuessedWord()}</div>
             <input
               type="text"
-              style={{fontSize: '1.9em',color: 'green',fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)'}}
+              style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
               value={guess}
               onChange={(e) => {
                 const inputValue = e.target.value;
@@ -159,7 +159,7 @@ const AhorcadoAzteca = () => {
             />
             <button
               onClick={checkGuess}
-              style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+              style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
             >
               Adivinar
             </button>
@@ -169,11 +169,11 @@ const AhorcadoAzteca = () => {
       )}
       {(isGameOver || attempts === 0) && (
         <div style={styles.resultContainer}>
-          <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             {guessedWord.join('') === word ? '¡Felicidades! Has adivinado la palabra.' : '¡Oh no! Has perdido.'}
           </div>
           {guessedWord.join('') !== word && (
-            <p style={{ fontSize: '1.9em', color: 'black', fontWeight: 'bold',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
+            <p style={{ fontSize: '1.9em', color: 'black', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
               La palabra correcta era: {word}
             </p>
           )}

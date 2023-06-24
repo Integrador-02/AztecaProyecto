@@ -86,9 +86,8 @@ const UserProfilePage = () => {
                 id="name"
                 value={name}
                 onChange={handleNameChange}
-                className={`mb-2 w-full rounded-md border border-gray-300 p-2 ${
-                  isEditMode ? "" : "bg-white"
-                }`}
+                className={`mb-2 w-full rounded-md border border-gray-300 p-2 ${isEditMode ? "" : "bg-white"
+                  }`}
                 disabled={!isEditMode}
               />
             </div>
@@ -101,9 +100,8 @@ const UserProfilePage = () => {
                 id="username"
                 value={username}
                 onChange={handleUsernameChange}
-                className={`mb-2 w-full rounded-md border border-gray-300 p-2 ${
-                  isEditMode ? "" : "bg-white"
-                }`}
+                className={`mb-2 w-full rounded-md border border-gray-300 p-2 ${isEditMode ? "" : "bg-white"
+                  }`}
                 disabled={!isEditMode}
               />
             </div>
@@ -116,9 +114,8 @@ const UserProfilePage = () => {
                 id="email"
                 value={email}
                 onChange={handleEmailChange}
-                className={`mb-2 w-full rounded-md border border-gray-300 p-2 ${
-                  isEditMode ? "" : "bg-white"
-                }`}
+                className={`mb-2 w-full rounded-md border border-gray-300 p-2 ${isEditMode ? "" : "bg-white"
+                  }`}
                 disabled={!isEditMode}
               />
             </div>
