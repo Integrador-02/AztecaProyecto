@@ -22,16 +22,21 @@ const Titulo = () => {
         src={"/images/60ececdb1ab3bd00957e108ed2f27ec6.gif"}
         alt="Imagen de fondo"
       />
-      <div className="relative z-12 flex items-center justify-center h-full">
-        <h1 className="font-bold text-4xl">
-          <span className="text-green-500"style={{ fontSize: '1.9em', color: 'white' }}>Categorías Aztecas</span>
+      <div className="relative z-12 flex flex-col items-center justify-center h-full text-center">
+        <h1 className="font-bold text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+          <span className="text-green-500" style={{ fontSize: '1.9em', color: 'white' }}>Categorías Aztecas</span>
         </h1>
+        <p className="text-sm sm:text-sm md:text-lg lg:text-xl xl:text-1xl text-[#FFFFFF] mt-4 mx-6 sm:mx-8 md:mx-10 lg:mx-12 xl:mx-16">
+          Explora la fascinante civilización azteca. Haz clic en la categoría que más te interese para obtener información relevante sobre el tema. Descubre sus creencias religiosas, sumérgete en su cultura, conoce su economía y admira su arquitectura. ¡Sumérgete en el mundo de los aztecas y despierta tu curiosidad histórica!
+        </p>
       </div>
-
     </div>
-
   );
 };
+
+
+
+
 
  
 
@@ -45,19 +50,16 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
 
     <section className="section pt-0">
 
-      <div className="container pt-12 text-center"> <p className="text-xl text-[#49B675] mb-2">
-        Explora la fascinante civilización azteca. Haz clic en la categoría que más te interese para obtener información relevante sobre el tema. Descubre sus creencias religiosas, sumérgete en su cultura, conoce su economía y admira su arquitectura. ¡Sumérgete en el mundo de los aztecas y despierta tu curiosidad histórica!
-
-      </p>
+      <div className="container pt-12 text-center"> 
         <header style={{ textAlign: 'center' }}>
 
 
 
         </header>
-        <ul className="grid grid-cols-3 gap-2" style={{ margin: 0, padding: 0 }}>
+        <ul className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2" style={{ margin: 0, padding: 0 }}>
           <li
             key={`1`}
-            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400 "
             style={{
               margin: 0,
               padding: 0,
@@ -82,7 +84,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
 
               }}
             >
-              <span style={{ fontSize: '1.9em', color: '#006400' }}>Jerarquia</span>
+              <span style={{ fontSize: '130%', color: '#006400' }}>Jerarquia</span>
             </Link>
           </li>
 
@@ -111,7 +113,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
               }}
             >
-              <span style={{ fontSize: '1.9em', color: '#006400' }}>Religión</span>
+              <span style={{ fontSize: '130%', color: '#006400' }}>Religión</span>
             </Link>
           </li>
 
@@ -141,7 +143,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
               }}
             >
-              <span style={{ fontSize: '1.9em', color: '#006400' }}>Arte</span>
+              <span style={{ fontSize: '130%', color: '#006400' }}>Arte</span>
             </Link>
           </li>
 
@@ -170,7 +172,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
               }}
             >
-               <span style={{ fontSize: '1.9em', color: '#006400' }}>Arquitectura</span>
+               <span style={{ fontSize: '130%', color: '#006400' }}>Arquitectura</span>
             </Link>
           </li>
 
@@ -199,7 +201,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
               }}
             >
-                <span style={{ fontSize: '1.9em', color: '#006400' }}>Economía</span>
+                <span style={{ fontSize: '130%', color: '#006400' }}>Economía</span>
             </Link>
           </li>
 
@@ -229,7 +231,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
               }}
             >
-               <span style={{ fontSize: '1.9em', color: '#006400' }}>Minijuegos/Quiz</span>
+               <span style={{ fontSize: '130%', color: '#006400' }}>Minijuegos/Quiz</span>
             </Link>
           </li>
 
