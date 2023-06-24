@@ -135,7 +135,7 @@ const Minijuegos = () => {
                 }}
               >
                 <Link
-                  href={`/pulz`}
+                  href={`/rapidoJ`}
                   className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                   style={{
                     width: "100%",
@@ -146,7 +146,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>rompecabeza🧠</span>
+                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Atento y rapido</span>
                 </Link>
               </li>
               <li
