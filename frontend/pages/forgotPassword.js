@@ -42,7 +42,7 @@ const ForgotPassword = () => {
     axios.post("https://happy-fly-loincloth.cyclic.app/api/newPassword", { code,newPassword })
       .then(async () => {
         // Manejo de errores en caso de que falle la solicitud al backend
-        alert("se envio un codigo a tu correo");
+        alert("Contraseña cambiada correctamente");
         
         setIsCodeSubmitted(true);
       })
