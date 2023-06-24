@@ -6,6 +6,7 @@ import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 import Link from "next/link";
+
 const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
@@ -208,6 +209,7 @@ const Arte = ({ data }) => {
 
             </li>
             
+
           </ul>
 
 
@@ -243,6 +245,7 @@ const Arte = ({ data }) => {
                       </Link>
                   
                   </li>
+
 
                   
                   <li

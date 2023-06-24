@@ -74,69 +74,70 @@ const Register = () => {
 
   return (
     <Base>
-    <div className="flex h-screen items-center justify-center">
-      <Image
-        src="/images/Login.jpg"
-        alt="Background"
-        layout="fill"
-        objectFit="cover"
-        quality={70}
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        style={{ zIndex: -1 }}
-      />
-      <div className="mx-auto max-w-lg rounded-lg bg-white p-4 shadow-lg">
-        <h1
-          className="mb-4 text-left text-3xl font-semibold text-[#49B675] md:text-5xl"
-          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
-        >
-          !Crea tu cuenta!
-        </h1>
-        <form onSubmit={handleSubmit}>
-          <div></div>
-          <input
-            type="text"
-            placeholder="Nombre completo"
-            value={fullName}
-            onChange={handleFullNameChange}
-            className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
-          />
-          <input
-            type="text"
-            placeholder="Usuario"
-            value={username}
-            onChange={handleUsernameChange}
-            className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={handleEmailChange}
-            className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
-          />
-          <input
-            type="password"
-            placeholder="Contraseña"
-            value={password}
-            onChange={handlePasswordChange}
-            className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
-          />
-          <input
-            type="password"
-            placeholder="Confirmar Contraseña"
-            value={confirmPassword}
-            onChange={handleConfirmPasswordChange}
-            className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
-          />
-          <button
-            className="my-4 w-full rounded-md bg-[#49B675] p-3 text-center text-white"
-            style={{ boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}
+      <div className="flex h-screen items-center justify-center">
+        <Image
+          src="/images/Login.jpg"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          quality={70}
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          style={{ zIndex: -1 }}
+        />
+        <div className="mx-auto max-w-lg rounded-lg bg-white p-4 shadow-lg">
+          <h1
+            className="mb-4 text-left text-3xl font-semibold text-[#49B675] md:text-5xl"
+            style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
           >
-            Registrarse
-          </button>
-        </form>
+            !Crea tu cuenta!
+
+          </h1>
+          <form onSubmit={handleSubmit}>
+            <div></div>
+            <input
+              type="text"
+              placeholder="Nombre completo"
+              value={fullName}
+              onChange={handleFullNameChange}
+              className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
+            />
+            <input
+              type="text"
+              placeholder="Usuario"
+              value={username}
+              onChange={handleUsernameChange}
+              className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={handleEmailChange}
+              className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
+            />
+            <input
+              type="password"
+              placeholder="Contraseña"
+              value={password}
+              onChange={handlePasswordChange}
+              className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
+            />
+            <input
+              type="password"
+              placeholder="Confirmar Contraseña"
+              value={confirmPassword}
+              onChange={handleConfirmPasswordChange}
+              className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
+            />
+            <button
+              className="my-4 w-full rounded-md bg-[#49B675] p-3 text-center text-white"
+              style={{ boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}
+            >
+              Registrarse
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
     </Base>
   );
 };

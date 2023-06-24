@@ -1,3 +1,4 @@
+
 import { Base1 } from "@layouts/Baseof";
 import { markdownify } from "@lib/utils/textConverter";
 
@@ -23,12 +24,14 @@ const Chinampas=()=>{
            <Titulo/>
         
 
-           <div class="sketchfab-embed-wrapper" style={{margin:30,position :10 }} > 
-            
+
+           <div className="grid grid-cols-2 gap-1" style={{margin:30,position :10 }}>
+
         <iframe 
         style={{justifyContent:'center',marginLeft:'auto', marginRight:'auto' ,margin:'auto',marginTop:'10px'}} 
-        width="720" 
-        height="480" src="https://www.youtube.com/embed/F0B2ynEV77Q" 
+        width="100%" 
+        height="100%" src="https://www.youtube.com/embed/F0B2ynEV77Q" 
+
         title="Chinampas prehispánicas" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,11 +40,8 @@ const Chinampas=()=>{
         </iframe>
 
 
-            
-        </div>
 
-
-        <div>
+      
         <p style={{
             fontSize: '23px',
             fontWeight: 'normal',
@@ -55,9 +55,11 @@ const Chinampas=()=>{
             Se cree que es una técnica iniciada en la época de los toltecas, aunque fue en 1519 que este método de cultivo se popularizó y ocupó casi el 100 por ciento del lago Xochimilco, gracias a ello, una amplia población se pudo desarrollorar a sus orillas. 
 
         </p>
-        
         </div>
+          
+        
         </Base1>
+
     );
 }
 export default Chinampas;

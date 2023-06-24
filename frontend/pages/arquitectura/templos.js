@@ -12,6 +12,7 @@ const Templos=()=>{
         )}
 
 
+
         <div class="sketchfab-embed-wrapper">
         <iframe
         style={{ width: '40%', height: '400px' }}
@@ -27,6 +28,7 @@ const Templos=()=>{
                  </a>
                  on
                  <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=40f6f12130ef4fdaad6a9d2a28a7250e" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+
                     Sketchfab
                     </a>
                     </p>
@@ -70,4 +72,6 @@ const Templos=()=>{
         </Base>
     );
 }
+
 export default Templos;
+

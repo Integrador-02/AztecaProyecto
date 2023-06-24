@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Base1 } from '@layouts/Baseof';
 import AhorcadoAzteca from './minijuego1';
+import Swal from 'sweetalert2';
+
 
 const Titulo = () => {
+  useEffect(() => {
+    Swal.fire({
+      title: '¡Hola! ¡Bienvenido al clásico juego del ahorcado!',
+      text: 'El objetivo del juego es adivinar una palabra oculta antes de que se completen todos los intentos.Tendrás un número limitado de intentos para adivinar la palabra. solo puedes ingresar una letra a la vez.',
+      icon: 'info',
+      confirmButtonText: 'Comenzar',
+      customClass: {
+        'title': 'my-title-style',
+        'content': 'my-content-style',
+        'confirmButton': 'my-confirm-button-style',
+      },
+    });
+  }, []);
+
   return (
     <div className="relative h-80 font-text">
       <img
@@ -27,7 +43,7 @@ const Ahorcado = () => {
     <div>
       < Titulo />
     </div>
-    <div className="container pt-12 text-center">
+    <div className="container pt-12 text-center" >
     <AhorcadoAzteca/>
     </div>
       </Base1>

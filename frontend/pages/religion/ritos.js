@@ -1,6 +1,6 @@
 import React from 'react';
 import { markdownify } from "@lib/utils/textConverter";
-import Base from "@layouts/Baseof";
+import { Base1 } from '@layouts/Baseof';
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 import { useState } from 'react';
@@ -8,23 +8,63 @@ import Link from 'next/link';
 
 const Ritos = () => {
 
-  return (
-    <Base title={"Categorias Aztecas"}>
-      <section className="section pt-0">
-        {markdownify(
-          "Ritos",
-          "h1",
-          "h2 mb-16 bg-theme-light dark:bg-darkmode-theme-dark py-12 text-center lg:text-[55px]"
-        )}
-        <div className="sketchfab-embed-wrapper">
-          <p style={{ fontSize: '23px', fontWeight: 'normal', margin: '20px', color: '#000' }}>
-          </p>
-
-          
+  const Titulo = () => {
+    return (
+      <div className="relative h-80 font-text">
+        <img
+          className="absolute inset-0 w-full h-full object-cover brightness-50"
+          src={"https://wpcdn.zenger.news/wp-content/uploads/2021/01/26092505/5af02125-21b5-455a-81a9-44af0dd46f2f-e1611944587406.jpg"}
+          alt="Imagen de fondo"
+        />
+        <div className="relative z-12 flex items-center justify-center h-full">
+          <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+            <span className="text-green-600">Ritos</span>
+          </h1>
         </div>
+      </div>
+    );
+  };
+return (
+    <Base1 title="Vasijas y Ceramicas">
+       <Titulo/>
+
+    <div class="sketchfab-embed-wrapper" style={{margin :20,padding :20}}> 
+    <div className="grid grid-cols-2 gap-1">
+
+    
+    <iframe style={{ width: '100%', height: '550px' }}  title="Fantasy Garden - Aztec Lizardmen Ritual" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/774874b40ac043c78347a5c8ee943f74/embed"> 
+    </iframe> 
+    
+
+   
+
+
+    <div>
+    <p style={{
+        fontSize: '23px',
+        fontWeight: 'normal',
+        margin: '20px',
+        color: '#000',
+        textAlign: 'justify',
+        lineHeight: '1.5',
+        fontFamily: 'Arial, sans-serif',
+      }}>     
+      Se practicaban 3 clases de rituales sangrientos relacionados con 
+      la persona: el autosacrificio o rituales de efusiones de sangre, 
+      los rituales asociados a las guerras y los sacrificios agrarios. 
+      No consideraron al sacrificio humano como una categoría específica, 
+      sino que formaban parte importante de un determinado ritual.
+      El ritual tenía como función la introducción del hombre en lo sagrado y 
+      servía para darle a conocer su introducción en un mundo diferente
+      como lo sería el correspondiente al cielo o al inframundo, y para
+      ello era necesario tener un recinto y tener un ritual
+
+        </p>
         
-        <MasInformacion />
-        <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
+
+    </div>
+    </div> </div>
+    <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
            
            <li
                key={`2`}
@@ -55,9 +95,15 @@ const Ritos = () => {
                  </Link>
            </li>
            </ul>
-      </section>
-    </Base>
-  );
+
+        
+
+
+
+    </Base1>
+
+
+);
 };
 
 export default Ritos;

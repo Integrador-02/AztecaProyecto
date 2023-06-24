@@ -1,15 +1,11 @@
-import config from "@config/config.json";
-import Base from "@layouts/Baseof";
-import InnerPagination from "@layouts/components/InnerPagination";
-import dateFormat from "@lib/utils/dateFormat";
-import { markdownify } from "@lib/utils/textConverter";
-import { DiscussionEmbed } from "disqus-react";
-import { MDXRemote } from "next-mdx-remote";
-import { useTheme } from "next-themes";
+
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Cookies from "js-cookie";
 
+import Avatar from "react-avatar";
+
+import axios from "axios";
 
 
 
@@ -17,12 +13,15 @@ import Cookies from "js-cookie";
 const CommentSection = () => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
+  console.log(comments);
   const [replyTo, setReplyTo] = useState(null);
   const [email, setEmail] = useState('');
 
   useEffect(() => {
     const user = Cookies.get('clave');
     setEmail(user);
+
+
   }, []);
 
   const handleAddComment = () => {
@@ -38,11 +37,35 @@ const CommentSection = () => {
       timestamp: timestamp,
     };
 
+
+    const coment = newCommentObject.text
+    const correo = newCommentObject.username
+    const gusta = newCommentObject.likes
+    const responde = newCommentObject.replyTo
+    console.log(responde);
+    axios.post("https://happy-fly-loincloth.cyclic.app/api/commit", { coment, correo, responde, gusta })
+      .then(async () => {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("registrado correctamente");
+
+
+      })
+      .catch(async (error) => {
+        console.log(error);
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      });
+
+
+
+
     setComments([...comments, newCommentObject]);
     setNewComment('');
     setReplyTo(null);
   };
 
+  
+  
   const handleReplyToComment = (commentId) => {
     const commentToReply = comments.find((comment) => comment.id === commentId);
 
@@ -96,7 +119,62 @@ const CommentSection = () => {
   ];
 
   useEffect(() => {
-    setComments(fakeComments);
+    axios.get("https://happy-fly-loincloth.cyclic.app/api/comentarios", { email })
+      .then((response) => {
+        // Manipula los datos obtenidos como desees
+        const comentarios = response.data;
+        console.log(comentarios);
+        let idCounter = 5; // Contador inicial
+        function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        
+        function formatNumber(num) {
+          return num.toString().padStart(2, '0');
+        }
+        
+        function generateRandomDate() {
+          const year = 2023;
+          const month = getRandomInt(1, 12);
+          const day = getRandomInt(1, 28);
+          const hour = getRandomInt(0, 23);
+          const minute = getRandomInt(0, 59);
+        
+          const formattedDate = `${year}-${formatNumber(month)}-${formatNumber(day)} ${formatNumber(hour)}:${formatNumber(minute)}`;
+          return formattedDate;
+        }
+
+        const newC = comentarios.map((element) => {
+          const newItem = {
+            id: idCounter,
+            text: element.coment,
+            username: element.correo,
+            replyTo: element.responde,
+            likes: element.gusta,
+            timestamp: generateRandomDate(),
+          };
+          idCounter++; // Incrementar el contador para el siguiente elemento
+          return newItem;
+        });
+       
+
+
+
+
+        fakeComments.push(...newC);
+
+         setComments(fakeComments);
+
+        // Resto de la lógica de manipulación de los comentarios
+      })
+      .catch((error) => {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        console.log(error);
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      });
+
+
+
   }, []);
 
   return (
@@ -108,12 +186,8 @@ const CommentSection = () => {
             <li key={comment.id}>
               <div className="comment-container">
                 <div className="avatar-circle">
-                  <img
-                    src={`https://avatars.dicebear.com/api/male/${comment.id}.svg`}
-                    alt="Avatar"
-                    width="40"
-                    height="40"
-                  />
+                  <Avatar name={comment.username} size={50} round={true} />
+
                 </div>
                 <div className="comment-content">
                   <p className="comment-username">
@@ -145,7 +219,7 @@ const CommentSection = () => {
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}
           />
-          <button onClick={handleAddComment} disabled={ email ===undefined }>
+          <button onClick={handleAddComment} disabled={email === undefined}>
             Agregar comentario
           </button>        </div>
       </div>

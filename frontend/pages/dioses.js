@@ -1,7 +1,4 @@
-import { markdownify } from "@lib/utils/textConverter";
-import shortcodes from "@shortcodes/all";
-import { MDXRemote } from "next-mdx-remote";
-import Image from "next/image";
+
 import Base from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';

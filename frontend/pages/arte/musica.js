@@ -1,3 +1,4 @@
+
 import { Base1 } from "@layouts/Baseof"; 
 import Link from "next/link";
 const Titulo = () => {
@@ -23,6 +24,7 @@ const Musica=()=>{
 
 
     return(
+
         <Base1>
         <Titulo/>
         <ul className="grid grid-cols-1 gap-2" style={{ display: 'flex', justifyContent: 'flex-end', float: 'left', margin: 20 ,padding :10}} >
@@ -62,7 +64,7 @@ const Musica=()=>{
           >
 
             <Link
-              href={`/arte`}
+              href={`/arte/caracteriztica`}
               className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',
@@ -93,7 +95,7 @@ const Musica=()=>{
           >
 
             <Link
-              href={`/arte`}
+              href={`/arte/vida`}
               className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',
@@ -146,6 +148,7 @@ const Musica=()=>{
                   </ul>
 
         </Base1>
+
     );
 }
 

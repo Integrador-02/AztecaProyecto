@@ -1,3 +1,4 @@
+
 import { Base1 } from "@layouts/Baseof";
 import { markdownify } from "@lib/utils/textConverter";
 
@@ -39,6 +40,7 @@ const Agricultura=()=>{
              
             </div>
         </Base1>
+
     );
 }
 

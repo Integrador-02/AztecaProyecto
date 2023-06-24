@@ -1,10 +1,12 @@
-import { ObjectId } from "mongodb";
 import mongoose from "mongoose";
 
 const comentarioSchema = mongoose.Schema({
-    comentario: String,
-    comentadorID: ObjectId,
-    fecha: Date
+
+    coment: String,
+    correo: String,
+    responde: String,
+    gusta: Intl,
+
 });
 
 
