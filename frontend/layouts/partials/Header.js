@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FaUser } from 'react-icons/fa';
 import Menu from "pages/menu";
+
 const Header = () => {
   // distructuring the main menu from menu object
   const { main } = menu;

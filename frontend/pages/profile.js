@@ -1,5 +1,7 @@
 import { useState } from "react";
-import Base from "@layouts/Baseof";
+import { Base1 } from "@layouts/Baseof";
+import Cookies from "js-cookie";
+import { useEffect } from "react";
 
 const UserProfilePage = () => {
   const [name, setName] = useState("Proyecto Integrador");
@@ -7,7 +9,11 @@ const UserProfilePage = () => {
   const [email, setEmail] = useState("integrador@gmail.com");
   const [profileImage, setProfileImage] = useState(null);
   const [isEditMode, setIsEditMode] = useState(false);
-
+  
+  useEffect(() => {
+    const user = Cookies.get('clave');
+    setEmail(user);
+  }, []);
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -43,7 +49,7 @@ const UserProfilePage = () => {
   };
 
   return (
-    <Base>
+    <Base1>
       <div
         className="flex h-screen items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url("/images/Login.jpg")` }}
@@ -150,7 +156,7 @@ const UserProfilePage = () => {
           </form>
         </div>
       </div>
-    </Base>
+    </Base1>
   );
 };
 
