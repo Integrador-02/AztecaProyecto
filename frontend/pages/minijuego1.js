@@ -142,7 +142,7 @@ const AhorcadoAzteca = () => {
     <div style={styles.container}>
       {!isGameOver && attempts > 0 && (
         <>
-          <div style={styles.gameContainer}>
+          <div >
             <div style={{ fontSize: '2.5em', color: 'green', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Pista: {hint}</div>
             <div style={{ fontSize: '1.8em', color: 'black', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Intentos restantes: {attempts}</div>
             <div style={{ fontSize: '1.9em', color: 'green', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Palabra: {renderGuessedWord()}</div>
