@@ -3,46 +3,57 @@ import { Base1 } from '@layouts/Baseof';
 import Link from 'next/link';
 
 const questions = [
-  {
-    question: '¿Quién es el dios azteca del sol?',
-    options: ['Huitzilopochtli', 'Quetzalcoatl', 'Tlaloc', 'Tezcatlipoca'],
-    answer: 'Huitzilopochtli'
-  },
-  {
-    question: '¿Quién es la diosa azteca de la luna?',
-    options: ['Tonantzin', 'Coyolxauhqui', 'Xochiquetzal', 'Chalchiuhtlicue'],
-    answer: 'Coyolxauhqui'
-  },
-  {
-    question: '¿Mixcóatl era el dios de las enfermedades?',
-    options: ['Verdadero', 'Falso'],
-    answer: 'Falso'
-  },
-  {
-    question: 'Cintéotl es el dios de la mazorca madura.',
-    options: ['Verdadero', 'Falso'],
-    answer: 'Verdadero'
-  },
-  {
-    question: 'Xiuhtecuhtli es...',
-    options: ['el dios del agua', 'el dios del viento', 'el dios del fuego', 'la diosa de la vegetació'],
-    answer: 'el dios del fuego'
-  },
-  {
-    question: '¿La religión de los aztecas era monoteísta o politeísta?',
-    options: ['Monoteísta', 'Politeísta'],
-    answer: 'Politeísta'
-  },
-  {
-    question: '¿Quién es el dios del hielo y el frío?',
-    options: ['Mayahuel', 'Politeísta', 'Coatlicue', 'Ixquimilli', 'Coatlicue'],
-    answer: 'Ixquimilli'
-  },
-
-
-
-
-];
+    {
+      question: '¿Cuál era el dios azteca asociado con el sol y la guerra?',
+      options: ['Quetzalcóatl', 'Huitzilopochtli', 'Tlaloc', 'Xochiquetzal'],
+      answer: 'Huitzilopochtli'
+    },
+    {
+      question: '¿Cuál es la leyenda azteca que narra el origen de la ciudad de Tenochtitlán?',
+      options: ['Leyenda de Popocatépetl e Iztaccíhuatl', 'Leyenda de La Llorona', 'Leyenda del Quinto Sol', 'Leyenda de la fundación de México-Tenochtitlán'],
+      answer: 'Leyenda de la fundación de México-Tenochtitlán'
+    },
+    {
+      question: 'Según la leyenda azteca, ¿qué sucede cada vez que llora La Llorona?',
+      options: ['Ocurre un desastre natural', 'Se desata una guerra', 'Aparecen espíritus malignos', 'Alguien cercano a ella muere'],
+      answer: 'Alguien cercano a ella muere'
+    },
+    {
+      question: '¿Cuál es la serpiente emplumada de la mitología azteca?',
+      options: ['Quetzalcóatl', 'Tezcatlipoca', 'Coatlicue', 'Xolotl'],
+      answer: 'Quetzalcóatl'
+    },
+    {
+      question: '¿Cuál es la leyenda azteca que cuenta la historia de dos volcanes?',
+      options: ['Leyenda de Popocatépetl e Iztaccíhuatl', 'Leyenda de La Malinche', 'Leyenda del Quinto Sol', 'Leyenda de Xólotl y el Mictlán'],
+      answer: 'Leyenda de Popocatépetl e Iztaccíhuatl'
+    },
+    {
+      question: '¿Cuál era el dios azteca de la lluvia y la agricultura?',
+      options: ['Quetzalcóatl', 'Huitzilopochtli', 'Tlaloc', 'Xochiquetzal'],
+      answer: 'Tlaloc'
+    },
+    {
+      question: 'Según la leyenda azteca del Quinto Sol, ¿cómo fue creado el actual mundo?',
+      options: ['Por una gran inundación', 'Por una guerra entre dioses', 'Por la transformación de los hombres en aves', 'Por el sacrificio de los dioses'],
+      answer: 'Por una guerra entre dioses'
+    },
+    {
+      question: '¿Cuál es el animal sagrado en la leyenda azteca de Coatlicue?',
+      options: ['Serpiente', 'Águila', 'Jaguar', 'Coyote'],
+      answer: 'Serpiente'
+    },
+    {
+      question: '¿Quién era la diosa azteca de la belleza, el amor y las flores?',
+      options: ['Quetzalcóatl', 'Huitzilopochtli', 'Tlaloc', 'Xochiquetzal'],
+      answer: 'Xochiquetzal'
+    },
+    {
+      question: '¿Cuál es la leyenda azteca que cuenta la historia de un perro celestial?',
+      options: ['Leyenda de Xólotl y el Mictlán', 'Leyenda de La Llorona', 'Leyenda del Quinto Sol', 'Leyenda de la fundación de México-Tenochtitlán'],
+      answer: 'Leyenda de Xólotl y el Mictlán'
+    },
+  ];
 const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
@@ -53,7 +64,7 @@ const Titulo = () => {
       />
       <div className="relative z-12 flex items-center justify-center h-full">
         <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-          <span className="text-green-600">QUIZ DIOSES</span>
+          <span className="text-green-600">QUIZ LEYENDA 1</span>
         </h1>
       </div>
     </div>
