@@ -12,7 +12,7 @@ import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 
 import PostSingle from "./comentarios";
-
+import Breadcrumbs from "./nave";
 
 
 const { blog_folder, pagination } = config.settings;
@@ -35,8 +35,9 @@ const Home = ({
   return (
     <Base>
   {/* Banner */}
+ 
   <section className="section banner relative pb-0">
-    
+  
     <ImageFallback
       className="absolute bottom-0 left-0 z-[-1] w-full"
       src={"/images/banner-bg-shape.svg"}
@@ -74,7 +75,7 @@ const Home = ({
               alt="Banner Image"
             />
           </div>
-        )}
+        )}   
       </div>
 
       <div className="mt-1"style={{padding:40}}> {/* Agrega un margen superior de 8 unidades */}

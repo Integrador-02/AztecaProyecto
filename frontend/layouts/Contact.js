@@ -124,6 +124,7 @@ try {
       boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     }}
   >
+  
     <div className="bg-white p-8 rounded-lg shadow-md w-96 md:w-120 lg:w-144">
       <div className="text-center mb-4">
         <h3 className="text-3xl text-[#49B675] font-semibold mb-4">Bienvenidos!</h3>

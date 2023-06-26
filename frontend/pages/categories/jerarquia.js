@@ -62,7 +62,7 @@ const Jerarquia = ({ data }) => {
                   
                   
                       <Link
-                        href={`/jerarquia/emperador`}
+                        href={`/categories/jerarquia/emperador`}
                         className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                         style={{
                           width: '100%',
@@ -93,7 +93,7 @@ const Jerarquia = ({ data }) => {
                       }}>
                     
                     <Link
-                          href={`/jerarquia/nobleza`}
+                          href={`/categories/jerarquia/nobleza`}
                           className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                           style={{
                             width: '100%',
@@ -124,7 +124,7 @@ const Jerarquia = ({ data }) => {
                   
                     
                       <Link
-                          href={`./jerarquia/comerciantes`}
+                          href={`/categories/jerarquia/comerciantes`}
                           className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                           style={{
                             width: '100%',
@@ -156,7 +156,7 @@ const Jerarquia = ({ data }) => {
                 
                     
                       <Link
-                          href={`./jerarquia/plebeyos`}
+                          href={`/categories/jerarquia/plebeyos`}
                           className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                           style={{
                             width: '100%',
@@ -187,7 +187,7 @@ const Jerarquia = ({ data }) => {
                   
                     
                     <Link
-                          href={`./jerarquia/esclavos`}
+                          href={`/categories/jerarquia/esclavos`}
                           className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                           style={{
                             width: '100%',

@@ -49,7 +49,7 @@ const Temprano = () => {
 
 
                 {/* Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)*/}
-                <ul className="grid grid-cols-2 gap-3" style={{ margin: 0, padding: 0 }}>
+                <ul className="grid grid-cols-5 gap-3" style={{ margin: 0, padding: 0 }}>
                     <div >
                         <Tenoch />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
