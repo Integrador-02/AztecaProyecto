@@ -3,46 +3,58 @@ import { Base1 } from '@layouts/Baseof';
 import Link from 'next/link';
 
 const questions = [
-  {
-    question: '¿Quién es el dios azteca del sol?',
-    options: ['Huitzilopochtli', 'Quetzalcoatl', 'Tlaloc', 'Tezcatlipoca'],
-    answer: 'Huitzilopochtli'
-  },
-  {
-    question: '¿Quién es la diosa azteca de la luna?',
-    options: ['Tonantzin', 'Coyolxauhqui', 'Xochiquetzal', 'Chalchiuhtlicue'],
-    answer: 'Coyolxauhqui'
-  },
-  {
-    question: '¿Mixcóatl era el dios de las enfermedades?',
-    options: ['Verdadero', 'Falso'],
-    answer: 'Falso'
-  },
-  {
-    question: 'Cintéotl es el dios de la mazorca madura.',
-    options: ['Verdadero', 'Falso'],
-    answer: 'Verdadero'
-  },
-  {
-    question: 'Xiuhtecuhtli es...',
-    options: ['el dios del agua', 'el dios del viento', 'el dios del fuego', 'la diosa de la vegetació'],
-    answer: 'el dios del fuego'
-  },
-  {
-    question: '¿La religión de los aztecas era monoteísta o politeísta?',
-    options: ['Monoteísta', 'Politeísta'],
-    answer: 'Politeísta'
-  },
-  {
-    question: '¿Quién es el dios del hielo y el frío?',
-    options: ['Mayahuel', 'Politeísta', 'Coatlicue', 'Ixquimilli', 'Coatlicue'],
-    answer: 'Ixquimilli'
-  },
-
-
-
-
-];
+    {
+      question: '¿Cuál es la leyenda azteca que narra la historia de dos dioses hermanos?',
+      options: ['Leyenda de Quetzalcóatl y Tezcatlipoca', 'Leyenda de La Llorona', 'Leyenda del Quinto Sol', 'Leyenda de la fundación de México-Tenochtitlán'],
+      answer: 'Leyenda de Quetzalcóatl y Tezcatlipoca'
+    },
+    {
+      question: '¿Cuál es la serpiente emplumada que representa la dualidad en la mitología azteca?',
+      options: ['Quetzalcóatl', 'Huitzilopochtli', 'Coatlicue', 'Xolotl'],
+      answer: 'Quetzalcóatl'
+    },
+    {
+      question: 'Según la leyenda azteca, ¿qué ocurrió con los dioses de los cuatro soles anteriores?',
+      options: ['Se transformaron en animales', 'Fueron derrotados por los hombres', 'Se convirtieron en estrellas', 'Desaparecieron en el inframundo'],
+      answer: 'Desaparecieron en el inframundo'
+    },
+    {
+      question: '¿Cuál es la leyenda azteca que relata la historia de una mujer convertida en diosa?',
+      options: ['Leyenda de La Malinche', 'Leyenda de La Llorona', 'Leyenda del Quinto Sol', 'Leyenda de Coatlicue'],
+      answer: 'Leyenda de Coatlicue'
+    },
+    {
+      question: '¿Quién es el dios azteca asociado con la muerte y el inframundo?',
+      options: ['Quetzalcóatl', 'Mictlantecuhtli', 'Tlaloc', 'Xochiquetzal'],
+      answer: 'Mictlantecuhtli'
+    },
+    {
+      question: 'Según la leyenda azteca, ¿qué ocurrió cuando los dioses decidieron crear a los hombres?',
+      options: ['Los hombres surgieron de un maíz', 'Los hombres fueron creados por Quetzalcóatl', 'Los hombres descendieron del cielo', 'Los hombres surgieron de la tierra'],
+      answer: 'Los hombres surgieron de un maíz'
+    },
+    {
+      question: '¿Cuál es la leyenda azteca que cuenta la historia de un guerrero y una princesa?',
+      options: ['Leyenda de Popocatépetl e Iztaccíhuatl', 'Leyenda de La Malinche', 'Leyenda del Quinto Sol', 'Leyenda de Xólotl y el Mictlán'],
+      answer: 'Leyenda de Popocatépetl e Iztaccíhuatl'
+    },
+    {
+      question: '¿Qué animal era considerado sagrado en la mitología azteca y se asociaba con la guerra?',
+      options: ['Águila', 'Coyote', 'Jaguar', 'Serpiente'],
+      answer: 'Águila'
+    },
+    {
+      question: '¿Quién es la diosa azteca de la luna y la fertilidad?',
+      options: ['Quetzalcóatl', 'Cihuacóatl', 'Coyolxauhqui', 'Xochiquetzal'],
+      answer: 'Coyolxauhqui'
+    },
+    {
+      question: '¿Cuál es la leyenda azteca que relata el destino de los guerreros muertos en batalla?',
+      options: ['Leyenda de Xólotl y el Mictlán', 'Leyenda de La Llorona', 'Leyenda del Quinto Sol', 'Leyenda de los Guerreros Águila'],
+      answer: 'Leyenda de los Guerreros Águila'
+    },
+  ];
+  
 const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
@@ -53,7 +65,7 @@ const Titulo = () => {
       />
       <div className="relative z-12 flex items-center justify-center h-full">
         <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-          <span className="text-green-600">QUIZ DIOSES</span>
+          <span className="text-green-600">QUIZ LEYENDA 1</span>
         </h1>
       </div>
     </div>
