@@ -432,3 +432,116 @@ button svg {
 
 
 /**/
+.crossword-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.crossword-wrapper {
+  display: flex;
+  margin-top: 20px;
+}
+
+.crossword {
+  border-collapse: collapse;
+}
+
+.crossword td {
+  border: 1px solid #000;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+  position: relative;
+}
+
+.crossword td input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.crossword td.black {
+  background-color: #000;
+  color: #fff;
+}
+
+.crossword td.black .black-cell {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.clues {
+  margin-left: 20px;
+}
+
+.clues h3 {
+  margin-bottom: 10px;
+}
+
+.clues h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.clues ol {
+  padding-left: 20px;
+}
+
+.clues li {
+  margin-bottom: 5px;
+}
+
+.clue-number {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.clue-across {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 10px;
+  color: #333;
+  font-weight: bold;
+}
+.crossword-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.crossword-table td {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.crossword-table .black-cell {
+  background-color: black;
+}
+
+.crossword-table input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.crossword-table .highlight {
+  background-color: yellow;
+}
