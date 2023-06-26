@@ -56,7 +56,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
 
 
         </header>
-        <ul className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2" style={{ margin: 0, padding: 0 }}>
+        <ul className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{ margin: 0, padding: 0 }}>
           <li
             key={`1`}
             className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400 "
@@ -67,7 +67,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("https://aventurateamexico.com/wp-content/uploads/2022/12/gobernantes-aztecas.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
@@ -98,7 +98,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/religion-azteca.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
@@ -128,7 +128,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/arte.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
@@ -157,7 +157,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/arquitectura.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
@@ -186,7 +186,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/economia.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
@@ -216,7 +216,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/Tlachtli.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link

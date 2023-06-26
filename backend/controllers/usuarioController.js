@@ -96,15 +96,17 @@ const confirmar = async (req, res) => {
     const token = nanoid();
     const existeUsuario = await Promise.resolve(Usuario.findOne({ email }));
     if (!existeUsuario) {
+      
       const error = new Error('El usuario no existe');
       return res.status(400).json({ msg: error.message });
-
+      
     }
   
     try {
       existeUsuario.token = token;
       await existeUsuario.save();
       await sendPasswordResetEmail(email, token);
+      
       res.json({ msg: 'Hemos enviado un email con las instrucciones' });
     } catch (error) {
       console.log(error);

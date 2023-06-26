@@ -81,7 +81,6 @@ export const Base1 = ({ children }) => {
 
         .content {
           padding-top: 0px; /* Ajusta el valor según sea necesario */
-          overflow-y: auto;
           height: calc(100vh - 80px); /* Ajusta el valor según el padding-top */
         }
 
