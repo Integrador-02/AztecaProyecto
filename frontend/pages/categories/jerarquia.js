@@ -10,15 +10,18 @@ const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
       <img
-        className="absolute inset-x-0 top-0 w-full h-80 object-cover brightness-60"
+        className="absolute inset-x-0 top-0 w-full h-80 object-cover brightness-50"
         src={"/images/gobernantes-aztecas.jpg"}
         alt="Imagen de fondo"
         
       />
-      <div className="relative z-12 flex items-center justify-center h-full">
-        <h1 className="font-bold text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
-          <span className="text-green-500"  style={{ fontSize: '180%', color: '#006400' }}>JERARQUÍA</span>
+      <div className="relative z-12 flex flex-col items-center justify-center h-full text-center">
+        <h1 className="font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
+          <span className="text-green-500"  style={{ fontSize: '180%', color: '#00CC00' }}>JERARQUÍA</span>
         </h1>
+        <p className="text-sm sm:text-sm md:text-lg lg:text-xl xl:text-1xl text-[#FFFFFF] mt-4 mx-6 sm:mx-8 md:mx-10 lg:mx-12 xl:mx-16">
+          La jerarquía en la sociedad azteca estaba fuertemente estratificada, con diferentes niveles y roles que determinaban el estatus y los privilegios de cada individuo. A continuación, se presenta una visión general de la jerarquía de los aztecas, comenzando desde la cúspide y descendiendo hacia los estratos inferiores:
+        </p>
         
       </div>
     </div>
@@ -35,20 +38,10 @@ const Jerarquia = ({ data }) => {
     
       <div className="jerarquia-class" style={{margin :10, padding : 10}}>
                   
-      <p style={{
-                    fontSize: '23px',
-                    fontWeight: 'normal',
-                    margin: '20px',
-                    color: '#000',
-                    textAlign: 'justify',
-                    lineHeight: '1.5',
-                    fontFamily: 'Arial, sans-serif',
-                }}>
-                La jerarquía en la sociedad azteca estaba fuertemente estratificada, con diferentes niveles y roles que determinaban el estatus y los privilegios de cada individuo. A continuación, se presenta una visión general de la jerarquía de los aztecas, comenzando desde la cúspide y descendiendo hacia los estratos inferiores:
-        </p>
+ 
                 
 
-        <ul className="grid grid-cols-3 gap-4" style={{ margin: 0, padding: 0 }}>
+        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ margin: 0, padding: 0 }}>
                   <li
                       key={`1`}
                       className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
@@ -65,7 +58,7 @@ const Jerarquia = ({ data }) => {
                   
                       <Link
                         href={`/categories/jerarquia/emperador`}
-                        className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                        className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                         style={{
                           width: '100%',
                           height: '100%',
@@ -96,7 +89,7 @@ const Jerarquia = ({ data }) => {
                     
                     <Link
                           href={`/categories/jerarquia/nobleza`}
-                          className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                           style={{
                             width: '100%',
                             height: '100%',
@@ -127,7 +120,7 @@ const Jerarquia = ({ data }) => {
                     
                       <Link
                           href={`/categories/jerarquia/comerciantes`}
-                          className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                           style={{
                             width: '100%',
                             height: '100%',
@@ -159,7 +152,7 @@ const Jerarquia = ({ data }) => {
                     
                       <Link
                           href={`/categories/jerarquia/plebeyos`}
-                          className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                           style={{
                             width: '100%',
                             height: '100%',
@@ -190,7 +183,7 @@ const Jerarquia = ({ data }) => {
                     
                     <Link
                           href={`/categories/jerarquia/esclavos`}
-                          className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                           style={{
                             width: '100%',
                             height: '100%',
@@ -229,7 +222,7 @@ const Jerarquia = ({ data }) => {
                   
                       <Link
                         href={`/categories`}
-                        className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                        className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                         style={{
                           width: '100%',
                           height: '100%',
@@ -239,7 +232,7 @@ const Jerarquia = ({ data }) => {
                           backgroundColor: 'rgba(255, 255, 255, 0.8)',
                         }}
                       >
-                       <span style={{ fontSize: '1.9em', color: '#006400' }}>Pagina Principal</span>
+                       <span style={{ fontSize: '130%', color: '#006400' }}>Pagina Principal</span>
                       </Link>
                   
                   </li>
@@ -260,7 +253,7 @@ const Jerarquia = ({ data }) => {
                     
                     <Link
                           href={`/religion`}
-                          className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                           style={{
                             width: '100%',
                             height: '100%',
@@ -270,7 +263,7 @@ const Jerarquia = ({ data }) => {
                             backgroundColor: 'rgba(255, 255, 255, 0.8)',
                           }}
                         >
-                          <span style={{ fontSize: '1.9em', color: '#006400' }}>Religión</span>
+                          <span style={{ fontSize: '130%', color: '#006400' }}>Religión</span>
                         </Link>
                   </li>
                   </ul>
