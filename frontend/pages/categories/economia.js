@@ -86,7 +86,7 @@ const Economia = ({ data }) => {
 
          </div>
 
-        <ul className="grid grid-cols-2 gap-1" style={{  margin: 100, padding: 0 }}>
+        <ul className="grid grid-cols-2 gap-8" style={{  margin: 50, padding: 0 }}>
         <li
 
               key={`1`}

@@ -208,7 +208,7 @@ const Carta = () => {
   };
 
   return (
-    <div   className="grid grid-cols-3 gap-1 center" style={{ margin:'10%', marginTop:'-4%' }} >
+    <div   className="grid grid-cols-3 gap-4 center" style={{ margin:'10%', marginTop:'-4%' , width: '80vw'}} >
       
       {/* Mostrar las cartas  paginadas */}
         {paginatedImages.map((dioses, index) => (
@@ -223,7 +223,7 @@ const Carta = () => {
         ))}
 
       {/* Agregar iconos de paginación */}
-      <div className="pagination" style={{  justifyContent: 'center',margin:'-2.5rem'}}>
+      <div className="pagination " style={{  justifyContent: 'center',margin:'-2.5rem'}}>
         {Array.from({ length: totalPages }).map((_, index) => (
           <button
             key={index}
@@ -259,20 +259,7 @@ const Dioses = () => {
         <div className="grid grid-cols-2 gap-1 center">
        
         
-        <p style={{
-          fontSize: '23px',
-          fontWeight: 'normal',
-          margin: '20px',
-          color: '#000',
-          textAlign: 'justify',
-          lineHeight: '1.5',
-          fontFamily: 'Arial, sans-serif',
-          marginTop :'40px'
-          }}>          
-          Los dioses aztecas eran parte fundamental de la religión y la mitología de la antigua civilización azteca. Tenían una amplia variedad de dioses que representaban diferentes aspectos de la naturaleza, el cosmos, la guerra, la fertilidad y otras esferas de la vida.
-          <br/>
-          Entre ellos:
-        </p>
+       
       
  <Carta/>
        
