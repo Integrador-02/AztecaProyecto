@@ -77,6 +77,7 @@
 .card span {
   font-size: 48px;
 }
+
 .quiz {
   text-align: center;
   padding: 20px;
@@ -233,14 +234,15 @@
 }
 
 .app2 {
-  background-color: #246d51;
+  display: block;
+  background-color: #e3e4e7;
   max-width: 700px;
   min-width: 450px;
   height: min-content;
   min-height: 200px;
-  border-radius: 15px;
+  border-radius: 30px;
   padding: 20px;
-  box-shadow: 10px 10px 42px 0px rgba(236, 228, 228, 0.75);
+  box-shadow: 10px 10px 42px 0px rgba(101, 214, 202, 0.75);
   display: flex;
   justify-content: space-evenly;
 }
@@ -278,7 +280,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-size: 24px;
+  font-size: 34px;
   align-items: center;
 }
 
@@ -287,30 +289,30 @@
   width: 100%;
   font-size: 16px;
   color: #ffffff;
-  background-color: #c6c9d4;
+  background-color: #030304;
   border-radius: 15px;
   display: flex;
   padding: 5px;
   justify-content: flex-start;
   align-items: center;
-  border: 5px solid #218179;
+  border: 5px solid #cad0cf;
   cursor: pointer;
 }
 
 .tiempo-restante {
-  font-size: 14px;
+  font-size: 34px;
   color: #fc3d3d;
   margin-bottom: 50px;
 }
 
 .correct,
 .correct:hover {
-  background-color: #2f922f;
+  background-color: #2abc2a;
 }
 
 .incorrect,
 .incorrect:hover {
-  background-color: #ff3333;
+  background-color: #f60707;
 }
 
 .btns-container {
@@ -335,6 +337,7 @@ button:focus {
 button svg {
   margin-right: 5px;
 }
+
 //------ juegos
 
 .board {
@@ -376,16 +379,19 @@ button svg {
 /* quiz.css */
 
 .quiz-container {
-  width: 500px;
-  max-width: 500px;
+  width: 25rem;
+  max-width: 30rem;
   margin: 0 auto;
+  padding: 10 auto;
 }
 
 .question {
   font-weight: bold;
-  margin-bottom: 2rem;
-}
+  margin-bottom: 1rem;
+  text-align: center;
+  color: rgb(4, 4, 4);
 
+}
 .options {
   list-style-type: none;
   padding: 0;
@@ -393,6 +399,8 @@ button svg {
 
 .option {
   margin-bottom: 0.5rem;
+  color: rgb(255, 251, 251);
+
 }
 
 .option input[type="radio"] {
@@ -413,14 +421,16 @@ button svg {
 .card {
   display: inline-block;
   margin: 5px;
-  height: calc(200px );
+  height: calc(200px);
   width: calc(250px);
   cursor: pointer;
 }
-.cards-container{
+
+.cards-container {
   width: 1000px;
   height: 600px;
 }
+
 .card:hover {
   transform: scale(0.98);
 }
@@ -435,10 +445,12 @@ button svg {
 .active {
   font-weight: bold;
   color: blue;
-  font-size: 1rem ;  
-  font-family: "Arial", sans-serif; /* Cambia "Arial" por el nombre de la fuente deseada */
+  font-size: 1rem;
+  font-family: "Arial", sans-serif;
+  /* Cambia "Arial" por el nombre de la fuente deseada */
 
 }
+
 .breadcrumbs {
   list-style: none;
   margin: 0;
@@ -456,18 +468,23 @@ button svg {
 .breadcrumbs a {
   cursor: pointer;
   text-decoration: none;
-   
-    color:    #2EA684; /* Verde turquesa */
+
+  color: #2EA684;
+  /* Verde turquesa */
   /* Agrega aquí el color que deseas */
-  font-size: 1rem ; /* Ajusta el tamaño de letra según tus necesidades */
-  font-family: "Arial", sans-serif; /* Cambia "Arial" por el nombre de la fuente deseada */
+  font-size: 1rem;
+  /* Ajusta el tamaño de letra según tus necesidades */
+  font-family: "Arial", sans-serif;
+  /* Cambia "Arial" por el nombre de la fuente deseada */
 
 }
 
 .breadcrumbs span {
   font-weight: bold;
-  color:blue;/* Agrega aquí el color que deseas */
+  color: blue;
+  /* Agrega aquí el color que deseas */
 }
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -488,4 +505,95 @@ button svg {
 .pagination button.active {
   background-color: #555;
   color: #fff;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*quiz*/
+
+.option {
+  display: block;
+  margin-bottom: 10px;
+  width: 25rem;
+  height: 2.5rem;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(25, 208, 232);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.option:hover {
+  transform: scale(1.1);
+}
+
+.selected {
+  background-color: rgb(89, 159, 163);
+}
+
+.next-button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #34D399;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.next-button:hover {
+  background-color: #2DAF92;
+}
+
+.next-button.disabled {
+  background-color: rgb(37, 109, 86);
+  cursor: not-allowed;
+}
+
+.result-container {
+  margin-top: 20px;
+}
+
+.result-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.result-text {
+  margin-top: 10px;
+}
+
+.reset-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FF5722;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #E64A19;
+}
+.option.correct {
+  /* Estilos de opción correcta */
+  background-color: #03f52b;
+  color: #FFF;
+}
+
+.option.incorrect {
+  /* Estilos de opción incorrecta */
+  background-color: #EF4444;
+  color: #FFF;
+} .option.review {
+  /* Estilos de opción en modo de revisión */
+  pointer-events: none;
 }

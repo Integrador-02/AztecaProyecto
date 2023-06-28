@@ -111,6 +111,7 @@ try {
     Cookies.set('clave',email2);
     Cookies.set('name',nameUser);
  console.log(Cookies.get('name'))
+
   } else {
     // Si las credenciales son incorrectas, muestra un mensaje de error
     alert("Credenciales incorrectas");

@@ -41,7 +41,6 @@ const Ahorcado = () => {
   return (
     <Base1>
     <div>
-      < Titulo />
     </div>
     <div className="container pt-12 text-center" >
     <AhorcadoAzteca/>
