@@ -47,7 +47,7 @@ const ImperioAzteca = () => {
 
 
                 {/* Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)*/}
-                <ul className="grid grid-cols-2 gap-3" style={{ margin: 0, padding: 0 }}>
+                <ul className="grid grid-cols-4 gap-3" style={{ margin: 0, padding: 0 }}>
                     <div >
                         <Itzcóatl />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -236,7 +236,7 @@ const Itzcóatl = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -262,7 +262,7 @@ const Itzcóatl = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -302,7 +302,7 @@ const MoctezumaI = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -328,7 +328,7 @@ const MoctezumaI = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -367,7 +367,7 @@ const Atotoztli = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -393,7 +393,7 @@ const Atotoztli = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -434,7 +434,7 @@ const Axayacatl = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -460,7 +460,7 @@ const Axayacatl = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -498,7 +498,7 @@ const Tizoc = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -524,7 +524,7 @@ const Tizoc = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -564,7 +564,7 @@ const Ahuitzotl = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -590,7 +590,7 @@ const Ahuitzotl = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -625,7 +625,7 @@ const MoctezumaII = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -651,7 +651,7 @@ const MoctezumaII = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -687,7 +687,7 @@ const Cuitláhuac = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -713,7 +713,7 @@ const Cuitláhuac = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
