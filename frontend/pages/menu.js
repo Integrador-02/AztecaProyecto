@@ -4,12 +4,12 @@ import { FaUser, FaAngleDown } from 'react-icons/fa';
 import Avatar from 'react-avatar';
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
+  
 
 const MenuComponent = () => {
   const router = useRouter();
-  const [email, setEmail] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-
+const [email, setEmail] = useState('');
   useEffect(() => {
     const user = Cookies.get('clave');
     setEmail(user);
@@ -67,4 +67,5 @@ const MenuComponent = () => {
 };
 
 export default MenuComponent;
+
 

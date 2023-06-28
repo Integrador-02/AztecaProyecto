@@ -102,9 +102,15 @@ try {
   const payloadObject = JSON.parse(decodedPayload);
   const userId2 = payloadObject.userId;
   const email2 = payloadObject.email;
+  const nombre = payloadObject.nombre;
+  console.log(nombre)
   usuario.userId2= String(userId2);
   usuario.email2= String(email2);
+  
     Cookies.set('clave',email2);
+    
+
+
   } else {
     // Si las credenciales son incorrectas, muestra un mensaje de error
     alert("Credenciales incorrectas");
