@@ -66,7 +66,7 @@ const confirmar = async (req, res) => {
   
       if (!usuario) {
         return res.status(401).json('Credenciales inválidas');
-      }
+      }//hola
   
       // Revisar Password
       if (usuario.password === password) {
