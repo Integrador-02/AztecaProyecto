@@ -56,7 +56,7 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
 
 
         </header>
-        <ul className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2" style={{ margin: 0, padding: 0 }}>
+        <ul className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{ margin: 0, padding: 0 }}>
           <li
             key={`1`}
             className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400 "
@@ -67,12 +67,12 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("https://aventurateamexico.com/wp-content/uploads/2022/12/gobernantes-aztecas.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
               href={`/categories/jerarquia`}
-              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-primary hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              className="text-lg flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-primary hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white sm:text-lg md:text-xl"
               style={{
                 width: '100%',
                 height: '100%',
@@ -98,12 +98,12 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/religion-azteca.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
               href={`/categories/religion`}
-              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',
                 height: '100%',
@@ -128,12 +128,12 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/arte.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
               href={`/categories/arte`}
-              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',
                 height: '100%',
@@ -157,12 +157,12 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/arquitectura.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
               href={`/categories/arquitectura`}
-              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',
                 height: '100%',
@@ -186,12 +186,12 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/economia.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
               href={`/categories/economia`}
-              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',
                 height: '100%',
@@ -216,12 +216,12 @@ const Categories = ({ categories }) => {const  a = Cookies.get('clave');
               backgroundImage: 'url("/images/Tlachtli.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+              filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
             }}
           >
             <Link
               href={`/minijuegos`}
-              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',
                 height: '100%',

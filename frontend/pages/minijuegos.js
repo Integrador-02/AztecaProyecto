@@ -4,16 +4,20 @@ import Link from "next/link";
 const Titulo = () => {
   return (
     <div className="font-text relative h-80">
-      <img
-        className="absolute inset-0 h-full w-full object-cover brightness-50"
-        src={"/images/60ececdb1ab3bd00957e108ed2f27ec6.gif"}
-        alt="Imagen de fondo"
-      />
-      <div className="z-12 relative flex h-full items-center justify-center">
-        <h1 className="text-4xl font-bold">
-          <span className="text-green-500">Minijuegos Aztecas</span>
-        </h1>
-      </div>
+    <img
+      className="absolute inset-0 h-full w-full object-cover brightness-50"
+      src={"/images/60ececdb1ab3bd00957e108ed2f27ec6.gif"}
+      alt="Imagen de fondo"
+    />
+    <div className="relative z-12 flex flex-col items-center justify-center h-full text-center">
+      <h1 className="text-4xl font-bold">
+        <span className="text-green-500">Minijuegos Aztecas</span>
+      </h1>
+      <p className="text-sm sm:text-sm md:text-lg lg:text-xl xl:text-1xl text-[#FFFFFF] mt-4 mx-6 sm:mx-8 md:mx-10 lg:mx-12 xl:mx-16">
+      Diviertete aprendiendo mas sobre la civilización Aztecas a través de
+              los siguientes minijuegos:
+      </p>
+    </div>
     </div>
   );
 };
@@ -25,13 +29,9 @@ const Minijuegos = () => {
         <Titulo />
         <section className="section pt-0 mt-8">
           <div className="container pt-12 text-center">
-            <p className="mb-2 text-xl text-[#49B675]">
-              Diviertete aprendiendo mas sobre la civilización Aztecas a través de
-              los siguientes minijuegos:
-            </p>
-            <header style={{ textAlign: "center" }}></header>
+           
             <ul
-              className="grid grid-cols-4 gap-2"
+              className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4"
               style={{ margin: 0, padding: 0 }}
             >
               <li
@@ -44,7 +44,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("/images/agricultura.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -59,7 +59,8 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Ahorcado</span>
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Ahorcado</span>
+
                 </Link>
               </li>
 
@@ -73,7 +74,8 @@ const Minijuegos = () => {
                   backgroundImage: 'url("/images/quiz.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
+
                 }}
               >
                 <Link
@@ -88,7 +90,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz</span>
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Quiz</span>
                 </Link>
               </li>
 
@@ -102,7 +104,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("/images/TicTacToe.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -117,7 +119,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Tic Tac Toe</span>
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Tic Tac Toe</span>
                 </Link>
               </li>
 
@@ -131,7 +133,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("https://play-lh.googleusercontent.com/S91io1m21x1O9sFYjXku6b1N4mmBz4hxriNKPnagw9z5lTzmBbL9oCvLGY3n4nrvAUA")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -146,7 +148,8 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Atento y rapido</span>
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Rompecabeza🧠</span>
+
                 </Link>
               </li>
               <li
@@ -159,7 +162,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("https://www.cinconoticias.com/wp-content/uploads/xolotl.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -174,7 +177,8 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Dioses</span>
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Quiz Dioses</span>
+
                 </Link>
               </li>
               <li
@@ -187,7 +191,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -202,7 +206,8 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Religion</span>
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Quiz Religion</span>
+
                 </Link>
               </li>
 
@@ -216,7 +221,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -231,7 +236,8 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Jerarquía</span>
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Quiz Jerarquía</span>
+
                 </Link>
               </li>
 
@@ -245,7 +251,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -260,7 +266,9 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Arte</span>
+
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Quiz Arte</span>
+
                 </Link>
 
 
@@ -281,7 +289,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -296,7 +304,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz LEYENDA 1</span>
+                  <span style={{ fontSize: '130%', color: '#006400' }}>Quiz LEYENDA 1</span>
                 </Link>
 
 
@@ -316,7 +324,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -331,7 +339,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz LEYENDA 2</span>
+                  <span style={{ fontSize: '130%', color: '#006400' }}>Quiz LEYENDA 2</span>
                 </Link>
 
 
@@ -351,7 +359,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -366,7 +374,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Gobernantes</span>
+                  <span style={{ fontSize: '130%', color: '#006400' }}>Quiz Gobernantes</span>
                 </Link>
 
 
@@ -386,7 +394,7 @@ const Minijuegos = () => {
                   backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
                 }}
               >
                 <Link
@@ -401,7 +409,7 @@ const Minijuegos = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.8)",
                   }}
                 >
-                  <span style={{ fontSize: '1.9em', color: '#006400' }}>Quiz Textil</span>
+                  <span style={{ fontSize: '130%', color: '#006400' }}>Quiz Textil</span>
                 </Link>
 
 

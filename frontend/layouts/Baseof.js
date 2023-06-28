@@ -64,7 +64,7 @@ export const Base1 = ({ children }) => {
       </Head>
       <div className="app-container">
         <Header3 />
-        <div style={{ margin: '2rem' }}>
+        <div style={{ margin: '1rem' }}>
           <Breadcrumbs className="my-breadcrumbs" />
         </div>
 
@@ -81,7 +81,6 @@ export const Base1 = ({ children }) => {
 
         .content {
           padding-top: 0px; /* Ajusta el valor según sea necesario */
-          overflow-y: auto;
           height: calc(100vh - 80px); /* Ajusta el valor según el padding-top */
         }
 

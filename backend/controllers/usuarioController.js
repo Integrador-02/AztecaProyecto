@@ -73,7 +73,7 @@ const confirmar = async (req, res) => {
           
         // Generar el token JWT   
         const privateKey = process.env.JWT_SECRET; 
-        const token = jwt.sign({ userId: usuario._id, email }, privateKey, { expiresIn: '1h' });
+        const token = jwt.sign({ userId: usuario._id, email ,nameU: usuario.nombre}, privateKey, { expiresIn: '1h' });
         req.usuario = usuario; // Agregar el objeto de usuario a la solicitud
         req.token = token; // Agregar el token a la solicitud
         
@@ -96,15 +96,17 @@ const confirmar = async (req, res) => {
     const token = nanoid();
     const existeUsuario = await Promise.resolve(Usuario.findOne({ email }));
     if (!existeUsuario) {
+      
       const error = new Error('El usuario no existe');
       return res.status(400).json({ msg: error.message });
-
+      
     }
   
     try {
       existeUsuario.token = token;
       await existeUsuario.save();
       await sendPasswordResetEmail(email, token);
+      
       res.json({ msg: 'Hemos enviado un email con las instrucciones' });
     } catch (error) {
       console.log(error);

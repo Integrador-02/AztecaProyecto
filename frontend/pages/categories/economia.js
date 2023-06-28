@@ -10,7 +10,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 //clase Economia
 const Titulo = () => {
   return (
-    <div className="relative h-80 font-text">
+    <div className="relative h-80 font-text mt-[-2%]">
       <img
         className="absolute inset-0 w-full h-full object-cover brightness-50"
         src={"https://img.over-blog-kiwi.com/1/06/54/81/20140530/ob_754e74_aztecas-imagen.jpg"}
@@ -49,7 +49,7 @@ const Economia = ({ data }) => {
             </iframe> 
 
             <p style={{
-                    fontSize: '23px',
+                    fontSize: '18px',
                     fontWeight: 'normal',
                     margin: '20px',
                     color: '#000',
@@ -86,7 +86,7 @@ const Economia = ({ data }) => {
 
          </div>
 
-        <ul className="grid grid-cols-2 gap-1" style={{  margin: 100, padding: 0 }}>
+        <ul className="grid grid-cols-2 gap-8" style={{  margin: 50, padding: 0  }}>
         <li
 
               key={`1`}
@@ -98,7 +98,7 @@ const Economia = ({ data }) => {
                 backgroundImage: 'url(https://www.gob.mx/cms/uploads/article/main_image/25411/chinampa1.jpg)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
+                filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
               }}
             >
 
@@ -115,7 +115,7 @@ const Economia = ({ data }) => {
               }}
             >
 
-               <span style={{ fontSize: '1.9em', color: '#006400' }}>Chinampas</span>
+               <span style={{ fontSize: '130%', color: '#006400' }}>Chinampas</span>
 
             </Link>
                          
@@ -133,7 +133,7 @@ const Economia = ({ data }) => {
                 backgroundImage: 'url("https://hablemosdeculturas.com/wp-content/uploads/2018/09/agricultura-azteca-11.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: 'brightness(70%)', // Ajusta el valor de brillo según tus preferencias
+                filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
               }}
             >
 
@@ -151,7 +151,7 @@ const Economia = ({ data }) => {
               }}
             >
 
-               <span style={{ fontSize: '1.9em', color: '#006400' }}>Agricultura</span>
+               <span style={{ fontSize: '130%', color: '#006400' }}>Agricultura</span>
             </Link>
                          
               

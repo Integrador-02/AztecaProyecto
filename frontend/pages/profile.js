@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Base1 } from "@layouts/Baseof";
 import Cookies from "js-cookie";
 import { useEffect } from "react";
+import Avatar from "react-avatar";
 
 const UserProfilePage = () => {
   const [name, setName] = useState("Proyecto Integrador");
@@ -13,7 +14,38 @@ const UserProfilePage = () => {
   useEffect(() => {
     const user = Cookies.get('clave');
     setEmail(user);
+    const nameUs =  Cookies.get('name');
+    setName(nameUs);
   }, []);
+  
+  useEffect(() => {
+    const generateInitialImage = () => {
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      const size = 100; // Tamaño de la imagen
+      const fontSize = 50; // Tamaño de la fuente
+      const fontFamily = 'Arial';
+      const backgroundColor = '#ccc'; // Color de fondo
+      const textColor = '#fff'; // Color del texto
+
+      canvas.width = size;
+      canvas.height = size;
+      context.fillStyle = backgroundColor;
+      context.fillRect(0, 0, size, size);
+      context.font = `${fontSize}px ${fontFamily}`;
+      context.fillStyle = textColor;
+      context.textAlign = 'center';
+      context.textBaseline = 'middle';
+      context.fillText(name.charAt(0).toUpperCase(), size / 2, size / 2);
+
+      const dataURL = canvas.toDataURL('image/png');
+      setProfileImage(dataURL);
+    };
+
+    generateInitialImage();
+  }, [name]);
+
+
   const handleNameChange = (e) => {
     setName(e.target.value);
   };

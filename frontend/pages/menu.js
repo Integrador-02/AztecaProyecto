@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef  } from "react";
 import Dropdown from 'react-dropdown-select';
 import { FaUser, FaAngleDown } from 'react-icons/fa';
 import Avatar from 'react-avatar';
@@ -6,22 +6,34 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
   
 
+
+
 const MenuComponent = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+
 const [email, setEmail] = useState('');
+
+  const avatarRef = useRef(null);
+
   useEffect(() => {
-    const user = Cookies.get('clave');
+    const user = Cookies.get('name');
     setEmail(user);
   }, []);
 
+ 
+
   const handleLogout = () => {
     Cookies.remove('clave');
+    Cookies.remove('name');
     router.push('/');
   };
 
   const handlePerfil = () => {
+   
+
     router.push('/profile');
+
   };
 
   const handleClick = () => {
@@ -38,7 +50,8 @@ const [email, setEmail] = useState('');
   return (
     <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
       <div onClick={handleClick} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-        <Avatar name={email} size={50} round={true} />
+          
+        <Avatar name={email} size={50} round={true} ref={avatarRef}/>
         <FaAngleDown style={{ marginLeft: '5px' }} onClick={handleClick} />
       </div>
       {isOpen && (
