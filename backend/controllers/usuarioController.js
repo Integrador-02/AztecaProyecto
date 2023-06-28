@@ -73,7 +73,7 @@ const confirmar = async (req, res) => {
           
         // Generar el token JWT   
         const privateKey = process.env.JWT_SECRET; 
-        const token = jwt.sign({ userId: usuario._id, email }, privateKey, { expiresIn: '1h' });
+        const token = jwt.sign({ userId: usuario._id, email ,nameU: usuario.nombre}, privateKey, { expiresIn: '1h' });
         req.usuario = usuario; // Agregar el objeto de usuario a la solicitud
         req.token = token; // Agregar el token a la solicitud
         

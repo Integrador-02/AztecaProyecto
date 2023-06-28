@@ -64,7 +64,7 @@ export const Base1 = ({ children }) => {
       </Head>
       <div className="app-container">
         <Header3 />
-        <div style={{ margin: '2rem' }}>
+        <div style={{ margin: '1rem' }}>
           <Breadcrumbs className="my-breadcrumbs" />
         </div>
 

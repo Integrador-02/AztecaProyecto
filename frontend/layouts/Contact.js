@@ -11,7 +11,8 @@ import Cookies from 'js-cookie';
 
 const usuario = {
   userId2 :'',
- email2 : ''
+ email2 : '',
+ nameU2: '',
 
 }
 
@@ -83,7 +84,7 @@ if (!email || !password) {
 }
 
 try {
-  const url = "https://happy-fly-loincloth.cyclic.app/api/login";
+  const url = "http://localhost:4000/api/login";
   const respuest = await axios.post(url, { email, password });
 
  console.log( usuario);
@@ -93,7 +94,7 @@ try {
 
 
   if (isAuthorized) {
-    ;
+    
     // Si la autenticación es exitosa, redirige al usuario a la página de categorías
     window.location.href = "/categories";
     const token = respuest.data.t;
@@ -102,9 +103,14 @@ try {
   const payloadObject = JSON.parse(decodedPayload);
   const userId2 = payloadObject.userId;
   const email2 = payloadObject.email;
+  const nameUser = payloadObject.nameU;
+ 
   usuario.userId2= String(userId2);
   usuario.email2= String(email2);
+  usuario.nameU2= String(nameUser)
     Cookies.set('clave',email2);
+    Cookies.set('name',nameUser);
+ console.log(Cookies.get('name'))
   } else {
     // Si las credenciales son incorrectas, muestra un mensaje de error
     alert("Credenciales incorrectas");
