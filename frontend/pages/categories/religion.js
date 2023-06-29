@@ -82,7 +82,7 @@ const Religion = ({ data }) => {
               backgroundImage: 'url("https://aventurateamexico.com/wp-content/uploads/2022/12/Religion_Azteca-1280x720-1.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(70%)',
+              filter: 'brightness(90%)',
             }}
           >
 
@@ -112,7 +112,7 @@ const Religion = ({ data }) => {
               backgroundImage: 'url("https://hablemosdeculturas.com/wp-content/uploads/2017/11/Cultura-azteca-5.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(70%)',
+              filter: 'brightness(90%)',
             }}
           >
 
