@@ -5,6 +5,7 @@ import axios from "axios";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
+  
   const [code, setCode] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");

@@ -81,4 +81,3 @@ const [email, setEmail] = useState('');
 
 export default MenuComponent;
 
-

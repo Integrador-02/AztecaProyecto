@@ -1,9 +1,7 @@
 import React from 'react';
-import { markdownify } from "@lib/utils/textConverter";
 import {Base1} from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
-import { useState } from 'react';
 import Link from 'next/link';
 
 const Sangre = () => {

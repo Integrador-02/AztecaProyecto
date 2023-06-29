@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { Base1 } from '@layouts/Baseof';
-import Swal from 'sweetalert2';
 import App from './pulz';
 import { Header3 } from '@layouts/partials/Header';
 
