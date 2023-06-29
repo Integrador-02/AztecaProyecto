@@ -49,7 +49,7 @@ const Temprano = () => {
 
 
                 {/* Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)*/}
-                <ul className="grid grid-cols-2 gap-3" style={{ margin: 0, padding: 0 }}>
+                <ul className="grid grid-cols-5 gap-3" style={{ margin: 0, padding: 0 }}>
                     <div >
                         <Tenoch />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -176,7 +176,7 @@ const Tenoch = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -202,7 +202,7 @@ const Tenoch = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -241,7 +241,7 @@ const Acamapichtli = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -267,7 +267,7 @@ const Acamapichtli = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -308,7 +308,7 @@ const Huītzilihhuitl = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -334,7 +334,7 @@ const Huītzilihhuitl = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -377,7 +377,7 @@ const Chīmalpopōca = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -403,7 +403,7 @@ const Chīmalpopōca = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -443,7 +443,7 @@ const XīhuitlTēmoc = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -469,7 +469,7 @@ const XīhuitlTēmoc = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',

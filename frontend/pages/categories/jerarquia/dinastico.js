@@ -45,7 +45,7 @@ const Dinastico = () => {
 
 
                 {/* Temprano Tenochtitlan (1325-1375) y Tlatoque preimperial (1375-1427)*/}
-                <ul className="grid grid-cols-2 gap-3" style={{ margin: 0, padding: 0 }}>
+                <ul className="grid grid-cols-4 gap-3" style={{ margin: 0, padding: 0 }}>
                     <div >
                         <Huanitzin />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -157,7 +157,7 @@ const Huanitzin = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -183,7 +183,7 @@ const Huanitzin = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -223,7 +223,7 @@ const Tehuetzquititzin = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -249,7 +249,7 @@ const Tehuetzquititzin = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -288,7 +288,7 @@ const Cecetzin = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -314,7 +314,7 @@ const Cecetzin = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -351,7 +351,7 @@ const Cipac= () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -377,7 +377,7 @@ const Cipac= () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',

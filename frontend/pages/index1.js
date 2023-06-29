@@ -1,25 +1,30 @@
 import config from "@config/config.json";
 import { FaSpinner } from 'react-icons/fa';
 
-import Base from "@layouts/Baseof";
+import {Base1} from "@layouts/Baseof";
 import ImageFallback from "@layouts/components/ImageFallback";
-
+import Pagination from "@layouts/components/Pagination";
+import Post from "@layouts/partials/Post";
+import Sidebar from "@layouts/partials/Sidebar";
 import { getListPage, getSinglePage } from "@lib/contentParser";
 import { getTaxonomy } from "@lib/taxonomyParser";
-
+import dateFormat from "@lib/utils/dateFormat";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
-
+import { FaRegCalendar } from "react-icons/fa";
+import Quiz from "./quiz";
 import PostSingle from "./comentarios";
-import Breadcrumbs from "./nave";
+import AhorcadoAzteca from "./minijuego1";
+import Menu from "./menu";
 
 
 const { blog_folder, pagination } = config.settings;
 
-const Home = ({
+const Home1 = ({
   banner,
   posts,
+  categories,
 
 }) => {
   // define state
@@ -33,11 +38,10 @@ const Home = ({
 
 
   return (
-    <Base>
+    <Base1>
   {/* Banner */}
- 
   <section className="section banner relative pb-0">
-  
+    
     <ImageFallback
       className="absolute bottom-0 left-0 z-[-1] w-full"
       src={"/images/banner-bg-shape.svg"}
@@ -75,7 +79,7 @@ const Home = ({
               alt="Banner Image"
             />
           </div>
-        )}   
+        )}
       </div>
 
       <div className="mt-1"style={{padding:40}}> {/* Agrega un margen superior de 8 unidades */}
@@ -84,12 +88,12 @@ const Home = ({
 
     </div>
   </section>
-</Base>
+</Base1>
 
   );
 };
 
-export default Home;
+export default Home1;
 
 // for homepage data
 export const getStaticProps = async () => {

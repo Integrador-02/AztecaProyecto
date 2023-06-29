@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FaUser } from 'react-icons/fa';
 import Menu from "pages/menu";
+
 const Header = () => {
   // distructuring the main menu from menu object
   const { main } = menu;
@@ -271,17 +272,18 @@ export const Header3 = () => {
     }
   }, [showMenu]);
   useEffect(() => {
-    const user = Cookies.get('clave');
+    const user = Cookies.get('name');
     setEmail(user);
   }, []);
   const handleLogout = () => {
     Cookies.remove('clave');
+    Cookies.remove('name');
     router.push('/');
   
   };
   return (
-    <header className="header">
-      <nav className="navbar container px-1 sm:px-3">
+    <header className="header mt-0">
+      <nav className="navbar container px-1 sm:px-3 h-7">
         <div className="order-0">
           <Logo />
         

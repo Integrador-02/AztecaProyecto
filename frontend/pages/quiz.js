@@ -142,11 +142,11 @@ const Quiz = () => {
   if (isFinished)
     return (
       <main className="app2">
-        <div className="juego-terminado">
+        <div className="juego-terminado2">
           <span>
             Obtuviste {puntuación} de {preguntas.length}
           </span>
-          <button onClick={restartGame}>Volver a jugar</button>
+          <button onClick={restartGame} style={{margin:10}}>Volver a jugar</button>
           <button
             onClick={() => {
               setIsFinished(false);
