@@ -95,7 +95,7 @@ const Colonial = () => {
       {/* Mostrar las cartas  paginadas */}
         {paginatedImages.map((dioses, index) => (
           <li key={index}>
-            {colonial2(
+            {Colonial2(
              dioses.nombreDios,
              dioses.tipoDios,
              dioses.urlImage,
@@ -154,7 +154,7 @@ export default Colonial;
 
 
 
-const colonial2 = (nombreDios, tipoDios, urlImage, texto1) => {
+const Colonial2 = (nombreDios, tipoDios, urlImage, texto1) => {
     const [isFlipped, setIsFlipped] = useState(false);
   
     const handleCardClick = () => {
