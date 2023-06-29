@@ -1,8 +1,57 @@
 import React, { useEffect, useState } from 'react';
-import { imgs } from './juego/data';
-import { Card } from './juego/Card';
+
 import Modal from './modal';
 import { Base1 } from '@layouts/Baseof';
+const imgs = [
+	{
+		id: 1,
+		img: '/img/facebook.png',
+		alt: 'Facebook',
+	},
+	{
+		id: 2,
+		img: '/img/discord.png',
+		alt: 'Discord',
+	},
+	{
+		id: 3,
+		img: '/img/instagram.png',
+		alt: 'Instagram',
+	},
+	{
+		id: 4,
+		img: '/img/whatsapp.png',
+		alt: 'WhatsApp',
+	},
+	{
+		id: 5,
+		img: '/img/google.png',
+		alt: 'Google',
+	}
+];
+
+const Card = ({ card, handleCardClick }) => {
+	return (
+		<div
+			className={`drop-shadow-md flex items-center ${
+				card.flipped ? '[transform: rotateY(10deg)]' : 'bg-white'
+			} justify-center cursor-pointer h-16 w-16 hover:scale-105 rounded-xl transition-all duration-1000`}
+			onClick={() => handleCardClick(card.id)}
+		>
+			<div>
+				<img
+					src={card.img}
+					alt={card.alt}
+					className={`h-16 scale-110 ${
+						!card.flipped
+							? '[transform:rotateY(180deg)] [backface-visibility:hidden] transition-all duration-1000'
+							: ''
+					}`}
+				/>
+			</div>
+		</div>
+	);
+};
 const shuffleArray = array => {
 	for (let i = array.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
