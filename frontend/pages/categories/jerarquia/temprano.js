@@ -104,7 +104,7 @@ const Temprano = () => {
         };
 
         return (
-            <div className="grid grid-cols-2 gap-4 center" style={{ margin: '10%', marginTop: '-4%', width: '80vw' }} >
+            <div className="grid grid-cols-2 gap-4 center" style={{ margin: '10%', marginTop: '-4%', width: '80vw',padding:'%' }} >
 
                 {/* Mostrar las cartas  paginadas */}
                 {paginatedImages.map((dioses, index) => (
@@ -150,11 +150,11 @@ const Temprano = () => {
 
     return (
         <Base1 title={"Categorias Aztecas"}>
-            <section className="section pt-0">
+            <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll'}}>
                 <Titulo />
-                <div style={{ margin: '0%', }}>
+               
                     <Carta />
-                </div>
+                
 
 
 

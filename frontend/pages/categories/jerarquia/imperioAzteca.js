@@ -184,7 +184,7 @@ const ImperioAzteca = () => {
 
     return (
         <Base1 title={"Categorias Aztecas"}>
-            <section className="section pt-0">
+            <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll'}}>
                 <Titulo />
                 <Carta />
             </section>
