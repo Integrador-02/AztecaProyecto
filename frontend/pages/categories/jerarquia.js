@@ -33,7 +33,7 @@ const Jerarquia = ({ data }) => {
   return (
     <Base1 title={"Categorias Aztecas"}>
               
-    <section className="section pt-0">
+    <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll'}}>
     < Titulo/>
     
       <div className="jerarquia-class" style={{margin :10, padding : 10}}>
@@ -41,7 +41,7 @@ const Jerarquia = ({ data }) => {
  
                 
 
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ margin: 0, padding: 0 }}>
+        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-5" style={{ margin: 0, padding: 0 }}>
                   <li
                       key={`1`}
                       className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
