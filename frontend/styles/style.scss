@@ -393,6 +393,7 @@ button svg {
   color: rgb(4, 4, 4);
 
 }
+
 .options {
   list-style-type: none;
   padding: 0;
@@ -507,6 +508,7 @@ button svg {
   background-color: #555;
   color: #fff;
 }
+
 .options {
   display: flex;
   flex-direction: column;
@@ -584,6 +586,7 @@ button svg {
 .reset-button:hover {
   background-color: #E64A19;
 }
+
 .option.correct {
   /* Estilos de opción correcta */
   background-color: #03f52b;
@@ -594,13 +597,16 @@ button svg {
   /* Estilos de opción incorrecta */
   background-color: #EF4444;
   color: #FFF;
-} .option.review {
+}
+
+.option.review {
   /* Estilos de opción en modo de revisión */
   pointer-events: none;
 }
 
 /*audio*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 //titulo del audio
 :root {
   --mainColor: #fff;
@@ -684,9 +690,12 @@ button svg {
 }
 
 @keyframes animateAvatar {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.03);
   }
@@ -802,4 +811,50 @@ button svg {
   .changeBackBtn {
     width: 100%;
   }
+}
+
+.comentario2 {
+  display: auto;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 1.5rem;
+  width: 40rem;
+
+}
+#invite-comment {
+  position: fixed;
+  bottom: 10px;
+  right: 1px;
+  display: flex;
+  align-items: center;
+  background-color:transparent;
+  padding: 10px;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 4rem;
+  height: 2rem;
+}
+
+#invite-comment img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#invite-comment p {
+  margin: 0;
+}
+#invite-comment2 {
+  position: fixed;
+  bottom: 10px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  background-color:transparent;
+  padding: 10px;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 4rem;
+  height: 2rem;
 }

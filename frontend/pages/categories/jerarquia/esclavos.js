@@ -23,6 +23,11 @@ const Titulo = () => {
 };
 
 const Esclavos = () => {
+  const handleSubmit = async () => {
+
+    window.location.href = "/categories/jerarquia/comentarioJeraquia";
+
+  };
 
   return (
     <Base1 title={"Categorias Aztecas"}>
@@ -64,8 +69,7 @@ const Esclavos = () => {
           </p>
         </div>
         </div>
-<InteractionMessage />
-        <MasInformacion />
+
         <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
           <li
             key={`7`}
@@ -102,6 +106,9 @@ const Esclavos = () => {
 
         </ul>
 
+        <button id="invite-comment" onClick={handleSubmit}>
+          <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />
+        </button>
 
       </section>
     </Base1>

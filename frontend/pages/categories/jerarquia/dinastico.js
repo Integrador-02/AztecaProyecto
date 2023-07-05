@@ -143,6 +143,11 @@ const Dinastico = () => {
     };
 
 
+    const handleSubmit = async () => {
+
+        window.location.href = "/categories/jerarquia/comentarioJeraquia";
+
+    };
 
 
     return (
@@ -152,6 +157,9 @@ const Dinastico = () => {
                 <div style={{ margin: '0%', }}>
                     <Carta />
                 </div>
+                <button id="invite-comment" onClick={handleSubmit}>
+                    <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />
+                </button>
 
 
 

@@ -26,6 +26,7 @@ const Ritos = () => {
   };
 return (
     <Base1 title="Vasijas y Ceramicas">
+      <section className="section pt-0"style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll'}}>
        <Titulo/>
 
     <div class="sketchfab-embed-wrapper" style={{margin :20,padding :20}}> 
@@ -96,7 +97,7 @@ return (
            </li>
            </ul>
 
-        
+           </section>
 
 
 

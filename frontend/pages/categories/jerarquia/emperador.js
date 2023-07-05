@@ -35,8 +35,12 @@ const Emperador = () => {
   const open = Boolean(anchorEl);
   const id = open ? 'popover' : undefined;
   
-
-
+  const handleSubmit = async () => {
+   
+    window.location.href = "/categories/jerarquia/comentarioJeraquia";
+  
+  };
+  
   return (
     <Base1 title={"Categorias Aztecas"}>
       <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll'}}>
@@ -85,7 +89,7 @@ const Emperador = () => {
             </p>
           </div>
         </div>
-        <MasInformacion />
+        
         <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
                   <li
                       key={`7`}
@@ -163,7 +167,10 @@ const Emperador = () => {
              
     
     </div>
-
+        
+    <button id="invite-comment"  onClick={handleSubmit}>
+  <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />
+</button>
       </section>
     </Base1>
   );

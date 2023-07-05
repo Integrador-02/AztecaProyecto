@@ -13,264 +13,314 @@ const Titulo = () => {
         className="absolute inset-x-0 top-0 w-full h-80 object-cover brightness-50"
         src={"/images/gobernantes-aztecas.jpg"}
         alt="Imagen de fondo"
-        
+
       />
       <div className="relative z-12 flex flex-col items-center justify-center h-full text-center">
         <h1 className="font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
-          <span className="text-green-500"  style={{ fontSize: '180%', color: '#00CC00' }}>JERARQUÍA</span>
+          <span className="text-green-500" style={{ fontSize: '180%', color: '#00CC00' }}>JERARQUÍA</span>
         </h1>
         <p className="text-sm sm:text-sm md:text-lg lg:text-xl xl:text-1xl text-[#FFFFFF] mt-4 mx-6 sm:mx-8 md:mx-10 lg:mx-12 xl:mx-16">
           La jerarquía en la sociedad azteca estaba fuertemente estratificada, con diferentes niveles y roles que determinaban el estatus y los privilegios de cada individuo. A continuación, se presenta una visión general de la jerarquía de los aztecas, comenzando desde la cúspide y descendiendo hacia los estratos inferiores:
         </p>
-        
+
       </div>
     </div>
   );
 };
 
+
 const Jerarquia = ({ data }) => {
-  
+
+
+  const handleSubmit = async () => {
+
+    window.location.href = "/categories/jerarquia/comentarioJeraquia";
+
+  };
+
+
   return (
     <Base1 title={"Categorias Aztecas"}>
-              
-    <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll'}}>
-    < Titulo/>
-    
-      <div className="jerarquia-class" style={{margin :10, padding : 10}}>
-                  
- 
-                
 
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-5" style={{ margin: 0, padding: 0 }}>
-                  <li
-                      key={`1`}
-                      className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-                      style={{
-                        margin: 0,
-                        padding: 0,
-                        position: 'relative',
-                        backgroundImage: 'url("https://plenitudazteca.com/wp-content/uploads/2022/12/1-1-1024x683-1-750x350.jpg")',
-                       backgroundSize: 'cover',
+      <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll' }}>
+        < Titulo />
+
+        <div className="jerarquia-class" style={{ margin: 10, padding: 10 }}>
+
+
+
+
+          <ul className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-6" style={{ margin: 0, padding: 0 }}>
+            <li
+              key={`1`}
+              className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundImage: 'url("https://plenitudazteca.com/wp-content/uploads/2022/12/1-1-1024x683-1-750x350.jpg")',
+                backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
-                      }}>
-                  
-                  
-                      <Link
-                        href={`/categories/jerarquia/emperador`}
-                        className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                        }}
-                      >
-                       <span style={{ fontSize: '130%', color: '#006400' }}>Emperador</span>
-                      </Link>
-                  
-                  </li>
+              }}>
 
-                  
-                  <li
-                      key={`2`}
-                      className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-                      style={{
-                        margin: 0,
-                        padding: 0,
-                        position: 'relative',
-                        backgroundImage: 'url(https://historia.nationalgeographic.com.es/medio/2019/03/13/guerreros-aztecas-ataviados-con-sus-armas-y-vestimenta-tipicas_e7a6b441_800x800.jpg)',
-                        backgroundSize: 'cover',
+
+              <Link
+                href={`/categories/jerarquia/emperador`}
+                className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                }}
+              >
+                <span style={{ fontSize: '130%', color: '#006400' }}>Emperador</span>
+              </Link>
+
+            </li>
+
+
+            <li
+              key={`2`}
+              className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundImage: 'url(https://historia.nationalgeographic.com.es/medio/2019/03/13/guerreros-aztecas-ataviados-con-sus-armas-y-vestimenta-tipicas_e7a6b441_800x800.jpg)',
+                backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
-                      }}>
-                    
-                    <Link
-                          href={`/categories/jerarquia/nobleza`}
-                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                          }}
-                        >
-                          <span style={{ fontSize: '130%', color: '#006400' }}>Nobles</span>
-                        </Link>
-                  </li>
+              }}>
 
-                  <li
-                     key={`3`}
-                     className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-                     style={{
-                       margin: 0,
-                       padding: 0,
-                       position: 'relative',
-                       backgroundImage: 'url(https://www.gaceta.unam.mx/wp-content/uploads/2019/10/190919-cult2-des-f1-tlamemes.jpg)',
-                       backgroundSize: 'cover',
-                       backgroundPosition: 'center',
-                       filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
-                             }}>
-                         
-                  
-                    
-                      <Link
-                          href={`/categories/jerarquia/comerciantes`}
-                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                          }}
-                      >
-                            <span style={{ fontSize: '130%', color: '#006400' }}>Comerciantes</span>
-                      </Link>
-                                      
-                  </li>
+              <Link
+                href={`/categories/jerarquia/nobles`}
+                className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                }}
+              >
+                <span style={{ fontSize: '130%', color: '#006400' }}>Nobles</span>
+              </Link>
+            </li>
 
-                  <li
-                    key={`4`}
-                    className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-                    style={{
-                      margin: 0,
-                      padding: 0,
-                      position: 'relative',
-                      backgroundImage: 'url("https://www.worldhistory.org/img/c/p/1200x627/4198.jpg")',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencia// Ajusta el valor de brillo según tus preferencias
-                    }}>
-                  
-                
-                    
-                      <Link
-                          href={`/categories/jerarquia/plebeyos`}
-                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                          }}
-                      >
-                          <span style={{ fontSize: '130%', color: '#006400' }}>Plebeyos</span>
-                      </Link>
-                                      
-                  </li>
+            <li
+              key={`3`}
+              className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundImage: 'url(https://www.gaceta.unam.mx/wp-content/uploads/2019/10/190919-cult2-des-f1-tlamemes.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
+              }}>
 
-                  <li
-                    key={`5`}
-                    className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-                    style={{
-                      margin: 0,
-                      padding: 0,
-                      position: 'relative',
-                      backgroundImage: 'url("https://cdn.shopify.com/s/files/1/2393/9365/files/main-qimg-ca9ec91b20d584cdf2c1a3c5893b3a1d-lq_480x480.jpg?v=1667844224")',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencia// Ajusta el valor de brillo según tus preferencias
-                    }}>
-                  
-                    
-                    <Link
-                          href={`/categories/jerarquia/esclavos`}
-                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                          }}
-                        >
-                           <span style={{ fontSize: '130%', color: '#006400' }}>Esclavos</span>
-                        </Link>
-                                      
-                        
-      
-                  </li>
+
+
+              <Link
+                href={`/categories/jerarquia/comerciantes`}
+                className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                }}
+              >
+                <span style={{ fontSize: '130%', color: '#006400' }}>Comerciantes</span>
+              </Link>
+
+            </li>
+
+            <li
+              key={`4`}
+              className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundImage: 'url("https://www.worldhistory.org/img/c/p/1200x627/4198.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencia// Ajusta el valor de brillo según tus preferencias
+              }}>
+
+
+
+              <Link
+                href={`/categories/jerarquia/plebeyos`}
+                className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                }}
+              >
+                <span style={{ fontSize: '130%', color: '#006400' }}>Plebeyos</span>
+              </Link>
+
+            </li>
+
+            <li
+              key={`5`}
+              className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundImage: 'url("https://cdn.shopify.com/s/files/1/2393/9365/files/main-qimg-ca9ec91b20d584cdf2c1a3c5893b3a1d-lq_480x480.jpg?v=1667844224")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencia// Ajusta el valor de brillo según tus preferencias
+              }}>
+
+
+              <Link
+                href={`/categories/jerarquia/esclavos`}
+                className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                }}
+              >
+                <span style={{ fontSize: '130%', color: '#006400' }}>Esclavos</span>
+              </Link>
+
+
+
+            </li>
+
+            <li
+              key={`6`}
+              className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+              style={{
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+                backgroundImage: 'url("https://cdn.shopify.com/s/files/1/2393/9365/files/main-qimg-ca9ec91b20d584cdf2c1a3c5893b3a1d-lq_480x480.jpg?v=1667844224")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencia// Ajusta el valor de brillo según tus preferencias
+              }}>
+
+
+              <Link
+                href={`/categories/jerarquia/desafioJeraquia`}
+                className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                }}
+              >
+                <span style={{ fontSize: '130%', color: '#006400' }}>Desafios</span>
+              </Link>
+
+
+
+            </li>
+          </ul>
+
+
+
+        </div>
+
+        <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
+          <li
+            key={`7`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/categories`}
+              className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '130%', color: '#006400' }}>Pagina Principal</span>
+            </Link>
+
+          </li>
+
+
+          <li
+            key={`2`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url(/images/religion-azteca.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+            <Link
+              href={`/categories/religion`}
+              className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '130%', color: '#006400' }}>Religión</span>
+            </Link>
+          </li>
+
+
+          
         </ul>
 
-  
 
-      </div>
 
-      <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
-                  <li
-                      key={`7`}
-                      className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-                      style={{
-                        margin: 0,
-                        padding: 0,
-                        position: 'relative',
-                        backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
-                       backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
-                      }}>
-                  
-                  
-                      <Link
-                        href={`/categories`}
-                        className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                        }}
-                      >
-                       <span style={{ fontSize: '130%', color: '#006400' }}>Pagina Principal</span>
-                      </Link>
-                  
-                  </li>
+        <button id="invite-comment" onClick={handleSubmit}>
+          <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />
+        </button>
 
-                  
-                  <li
-                      key={`2`}
-                      className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-                      style={{
-                        margin: 0,
-                        padding: 0,
-                        position: 'relative',
-                        backgroundImage: 'url(/images/religion-azteca.jpg)',
-                        backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
-                      }}>
-                    
-                    <Link
-                          href={`/categories/religion`}
-                          className="text-lg sm:text-lg md:text-xl flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                          }}
-                        >
-                          <span style={{ fontSize: '130%', color: '#006400' }}>Religión</span>
-                        </Link>
-                  </li>
-                  </ul>
 
-      
-        
-    </section>
+      </section>
 
     </Base1>
   );
@@ -280,23 +330,23 @@ const Jerarquia = ({ data }) => {
 export default Jerarquia;
 
 const MasInformacion = () => {
-    return (
-      <div className="center-container">
-        <FaInfoCircle size={50} />
-        <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
-      </div>
-    );
+  return (
+    <div className="center-container">
+      <FaInfoCircle size={50} />
+      <span style={{ marginLeft: '5px' }}>Más información próximamente</span>
+    </div>
+  );
+};
+
+const InteractionMessage = () => {
+  const showMessage = () => {
+    alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
   };
 
-  const InteractionMessage = () => {
-    const showMessage = () => {
-      alert('Para interactuar con el modelo 3D, sigue estos pasos:\n\n1. Haz clic en el modelo para activarlo.\n2. Utiliza los controles del modelo para moverte, rotarlo y hacer zoom.\n3. Explora todas las características y detalles del modelo.\n\n¡Disfruta de la experiencia interactiva!');
-    };
-  
-    return (
-      <div className="interaction-message">
-        <FaQuestionCircle className="help-icon" onClick={showMessage} />
-        <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
-      </div>
-    );
-  }; 
+  return (
+    <div className="interaction-message">
+      <FaQuestionCircle className="help-icon" onClick={showMessage} />
+      <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
+    </div>
+  );
+}; 

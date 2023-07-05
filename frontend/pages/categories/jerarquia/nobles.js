@@ -22,6 +22,11 @@ const Titulo = () => {
   );
 };
 const Nobleza = () => {
+  const handleSubmit = async () => {
+
+    window.location.href = "/categories/jerarquia/comentarioJeraquia";
+
+  };
 
   return (
     <Base1 title={"Categorias Aztecas"}>
@@ -67,8 +72,7 @@ const Nobleza = () => {
               Se esperaba que los pipiltin cumplieran con ciertos roles y responsabilidades en la sociedad azteca. Además de su papel en la política y el gobierno, los pipiltin también participaban en actividades religiosas y militares. Algunos miembros de la nobleza podían convertirse en sacerdotes o líderes militares, llevando a cabo rituales sagrados o liderando ejércitos en campañas militares.
             </p>
           </div> </div>
-        <InteractionMessage />
-        <MasInformacion />
+        
         <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
           <li
             key={`7`}
@@ -105,6 +109,9 @@ const Nobleza = () => {
 
         </ul>
 
+        <button id="invite-comment" onClick={handleSubmit}>
+          <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />
+        </button>
 
       </section>
     </Base1>
