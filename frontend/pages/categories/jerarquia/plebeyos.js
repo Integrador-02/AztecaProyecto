@@ -21,10 +21,15 @@ const Titulo = () => {
   );
 };
 const Plebeyos = () => {
+  const handleSubmit = async () => {
+
+    window.location.href = "/categories/jerarquia/comentarioJeraquia";
+
+  };
 
   return (
     <Base1 title={"Categorias Aztecas"}>
-      <section className="section pt-0">
+      <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll'}}>
        <Titulo/>
         <div className="sketchfab-embed-wrapper">
         <p>
@@ -53,8 +58,7 @@ const Plebeyos = () => {
           </p>
         </div>
         </div>
- <InteractionMessage />
-        <MasInformacion />
+
         <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
           <li
             key={`7`}
@@ -71,7 +75,7 @@ const Plebeyos = () => {
 
 
             <Link
-              href={`/jerarquia`}
+              href={`/categories/jerarquia`}
               className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',
@@ -91,7 +95,9 @@ const Plebeyos = () => {
 
         </ul>
 
-
+        <button id="invite-comment" onClick={handleSubmit}>
+          <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />
+        </button>
       </section>
     </Base1>
   );

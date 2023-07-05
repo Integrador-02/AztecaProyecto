@@ -85,7 +85,7 @@ return (
         }}
       >
         <Link
-          href={`/arte`}
+          href={`/categories/arte`}
           className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
           style={{
             width: '100%',
@@ -115,7 +115,7 @@ return (
                }}>
              
              <Link
-                   href={`/religion`}
+                   href={`/categories/religion`}
                    className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                    style={{
                      width: '100%',

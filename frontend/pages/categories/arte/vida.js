@@ -63,7 +63,7 @@ const Vida = () => {
                         }}
                     >
                         <Link
-                            href={`/arte/guerreros`}
+                            href={`/categories//arte/guerreros`}
                             className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                             style={{
                                 width: '100%',
@@ -93,7 +93,7 @@ const Vida = () => {
                         }}
                     >
                         <Link
-                            href={`/arte/musicos`}
+                            href={`/categories//arte/musicos`}
                             className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                             style={{
                                 width: '100%',
@@ -123,7 +123,7 @@ const Vida = () => {
                         }}
                     >
                         <Link
-                            href={`/arte/instrumentos`}
+                            href={`/categories//arte/instrumentos`}
                             className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                             style={{
                                 width: '100%',
@@ -164,7 +164,7 @@ const Vida = () => {
                     }}
                 >
                     <Link
-                        href={`/arte/musica`}
+                        href={`/categories//arte/musica`}
                         className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
                         style={{
                             width: '100%',

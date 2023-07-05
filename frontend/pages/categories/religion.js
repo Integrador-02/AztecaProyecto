@@ -31,7 +31,7 @@ const Religion = ({ data }) => {
   return (
     <Base1 title={"Categorias Aztecas"}>
 
-    <section className="section pt-0">
+    <section className="section pt-0"style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll'}}>
     <Titulo/>
 
       <div>
@@ -181,7 +181,7 @@ const Religion = ({ data }) => {
             }}
           >
             <Link
-              href={`/arte`}
+              href={`/categories/arte`}
               className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
               style={{
                 width: '100%',

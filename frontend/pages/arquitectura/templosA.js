@@ -160,7 +160,7 @@ const Mayor = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -185,7 +185,7 @@ const Mayor = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -225,7 +225,7 @@ const Teopanzolco = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -250,7 +250,7 @@ const Teopanzolco = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -290,7 +290,7 @@ const Teotihuacán= () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -315,7 +315,7 @@ const Teotihuacán= () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -356,7 +356,7 @@ const Luna = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -381,7 +381,7 @@ const Luna = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
