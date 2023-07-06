@@ -17,7 +17,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@giscus/react": "^2.2.8",
-
     "axios": "^1.4.0",
     "bad-words-es": "^1.0.0",
     "core-js-pure": "^3.31.0",
