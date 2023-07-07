@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { markdownify } from "@lib/utils/textConverter";
 import { Base1 } from '@layouts/Baseof';
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
-import { useState } from 'react';
 import Link from 'next/link';
+import axios from "axios";
+import Cookies from "js-cookie";
 const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
@@ -28,21 +30,80 @@ const Nobleza = () => {
 
   };
 
+  const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    const user = Cookies.get('clave');
+    setEmail(user);
+  }, []);
+  
+  useEffect(() => {
+    const guardarProgresoJeraquia = async () => {
+      const pagina = 'nobles';
+      const newCommentObject = {
+        id:  1,
+        text: 1,
+        username: email,
+        replyTo: 1,
+        likes: 0,
+        timestamp: 1,
+      };
+  
+  
+      const coment = newCommentObject.text
+      const correo = newCommentObject.username
+      try {
+        const response = await axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina });
+        // Manejo de la respuesta exitosa
+        alert("Registrado correctamente");
+      } catch (error) {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        console.log(error);
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      }
+    };
+  
+    if (email) {
+      console.log(email)
+      guardarProgresoJeraquia();
+    }
+  }, [email]);
+
+  const TextWithBoldFirstLetter = ({ title, text }) => {
+    const firstLetter = text.charAt(0);
+    const restOfText = text.slice(1);
+
+    return (
+      <div>
+        <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>
+          <span className="text-green-600">{title}</span>
+        </h1>
+
+        <p
+          style={{
+            fontSize: '23px',
+            fontWeight: 'normal',
+            margin: '20px',
+            color: '#000',
+            textAlign: 'justify',
+            lineHeight: '1.5',
+            fontFamily: 'Arial, sans-serif'
+          }}
+        >
+          <span >{firstLetter}</span>
+          {restOfText}
+        </p>
+      </div>
+    );
+  };
+
   return (
     <Base1 title={"Categorias Aztecas"}>
       <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll'}}>
         <Titulo />
-        <div className="sketchfab-embed-wrapper">
-          <p>
-            <span style={{ fontSize: '43px', fontWeight: 'normal', margin: '0px', color: '#000' }}>
-              Pipiltin
-            </span>
-            <span style={{ fontSize: '16px', fontWeight: 'normal', margin: '10px', color: '#808080' }}>
-              (Hijos nobles)
-            </span>
-          </p>
+          
 
-          <div className="grid grid-cols-2 gap-1">
+          <div className="grid grid-cols-2 gap-1" style={{padding:'2rem'}}>
 
             <iframe
               title="COL: Coyolxauhqui"
@@ -52,13 +113,13 @@ const Nobleza = () => {
               webkitallowfullscreen="true"
               allow="autoplay; fullscreen; xr-spatial-tracking"
               src="https://sketchfab.com/models/73dff65bf4654de08d8db64298adc6ae/embed"
-              style={{ width: '100%', height: '400px' }}
+              style={{ width: '100%', height: '450px' ,padding:'1rem'}}
             ></iframe>
 
+          <TextWithBoldFirstLetter title ={'Pipiltin (Hijos nobles)'} text={'  En la sociedad azteca, los nobles desempeñaban un papel destacado y ocupaban un estatus privilegiado. Eran miembros de la nobleza y pertenecían a familias aristocráticas que tenían un linaje y prestigio histórico.Se esperaba que los pipiltin cumplieran con ciertos roles y responsabilidades en la sociedad azteca. Además de su papel en la política y el gobierno, los pipiltin también participaban en actividades religiosas y militares. Algunos miembros de la nobleza podían convertirse en sacerdotes o líderes militares, llevando a cabo rituales sagrados o liderando ejércitos en campañas militares.'}/>
 
 
-
-            <p style={{
+           {/*<p style={{
               fontSize: '23px',
               fontWeight: 'normal',
               margin: '20px',
@@ -70,8 +131,8 @@ const Nobleza = () => {
               En la sociedad azteca, los nobles desempeñaban un papel destacado y ocupaban un estatus privilegiado. Eran miembros de la nobleza y pertenecían a familias aristocráticas que tenían un linaje y prestigio histórico.
 
               Se esperaba que los pipiltin cumplieran con ciertos roles y responsabilidades en la sociedad azteca. Además de su papel en la política y el gobierno, los pipiltin también participaban en actividades religiosas y militares. Algunos miembros de la nobleza podían convertirse en sacerdotes o líderes militares, llevando a cabo rituales sagrados o liderando ejércitos en campañas militares.
-            </p>
-          </div> </div>
+          </p>*/}
+          </div> 
         
         <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
           <li

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { markdownify } from "@lib/utils/textConverter";
 import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
-import { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
-
+import axios from "axios";
+import Cookies from "js-cookie";
 import Button from '@layouts/shortcodes/Button';
 
 
@@ -102,6 +103,45 @@ const Temprano = () => {
         const handlePageChange = (newPage) => {
             setPage(newPage);
         };
+
+        const [email, setEmail] = useState('');
+
+        useEffect(() => {
+          const user = Cookies.get('clave');
+          setEmail(user);
+        }, []);
+        
+        useEffect(() => {
+          const guardarProgresoJeraquia = async () => {
+            const pagina = 'temprano';
+            const newCommentObject = {
+              id:  1,
+              text: 1,
+              username: email,
+              replyTo: 1,
+              likes: 0,
+              timestamp: 1,
+            };
+        
+        
+            const coment = newCommentObject.text
+            const correo = newCommentObject.username
+            try {
+              const response = await axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina });
+              // Manejo de la respuesta exitosa
+              alert("Registrado correctamente");
+            } catch (error) {
+              // Manejo de errores en caso de que falle la solicitud al backend
+              console.log(error);
+              alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+            }
+          };
+        
+          if (email) {
+            console.log(email)
+            guardarProgresoJeraquia();
+          }
+        }, [email]);
 
         return (
             <div className="grid grid-cols-2 gap-4 center" style={{ margin: '10%', marginTop: '-4%', width: '80vw', padding: '%' }} >

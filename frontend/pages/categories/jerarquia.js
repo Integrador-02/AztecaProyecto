@@ -1,11 +1,54 @@
-import { markdownify } from "@lib/utils/textConverter";
-import shortcodes from "@shortcodes/all";
-import { MDXRemote } from "next-mdx-remote";
-import Image from "next/image";
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 import Link from "next/link";
+import {
+  CircularProgressbar,
+  CircularProgressbarWithChildren,
+  buildStyles
+} from "react-circular-progressbar";
+import axios from "axios";
+import Cookies from "js-cookie";
+
+
+
+
+
+const handleAddComment = () => {
+
+  const newCommentObject = {
+    correo: 'ejemplo@ciorreo.com',
+    pagina: 'página de ejsd272wwwv8d88888emgdvdvdsfrplo'
+  };
+
+
+
+
+  const correo = newCommentObject.correo
+  const pagina = newCommentObject.pagina
+
+
+  ///api/progresoJeraquia
+  axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina })
+    .then(async () => {
+      // Manejo de errores en caso de que falle la solicitud al backend
+      alert("registrado correctamente");
+
+
+    })
+    .catch(async (error) => {
+      console.log(error);
+      // Manejo de errores en caso de que falle la solicitud al backend
+      alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+    });
+
+
+
+
+
+};
 const Titulo = () => {
   return (
     <div className="relative h-80 font-text">
@@ -30,13 +73,77 @@ const Titulo = () => {
 
 
 const Jerarquia = ({ data }) => {
+  const [email, setEmail] = useState('');
+  const [selectedOptions2, setSelectedOptions2] = useState(0);
 
+
+  useEffect(() => {
+    const user = Cookies.get('clave');
+    setEmail(user);
+  }, []);
+
+  useEffect(() => {
+    const guardarProgresoJeraquia = async () => {
+      const pagina = 'jeraquia';
+      const newCommentObject = {
+        id: 1,
+        text: 1,
+        username: email,
+        replyTo: 1,
+        likes: 0,
+        timestamp: 1,
+      };
+
+
+      const coment = newCommentObject.text
+      const correo = newCommentObject.username
+      try {
+        const response = await axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina });
+        // Manejo de la respuesta exitosa
+        alert("Registrado correctamente");
+      } catch (error) {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        console.log(error);
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      }
+    };
+
+    if (email) {
+      console.log(email)
+      guardarProgresoJeraquia();
+    }
+  }, [email]);
 
   const handleSubmit = async () => {
 
     window.location.href = "/categories/jerarquia/comentarioJeraquia";
 
   };
+
+  useEffect(() => {
+    const handlerRevision = async () => {
+      try {
+        console.log('sd', email);
+        const url = `http://localhost:4000/api/recuperarprogresoJeraquia?correo=${email}`;
+        const respuesta = await axios.get(url);
+        setSelectedOptions2(respuesta.data.valor); // Utiliza respuesta.data.valor en lugar de respuesta.valor
+      } catch (error) {
+        console.error('Error al hacer la solicitud:', error);
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      }
+    };
+
+    if (email) {
+      handlerRevision();
+    }
+  }, [email]);
+
+
+
+
+
+
 
 
   return (
@@ -310,7 +417,7 @@ const Jerarquia = ({ data }) => {
           </li>
 
 
-          
+
         </ul>
 
 
@@ -318,6 +425,56 @@ const Jerarquia = ({ data }) => {
         <button id="invite-comment" onClick={handleSubmit}>
           <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />
         </button>
+        {/* */}
+        <div
+  style={{
+    position: 'fixed',
+    bottom: '55%',
+    right: '1%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    padding: '2%',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    width: '10%',
+    height: 'auto',
+    minWidth: '100px',
+    minHeight: '100px',
+    maxWidth: '200px',
+    maxHeight: '200px',
+    fontWeight: 'bold',
+  }}
+>
+  <div style={{ width: '100%', height: '100%' }}>
+    {/**/}
+    <CircularProgressbar
+      value={selectedOptions2}
+      text={`${selectedOptions2}%`}
+      strokeWidth={14}
+      styles={buildStyles({
+        textColor: '#2ecc71',
+        pathColor: '#2ecc71',
+        trailColor: 'white',
+        strokeLinecap: 'round',
+        textSize: '20px',
+        transformOrigin: 'center center',
+        pathTransitionDuration: 2,
+        textStyle: {
+          fontFamily: 'fantasy',
+          left: '-90%', // Ajusta la posición del texto a la izquierda
+          fontWeight: 'bold', // Aplica negrita al texto
+        },
+      })}
+    ></CircularProgressbar>
+  </div>
+</div>
+
+
+
+
+
+
 
 
       </section>
@@ -325,7 +482,7 @@ const Jerarquia = ({ data }) => {
     </Base1>
   );
 };
-// get 404 page data
+// get 404 page data   error en  l abd 
 
 export default Jerarquia;
 
@@ -350,3 +507,18 @@ const InteractionMessage = () => {
     </div>
   );
 }; 
+
+function Example(props) {
+  return (
+    <div style={{ marginBottom: 80 }}>
+      <hr style={{ border: "2px solid #ddd" }} />
+      <div style={{ marginTop: 30, display: "flex" }}>
+        <div style={{ width: "30%", paddingRight: 30 }}>{props.children}</div>
+        <div style={{ width: "70%" }}>
+          <h3 className="h5">{props.label}</h3>
+          <p>{props.description}</p>
+        </div>
+      </div>
+    </div>
+  );
+}

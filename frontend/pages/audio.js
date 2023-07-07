@@ -5,7 +5,7 @@ import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 const Audio = () => {
   const [currentMusicDetails, setCurrentMusicDetails] = useState({
-    songName: 'Leyenda azteca del maíz',
+    songName: 'ddd',
     songArtist: 'NEFFEX',
     songSrc: './Assets/songs/leyendaAzteca1.mp3',
     songAvatar: 'https://www.mexicodesconocido.com.mx/wp-content/uploads/2019/07/maiz-1-768x505.jpg'

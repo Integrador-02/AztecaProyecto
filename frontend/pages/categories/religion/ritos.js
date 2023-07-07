@@ -1,12 +1,58 @@
-import React from 'react';
-import { markdownify } from "@lib/utils/textConverter";
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { Base1 } from '@layouts/Baseof';
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
-import { useState } from 'react';
 import Link from 'next/link';
+import axios from "axios";
+import Cookies from "js-cookie";
 
 const Ritos = () => {
+  
+  const [email, setEmail] = useState('');
+  const [selectedOptions2, setSelectedOptions2] = useState(0);
+  useEffect(() => {
+    const user = Cookies.get('clave');
+    setEmail(user);
+  }, []);
+
+  useEffect(() => {
+    const guardarProgresoJeraquia = async () => {
+      const pagina = 'ritos';
+      const newCommentObject = {
+        id: 1,
+        text: 1,
+        username: email,
+        replyTo: 1,
+        likes: 0,
+        timestamp: 1,
+      };
+
+
+      const coment = newCommentObject.text
+      const correo = newCommentObject.username
+      try {
+        const response = await axios.post("http://localhost:4000/api/progresorReligion", { correo, pagina });
+        // Manejo de la respuesta exitosa
+        //alert("Registrado correctamente");
+      } catch (error) {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        console.log(error);
+        //alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      }
+    };
+
+    if (email) {
+      console.log(email)
+      guardarProgresoJeraquia();
+    }
+  }, [email]);
+
+  const handleSubmit = async () => {
+
+    //window.location.href = "/categories/jerarquia/comentarioJeraquia";
+
+  };
 
   const Titulo = () => {
     return (
