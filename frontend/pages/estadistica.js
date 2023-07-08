@@ -82,7 +82,7 @@ export const data1 = {
     },
     {
       label: 'Aciertos',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
       backgroundColor: 'rgb(75, 192, 192)',
       stack: 'Stack 0',
     },
