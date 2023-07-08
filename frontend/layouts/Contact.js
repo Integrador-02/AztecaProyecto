@@ -87,7 +87,7 @@ try {
   const url = "http://localhost:4000/api/login";
   const respuest = await axios.post(url, { email, password });
 
- console.log( usuario);
+ 
   const isAuthorized = respuest.data.respuesta === "ok";
 
 

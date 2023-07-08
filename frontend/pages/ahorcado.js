@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Base1 } from '@layouts/Baseof';
 import AhorcadoAzteca from './minijuego1';
 import Swal from 'sweetalert2';
+import Audio from './audio';
 
 
 const Titulo = () => {

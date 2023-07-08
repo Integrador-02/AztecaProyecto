@@ -35,10 +35,10 @@ const Triquii = () => {
   }, []);
   return (
     <Base1>
-      <div className="center-container" style={{ margin: -4 }}>
+      <div className="center-container" style={{ margin:'-5rem' }}>
         <TicTacToe />
       </div>
-      <Titulo />
+     
     </Base1>
   );
 };

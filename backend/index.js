@@ -12,7 +12,9 @@ import  { guardarDatosE ,obtenerOpcionesPorCorreoE} from "./controllers/quizLeye
 import  { guardarDatosF ,obtenerOpcionesPorCorreoF} from "./controllers/quizLeyenda2Controller.js";
 import  { guardarDatosG ,obtenerOpcionesPorCorreoG} from "./controllers/quizGobernanteController.js";
 import  { guardarDatosH ,obtenerOpcionesPorCorreoH} from "./controllers/quizTextilController.js";
-
+import { guardarPJ,posgresoJ1} from "./controllers/pogreJ1Controller.js";
+import { guardarPR ,posgresoR1} from "./controllers/pogreR1Controller.js";
+import  { guardarPA ,posgresoA1} from "./controllers/pogreA1Controller.js";
 
 const app = express();
 
@@ -53,6 +55,16 @@ app.get('/api/recuperarquizG',obtenerOpcionesPorCorreoG);
 
 app.post('/api/quizH',guardarDatosH);
 app.get('/api/recuperarquizH',obtenerOpcionesPorCorreoH);
+
+app.post('/api/progresoJeraquia',guardarPJ);
+app.get('/api/recuperarprogresoJeraquia',posgresoJ1);
+
+
+app.post('/api/progresorReligion',guardarPR);
+app.get('/api/recuperarprogresoReligion',posgresoR1);
+
+app.post('/api/progresorArte',guardarPA);
+app.get('/api/recuperarprogresoArte',posgresoA1);
 
 const PORT = process.env.PORT || 4000;
 

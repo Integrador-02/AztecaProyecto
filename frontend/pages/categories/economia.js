@@ -10,7 +10,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 //clase Economia
 const Titulo = () => {
   return (
-    <div className="relative h-80 font-text mt-[-2%]">
+    <div className="relative h-60 font-text mt-[-2%]">
       <img
         className="absolute inset-0 w-full h-full object-cover brightness-50"
         src={"https://img.over-blog-kiwi.com/1/06/54/81/20140530/ob_754e74_aztecas-imagen.jpg"}
@@ -32,7 +32,7 @@ const Economia = ({ data }) => {
 
         < Base1 title={"Categorias Aztecas"}>
             
-      <section className="section pt-0">
+      <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll' }}>
       <Titulo/>
         
          
@@ -86,78 +86,7 @@ const Economia = ({ data }) => {
 
          </div>
 
-        <ul className="grid grid-cols-2 gap-8" style={{  margin: 50, padding: 0  }}>
-        <li
-
-              key={`1`}
-              className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-              style={{
-                margin: 0,
-                padding: 0,
-                position: 'relative',
-                backgroundImage: 'url(https://www.gob.mx/cms/uploads/article/main_image/25411/chinampa1.jpg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
-              }}
-            >
-
-        <Link
-              href={`./arquitectura/chinampas`}
-              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-              style={{
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
-              }}
-            >
-
-               <span style={{ fontSize: '130%', color: '#006400' }}>Chinampas</span>
-
-            </Link>
-                         
-              
-
-        </li>
-        <li
-
-              key={`1`}
-              className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
-              style={{
-                margin: 0,
-                padding: 0,
-                position: 'relative',
-                backgroundImage: 'url("https://hablemosdeculturas.com/wp-content/uploads/2018/09/agricultura-azteca-11.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                filter: 'brightness(90%)', // Ajusta el valor de brillo según tus preferencias
-              }}
-            >
-
         
-        <Link
-              href={`./economia/agricultura`}
-              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
-              style={{
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
-              }}
-            >
-
-               <span style={{ fontSize: '130%', color: '#006400' }}>Agricultura</span>
-            </Link>
-                         
-              
-
-        </li>
-        </ul>        
         
 
 
