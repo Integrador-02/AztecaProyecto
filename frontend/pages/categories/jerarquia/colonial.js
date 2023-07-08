@@ -7,6 +7,7 @@ import ReactCardFlip from 'react-card-flip';
 import axios from "axios";
 import Cookies from "js-cookie";
 import Button from '@layouts/shortcodes/Button';
+import Link from 'next/link';
 
 
 const Colonial = () => {
@@ -92,42 +93,42 @@ const Colonial = () => {
 
     const [email, setEmail] = useState('');
 
-        useEffect(() => {
-          const user = Cookies.get('clave');
-          setEmail(user);
-        }, []);
-        
-        useEffect(() => {
-          const guardarProgresoJeraquia = async () => {
-            const pagina = 'colonial';
-            const newCommentObject = {
-              id:  1,
-              text: 1,
-              username: email,
-              replyTo: 1,
-              likes: 0,
-              timestamp: 1,
-            };
-        
-        
-            const coment = newCommentObject.text
-            const correo = newCommentObject.username
-            try {
-              const response = await axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina });
-              // Manejo de la respuesta exitosa
-              alert("Registrado correctamente");
-            } catch (error) {
-              // Manejo de errores en caso de que falle la solicitud al backend
-              console.log(error);
-              alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
-            }
-          };
-        
-          if (email) {
-            console.log(email)
-            guardarProgresoJeraquia();
-          }
-        }, [email]);
+    useEffect(() => {
+      const user = Cookies.get('clave');
+      setEmail(user);
+    }, []);
+
+    useEffect(() => {
+      const guardarProgresoJeraquia = async () => {
+        const pagina = 'colonial';
+        const newCommentObject = {
+          id: 1,
+          text: 1,
+          username: email,
+          replyTo: 1,
+          likes: 0,
+          timestamp: 1,
+        };
+
+
+        const coment = newCommentObject.text
+        const correo = newCommentObject.username
+        try {
+          const response = await axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina });
+          // Manejo de la respuesta exitosa
+          alert("Registrado correctamente");
+        } catch (error) {
+          // Manejo de errores en caso de que falle la solicitud al backend
+          console.log(error);
+          alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+        }
+      };
+
+      if (email) {
+        console.log(email)
+        guardarProgresoJeraquia();
+      }
+    }, [email]);
 
 
     return (
@@ -174,17 +175,82 @@ const Colonial = () => {
 
 
   const handleSubmit = async () => {
-   
+
     window.location.href = "/categories/jerarquia/comentarioJeraquia";
-  
+
   };
-  
+
 
   return (
     <Base1 title={"Categorias Aztecas"}>
       <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll' }}>
         <Titulo />
         <Carta />
+        <ul className="grid grid-cols-2 gap-1" style={{ justifyContent: 'center', marginTop: '-9.5rem' }}>
+
+          <li
+            key={`5`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/categories/jerarquia/imperioAzteca`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Regresar a imperioAzteca</span>
+            </Link>
+
+          </li>
+          <li
+            key={`10`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/categories/jerarquia/dinastico`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Reanudación del gobierno dinástico (1538-1565)</span>
+            </Link>
+
+          </li>
+        </ul>
+
+
         <button id="invite-comment" onClick={handleSubmit}>
           <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />
         </button>

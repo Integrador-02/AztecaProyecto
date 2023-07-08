@@ -427,57 +427,57 @@ const Jerarquia = ({ data }) => {
         </button>
         {/* */}
         <div
-  style={{
-    position: 'fixed',
-    bottom: '55%',
-    right: '1%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'transparent',
-    padding: '2%',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-    width: '10%',
-    height: 'auto',
-    minWidth: '100px',
-    minHeight: '100px',
-    maxWidth: '200px',
-    maxHeight: '200px',
-    fontWeight: 'bold',
-  }}
->
-  <div style={{ width: '100%', height: '100%' }}>
-    {/**/}
-    <CircularProgressbar
-      value={selectedOptions2}
-      text={`${selectedOptions2}%`}
-      strokeWidth={14}
-      styles={buildStyles({
-        textColor: '#2ecc71',
-        pathColor: '#2ecc71',
-        trailColor: 'white',
-        strokeLinecap: 'round',
-        textSize: '20px',
-        transformOrigin: 'center center',
-        pathTransitionDuration: 2,
-        textStyle: {
-          fontFamily: 'fantasy',
-          left: '-90%', // Ajusta la posición del texto a la izquierda
-          fontWeight: 'bold', // Aplica negrita al texto
-        },
-      })}
-    ></CircularProgressbar>
-  </div>
-</div>
+          style={{
+            position: 'fixed',
+            bottom: '55%',
+            right: '1%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'transparent',
+            padding: '2%',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+            width: '10%',
+            height: 'auto',
+            minWidth: '100px',
+            minHeight: '100px',
+            maxWidth: '200px',
+            maxHeight: '200px',
+            fontWeight: 'bold',
+          }}
+        >
+          <div style={{ width: '100%', height: '100%' }}>
+            {/**/}
+            <CircularProgressbar
+              value={selectedOptions2}
+              text={`${selectedOptions2}%`}
+              strokeWidth={14}
+              styles={buildStyles({
+                textColor: '#2ecc71',
+                pathColor: '#2ecc71',
+                trailColor: 'white',
+                strokeLinecap: 'round',
+                textSize: '20px',
+                transformOrigin: 'center center',
+                pathTransitionDuration: 2,
+                textStyle: {
+                  fontFamily: 'fantasy',
+                  left: '-90%', // Ajusta la posición del texto a la izquierda
+                  fontWeight: 'bold', // Aplica negrita al texto
+                },
+              })}
+            ></CircularProgressbar>
+          </div>
+          
+        </div>
 
 
 
 
 
-
-
-
+       
       </section>
+
 
     </Base1>
   );
@@ -506,7 +506,7 @@ const InteractionMessage = () => {
       <span className="help-text">Haz clic para obtener instrucciones de interacción</span>
     </div>
   );
-}; 
+};
 
 function Example(props) {
   return (

@@ -31,7 +31,7 @@ const Minijuegos = () => {
           <div className="container pt-12 text-center">
            
             <ul
-              className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+              className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 " 
               style={{ margin: 0, padding: 0 }}
             >
               <li
@@ -155,7 +155,35 @@ const Minijuegos = () => {
 
                 </Link>
               </li>
+              <li
+                key={`8`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("https://etniasdelmundo.com/wp-content/uploads/2020/02/religion-de-los-aztecas-31.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/categories/jerarquia/memoriJeraquia`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Juego memoria</span>
 
+                </Link>
+              </li>
             
 
 

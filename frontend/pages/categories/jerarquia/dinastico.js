@@ -6,6 +6,7 @@ import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
 import ReactCardFlip from 'react-card-flip';
 import axios from "axios";
 import Cookies from "js-cookie";
+import Link from 'next/link';
 const Dinastico = () => {
     const Titulo = () => {
         return (
@@ -198,6 +199,70 @@ const Dinastico = () => {
                 <Titulo />
                 <div style={{ margin: '0%', }}>
                     <Carta />
+                    <ul className="grid grid-cols-2 gap-1" style={{ justifyContent: 'center', marginTop: '-9.5rem' }}>
+
+<li
+    key={`5`}
+    className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+    style={{
+        margin: 0,
+        padding: 0,
+        position: 'relative',
+        backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+    }}>
+
+
+    <Link
+        href={`/categories/jerarquia/colonial`}
+        className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+        style={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        }}
+    >
+        <span style={{ fontSize: '1.9em', color: '#006400' }}>Regresar a Periodo colonial</span>
+    </Link>
+
+</li>
+<li
+            key={`10`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/categories/jerarquia/desafioJeraquia`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Desafios</span>
+            </Link>
+
+            </li>
+</ul>
+
                 </div>
                 <button id="invite-comment" onClick={handleSubmit}>
                     <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />

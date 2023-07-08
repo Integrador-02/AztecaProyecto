@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import Modal from './modal';
 import { Base1 } from '@layouts/Baseof';
+import Link from 'next/link';
 
 const imgs = [
 	{
 		id: 1,
-		img: '/img/facebook.png',
-		alt: 'Facebook',
+		img: 'https://pueblosoriginarios.com/recursos/colecciones/azteca/imagenes/1_big.jpg',
+		alt: '1',
 	},
 	{
 		id: 2,
-		img: '/img/discord.png',
-		alt: 'Discord',
+		img: 'https://www.debate.com.mx/__export/1598721510478/sites/debate/img/2020/08/29/cuauhtemoc_ultimo_emperador_azteca_crop1598721110343.jpg_1902800913.jpg',
+		alt: '2',
 	},
 	{
 		id: 3,
-		img: '/img/instagram.png',
-		alt: 'Instagram',
+		img: 'https://m.media-amazon.com/images/I/81lm6mHYeiL._UF1000,1000_QL80_.jpg',
+		alt: '3',
 	},
 	{
 		id: 4,
-		img: '/img/whatsapp.png',
-		alt: 'WhatsApp',
+		img: 'https://www.worldhistory.org/img/c/p/1200x627/4198.jpg',
+		alt: '4',
 	},
 	{
 		id: 5,
-		img: '/img/google.png',
-		alt: 'Google',
+		img: 'https://i.etsystatic.com/40584037/r/il/f353b9/4547205378/il_570xN.4547205378_7iz0.jpg',
+		alt: '5',
 	}
 ];
 
@@ -176,6 +177,8 @@ const Board = () => {
 				/>
 			</div>
 			</div>
+
+
 		</Base1>
 	);
 };
