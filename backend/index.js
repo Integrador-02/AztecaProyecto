@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from 'dotenv';
 import cors from 'cors';
 import conectarDB from "./config/db.js";
-import { autenticar, registrar, olvidePassword,nuevoPassword} from "./controllers/usuarioController.js";
+import { autenticar, registrar, olvidePassword,nuevoPassword, cambiarDatos} from "./controllers/usuarioController.js";
 import { guardar, obtenerComentarios } from "./controllers/comentarioController.js";
 import { guardarDatos,obtenerOpcionesPorCorreo } from "./controllers/quiz1D.jController.js";
 import  { guardarDatosA ,obtenerOpcionesPorCorreoA} from "./controllers/quizArte1Controller.js";
@@ -28,7 +28,7 @@ app.use(cors());
 
 
 app.post('/api/login', autenticar);
-
+app.post('/api/resetDatos', cambiarDatos);
 app.post('/api/register', registrar);
 app.post('/api/commit', guardar);
 app.get('/api/comentarios',obtenerComentarios);

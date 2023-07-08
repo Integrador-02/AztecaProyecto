@@ -73,6 +73,7 @@ const UserProfilePage = () => {
       alert("Por favor, complete todos los campos.");
       return;
     }
+    
     console.log("Nombre:", name);
     console.log("Usuario:", username);
     console.log("Correo electrónico:", email);
