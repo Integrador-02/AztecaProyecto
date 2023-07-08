@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Header2 } from "./partials/Header";
 import axios from 'axios';
 import Link from 'next/link';
@@ -7,7 +7,7 @@ import Base from './Baseof';
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { AiOutlineUser } from "react-icons/ai";
 import Cookies from 'js-cookie';
-
+import {useSearchContext } from 'context/state';
 
 const usuario = {
   userId2 :'',
@@ -21,7 +21,14 @@ const Contact = () => {
   const [password, setPassword] = useState('');
   const [linkHref, setLinkHref] = useState("#");
   const [user,setUser] = useState('');
-
+  const {googleSignIn,Guser}=useSearchContext();
+  const googleLogin=async ()=>{
+    try {
+      await googleSignIn();
+    }catch(error){
+      console.log("Fatal error uwu")
+    }
+  }
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -47,31 +54,6 @@ const Contact = () => {
     // Aquí puedes mostrar el cuadro de diálogo o realizar otras acciones necesarias
     alert("Credenciales incorrectas");
   };
-
-{/*  const handleSubmit = async (e) => {
-    fetch('https://desback-backs.vercel.app/login', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({ email, password })
-})
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(response.status);
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-    window.location.href = "/categories";
-  })
-  .catch(error => {
-    console.error('Error en la solicitud:', error);
-    handleIncorrectCredentials();
-  });
-}
-*/}
 
 
 const handleSubmit = async (e) => {
@@ -122,6 +104,19 @@ try {
   alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
     }
   };
+
+
+  useEffect(()=>{
+    if(Guser!=null){
+      window.location.href = "/categories";
+      
+    }
+
+
+
+  },[Guser])
+
+
   return (
     <div
     className="flex justify-center items-center h-screen"
@@ -164,6 +159,12 @@ try {
             onClick={handleSubmit}
           >
             Iniciar sesión
+          </button>
+          <button
+            className="text-white my-2 bg-[#49B675] rounded-md py-3 px-4 text-center"
+            onClick={googleLogin}
+          >
+            Iniciar sesión con Google
           </button>
         </div>
         <div className="flex items-center justify-center">

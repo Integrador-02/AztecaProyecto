@@ -1,6 +1,6 @@
 import config from "@config/config.json";
 import theme from "@config/theme.json";
-import { JsonContext } from "context/state";
+import { JsonContext,useSearchContext } from "context/state";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import { useEffect, useState } from "react";
@@ -12,6 +12,12 @@ import "styles/style.scss";
 const App = ({ Component, pageProps }) => {
   // default theme setup
   const { default_theme } = config.settings;
+
+
+
+  
+
+
 
   // import google font css
   const pf = theme.fonts.font_family.primary;

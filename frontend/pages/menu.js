@@ -4,13 +4,15 @@ import { FaUser, FaAngleDown } from 'react-icons/fa';
 import Avatar from 'react-avatar';
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
-  
+import { useSearchContext } from "context/state";
 
 
 
 const MenuComponent = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const {Guser,logOut}= useSearchContext();
+  
 
 const [email, setEmail] = useState('');
 
@@ -19,14 +21,23 @@ const [email, setEmail] = useState('');
   useEffect(() => {
     const user = Cookies.get('name');
     setEmail(user);
+    
+
+
   }, []);
 
  
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     Cookies.remove('clave');
     Cookies.remove('name');
     router.push('/');
+    try {
+      await logOut();
+    } catch (error) {
+      console.log("El programa crasheó exitosamente uwu;;;;")
+    }
+
   };
 
   const handlePerfil = () => {
