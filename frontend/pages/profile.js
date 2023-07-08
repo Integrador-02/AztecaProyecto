@@ -3,8 +3,10 @@ import { Base1 } from "@layouts/Baseof";
 import Cookies from "js-cookie";
 import { useEffect } from "react";
 import Avatar from "react-avatar";
+import axios from "axios";
 
 const UserProfilePage = () => {
+  const [_id, setIds] = useState('')
   const [name, setName] = useState("Proyecto Integrador");
   const [username, setUsername] = useState("PI");
   const [email, setEmail] = useState("integrador@gmail.com");
@@ -16,6 +18,9 @@ const UserProfilePage = () => {
     setEmail(user);
     const nameUs =  Cookies.get('name');
     setName(nameUs);
+    const iden = Cookies.get('identif');
+    setIds(iden);
+    console.log(iden)
   }, []);
   
   useEffect(() => {
@@ -73,11 +78,26 @@ const UserProfilePage = () => {
       alert("Por favor, complete todos los campos.");
       return;
     }
-    
+    axios.post("http://localhost:4000/api/resetDatos", {_id, name, email, username, profileImage })
+      .then(async () => {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("se cambio la contraseña correctamente");
+        
+      })
+      .catch(async (error) => {
+        console.log(error);
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      });
     console.log("Nombre:", name);
     console.log("Usuario:", username);
     console.log("Correo electrónico:", email);
     console.log("Imagen de perfil:", profileImage);
+   
+      Cookies.set('clave',email);
+      Cookies.set('name',name);
+ 
+   
     setIsEditMode(false);
   };
 

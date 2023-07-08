@@ -179,7 +179,8 @@ const nuevoPassword = async (req, res) => {
 
 const cambiarDatos = async (req, res) =>
 {
-  const {_id, nombre, password, email, user, foto} = req.body
+  const {_id, name, email, username, profileImage} = req.body
+  console.log(_id)
   try {
     const usuario = await Promise.resolve(Usuario.findOne({ _id }));
     console.log(usuario)
@@ -189,11 +190,11 @@ const cambiarDatos = async (req, res) =>
     }
 
     
-    usuario.password = password;
-    usuario.nombre = nombre;
+    
+    usuario.nombre = name;
     usuario.email = email;
-    usuario.user = user;
-    usuario.foto = foto;
+    usuario.user = username;
+    usuario.foto = profileImage;
 
     await usuario.save();
     res.json({ msg: 'Datos modificados correctamente' });
