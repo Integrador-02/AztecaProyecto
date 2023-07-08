@@ -42,6 +42,7 @@ const Titulo = () => {
 
 const Categories = ({ categories }) => {const  a = Cookies.get('clave');
  console.log(a);
+ 
 
   return (
 

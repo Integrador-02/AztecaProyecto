@@ -243,8 +243,10 @@ const Religion = ({ data }) => {
               backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
-            }}>
+
+              filter: 'brightness(90%)',
+            }}
+          >
 
 
             <Link
@@ -263,6 +265,9 @@ const Religion = ({ data }) => {
             </Link>
 
           </li>
+
+
+          
 
 
           <li
@@ -359,7 +364,6 @@ const Religion = ({ data }) => {
     </Base1>
   );
 };
-// get 404 page data
 
 export default Religion;
 

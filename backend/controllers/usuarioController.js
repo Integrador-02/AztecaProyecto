@@ -177,12 +177,39 @@ const nuevoPassword = async (req, res) => {
   }
 };
 
+const cambiarDatos = async (req, res) =>
+{
+  const {_id, name, email, username, profileImage} = req.body
+  console.log(_id)
+  try {
+    const usuario = await Promise.resolve(Usuario.findOne({ _id }));
+    console.log(usuario)
+    if (!usuario) {
+        const error = new Error('Hubo un error');
+        return res.status(400).json({ msg: error.message });
+    }
 
+    
+    
+    usuario.nombre = name;
+    usuario.email = email;
+    usuario.user = username;
+    usuario.foto = profileImage;
+
+    await usuario.save();
+    res.json({ msg: 'Datos modificados correctamente' });
+    console.log(usuario);
+} catch (error) {
+    console.log(error);
+    res.status(500).json({ msg: 'Hubo un error al modificar los datos' });
+}
+}
 export {
   nuevoPassword,
   olvidePassword,
     registrar,
     perfil,
     confirmar,
-    autenticar
+    autenticar,
+    cambiarDatos
 }
