@@ -262,10 +262,37 @@ const Arte = ({ data }) => {
                 <span style={{ fontSize: '130%', color: '#006400' }}>Arquitectura</span>
               </Link>
 
-
+              
 
             </li>
-            
+            <li
+            key={`5`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("/images/arte.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}
+          >
+            <Link
+              href={`/categories/arte/desafioArte`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Desafios ARTE</span>
+            </Link>
+          </li>
 
           </ul>
 
