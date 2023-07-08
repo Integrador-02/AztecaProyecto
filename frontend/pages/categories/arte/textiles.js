@@ -1,8 +1,10 @@
-
+import React, { useEffect } from 'react';
 import { Base1 } from "@layouts/Baseof";
 import Link from "next/link";
 import { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
+import axios from "axios";
+import Cookies from "js-cookie"
 const Titulo = () => {
     return (
         <div className="relative h-80 font-text">
@@ -21,32 +23,113 @@ const Titulo = () => {
 };
 
 const Textiles = () => {
+    const [email, setEmail] = useState('');
+    const [selectedOptions2, setSelectedOptions2] = useState(0);
+    useEffect(() => {
+      const user = Cookies.get('clave');
+      setEmail(user);
+    }, []);
+  
+    useEffect(() => {
+      const guardarProgresoJeraquia = async () => {
+        const pagina = 'textiles';
+        const newCommentObject = {
+          id: 1,
+          text: 1,
+          username: email,
+          replyTo: 1,
+          likes: 0,
+          timestamp: 1,
+        };
+  
+  
+        const coment = newCommentObject.text
+        const correo = newCommentObject.username
+        try {
+          const response = await axios.post("http://localhost:4000/api/progresorArte", { correo, pagina });
+          // Manejo de la respuesta exitosa
+          //alert("Registrado correctamente");
+        } catch (error) {
+          // Manejo de errores en caso de que falle la solicitud al backend
+          console.log(error);
+          //alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+        }
+      };
+  
+      if (email) {
+        console.log(email)
+        guardarProgresoJeraquia();
+      }
+    }, [email]);
+  
+    const handleSubmit = async () => {
+  
+      //window.location.href = "/categories/jerarquia/comentarioJeraquia";
+  
+    };
+  
+    useEffect(() => {
+      const handlerRevision = async () => {
+        try {
+          console.log('sd', email);
+          const url = `http://localhost:4000/api/recuperarprogresoArte?correo=${email}`;
+          const respuesta = await axios.get(url);
+          setSelectedOptions2(respuesta.data.valor); // Utiliza respuesta.data.valor en lugar de respuesta.valor
+        } catch (error) {
+          console.error('Error al hacer la solicitud:', error);
+          // Manejo de errores en caso de que falle la solicitud al backend
+          alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+        }
+      };
+  
+      if (email) {
+        handlerRevision();
+      }
+    }, [email]);
+  
 
+    const TextWithBoldFirstLetter = ({ title, text }) => {
+        const firstLetter = text.charAt(0);
+        const restOfText = text.slice(1);
+    
+        return (
+          <div>
+            <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>
+              <span className="text-green-600">{title}</span>
+            </h1>
+    
+            <p
+              style={{
+                fontSize: '23px',
+                fontWeight: 'normal',
+                margin: '20px',
+                color: '#000',
+                textAlign: 'justify',
+                lineHeight: '1.5',
+                fontFamily: 'Arial, sans-serif'
+              }}
+            >
+              <span >{firstLetter}</span>
+              {restOfText}
+            </p>
+          </div>
+        );
+      };
     return (
         <Base1>
-            <Titulo />
+            
 
-            <div className="sketchfab-embed-wrapper" style={{ marginTop: '40px' }} >
+            <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll' }}>
                 <ul className="grid grid-cols-2 gap-3" style={{ margin: 0, padding: 0 }}>
 
+                <TextWithBoldFirstLetter title={'Textil'} text={' Los textiles tenían un valor simbólico y se utilizaban como moneda en el Imperio Azteca. Los diseños representaban estatus, origen geográfico, historia familiar y ocupación. El arte del tejido estaba principalmente a cargo de mujeres, desde las comunes hasta las nobles, y se transmitía de generación en generación. Aunque se adoptaron técnicas modernas, actualmente hay un resurgimiento de las técnicas tradicionales debido al interés en el arte textil.'} />
 
-
-                    <p style={{
-                        fontSize: '23px',
-                        fontWeight: 'normal',
-                        margin: '20px',
-                        color: '#000',
-                        textAlign: 'justify',
-                        lineHeight: '1.5',
-                        fontFamily: 'Arial, sans-serif',
-                    }}>
-                        Los textiles tenían un valor simbólico y se utilizaban como moneda en el Imperio Azteca. Los diseños representaban estatus, origen geográfico, historia familiar y ocupación. El arte del tejido estaba principalmente a cargo de mujeres, desde las comunes hasta las nobles, y se transmitía de generación en generación. Aunque se adoptaron técnicas modernas, actualmente hay un resurgimiento de las técnicas tradicionales debido al interés en el arte textil.
-                    </p>
+                  
 
                     <div >
                         <Textile />
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <a href={"/arte/vestimenta"}>
+                            <a href={"/categories/arte/vestimenta"}>
                                 <button
                                     style={{
                                         width: '100%',
@@ -65,7 +148,7 @@ const Textiles = () => {
 
 
 
-                </ul></div>
+                </ul>
             <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 10 }}>
 
 
@@ -99,7 +182,7 @@ const Textiles = () => {
                     </Link>
                 </li>
             </ul>
-
+            </section>
         </Base1>
 
     )
@@ -150,7 +233,7 @@ const Textile = () => {
                 style={{
                     width: '100%',
                     height: '50vh',
-                    backgroundColor: 'lightgreen',
+                    backgroundColor: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',

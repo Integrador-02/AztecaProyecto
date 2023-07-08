@@ -46,7 +46,7 @@ const posgresoA1 = async (req, res) => {
     // Obtener la lista de objetos asociados al correo
     const opciones = datos;
     const longitud = opciones ? opciones.length : 0;
-    const longitudTotalEsperada =11;
+    const longitudTotalEsperada =12;
     let valor = Math.round((100 * longitud) / longitudTotalEsperada);
     
     res.json({ valor: valor });

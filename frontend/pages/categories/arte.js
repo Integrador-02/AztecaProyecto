@@ -1,15 +1,20 @@
-import { markdownify } from "@lib/utils/textConverter";
-import shortcodes from "@shortcodes/all";
-import { MDXRemote } from "next-mdx-remote";
-import Image from "next/image";
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { Base1 } from "@layouts/Baseof"; 
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaQuestionCircle } from 'react-icons/fa';
 import Link from "next/link";
+import {
+  CircularProgressbar,
+  CircularProgressbarWithChildren,
+  buildStyles
+} from "react-circular-progressbar";
+import axios from "axios";
+import Cookies from "js-cookie";
 
 const Titulo = () => {
   return (
-    <div className="relative h-80 font-text">
+    <div className="relative h-60 font-text">
       <img
         className="absolute inset-0 w-full h-full object-cover brightness-50"
         src={"/images/arte2.jpg"}
@@ -42,10 +47,77 @@ const Arte = ({ data }) => {
       </div>
     );
   };
+
+  const [email, setEmail] = useState('');
+  const [selectedOptions2, setSelectedOptions2] = useState(0);
+  useEffect(() => {
+    const user = Cookies.get('clave');
+    setEmail(user);
+  }, []);
+
+  useEffect(() => {
+    const guardarProgresoJeraquia = async () => {
+      const pagina = 'arte';
+      const newCommentObject = {
+        id: 1,
+        text: 1,
+        username: email,
+        replyTo: 1,
+        likes: 0,
+        timestamp: 1,
+      };
+
+
+      const coment = newCommentObject.text
+      const correo = newCommentObject.username
+      try {
+        const response = await axios.post("http://localhost:4000/api/progresorArte", { correo, pagina });
+        // Manejo de la respuesta exitosa
+        //alert("Registrado correctamente");
+      } catch (error) {
+        // Manejo de errores en caso de que falle la solicitud al backend
+        console.log(error);
+        //alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      }
+    };
+
+    if (email) {
+      console.log(email)
+      guardarProgresoJeraquia();
+    }
+  }, [email]);
+
+  const handleSubmit = async () => {
+
+    //window.location.href = "/categories/jerarquia/comentarioJeraquia";
+
+  };
+
+  useEffect(() => {
+    const handlerRevision = async () => {
+      try {
+        console.log('sd', email);
+        const url = `http://localhost:4000/api/recuperarprogresoArte?correo=${email}`;
+        const respuesta = await axios.get(url);
+        setSelectedOptions2(respuesta.data.valor); // Utiliza respuesta.data.valor en lugar de respuesta.valor
+      } catch (error) {
+        console.error('Error al hacer la solicitud:', error);
+        // Manejo de errores en caso de que falle la solicitud al backend
+        alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+      }
+    };
+
+    if (email) {
+      handlerRevision();
+    }
+  }, [email]);
+
+  
+
   return (
     <Base1 >
 
-      <section className="section pt-0" >
+      <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll' }}>
 
         <Titulo />
         <div className="sketchfab-embed-wrapper" style={{ marginTop: '40px' }} >
@@ -55,9 +127,9 @@ const Arte = ({ data }) => {
           <p className="text-sm sm:text-sm md:text-lg lg:text-xl xl:text-1xl text-base font-normal m-5 text-black text-justify leading-6 font-sans"
           >
             Los colores vibrantes y los detalles ornamentales eran características destacadas. Además, el arte azteca servía como una forma de educación y comunicación, transmitiendo conocimientos y mitos a través de imágenes y códices. En resumen, el arte azteca era una expresión sagrada que reflejaba su identidad cultural y religiosa.
-             Varios aspectos que podemos resaltar de el arte azteca son los siguientes
+             Varios aspectos que podemos resaltar de el arte azteca son los siguientes :
           </p>
-          <ul className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-1" style={{ margin: 0, padding: 0 }}>
+          <ul className="grid grid-cols-5 " style={{ margin: '1rem', padding: 0 }}>
 
 
 
@@ -263,7 +335,53 @@ const Arte = ({ data }) => {
           </li>
                   </ul>
 
-        
+        {/* */}
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '55%',
+            right: '1%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'transparent',
+            padding: '2%',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+            width: '10%',
+            height: 'auto',
+            minWidth: '100px',
+            minHeight: '100px',
+            maxWidth: '200px',
+            maxHeight: '200px',
+            fontWeight: 'bold',
+          }}
+        >
+          <div style={{ width: '100%', height: '100%' }}>
+            {/**/}
+            <CircularProgressbar
+              value={selectedOptions2}
+              text={`${selectedOptions2}%`}
+              strokeWidth={14}
+              styles={buildStyles({
+                textColor: '#2ecc71',
+                pathColor: '#2ecc71',
+                trailColor: 'white',
+                strokeLinecap: 'round',
+                textSize: '20px',
+                transformOrigin: 'center center',
+                pathTransitionDuration: 2,
+                textStyle: {
+                  fontFamily: 'fantasy',
+                  left: '-90%', // Ajusta la posición del texto a la izquierda
+                  fontWeight: 'bold', // Aplica negrita al texto
+                },
+              })}
+            ></CircularProgressbar>
+          </div>
+        </div>
+
+
+
 
       </section>
 
