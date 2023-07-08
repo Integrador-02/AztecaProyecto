@@ -105,13 +105,13 @@ export const data22 = {
   datasets: [
     {
       label: 'Errores',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: -1000, max: 0 })),
       backgroundColor: 'rgb(255, 99, 132)',
       stack: 'Stack 0',
     },
     {
       label: 'Aciertos',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
       backgroundColor: 'rgb(75, 192, 192)',
       stack: 'Stack 0',
     },
@@ -135,13 +135,13 @@ export const data33 = {
   datasets: [
     {
       label: 'Errores',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: -1000, max: 0 })),
       backgroundColor: 'rgb(255, 99, 132)',
       stack: 'Stack 0',
     },
     {
       label: 'Aciertos',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
       backgroundColor: 'rgb(75, 192, 192)',
       stack: 'Stack 0',
     },
@@ -164,13 +164,13 @@ export const data44 = {
   datasets: [
     {
       label: 'Errores',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: -1000, max: 0 })),
       backgroundColor: 'rgb(255, 99, 132)',
       stack: 'Stack 0',
     },
     {
       label: 'Aciertos',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
       backgroundColor: 'rgb(75, 192, 192)',
       stack: 'Stack 0',
     },
@@ -193,13 +193,13 @@ export const data55 = {
   datasets: [
     {
       label: 'Errores',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: -1000, max: 0 })),
       backgroundColor: 'rgb(255, 99, 132)',
       stack: 'Stack 0',
     },
     {
       label: 'Aciertos',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
       backgroundColor: 'rgb(75, 192, 192)',
       stack: 'Stack 0',
     },
@@ -222,13 +222,13 @@ export const data66 = {
   datasets: [
     {
       label: 'Errores',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: -1000, max: 0 })),
       backgroundColor: 'rgb(255, 99, 132)',
       stack: 'Stack 0',
     },
     {
       label: 'Aciertos',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
       backgroundColor: 'rgb(75, 192, 192)',
       stack: 'Stack 0',
     },
