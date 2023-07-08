@@ -9,12 +9,11 @@ import { faBackward, faPauseCircle, faForward, faVolumeDown } from '@fortawesome
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 
-/**
- * El Flechador Del Cielo
- * https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2COBRhPNFpcJXw6RFWp6eH1Vo8oBxAD1kQ&usqp=CAU
- * 
- */
-const Leyenda7=()=>{
+
+/**Los huicholes y el maíz
+Cuenta una antigua leyenda que una vez, una tribu del sur de Mexico, los Huicholes, que se encontraban en la Sierra Madre de la zona occidental, estaban cansados de comer siempre lo mismo. De hecho, no les gustaban los alimentos que tenían, pero se conformaban porque unas enormes montañas les separaban del resto de México, y ninguno se atrevía a aventurarse más allá de esas cumbres.
+*/
+const Leyenda3=()=>{
   const [email, setEmail] = useState('');
   const [selectedOptions2, setSelectedOptions2] = useState(0);
   useEffect(() => {
@@ -24,7 +23,7 @@ const Leyenda7=()=>{
 
   useEffect(() => {
     const guardarProgresoJeraquia = async () => {
-      const pagina = 'leyenda 7';
+      const pagina = 'leyenda 3';
       const newCommentObject = {
         id: 1,
         text: 1,
@@ -79,8 +78,6 @@ const Leyenda7=()=>{
     }
   }, [email]);
 
-  
-
   const TextWithBoldFirstLetter = ({ title, text }) => {
     const firstLetter = text.charAt(0);
     const restOfText = text.slice(1);
@@ -88,7 +85,7 @@ const Leyenda7=()=>{
     return (
       <div>
         <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>
-          <span className="text-green-600">{title}</span>
+          <span className="text-green-400">{title}</span>
         </h1>
 
         <p
@@ -114,11 +111,9 @@ const Leyenda7=()=>{
     const itemsPerPage = 1; // Número de imágenes por página
     const text = [
       {
-        title: 'El Flechador Del Cielo',
-        texto1: " Ilhuicamina era un guerrero muy popular entre su gente. Quienes lo conocían, decían que era el mejor con el arco y las flechas. Sin embargo, no fue bien recibido por el padre de la bella Citlalixochitl, quien no veía con buenos ojos que un simple guerrero cortejara a su hija."
-      },
-     
-
+        title: 'Los huicholes y el maíz',
+        texto1: " Cuenta una antigua leyenda que una vez, una tribu del sur de Mexico, los Huicholes, que se encontraban en la Sierra Madre de la zona occidental, estaban cansados de comer siempre lo mismo. De hecho, no les gustaban los alimentos que tenían, pero se conformaban porque unas enormes montañas les separaban del resto de México, y ninguno se atrevía a aventurarse más allá de esas cumbres."
+      }
 
 
     ];
@@ -199,14 +194,14 @@ const Leyenda7=()=>{
 
 }
 
-export default Leyenda7;
+export default Leyenda3;
 
 const Audid = () => {
   const [currentMusicDetails, setCurrentMusicDetails] = useState({
-    songName: 'El Flechador Del Cielo',
+    songName: 'Los huichilotes y el maiz',
     songArtist: 'Equipo Azteca',
-    songSrc: './Assets/songs/Leyenda7.mp3',
-    songAvatar: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2COBRhPNFpcJXw6RFWp6eH1Vo8oBxAD1kQ&usqp=CAU'
+    songSrc: '../../.././Assets/songs/Leyenda3.mp3',
+    songAvatar:  'https://www.mitos-cortos.com/wp-content/uploads/leyenda-del-maiz.jpg'
   });
 
   const [audioProgress, setAudioProgress] = useState(0);
@@ -251,16 +246,16 @@ const Audid = () => {
 
   const musicAPI = [
     {
-      songName: 'El Flechador Del Cielo',
-    songArtist: 'Equipo Azteca',
-    songSrc: './Assets/songs/Leyenda7.mp3',
-    songAvatar: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2COBRhPNFpcJXw6RFWp6eH1Vo8oBxAD1kQ&usqp=CAU'
+      songName: 'Los huichilotes y el maiz',
+      songArtist: 'Equipo Azteca',
+      songSrc: '../../.././Assets/songs/Leyenda3.mp3',
+      songAvatar:  'https://www.mitos-cortos.com/wp-content/uploads/leyenda-del-maiz.jpg'
     },
     {
-      songName: 'El Flechador Del Cielo',
-    songArtist: 'Equipo Azteca',
-    songSrc: './Assets/songs/Leyenda7.mp3',
-    songAvatar: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2COBRhPNFpcJXw6RFWp6eH1Vo8oBxAD1kQ&usqp=CAU'}
+      songName: 'Los huichilotes y el maiz',
+      songArtist: 'Equipo Azteca',
+      songSrc: '../../.././Assets/songs/Leyenda3.mp3',
+      songAvatar:  'https://www.mitos-cortos.com/wp-content/uploads/leyenda-del-maiz.jpg'}
   ];
   const vidArray = [];
   const handleNextSong = () => {
@@ -334,7 +329,7 @@ const Audid = () => {
   return (
     <>
       <div className="card2" >
-        <audio src="./Assets/songs/El Mito del Dios Maíz.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
+        <audio src="../../.././Assets/songs/Leyenda3.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
         <div className="music-Container">
           <p className="musicPlayer">Audio Azteca Player</p>
           <p className="music-Head-Name">{currentMusicDetails.songName}</p>

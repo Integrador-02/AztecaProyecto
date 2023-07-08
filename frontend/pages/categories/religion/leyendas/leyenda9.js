@@ -9,11 +9,12 @@ import { faBackward, faPauseCircle, faForward, faVolumeDown } from '@fortawesome
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 
+/**
+ * El Espejo Humeante
 
-/**Los huicholes y el maíz
-Cuenta una antigua leyenda que una vez, una tribu del sur de Mexico, los Huicholes, que se encontraban en la Sierra Madre de la zona occidental, estaban cansados de comer siempre lo mismo. De hecho, no les gustaban los alimentos que tenían, pero se conformaban porque unas enormes montañas les separaban del resto de México, y ninguno se atrevía a aventurarse más allá de esas cumbres.
+ *  
 */
-const Leyenda3=()=>{
+const Leyenda9=()=>{
   const [email, setEmail] = useState('');
   const [selectedOptions2, setSelectedOptions2] = useState(0);
   useEffect(() => {
@@ -23,7 +24,7 @@ const Leyenda3=()=>{
 
   useEffect(() => {
     const guardarProgresoJeraquia = async () => {
-      const pagina = 'leyenda 3';
+      const pagina = 'leyenda 9';
       const newCommentObject = {
         id: 1,
         text: 1,
@@ -62,7 +63,6 @@ const Leyenda3=()=>{
   useEffect(() => {
     const handlerRevision = async () => {
       try {
-        console.log('sd', email);
         const url = `http://localhost:4000/api/recuperarprogresoReligion?correo=${email}`;
         const respuesta = await axios.get(url);
         setSelectedOptions2(respuesta.data.valor); // Utiliza respuesta.data.valor en lugar de respuesta.valor
@@ -78,6 +78,8 @@ const Leyenda3=()=>{
     }
   }, [email]);
 
+   
+
   const TextWithBoldFirstLetter = ({ title, text }) => {
     const firstLetter = text.charAt(0);
     const restOfText = text.slice(1);
@@ -85,7 +87,7 @@ const Leyenda3=()=>{
     return (
       <div>
         <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>
-          <span className="text-green-400">{title}</span>
+          <span className="text-green-600">{title}</span>
         </h1>
 
         <p
@@ -111,9 +113,11 @@ const Leyenda3=()=>{
     const itemsPerPage = 1; // Número de imágenes por página
     const text = [
       {
-        title: 'Los huicholes y el maíz',
-        texto1: " Cuenta una antigua leyenda que una vez, una tribu del sur de Mexico, los Huicholes, que se encontraban en la Sierra Madre de la zona occidental, estaban cansados de comer siempre lo mismo. De hecho, no les gustaban los alimentos que tenían, pero se conformaban porque unas enormes montañas les separaban del resto de México, y ninguno se atrevía a aventurarse más allá de esas cumbres."
-      }
+        title: 'El Espejo Humeante',
+        texto1: "Cuentan que hace miles de años, uno de los dioses creadores, Tezcatlipoca, estaba frustrado pensando en que le faltaban conocimientos. Un día, mientras dormía, soñó que dormía. Él, en su sueño, se levantó y salió a contemplar el cielo estrellado. Miró fijamente y se dio cuenta de que las estrellas estaban allí gracias a la luz. Que la luz lo eran todo, y que cada una de las personas, también eran luz"
+      },
+     
+
 
 
     ];
@@ -194,14 +198,14 @@ const Leyenda3=()=>{
 
 }
 
-export default Leyenda3;
+export default Leyenda9;
 
 const Audid = () => {
   const [currentMusicDetails, setCurrentMusicDetails] = useState({
-    songName: 'El Monte De Nuestro Sustento',
+    songName: ' El Espejo Humeante',
     songArtist: 'Equipo Azteca',
-    songSrc: './Assets/songs/Leyenda3.mp3',
-    songAvatar:  'https://www.mitos-cortos.com/wp-content/uploads/leyenda-del-maiz.jpg'
+    songSrc: '../../.././Assets/songs/Leyenda9.mp3',
+    songAvatar: ' https://tucuentofavorito.com/wp-content/uploads/2022/11/leyenda-del-espejo-humeante.jpg.webp'
   });
 
   const [audioProgress, setAudioProgress] = useState(0);
@@ -246,16 +250,16 @@ const Audid = () => {
 
   const musicAPI = [
     {
-      songName: 'El Monte De Nuestro Sustento',
+      songName: ' El Espejo Humeante',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda3.mp3',
-      songAvatar:  'https://www.mitos-cortos.com/wp-content/uploads/leyenda-del-maiz.jpg'
+      songSrc: '../../.././Assets/songs/Leyenda9.mp3',
+      songAvatar: ' https://tucuentofavorito.com/wp-content/uploads/2022/11/leyenda-del-espejo-humeante.jpg.webp'
     },
     {
-      songName: 'El Monte De Nuestro Sustento',
+      songName: ' El Espejo Humeante',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda3.mp3',
-      songAvatar:  'https://www.mitos-cortos.com/wp-content/uploads/leyenda-del-maiz.jpg'}
+      songSrc: '../../.././Assets/songs/Leyenda9.mp3',
+      songAvatar: ' https://tucuentofavorito.com/wp-content/uploads/2022/11/leyenda-del-espejo-humeante.jpg.webp'}
   ];
   const vidArray = [];
   const handleNextSong = () => {
@@ -329,7 +333,7 @@ const Audid = () => {
   return (
     <>
       <div className="card2" >
-        <audio src="./Assets/songs/El Mito del Dios Maíz.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
+        <audio src="../../.././Assets/songs/Leyenda9.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
         <div className="music-Container">
           <p className="musicPlayer">Audio Azteca Player</p>
           <p className="music-Head-Name">{currentMusicDetails.songName}</p>

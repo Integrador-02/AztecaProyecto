@@ -1,4 +1,6 @@
-import { Base1 } from "@layouts/Baseof";
+
+
+import { Base1 } from '@layouts/Baseof';
 import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
 import Link from 'next/link';
 import axios from "axios";
@@ -8,15 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackward, faPauseCircle, faForward, faVolumeDown } from '@fortawesome/free-solid-svg-icons';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
-/**
- * Tajín y los siete truenos
 
-
-Cuentan que hace mucho tiempo, en una calurosa tarde de verano, el joven Tajín se adentró en la selva en la zona de Totonacapan. Los animales y hasta los árboles estaban nerviosos. Todos conocían a Tajín y le tenían miedo, porque solo pensaba en hacer ‘maldades’: aplastaba a las hormigas, rompía las ramas de los árboles, arrancaba las flores del camino… Las ramas susurraban para alertar al resto: «ya viene Tajínnnnn», y los animales se escondían.
- https://tucuentofavorito.com/wp-content/uploads/2020/07/Tajin-siete-truenos.jpg.webp"
-
-*/
-const Leyenda5=()=>{
+const Leyenda1=()=>{
   const [email, setEmail] = useState('');
   const [selectedOptions2, setSelectedOptions2] = useState(0);
   useEffect(() => {
@@ -26,7 +21,7 @@ const Leyenda5=()=>{
 
   useEffect(() => {
     const guardarProgresoJeraquia = async () => {
-      const pagina = 'leyenda 5';
+      const pagina = 'leyenda 1';
       const newCommentObject = {
         id: 1,
         text: 1,
@@ -81,7 +76,8 @@ const Leyenda5=()=>{
     }
   }, [email]);
 
-  
+
+
 
   const TextWithBoldFirstLetter = ({ title, text }) => {
     const firstLetter = text.charAt(0);
@@ -89,7 +85,7 @@ const Leyenda5=()=>{
 
     return (
       <div>
-        <h1 className="font-bold text-4xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>
+        <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>
           <span className="text-green-600">{title}</span>
         </h1>
 
@@ -116,9 +112,35 @@ const Leyenda5=()=>{
     const itemsPerPage = 1; // Número de imágenes por página
     const text = [
       {
-        title: ' Tajín y los siete truenos',
-        texto1: " Cuentan que hace mucho tiempo, en una calurosa tarde de verano, el joven Tajín se adentró en la selva en la zona de Totonacapan."
-      }
+        title: 'Leyenda Volcán Popocatépetl',
+        texto1: " Cuenta una leyenda el origen del volcán Popocatépetl y del volcán con perfil de mujer, conocida como la (Mujer dormida).Hace mucho, mucho tiempo, gobernó entre los aztecas un hombre bueno y justo, al que todos querían muchísimo."
+      },
+      {
+        title: 'Leyenda Volcán Popocatépetl',
+        texto1: "emperador tuvo una hija, hermosa e inteligente. Según iba creciendo, sus dones aumentaban, hasta tal punto que su padre temía no encontrar una pareja lo suficientemente valiosa para ella."
+      },
+
+
+
+      {
+
+        title: 'Leyenda Volcán Popocatépetl',
+        texto1: "Sin embargo, su hija, de nombre Izta, ya se había enamorado de un valiente guerrero, muy popular entre todos por sus victorias. Pero por supuesto, ambos jóvenes llevaban su amor en secreto."
+
+      },
+      {
+
+        title: 'Leyenda Volcán Popocatépetl',
+        texto1: "En una ocasión, el imperio se vio amenazado por un enemigo muy fuerte. El emperador estaba tan preocupado, que llamó a sus tres mejores guerreros. Entre ellos estaba Popocatépetl, el guerrero del que su hija se había enamorado en secreto."
+
+      },
+      {
+
+        title: 'Leyenda Volcán Popocatépetl',
+        texto1: "En una ocasión, el imperio se vio amenazado por un enemigo muy fuerte. El emperador estaba tan preocupado, que llamó a sus tres mejores guerreros. Entre ellos estaba Popocatépetl, el guerrero del que su hija se había enamorado en secreto."
+
+      },
+
 
 
     ];
@@ -181,9 +203,8 @@ const Leyenda5=()=>{
 
 
 <div className="grid grid-cols-2 gap-1">
-<div style={{padding:'1%'}}>
   <Carta />
-</div>
+
   <div style={{padding:'1%'}}>
   <Audid/>
   
@@ -200,14 +221,14 @@ const Leyenda5=()=>{
 
 }
 
-export default Leyenda5;
+export default Leyenda1;
 
 const Audid = () => {
   const [currentMusicDetails, setCurrentMusicDetails] = useState({
-    songName: 'Tajín y los siete truenos',
-      songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda5.mp3',
-      songAvatar: 'https://tucuentofavorito.com/wp-content/uploads/2020/07/Tajin-siete-truenos.jpg.webp'
+    songName: 'Leyenda Volcán Popocatépetl',
+    songArtist: 'Equipo Azteca',
+    songSrc: '../../.././Assets/songs/Leyenda1.mp3',
+    songAvatar: 'https://www.inside-mexico.com/wp-content/uploads/2013/10/LamujerdormidabyWarnerC.jpg'
   });
 
   const [audioProgress, setAudioProgress] = useState(0);
@@ -252,16 +273,16 @@ const Audid = () => {
 
   const musicAPI = [
     {
-      songName: 'Tajín y los siete truenos',
+      songName: 'Leyenda Volcán Popocatépetl',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda5.mp3',
-      songAvatar: 'https://tucuentofavorito.com/wp-content/uploads/2020/07/Tajin-siete-truenos.jpg.webp'
+      songSrc: '../../../Assets/songs/Leyenda1.mp3',
+      songAvatar: 'https://www.inside-mexico.com/wp-content/uploads/2013/10/LamujerdormidabyWarnerC.jpg'
     },
     {
-      songName: 'Tajín y los siete truenos',
+      songName: 'Leyenda Volcán Popocatépetl',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda5.mp3',
-      songAvatar: 'https://tucuentofavorito.com/wp-content/uploads/2020/07/Tajin-siete-truenos.jpg.webp'}
+      songSrc: '../../.././Assets/songs/Leyenda1.mp3',
+      songAvatar: 'https://www.inside-mexico.com/wp-content/uploads/2013/10/LamujerdormidabyWarnerC.jpg'}
   ];
   const vidArray = [];
   const handleNextSong = () => {
@@ -335,7 +356,7 @@ const Audid = () => {
   return (
     <>
       <div className="card2" >
-        <audio src="./Assets/songs/El Mito del Dios Maíz.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
+        <audio src="../../.././Assets/songs/Leyenda1.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
         <div className="music-Container">
           <p className="musicPlayer">Audio Azteca Player</p>
           <p className="music-Head-Name">{currentMusicDetails.songName}</p>

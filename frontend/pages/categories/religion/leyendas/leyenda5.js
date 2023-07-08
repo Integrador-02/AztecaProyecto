@@ -9,12 +9,14 @@ import { faBackward, faPauseCircle, faForward, faVolumeDown } from '@fortawesome
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 /**
- * El Ahuízotl
- * https://pm1.aminoapps.com/6283/36fc92c000641e4b32bdb0b0f18b35a898dbf486_00.jpg
- Existe un animal del que nunca habrás oído hablar. Un ser que vive en el agua y se llama ahuízotl. Es como un perro, como un perro pequeño, con el pelo corto y suave. Quienes le han visto aseguran que tiene las orejas pequeñas y puntiagudas, como la de los gatos. El color de su pelo es negro y muy liso, y tiene una cola muy larga que termina en una mano. Y la mano es como la de una persona. Este animal tiene cuatro patas, y manos y pies como la de los monos.
-*/
+ * Tajín y los siete truenos
 
-const Leyenda8=()=>{
+
+Cuentan que hace mucho tiempo, en una calurosa tarde de verano, el joven Tajín se adentró en la selva en la zona de Totonacapan. Los animales y hasta los árboles estaban nerviosos. Todos conocían a Tajín y le tenían miedo, porque solo pensaba en hacer ‘maldades’: aplastaba a las hormigas, rompía las ramas de los árboles, arrancaba las flores del camino… Las ramas susurraban para alertar al resto: «ya viene Tajínnnnn», y los animales se escondían.
+ https://tucuentofavorito.com/wp-content/uploads/2020/07/Tajin-siete-truenos.jpg.webp"
+
+*/
+const Leyenda5=()=>{
   const [email, setEmail] = useState('');
   const [selectedOptions2, setSelectedOptions2] = useState(0);
   useEffect(() => {
@@ -24,7 +26,7 @@ const Leyenda8=()=>{
 
   useEffect(() => {
     const guardarProgresoJeraquia = async () => {
-      const pagina = 'leyenda 8';
+      const pagina = 'leyenda 5';
       const newCommentObject = {
         id: 1,
         text: 1,
@@ -79,7 +81,7 @@ const Leyenda8=()=>{
     }
   }, [email]);
 
-    
+  
 
   const TextWithBoldFirstLetter = ({ title, text }) => {
     const firstLetter = text.charAt(0);
@@ -87,7 +89,7 @@ const Leyenda8=()=>{
 
     return (
       <div>
-        <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>
+        <h1 className="font-bold text-4xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>
           <span className="text-green-600">{title}</span>
         </h1>
 
@@ -114,11 +116,9 @@ const Leyenda8=()=>{
     const itemsPerPage = 1; // Número de imágenes por página
     const text = [
       {
-        title: 'El Ahuízotl',
-        texto1: " Existe un animal del que nunca habrás oído hablar. Un ser que vive en el agua y se llama ahuízotl. Es como un perro, como un perro pequeño, con el pelo corto y suave. Quienes le han visto aseguran que tiene las orejas pequeñas y puntiagudas, como la de los gatos. El color de su pelo es negro y muy liso, y tiene una cola muy larga que termina en una mano. Y la mano es como la de una persona. Este animal tiene cuatro patas, y manos y pies como la de los monos."
-      },
-     
-
+        title: ' Tajín y los siete truenos',
+        texto1: " Cuentan que hace mucho tiempo, en una calurosa tarde de verano, el joven Tajín se adentró en la selva en la zona de Totonacapan."
+      }
 
 
     ];
@@ -181,8 +181,9 @@ const Leyenda8=()=>{
 
 
 <div className="grid grid-cols-2 gap-1">
+<div style={{padding:'1%'}}>
   <Carta />
-
+</div>
   <div style={{padding:'1%'}}>
   <Audid/>
   
@@ -199,14 +200,14 @@ const Leyenda8=()=>{
 
 }
 
-export default Leyenda8;
+export default Leyenda5;
 
 const Audid = () => {
   const [currentMusicDetails, setCurrentMusicDetails] = useState({
-    songName: 'El Ahuízotl',
-    songArtist: 'Equipo Azteca',
-    songSrc: './Assets/songs/Leyenda8.mp3',
-    songAvatar: 'https://pm1.aminoapps.com/6283/36fc92c000641e4b32bdb0b0f18b35a898dbf486_00.jpg'
+    songName: 'Tajín y los siete truenos',
+      songArtist: 'Equipo Azteca',
+      songSrc: '../../.././Assets/songs/Leyenda5.mp3',
+      songAvatar: 'https://tucuentofavorito.com/wp-content/uploads/2020/07/Tajin-siete-truenos.jpg.webp'
   });
 
   const [audioProgress, setAudioProgress] = useState(0);
@@ -251,16 +252,16 @@ const Audid = () => {
 
   const musicAPI = [
     {
-      songName: 'El Ahuízotl',
-    songArtist: 'Equipo Azteca',
-    songSrc: './Assets/songs/Leyenda8.mp3',
-    songAvatar: 'https://pm1.aminoapps.com/6283/36fc92c000641e4b32bdb0b0f18b35a898dbf486_00.jpg'
+      songName: 'Tajín y los siete truenos',
+      songArtist: 'Equipo Azteca',
+      songSrc: '../../.././Assets/songs/Leyenda5.mp3',
+      songAvatar: 'https://tucuentofavorito.com/wp-content/uploads/2020/07/Tajin-siete-truenos.jpg.webp'
     },
     {
-      songName: 'El Ahuízotl',
+      songName: 'Tajín y los siete truenos',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda8.mp3',
-      songAvatar: 'https://pm1.aminoapps.com/6283/36fc92c000641e4b32bdb0b0f18b35a898dbf486_00.jpg'}
+      songSrc: '../../.././Assets/songs/Leyenda5.mp3',
+      songAvatar: 'https://tucuentofavorito.com/wp-content/uploads/2020/07/Tajin-siete-truenos.jpg.webp'}
   ];
   const vidArray = [];
   const handleNextSong = () => {
@@ -334,7 +335,7 @@ const Audid = () => {
   return (
     <>
       <div className="card2" >
-        <audio src="./Assets/songs/El Mito del Dios Maíz.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
+        <audio src="../../.././Assets/songs/Leyenda5.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
         <div className="music-Container">
           <p className="musicPlayer">Audio Azteca Player</p>
           <p className="music-Head-Name">{currentMusicDetails.songName}</p>

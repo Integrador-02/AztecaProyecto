@@ -207,7 +207,7 @@ const Audid = () => {
   const [currentMusicDetails, setCurrentMusicDetails] = useState({
     songName: 'Tajín y los siete truenos',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda6.mp3',
+      songSrc: '../../.././Assets/songs/Leyenda6.mp3',
       songAvatar: 'https://i.guim.co.uk/img/media/5e993f3c5e6e46ef962a613bc1889dca864afe9a/0_339_5122_3074/master/5122.jpg?width=700&quality=85&auto=format&fit=max&s=3006c8b84e2fb95222e6e64c5d709cf4'
   });
 
@@ -255,13 +255,13 @@ const Audid = () => {
     {
       songName: 'Tajín y los siete truenos',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda6.mp3',
+      songSrc: '../../.././Assets/songs/Leyenda6.mp3',
       songAvatar: 'https://i.guim.co.uk/img/media/5e993f3c5e6e46ef962a613bc1889dca864afe9a/0_339_5122_3074/master/5122.jpg?width=700&quality=85&auto=format&fit=max&s=3006c8b84e2fb95222e6e64c5d709cf4'
     },
     {
       songName: 'Tajín y los siete truenos',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda6.mp3',
+      songSrc: '../../.././Assets/songs/Leyenda6.mp3',
       songAvatar: 'https://i.guim.co.uk/img/media/5e993f3c5e6e46ef962a613bc1889dca864afe9a/0_339_5122_3074/master/5122.jpg?width=700&quality=85&auto=format&fit=max&s=3006c8b84e2fb95222e6e64c5d709cf4'}
   ];
   const vidArray = [];
@@ -336,7 +336,7 @@ const Audid = () => {
   return (
     <>
       <div className="card2" >
-        <audio src="./Assets/songs/El Mito del Dios Maíz.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
+        <audio src="../../.././Assets/songs/Leyenda6.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
         <div className="music-Container">
           <p className="musicPlayer">Audio Azteca Player</p>
           <p className="music-Head-Name">{currentMusicDetails.songName}</p>

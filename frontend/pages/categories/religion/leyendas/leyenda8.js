@@ -8,9 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackward, faPauseCircle, faForward, faVolumeDown } from '@fortawesome/free-solid-svg-icons';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
+/**
+ * El Ahuízotl
+ * https://pm1.aminoapps.com/6283/36fc92c000641e4b32bdb0b0f18b35a898dbf486_00.jpg
+ Existe un animal del que nunca habrás oído hablar. Un ser que vive en el agua y se llama ahuízotl. Es como un perro, como un perro pequeño, con el pelo corto y suave. Quienes le han visto aseguran que tiene las orejas pequeñas y puntiagudas, como la de los gatos. El color de su pelo es negro y muy liso, y tiene una cola muy larga que termina en una mano. Y la mano es como la de una persona. Este animal tiene cuatro patas, y manos y pies como la de los monos.
+*/
 
-
-const Leyenda2=()=>{
+const Leyenda8=()=>{
   const [email, setEmail] = useState('');
   const [selectedOptions2, setSelectedOptions2] = useState(0);
   useEffect(() => {
@@ -20,7 +24,7 @@ const Leyenda2=()=>{
 
   useEffect(() => {
     const guardarProgresoJeraquia = async () => {
-      const pagina = 'leyenda 2';
+      const pagina = 'leyenda 8';
       const newCommentObject = {
         id: 1,
         text: 1,
@@ -75,6 +79,8 @@ const Leyenda2=()=>{
     }
   }, [email]);
 
+    
+
   const TextWithBoldFirstLetter = ({ title, text }) => {
     const firstLetter = text.charAt(0);
     const restOfText = text.slice(1);
@@ -108,9 +114,11 @@ const Leyenda2=()=>{
     const itemsPerPage = 1; // Número de imágenes por página
     const text = [
       {
-        title: 'El Monte De Nuestro Sustento',
-        texto1: " En México existe una preciosa leyenda azteca conocida como 'El monte de nuestro sustento', que nos habla de cómo nacieron los campos de maíz. Pero además, esta leyenda nos habla de un valor esencial importantísimo: el valor de la humildad. Descubre aquí la preciosa leyenda azteca y las reflexiones sobre su mensaje."
-      }
+        title: 'El Ahuízotl',
+        texto1: " Existe un animal del que nunca habrás oído hablar. Un ser que vive en el agua y se llama ahuízotl. Es como un perro, como un perro pequeño, con el pelo corto y suave. Quienes le han visto aseguran que tiene las orejas pequeñas y puntiagudas, como la de los gatos. El color de su pelo es negro y muy liso, y tiene una cola muy larga que termina en una mano. Y la mano es como la de una persona. Este animal tiene cuatro patas, y manos y pies como la de los monos."
+      },
+     
+
 
 
     ];
@@ -191,14 +199,14 @@ const Leyenda2=()=>{
 
 }
 
-export default Leyenda2;
+export default Leyenda8;
 
 const Audid = () => {
   const [currentMusicDetails, setCurrentMusicDetails] = useState({
-    songName: 'El Monte De Nuestro Sustento',
+    songName: 'El Ahuízotl',
     songArtist: 'Equipo Azteca',
-    songSrc: './Assets/songs/Leyenda2.mp3',
-    songAvatar: 'https://www.mitos-cortos.com/wp-content/uploads/leyenda-del-maiz.jpg'
+    songSrc: '../../.././Assets/songs/Leyenda8.mp3',
+    songAvatar: 'https://pm1.aminoapps.com/6283/36fc92c000641e4b32bdb0b0f18b35a898dbf486_00.jpg'
   });
 
   const [audioProgress, setAudioProgress] = useState(0);
@@ -243,16 +251,16 @@ const Audid = () => {
 
   const musicAPI = [
     {
-      songName: 'El Monte De Nuestro Sustento',
-      songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda2.mp3',
-      songAvatar: 'https://www.mitos-cortos.com/wp-content/uploads/leyenda-del-maiz.jpg'
+      songName: 'El Ahuízotl',
+    songArtist: 'Equipo Azteca',
+    songSrc: '../../.././Assets/songs/Leyenda8.mp3',
+    songAvatar: 'https://pm1.aminoapps.com/6283/36fc92c000641e4b32bdb0b0f18b35a898dbf486_00.jpg'
     },
     {
-      songName: 'El Monte De Nuestro Sustento',
+      songName: 'El Ahuízotl',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda2.mp3',
-      songAvatar: 'https://www.mitos-cortos.com/wp-content/uploads/leyenda-del-maiz.jpg'}
+      songSrc: '../../.././Assets/songs/Leyenda8.mp3',
+      songAvatar: 'https://pm1.aminoapps.com/6283/36fc92c000641e4b32bdb0b0f18b35a898dbf486_00.jpg'}
   ];
   const vidArray = [];
   const handleNextSong = () => {
@@ -326,7 +334,7 @@ const Audid = () => {
   return (
     <>
       <div className="card2" >
-        <audio src="./Assets/songs/El Mito del Dios Maíz.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
+        <audio src="../../.././Assets/songs/Leyenda8.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
         <div className="music-Container">
           <p className="musicPlayer">Audio Azteca Player</p>
           <p className="music-Head-Name">{currentMusicDetails.songName}</p>

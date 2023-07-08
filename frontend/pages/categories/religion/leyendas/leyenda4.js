@@ -9,12 +9,18 @@ import { faBackward, faPauseCircle, faForward, faVolumeDown } from '@fortawesome
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 
-/**
- * El Espejo Humeante
+/**El Conejo De La Luna
+ Cuenta una leyenda azteca que hace mucho, pero muchísimo tiempo, andaba el dios Quetzalcóatl bastante aburrido. Los aztecas tenían muchos dioses, y Quetzalcóatl era un dios muy bondadoso.
 
- *  
+El aburrimiento llevó al dios maya a pensar: ¿y si viajo por el mundo transformado en hombre? Y eso hizo: el dios Quetzalcóatl se convirtió en hombre y bajó a la Tierra.
+
+Y andando y andando por el mundo, comenzó a tener hambre. De hecho, llevaba todo el día andando y no había probado bocado. El sol se puso, la luna y las estrellas iluminaron el cielo.
+
+El dios se sentó a descansar y de pronto vio a un conejito grisáceo que entraba en su madriguera a comer.
+
+
 */
-const Leyenda9=()=>{
+const Leyenda4=()=>{
   const [email, setEmail] = useState('');
   const [selectedOptions2, setSelectedOptions2] = useState(0);
   useEffect(() => {
@@ -24,7 +30,7 @@ const Leyenda9=()=>{
 
   useEffect(() => {
     const guardarProgresoJeraquia = async () => {
-      const pagina = 'leyenda 9';
+      const pagina = 'leyenda 4';
       const newCommentObject = {
         id: 1,
         text: 1,
@@ -63,6 +69,7 @@ const Leyenda9=()=>{
   useEffect(() => {
     const handlerRevision = async () => {
       try {
+        console.log('sd', email);
         const url = `http://localhost:4000/api/recuperarprogresoReligion?correo=${email}`;
         const respuesta = await axios.get(url);
         setSelectedOptions2(respuesta.data.valor); // Utiliza respuesta.data.valor en lugar de respuesta.valor
@@ -78,8 +85,6 @@ const Leyenda9=()=>{
     }
   }, [email]);
 
-   
-
   const TextWithBoldFirstLetter = ({ title, text }) => {
     const firstLetter = text.charAt(0);
     const restOfText = text.slice(1);
@@ -87,7 +92,7 @@ const Leyenda9=()=>{
     return (
       <div>
         <h1 className="font-bold text-5xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>
-          <span className="text-green-600">{title}</span>
+          <span className="text-green-400">{title}</span>
         </h1>
 
         <p
@@ -113,11 +118,9 @@ const Leyenda9=()=>{
     const itemsPerPage = 1; // Número de imágenes por página
     const text = [
       {
-        title: 'El Espejo Humeante',
-        texto1: "Cuentan que hace miles de años, uno de los dioses creadores, Tezcatlipoca, estaba frustrado pensando en que le faltaban conocimientos. Un día, mientras dormía, soñó que dormía. Él, en su sueño, se levantó y salió a contemplar el cielo estrellado. Miró fijamente y se dio cuenta de que las estrellas estaban allí gracias a la luz. Que la luz lo eran todo, y que cada una de las personas, también eran luz"
-      },
-     
-
+        title: 'El Conejo De La Luna',
+        texto1: " Cuenta una leyenda azteca que hace mucho, pero muchísimo tiempo, andaba el dios Quetzalcóatl bastante aburrido. Los aztecas tenían muchos dioses, y Quetzalcóatl era un dios muy bondadoso.El aburrimiento llevó al dios maya a pensar: ¿y si viajo por el mundo transformado en hombre."
+      }
 
 
     ];
@@ -198,14 +201,14 @@ const Leyenda9=()=>{
 
 }
 
-export default Leyenda9;
+export default Leyenda4;
 
 const Audid = () => {
   const [currentMusicDetails, setCurrentMusicDetails] = useState({
-    songName: ' El Espejo Humeante',
+    songName: 'El Conejo De La Luna',
     songArtist: 'Equipo Azteca',
-    songSrc: './Assets/songs/Leyenda9.mp3',
-    songAvatar: ' https://tucuentofavorito.com/wp-content/uploads/2022/11/leyenda-del-espejo-humeante.jpg.webp'
+    songSrc: '../../.././Assets/songs/Leyenda4.mp3',
+    songAvatar:  'https://cdn.bioguia.com/embed/cc0a3a9d1dfd562822941df06d70e8d441528478381/--Por_que_hay_un_conejo_en_la_luna-_Una_asombrosa_leyenda_maya"'
   });
 
   const [audioProgress, setAudioProgress] = useState(0);
@@ -250,17 +253,17 @@ const Audid = () => {
 
   const musicAPI = [
     {
-      songName: ' El Espejo Humeante',
+      songName: 'El Conejo De La Luna',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda9.mp3',
-      songAvatar: ' https://tucuentofavorito.com/wp-content/uploads/2022/11/leyenda-del-espejo-humeante.jpg.webp'
+      songSrc: './Assets/songs/Leyenda4.mp3',
+      songAvatar:  'https://cdn.bioguia.com/embed/cc0a3a9d1dfd562822941df06d70e8d441528478381/--Por_que_hay_un_conejo_en_la_luna-_Una_asombrosa_leyenda_maya"'
     },
     {
-      songName: ' El Espejo Humeante',
+      songName: 'El Conejo De La Luna',
       songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda9.mp3',
-      songAvatar: ' https://tucuentofavorito.com/wp-content/uploads/2022/11/leyenda-del-espejo-humeante.jpg.webp'}
-  ];
+      songSrc: './Assets/songs/Leyenda4.mp3',
+      songAvatar:  'https://cdn.bioguia.com/embed/cc0a3a9d1dfd562822941df06d70e8d441528478381/--Por_que_hay_un_conejo_en_la_luna-_Una_asombrosa_leyenda_maya"'
+  }  ];
   const vidArray = [];
   const handleNextSong = () => {
     if (musicIndex >= musicAPI.length - 1) {
@@ -333,7 +336,7 @@ const Audid = () => {
   return (
     <>
       <div className="card2" >
-        <audio src="./Assets/songs/El Mito del Dios Maíz.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
+        <audio src="../../.././Assets/songs/Leyenda4.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
         <div className="music-Container">
           <p className="musicPlayer">Audio Azteca Player</p>
           <p className="music-Head-Name">{currentMusicDetails.songName}</p>

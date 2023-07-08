@@ -1,5 +1,3 @@
-
-
 import { Base1 } from "@layouts/Baseof";
 import { FaInfoCircle, FaQuestionCircle } from 'react-icons/fa';
 import Link from 'next/link';
@@ -10,7 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackward, faPauseCircle, faForward, faVolumeDown } from '@fortawesome/free-solid-svg-icons';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
-const Leyenda1=()=>{
+
+/**
+ * El Flechador Del Cielo
+ * https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2COBRhPNFpcJXw6RFWp6eH1Vo8oBxAD1kQ&usqp=CAU
+ * 
+ */
+const Leyenda7=()=>{
   const [email, setEmail] = useState('');
   const [selectedOptions2, setSelectedOptions2] = useState(0);
   useEffect(() => {
@@ -20,7 +24,7 @@ const Leyenda1=()=>{
 
   useEffect(() => {
     const guardarProgresoJeraquia = async () => {
-      const pagina = 'leyenda 1';
+      const pagina = 'leyenda 7';
       const newCommentObject = {
         id: 1,
         text: 1,
@@ -75,8 +79,7 @@ const Leyenda1=()=>{
     }
   }, [email]);
 
-
-
+  
 
   const TextWithBoldFirstLetter = ({ title, text }) => {
     const firstLetter = text.charAt(0);
@@ -111,34 +114,10 @@ const Leyenda1=()=>{
     const itemsPerPage = 1; // Número de imágenes por página
     const text = [
       {
-        title: 'Leyenda Volcán Popocatépetl',
-        texto1: " Cuenta una leyenda el origen del volcán Popocatépetl y del volcán con perfil de mujer, conocida como la (Mujer dormida).Hace mucho, mucho tiempo, gobernó entre los aztecas un hombre bueno y justo, al que todos querían muchísimo."
+        title: 'El Flechador Del Cielo',
+        texto1: " Ilhuicamina era un guerrero muy popular entre su gente. Quienes lo conocían, decían que era el mejor con el arco y las flechas. Sin embargo, no fue bien recibido por el padre de la bella Citlalixochitl, quien no veía con buenos ojos que un simple guerrero cortejara a su hija."
       },
-      {
-        title: 'Leyenda Volcán Popocatépetl',
-        texto1: "emperador tuvo una hija, hermosa e inteligente. Según iba creciendo, sus dones aumentaban, hasta tal punto que su padre temía no encontrar una pareja lo suficientemente valiosa para ella."
-      },
-
-
-
-      {
-
-        title: 'Leyenda Volcán Popocatépetl',
-        texto1: "Sin embargo, su hija, de nombre Izta, ya se había enamorado de un valiente guerrero, muy popular entre todos por sus victorias. Pero por supuesto, ambos jóvenes llevaban su amor en secreto."
-
-      },
-      {
-
-        title: 'Leyenda Volcán Popocatépetl',
-        texto1: "En una ocasión, el imperio se vio amenazado por un enemigo muy fuerte. El emperador estaba tan preocupado, que llamó a sus tres mejores guerreros. Entre ellos estaba Popocatépetl, el guerrero del que su hija se había enamorado en secreto."
-
-      },
-      {
-
-        title: 'Leyenda Volcán Popocatépetl',
-        texto1: "En una ocasión, el imperio se vio amenazado por un enemigo muy fuerte. El emperador estaba tan preocupado, que llamó a sus tres mejores guerreros. Entre ellos estaba Popocatépetl, el guerrero del que su hija se había enamorado en secreto."
-
-      },
+     
 
 
 
@@ -220,14 +199,14 @@ const Leyenda1=()=>{
 
 }
 
-export default Leyenda1;
+export default Leyenda7;
 
 const Audid = () => {
   const [currentMusicDetails, setCurrentMusicDetails] = useState({
-    songName: 'Leyenda Volcán Popocatépetl',
+    songName: 'El Flechador Del Cielo',
     songArtist: 'Equipo Azteca',
-    songSrc: './Assets/songs/Leyenda1.mp3',
-    songAvatar: 'https://www.inside-mexico.com/wp-content/uploads/2013/10/LamujerdormidabyWarnerC.jpg'
+    songSrc: '../../.././Assets/songs/Leyenda7.mp3',
+    songAvatar: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2COBRhPNFpcJXw6RFWp6eH1Vo8oBxAD1kQ&usqp=CAU'
   });
 
   const [audioProgress, setAudioProgress] = useState(0);
@@ -272,16 +251,16 @@ const Audid = () => {
 
   const musicAPI = [
     {
-      songName: 'Leyenda Volcán Popocatépetl',
-      songArtist: 'Equipo Azteca',
-      songSrc: '/Assets/songs/Leyenda1.mp3',
-      songAvatar: 'https://www.inside-mexico.com/wp-content/uploads/2013/10/LamujerdormidabyWarnerC.jpg'
+      songName: 'El Flechador Del Cielo',
+    songArtist: 'Equipo Azteca',
+    songSrc: '../../.././Assets/songs/Leyenda7.mp3',
+    songAvatar: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2COBRhPNFpcJXw6RFWp6eH1Vo8oBxAD1kQ&usqp=CAU'
     },
     {
-      songName: 'Leyenda Volcán Popocatépetl',
-      songArtist: 'Equipo Azteca',
-      songSrc: './Assets/songs/Leyenda1.mp3',
-      songAvatar: 'https://www.inside-mexico.com/wp-content/uploads/2013/10/LamujerdormidabyWarnerC.jpg'}
+      songName: 'El Flechador Del Cielo',
+    songArtist: 'Equipo Azteca',
+    songSrc: '../../.././Assets/songs/Leyenda7.mp3',
+    songAvatar: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2COBRhPNFpcJXw6RFWp6eH1Vo8oBxAD1kQ&usqp=CAU'}
   ];
   const vidArray = [];
   const handleNextSong = () => {
@@ -355,7 +334,7 @@ const Audid = () => {
   return (
     <>
       <div className="card2" >
-        <audio src="./Assets/songs/El Mito del Dios Maíz.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
+        <audio src="../../.././Assets/songs/Leyenda7.mp3" ref={currentAudio} onEnded={handleNextSong}></audio>
         <div className="music-Container">
           <p className="musicPlayer">Audio Azteca Player</p>
           <p className="music-Head-Name">{currentMusicDetails.songName}</p>
