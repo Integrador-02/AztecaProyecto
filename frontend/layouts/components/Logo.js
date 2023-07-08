@@ -12,8 +12,18 @@ const Logo = ({ src }) => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
+  const redirectToPage = () => {
+    if (document.cookie.includes("clave")) {
+      // Redirige a la página si existe la cookie
+      window.location.href = "/index1";
+    } else {
+      // Redirige a otra página si no existe la cookie
+      window.location.href = "/";
+    }
+  };
+
   return (
-    <Link href="/" className="navbar-brand">
+    <Link href="/" className="navbar-brand" onClick={redirectToPage} >
       {src || logo ? (
         <ImageFallback
           width={logo_width.replace("px", "") * 2}
@@ -41,3 +51,4 @@ const Logo = ({ src }) => {
 };
 
 export default Logo;
+

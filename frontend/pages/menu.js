@@ -1,49 +1,65 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef  } from "react";
+import Dropdown from 'react-dropdown-select';
 import { FaUser, FaAngleDown } from 'react-icons/fa';
 import Avatar from 'react-avatar';
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
+  
 
-// Componente donde se muestra el icono del usuario, nombre y diferentes configuraciones
+
+
 const MenuComponent = () => {
   const router = useRouter();
-  const [email, setEmail] = useState(''); // Estado para almacenar el correo electrónico
-  const [isOpen, setIsOpen] = useState(false); // Estado para controlar si el menú desplegable está abierto
+  const [isOpen, setIsOpen] = useState(false);
+
+const [email, setEmail] = useState('');
+
+  const avatarRef = useRef(null);
 
   useEffect(() => {
-    // Obtener el correo electrónico almacenado en una cookie y establecerlo como valor inicial del estado
-    const user = Cookies.get('clave');
+    const user = Cookies.get('name');
     setEmail(user);
   }, []);
 
+ 
+
   const handleLogout = () => {
-    Cookies.remove('clave'); // Eliminar la cookie de sesión
-    router.push('/'); // Redirigir al inicio de sesión
+    Cookies.remove('clave');
+    Cookies.remove('name');
+    router.push('/');
   };
 
   const handlePerfil = () => {
-    router.push('/profile'); // Redirigir a la página de perfil
+   
+
+    router.push('/profile');
+
   };
+
+  const handleEstadistica = () => {
+   
+
+    router.push('/estadistica');
+
+  };
+  
 
   const handleClick = () => {
-    setIsOpen(!isOpen); // Alternar el estado del menú desplegable
-  };
-
-  const handleContraseña = () => {
-    router.push('/forgotPassword2'); // Redirigir a la página de cambio de contraseña
+    setIsOpen(!isOpen);
   };
 
   const options = [
     { label: 'Perfil', value: 'perfil' },
     { label: 'Logout', value: 'logout' },
-    { label: 'Contraseña', value: 'contraseña' },
+    { label: 'Configuración', value: 'configuracion' },
     { label: 'Estadística', value: 'estadistica' }
   ];
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
       <div onClick={handleClick} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-        <Avatar name={email} size={50} round={true} />
+          
+        <Avatar name={email} size={50} round={true} ref={avatarRef}/>
         <FaAngleDown style={{ marginLeft: '5px' }} onClick={handleClick} />
       </div>
       {isOpen && (
@@ -57,8 +73,9 @@ const MenuComponent = () => {
                     handlePerfil();
                   } else if (option.value === 'logout') {
                     handleLogout();
-                  } else if (option.value == 'contraseña') {
-                    handleContraseña();
+                  } else if(option.value == 'estadistica')
+                  {
+                    handleEstadistica();
                   }
                 }}
                 style={{ cursor: 'pointer', padding: '5px' }}
@@ -74,3 +91,4 @@ const MenuComponent = () => {
 };
 
 export default MenuComponent;
+

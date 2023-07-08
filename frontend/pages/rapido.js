@@ -125,13 +125,13 @@ const Game = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '55vh',
+            height: '50vh',
         },
         gameContainer: {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '90vh',
+            height: '50vh',
             flexDirection: 'column',
             alignItems: 'center',
             marginRight: '90px',
@@ -150,7 +150,7 @@ const Game = () => {
             flexDirection: 'column',
             alignItems: 'center',
             marginLeft: '20px',
-            width: '800px', // Tamaño fijo del recuadro del resultado
+            width: '50hv', // Tamaño fijo del recuadro del resultado
             border: '1px solid rgba(0, 0, 0, 0.8)',
             borderRadius: '5px',
             padding: '20px',

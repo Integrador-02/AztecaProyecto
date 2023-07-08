@@ -29,10 +29,9 @@ const Rapidoj = () => {
 
   return (
     <Base1>
-    <div>
-      < Titulo />
-    </div>
-    <div className="container pt-12 text-center" >  <Game/>
+    
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 "  > 
+    <Game/>
 </div>
   
 

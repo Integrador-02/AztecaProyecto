@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Base1 } from '@layouts/Baseof';
 import AhorcadoAzteca from './minijuego1';
 import Swal from 'sweetalert2';
+import Audio from './audio';
 
 
 const Titulo = () => {
@@ -41,7 +42,6 @@ const Ahorcado = () => {
   return (
     <Base1>
     <div>
-      < Titulo />
     </div>
     <div className="container pt-12 text-center" >
     <AhorcadoAzteca/>
