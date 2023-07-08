@@ -76,7 +76,7 @@ export const data1 = {
   datasets: [
     {
       label: 'Errores',
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: -1000, max: 0 })),
       backgroundColor: 'rgb(255, 99, 132)',
       stack: 'Stack 0',
     },
