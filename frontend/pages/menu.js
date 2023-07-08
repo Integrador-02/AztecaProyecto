@@ -73,7 +73,7 @@ const [email, setEmail] = useState('');
                     handlePerfil();
                   } else if (option.value === 'logout') {
                     handleLogout();
-                  } else if(option.value == estadistica)
+                  } else if(option.value == 'estadistica')
                   {
                     handleEstadistica();
                   }
