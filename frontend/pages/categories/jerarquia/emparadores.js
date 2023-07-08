@@ -108,8 +108,40 @@ const Emperador = () => {
           </p>
         </div>
         <ul className="grid grid-cols-2 gap-1" style={{ margin: 0, padding: 0 }}>
-          <li
-            key={`7`}
+
+        <li
+            key={`5`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/categories/jerarquia/emperador`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Regresar a Emperador</span>
+            </Link>
+
+          </li>
+
+        <li
+            key={`6`}
             className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
             style={{
               margin: 0,
@@ -138,8 +170,9 @@ const Emperador = () => {
             </Link>
 
           </li>
+          
 
-          <li
+        { /* <li
             key={`8`}
             className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
             style={{
@@ -233,7 +266,7 @@ const Emperador = () => {
               <span style={{ fontSize: '1.9em', color: '#006400' }}>Reanudación del gobierno dinástico (1538-1565)</span>
             </Link>
 
-          </li>
+            </li>*/}
 
 
 

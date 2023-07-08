@@ -53,57 +53,57 @@ const Leyendas = () => {
       {
         texto: "Leyenda del volcán Popocatépetl",
         imageURL: "https://upload.wikimedia.org/wikipedia/en/c/c0/El_nervio_del_volcan.jpg",
-        linkto: "/leyenda1"
+        linkto: "/categories/religion/leyendas/leyenda1"
 
       },
       {
         texto: "El monte de nuestro sustento",
         imageURL: "https://tucuentofavorito.com/wp-content/uploads/2020/06/campo-de-nuestro-sustento.jpg.webp",
-        linkto: "/leyenda2"
+        linkto: "/categories/religion/leyendas/leyenda2"
 
       },
 
       {
         texto: "Los huicholes y el maíz",
         imageURL: "https://tucuentofavorito.com/wp-content/uploads/2020/06/maiz.jpg.webp",
-        linkto: "/leyenda3"
+        linkto: "/categories/religion/leyendas/leyenda3"
 
       },
       {
         texto: "El conejo de la luna",
         imageURL: "https://cdn.bioguia.com/embed/cc0a3a9d1dfd562822941df06d70e8d441528478381/--Por_que_hay_un_conejo_en_la_luna-_Una_asombrosa_leyenda_maya",
-        linkto: "/leyenda4"
+        linkto: "/categories/religion/leyendas/leyenda4"
 
       },
       {
         texto: "Tajín y los siete truenos",
         imageURL: "https://tucuentofavorito.com/wp-content/uploads/2020/07/Tajin-siete-truenos.jpg.webp",
-        linkto: "/leyenda5"
+        linkto: "/categories/religion/leyendas//leyenda5"
 
       },
       {
         texto: "La leyenda del ajolote",
         imageURL: "https://i.guim.co.uk/img/media/5e993f3c5e6e46ef962a613bc1889dca864afe9a/0_339_5122_3074/master/5122.jpg?width=700&quality=85&auto=format&fit=max&s=3006c8b84e2fb95222e6e64c5d709cf4",
-        linkto: "/leyenda6"
+        linkto: "/categories/religion/leyendas//leyenda6"
 
       },
 
       {
         texto: "El flechador del cielo",
         imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2COBRhPNFpcJXw6RFWp6eH1Vo8oBxAD1kQ&usqp=CAU",
-        linkto: "/leyenda7"
+        linkto: "/categories/religion/leyendas//leyenda7"
 
       },
       {
         texto: "El ahuízotl",
         imageURL: "https://pm1.aminoapps.com/6283/36fc92c000641e4b32bdb0b0f18b35a898dbf486_00.jpg",
-        linkto: "/leyenda8"
+        linkto: "/categories/religion/leyendas//leyenda8"
 
       },
       {
         texto: "El espejo humeante",
         imageURL: "https://tucuentofavorito.com/wp-content/uploads/2022/11/leyenda-del-espejo-humeante.jpg.webp",
-        linkto: "/leyenda9"
+        linkto: "/categories/religion/leyendas//leyenda9"
 
       },
     ];

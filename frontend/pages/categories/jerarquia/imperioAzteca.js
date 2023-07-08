@@ -7,10 +7,11 @@ import ReactCardFlip from 'react-card-flip';
 import axios from "axios";
 import Cookies from "js-cookie";
 import Button from '@layouts/shortcodes/Button';
+import Link from 'next/link';
 const ImperioAzteca = () => {
     const Titulo = () => {
         return (
-            <div className="relative h-80 font-text">
+            <div className="relative h-60 font-text">
                 <img
                     className="absolute inset-0 w-full h-full object-cover brightness-50"
                     src={"https://elheraldoslp.com.mx/new/wp-content/uploads/2021/08/1-29-860x1024.jpg"}
@@ -164,11 +165,11 @@ const ImperioAzteca = () => {
             try {
               const response = await axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina });
               // Manejo de la respuesta exitosa
-              alert("Registrado correctamente");
+              //alert("Registrado correctamente");
             } catch (error) {
               // Manejo de errores en caso de que falle la solicitud al backend
               console.log(error);
-              alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
+              //alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
             }
           };
         
@@ -180,7 +181,7 @@ const ImperioAzteca = () => {
 
 
         return (
-            <div className="grid grid-cols-2 gap-4 center" style={{ margin: '10%', marginTop: '-4%', width: '80vw' }} >
+            <div className="grid grid-cols-2 gap-4 center" style={{ margin: '10%', marginTop: '-7%', width: '80vw' }} >
 
                 {/* Mostrar las cartas  paginadas */}
                 {paginatedImages.map((dioses, index) => (
@@ -229,9 +230,72 @@ const ImperioAzteca = () => {
 
     return (
         <Base1 title={"Categorias Aztecas"}>
-            <section className="section pt-0" style={{ height: 'calc(100vh - 80px)', overflowY: 'scroll' }}>
+            <section className="section pt-0" style={{ height: 'calc(100vh - 30px)', overflowY: 'scroll' }}>
                 <Titulo />
                 <Carta />
+                <ul className="grid grid-cols-2 gap-1" style={{ justifyContent: 'center', marginTop: '-9.5rem' }}>
+
+<li
+    key={`5`}
+    className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+    style={{
+        margin: 0,
+        padding: 0,
+        position: 'relative',
+        backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+    }}>
+
+
+    <Link
+        href={`/categories/jerarquia/temprano`}
+        className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+        style={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        }}
+    >
+        <span style={{ fontSize: '1.9em', color: '#006400' }}>Regresar a Temprano Tenochtitlan</span>
+    </Link>
+
+</li>
+<li
+            key={`9`}
+            className="block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
+            }}>
+
+
+            <Link
+              href={`/categories/jerarquia/colonial`}
+              className="flex flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition transform hover:bg-green-400 hover:text-white hover:scale-105 dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
+              <span style={{ fontSize: '1.9em', color: '#006400' }}>Período colonial (1525-1565)</span>
+            </Link>
+
+          </li>
+</ul>
                 <button id="invite-comment" onClick={handleSubmit}>
                     <img src="https://cdn-icons-png.flaticon.com/512/48/48733.png" alt="Muñeco invitando a comentar" />
                 </button>
