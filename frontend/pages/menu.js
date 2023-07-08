@@ -36,6 +36,14 @@ const [email, setEmail] = useState('');
 
   };
 
+  const handleEstadistica = () => {
+   
+
+    router.push('/estadistica');
+
+  };
+  
+
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
@@ -65,6 +73,9 @@ const [email, setEmail] = useState('');
                     handlePerfil();
                   } else if (option.value === 'logout') {
                     handleLogout();
+                  } else if(option.value == estadistica)
+                  {
+                    handleEstadistica();
                   }
                 }}
                 style={{ cursor: 'pointer', padding: '5px' }}
