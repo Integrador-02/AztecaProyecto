@@ -32,7 +32,7 @@ const Minijuegos = () => {
            
             <ul
               className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 " 
-              style={{ margin: 0, padding: 0 }}
+              style={{ marginTop: '-8%', padding: 0 }}
             >
               <li
                 key={`1`}
@@ -184,6 +184,85 @@ const Minijuegos = () => {
 
                 </Link>
               </li>
+            
+
+
+             
+
+                
+
+                
+            
+            </ul>
+
+            <ul
+              className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 " 
+              style={{ margin: 0, padding: 0 }}
+            >
+              <li
+                key={`1`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105 hover:bg-green-400"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url("/images/agricultura.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/categories/jerarquia`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-primary hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Regresar Jeraquia</span>
+
+                </Link>
+              </li>
+
+             
+
+              <li
+                key={`3`}
+                className="block transform overflow-hidden rounded-lg transition hover:scale-105"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  position: "relative",
+                  backgroundImage: 'url(/images/religion-azteca.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'brightness(100%)', // Ajusta el valor de brillo según tus preferencias
+                }}
+              >
+                <Link
+                  href={`/categories/religion`}
+                  className="flex transform flex-col items-center justify-center bg-theme-light px-4 py-4 font-bold text-dark transition hover:scale-105 hover:bg-green-400 hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                   <span style={{ fontSize: '130%', color: '#006400' }}>Religion</span>
+                </Link>
+              </li>
+
+              
+
+             
             
 
 
