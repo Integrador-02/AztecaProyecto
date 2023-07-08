@@ -88,6 +88,152 @@ export const data1 = {
     },
   ],
 };
+
+const data2 = {
+  labels: ['Aciertos', 'Errores'],
+  datasets: [
+    {
+      data: [500, 300],
+      backgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+      hoverBackgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+    },
+  ],
+};
+
+export const data22 = {
+  labels,
+  datasets: [
+    {
+      label: 'Errores',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(255, 99, 132)',
+      stack: 'Stack 0',
+    },
+    {
+      label: 'Aciertos',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(75, 192, 192)',
+      stack: 'Stack 0',
+    },
+  ],
+};
+
+
+const data3 = {
+  labels: ['Aciertos', 'Errores'],
+  datasets: [
+    {
+      data: [300, 300],
+      backgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+      hoverBackgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+    },
+  ],
+};
+
+export const data33 = {
+  labels,
+  datasets: [
+    {
+      label: 'Errores',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(255, 99, 132)',
+      stack: 'Stack 0',
+    },
+    {
+      label: 'Aciertos',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(75, 192, 192)',
+      stack: 'Stack 0',
+    },
+  ],
+};
+
+const data4 = {
+  labels: ['Aciertos', 'Errores'],
+  datasets: [
+    {
+      data: [200, 300],
+      backgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+      hoverBackgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+    },
+  ],
+};
+
+export const data44 = {
+  labels,
+  datasets: [
+    {
+      label: 'Errores',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(255, 99, 132)',
+      stack: 'Stack 0',
+    },
+    {
+      label: 'Aciertos',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(75, 192, 192)',
+      stack: 'Stack 0',
+    },
+  ],
+};
+
+const data5 = {
+  labels: ['Aciertos', 'Errores'],
+  datasets: [
+    {
+      data: [500, 400],
+      backgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+      hoverBackgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+    },
+  ],
+};
+
+export const data55 = {
+  labels,
+  datasets: [
+    {
+      label: 'Errores',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(255, 99, 132)',
+      stack: 'Stack 0',
+    },
+    {
+      label: 'Aciertos',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(75, 192, 192)',
+      stack: 'Stack 0',
+    },
+  ],
+};
+
+const data6 = {
+  labels: ['Aciertos', 'Errores'],
+  datasets: [
+    {
+      data: [450, 300],
+      backgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+      hoverBackgroundColor: ['rgb(75, 192, 192)', 'rgb(255, 99, 132)'],
+    },
+  ],
+};
+
+export const data66 = {
+  labels,
+  datasets: [
+    {
+      label: 'Errores',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(255, 99, 132)',
+      stack: 'Stack 0',
+    },
+    {
+      label: 'Aciertos',
+      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+      backgroundColor: 'rgb(75, 192, 192)',
+      stack: 'Stack 0',
+    },
+  ],
+};
   
 const tabsStyle = 
 {
@@ -261,7 +407,7 @@ const Estadisticas = () => {
         style={toggleState === 2 ? styleContA: contStyle}
       >
        <Doughnut
-        data={data}
+        data={data2}
         width={1}
         height={1}
         options={{
@@ -276,7 +422,7 @@ const Estadisticas = () => {
         <Bar
         width={410}
         height={210}
-        options={options} data={data1}  />
+        options={options} data={data22}  />
       </div>
 
       <div
@@ -284,7 +430,7 @@ const Estadisticas = () => {
         style={toggleState === 3 ? styleContA: contStyle}
       >
         <Doughnut
-        data={data}
+        data={data3}
         width={1}
         height={1}
         options={{
@@ -299,7 +445,7 @@ const Estadisticas = () => {
         <Bar
         width={410}
         height={210}
-        options={options} data={data1}  />
+        options={options} data={data33}  />
 
       </div>
       <div
@@ -307,7 +453,7 @@ const Estadisticas = () => {
         style={toggleState === 4 ? styleContA: contStyle}
       >
         <Doughnut
-        data={data}
+        data={data4}
         width={1}
         height={1}
         options={{
@@ -322,7 +468,7 @@ const Estadisticas = () => {
         <Bar
         width={410}
         height={210}
-        options={options} data={data1}  />
+        options={options} data={data44}  />
       </div>
       <div
         className={toggleState === 5 ? "content  active-content" : "content"}
@@ -330,7 +476,7 @@ const Estadisticas = () => {
       >
 
         <Doughnut
-          data={data}
+          data={data5}
           width={1}
           height={1}
           options={{
@@ -344,14 +490,14 @@ const Estadisticas = () => {
         <Bar
         width={410}
         height={210}
-        options={options} data={data1}  />
+        options={options} data={data55}  />
       </div>
       <div
         className={toggleState === 6 ? "content  active-content" : "content"}
         style={toggleState === 6 ? styleContA: contStyle}
       >
         <Doughnut
-        data={data}
+        data={data6}
         width={1}
         height={1}
         options={{
@@ -366,7 +512,7 @@ const Estadisticas = () => {
         <Bar
         width={410}
         height={210}
-        options={options} data={data1}  />
+        options={options} data={data66}  />
       </div>
       <div
         className={toggleState === 7 ? "content  active-content" : "content"}
