@@ -8,7 +8,6 @@ import axios from "axios";
 const UserProfilePage = () => {
   const [_id, setIds] = useState('')
   const [name, setName] = useState("Proyecto Integrador");
-  const [username, setUsername] = useState("PI");
   const [email, setEmail] = useState("integrador@gmail.com");
   const [profileImage, setProfileImage] = useState(null);
   const [isEditMode, setIsEditMode] = useState(false);
@@ -20,7 +19,7 @@ const UserProfilePage = () => {
     setName(nameUs);
     const iden = Cookies.get('identif');
     setIds(iden);
-    console.log(iden)
+    Cookies.set('fotico',profileImage);
   }, []);
   
   useEffect(() => {
@@ -55,9 +54,7 @@ const UserProfilePage = () => {
     setName(e.target.value);
   };
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
+ 
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -66,6 +63,7 @@ const UserProfilePage = () => {
   const handleProfileImageChange = (e) => {
     const file = e.target.files[0];
     setProfileImage(URL.createObjectURL(file));
+    
   };
 
   const handleEditButtonClick = () => {
@@ -74,11 +72,11 @@ const UserProfilePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!name || !username || !email) {
+    if (!name || !email) {
       alert("Por favor, complete todos los campos.");
       return;
     }
-    axios.post("http://localhost:4000/api/resetDatos", {_id, name, email, username, profileImage })
+    axios.post("http://localhost:4000/api/resetDatos", {_id, name, email, profileImage })
       .then(async () => {
         // Manejo de errores en caso de que falle la solicitud al backend
         alert("se cambio la contraseña correctamente");
@@ -90,7 +88,6 @@ const UserProfilePage = () => {
         alert("Ocurrió un error. Por favor, intenta nuevamente más tarde.");
       });
     console.log("Nombre:", name);
-    console.log("Usuario:", username);
     console.log("Correo electrónico:", email);
     console.log("Imagen de perfil:", profileImage);
    
@@ -145,20 +142,6 @@ const UserProfilePage = () => {
                 id="name"
                 value={name}
                 onChange={handleNameChange}
-                className={`mb-2 w-full rounded-md border border-gray-300 p-2 ${isEditMode ? "" : "bg-white"
-                  }`}
-                disabled={!isEditMode}
-              />
-            </div>
-            <div>
-              <label htmlFor="username" className="mb-2 block">
-                Usuario:
-              </label>
-              <input
-                type="text"
-                id="username"
-                value={username}
-                onChange={handleUsernameChange}
                 className={`mb-2 w-full rounded-md border border-gray-300 p-2 ${isEditMode ? "" : "bg-white"
                   }`}
                 disabled={!isEditMode}

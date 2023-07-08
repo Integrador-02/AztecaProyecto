@@ -58,10 +58,10 @@ export const options = {
   
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
 
 const data = {
-  labels: ['Group A', 'Group B'],
+  labels: ['Aciertos', 'Errores'],
   datasets: [
     {
       data: [400, 300],
@@ -75,13 +75,13 @@ export const data1 = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
+      label: 'Errores',
       data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
       backgroundColor: 'rgb(255, 99, 132)',
       stack: 'Stack 0',
     },
     {
-      label: 'Dataset 2',
+      label: 'Aciertos',
       data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
       backgroundColor: 'rgb(75, 192, 192)',
       stack: 'Stack 0',
@@ -91,9 +91,7 @@ export const data1 = {
   
 const tabsStyle = 
 {
-  ':not(:last-child)': {
-    borderRight: '1px solid rgba(0, 0, 0, 0.274)'
-  },
+  
   padding: '15px',
   textAlign: 'center',
   width: '50%',
@@ -114,16 +112,15 @@ const styleAct = {
 
 const contStyle = 
 {
-  ':not(:last-child)': {
-    borderRight: '1px solid rgba(0, 0, 0, 0.274)'
-  },
-  
+ 
   background: 'white',
   borderBottom: '1px solid transparent',
   position:'absolute',
   width: '60%',
   height: '40%',
   outline: 'none',
+  pointerEvents: 'none',
+  opacity: 0,
   display: 'flex', justifyContent: 'space-between'
 
 };
@@ -185,7 +182,8 @@ const Estadisticas = () => {
       <button
         className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
         style={toggleState === 1 ? styleAct: tabsStyle}
-        onClick={() => toggleTab(1)}
+        onClick={() => toggleTab(1)
+        }
       >
         General
       </button>
@@ -231,6 +229,7 @@ const Estadisticas = () => {
       <div
         className={toggleState === 1 ? "content  active-content" : "content"}
         style={toggleState === 1 ? styleContA: contStyle}
+        
       >
       
         <Doughnut
@@ -259,16 +258,120 @@ const Estadisticas = () => {
 
       <div
         className={toggleState === 2 ? "content  active-content" : "content"}
-        
+        style={toggleState === 2 ? styleContA: contStyle}
       >
-       
+       <Doughnut
+        data={data}
+        width={1}
+        height={1}
+        options={{
+          cutoutPercentage: 10, // Porcentaje del hueco en el centro
+          tooltips: {
+            enabled: false
+        }
+        }}
+        
+        
+      />
+        <Bar
+        width={410}
+        height={210}
+        options={options} data={data1}  />
       </div>
 
       <div
         className={toggleState === 3 ? "content  active-content" : "content"}
+        style={toggleState === 3 ? styleContA: contStyle}
       >
-       
+        <Doughnut
+        data={data}
+        width={1}
+        height={1}
+        options={{
+          cutoutPercentage: 10, // Porcentaje del hueco en el centro
+          tooltips: {
+            enabled: false
+        }
+        }}
+        
+        
+      />
+        <Bar
+        width={410}
+        height={210}
+        options={options} data={data1}  />
+
       </div>
+      <div
+        className={toggleState === 4 ? "content  active-content" : "content"}
+        style={toggleState === 4 ? styleContA: contStyle}
+      >
+        <Doughnut
+        data={data}
+        width={1}
+        height={1}
+        options={{
+          cutoutPercentage: 10, // Porcentaje del hueco en el centro
+          tooltips: {
+            enabled: false
+        }
+        }}
+        
+        
+      />
+        <Bar
+        width={410}
+        height={210}
+        options={options} data={data1}  />
+      </div>
+      <div
+        className={toggleState === 5 ? "content  active-content" : "content"}
+        style={toggleState === 5 ? styleContA: contStyle}
+      >
+
+        <Doughnut
+          data={data}
+          width={1}
+          height={1}
+          options={{
+            cutoutPercentage: 10, // Porcentaje del hueco en el centro
+            tooltips: {
+              enabled: false
+          }
+          }}
+        />
+
+        <Bar
+        width={410}
+        height={210}
+        options={options} data={data1}  />
+      </div>
+      <div
+        className={toggleState === 6 ? "content  active-content" : "content"}
+        style={toggleState === 6 ? styleContA: contStyle}
+      >
+        <Doughnut
+        data={data}
+        width={1}
+        height={1}
+        options={{
+          cutoutPercentage: 10, // Porcentaje del hueco en el centro
+          tooltips: {
+            enabled: false
+        }
+        }}
+        
+        
+      />
+        <Bar
+        width={410}
+        height={210}
+        options={options} data={data1}  />
+      </div>
+      <div
+        className={toggleState === 7 ? "content  active-content" : "content"}
+       
+      ></div>
     </div>
   </div>
 

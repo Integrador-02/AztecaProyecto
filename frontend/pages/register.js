@@ -15,9 +15,7 @@ const Register = () => {
     setFullName(e.target.value);
   };
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
+
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -35,7 +33,7 @@ const Register = () => {
     e.preventDefault();
 
     // Validar que los campos no estén vacíos
-    if (!fullName || !username || !email || !password || !confirmPassword) {
+    if (!fullName || !email || !password || !confirmPassword) {
       alert("Por favor, completa todos los campos");
       return;
     }
@@ -47,12 +45,14 @@ const Register = () => {
     }
 
     const nombre = fullName;
-
-    axios.post("https://happy-fly-loincloth.cyclic.app/api/register", { nombre, password, email })
+    const token= null;
+    const foto = null;
+    const user = username
+    axios.post("https://happy-fly-loincloth.cyclic.app/api/register", { nombre, password, email, token, user, foto })
       .then(async () => {
         // Manejo de errores en caso de que falle la solicitud al backend
         alert("registrado correctamente");
-        window.location.href = "/categories";
+        window.location.href = "/contact";
 
       })
       .catch(async (error) => {
@@ -101,13 +101,7 @@ const Register = () => {
               onChange={handleFullNameChange}
               className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
             />
-            <input
-              type="text"
-              placeholder="Usuario"
-              value={username}
-              onChange={handleUsernameChange}
-              className="my-2 w-full border-b border-black bg-transparent px-4 py-2 text-black outline-none focus:outline-none"
-            />
+           
             <input
               type="email"
               placeholder="Email"
