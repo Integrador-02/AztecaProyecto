@@ -42,7 +42,9 @@ const ForgotPassword = () => {
     axios.post("http://localhost:4000/api/newPassword", { code,newPassword })
       .then(async () => {
         // Manejo de errores en caso de que falle la solicitud al backend
+
         alert("se cambio la contraseña correctamente");
+
         
         window.location.href = "/contact";
       })
