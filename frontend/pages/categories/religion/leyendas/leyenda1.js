@@ -35,7 +35,7 @@ const Leyenda1=()=>{
       const coment = newCommentObject.text
       const correo = newCommentObject.username
       try {
-        const response = await axios.post("http://localhost:4000/api/progresorReligion", { correo, pagina });
+        const response = await axios.post("https://happy-fly-loincloth.cyclic.app/api/progresorReligion", { correo, pagina });
         // Manejo de la respuesta exitosa
         //alert("Registrado correctamente");
       } catch (error) {
@@ -61,7 +61,7 @@ const Leyenda1=()=>{
     const handlerRevision = async () => {
       try {
         console.log('sd', email);
-        const url = `http://localhost:4000/api/recuperarprogresoReligion?correo=${email}`;
+        const url = `https://happy-fly-loincloth.cyclic.app/api/recuperarprogresoReligion?correo=${email}`;
         const respuesta = await axios.get(url);
         setSelectedOptions2(respuesta.data.valor); // Utiliza respuesta.data.valor en lugar de respuesta.valor
       } catch (error) {

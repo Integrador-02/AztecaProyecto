@@ -95,7 +95,7 @@ const questions = [
       try {
           
           console.log('sd',email)
-          const url = `http://localhost:4000/api/recuperarquizE?correo=${email}`;
+          const url = `https://happy-fly-loincloth.cyclic.app/api/recuperarquizE?correo=${email}`;
           const respuesta = await axios.get(url);
           const opciones2 = respuesta.data.reduce((obj, opcion, index) => {
             obj[index] = opcion;
@@ -225,7 +225,7 @@ const questions = [
     
     const handlerIngresar = async () => {
       try {
-        const url = "http://localhost:4000/api/quizE";
+        const url = "https://happy-fly-loincloth.cyclic.app/api/quizE";
         const opciones = Object.values(selectedOptions);
         console.log('aaa',opciones)
         const currentDate = new Date();

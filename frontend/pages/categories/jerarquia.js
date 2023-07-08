@@ -31,7 +31,7 @@ const handleAddComment = () => {
 
 
   ///api/progresoJeraquia
-  axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina })
+  axios.post("https://happy-fly-loincloth.cyclic.app/api/progresoJeraquia", { correo, pagina })
     .then(async () => {
       // Manejo de errores en caso de que falle la solicitud al backend
       alert("registrado correctamente");
@@ -98,7 +98,7 @@ const Jerarquia = ({ data }) => {
       const coment = newCommentObject.text
       const correo = newCommentObject.username
       try {
-        const response = await axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina });
+        const response = await axios.post("https://happy-fly-loincloth.cyclic.app/api/progresoJeraquia", { correo, pagina });
         // Manejo de la respuesta exitosa
         alert("Registrado correctamente");
       } catch (error) {
@@ -124,7 +124,7 @@ const Jerarquia = ({ data }) => {
     const handlerRevision = async () => {
       try {
         console.log('sd', email);
-        const url = `http://localhost:4000/api/recuperarprogresoJeraquia?correo=${email}`;
+        const url = `https://happy-fly-loincloth.cyclic.app/api/recuperarprogresoJeraquia?correo=${email}`;
         const respuesta = await axios.get(url);
         setSelectedOptions2(respuesta.data.valor); // Utiliza respuesta.data.valor en lugar de respuesta.valor
       } catch (error) {

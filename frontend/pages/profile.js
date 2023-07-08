@@ -76,7 +76,7 @@ const UserProfilePage = () => {
       alert("Por favor, complete todos los campos.");
       return;
     }
-    axios.post("http://localhost:4000/api/resetDatos", {_id, name, email, profileImage })
+    axios.post("https://happy-fly-loincloth.cyclic.app/api/resetDatos", {_id, name, email, profileImage })
       .then(async () => {
         // Manejo de errores en caso de que falle la solicitud al backend
         alert("se cambio la contraseña correctamente");

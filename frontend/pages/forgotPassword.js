@@ -17,7 +17,7 @@ const ForgotPassword = () => {
       alert("Por favor, completa todos los campos");
       return;
     }
-    axios.post("http://localhost:4000/api/resetPasword", { email })
+    axios.post("https://happy-fly-loincloth.cyclic.app/api/resetPasword", { email })
       .then(async () => {
         // Manejo de errores en caso de que falle la solicitud al backend
         alert("se envio un codigo a tu correo");
@@ -39,7 +39,7 @@ const ForgotPassword = () => {
       alert("La contraseña y la confirmación de contraseña no coinciden");
       return;
     }
-    axios.post("http://localhost:4000/api/newPassword", { code,newPassword })
+    axios.post("https://happy-fly-loincloth.cyclic.app/api/newPassword", { code,newPassword })
       .then(async () => {
         // Manejo de errores en caso de que falle la solicitud al backend
 

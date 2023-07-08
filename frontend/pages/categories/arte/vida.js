@@ -31,7 +31,7 @@ const Vida = () => {
             const coment = newCommentObject.text
             const correo = newCommentObject.username
             try {
-                const response = await axios.post("http://localhost:4000/api/progresorArte", { correo, pagina });
+                const response = await axios.post("https://happy-fly-loincloth.cyclic.app/api/progresorArte", { correo, pagina });
                 // Manejo de la respuesta exitosa
                 //alert("Registrado correctamente");
             } catch (error) {
@@ -57,7 +57,7 @@ const Vida = () => {
         const handlerRevision = async () => {
             try {
                 console.log('sd', email);
-                const url = `http://localhost:4000/api/recuperarprogresoArte?correo=${email}`;
+                const url = `https://happy-fly-loincloth.cyclic.app/api/recuperarprogresoArte?correo=${email}`;
                 const respuesta = await axios.get(url);
                 setSelectedOptions2(respuesta.data.valor); // Utiliza respuesta.data.valor en lugar de respuesta.valor
             } catch (error) {

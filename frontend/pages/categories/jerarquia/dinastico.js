@@ -127,7 +127,7 @@ const Dinastico = () => {
         const coment = newCommentObject.text
         const correo = newCommentObject.username
         try {
-          const response = await axios.post("http://localhost:4000/api/progresoJeraquia", { correo, pagina });
+          const response = await axios.post("https://happy-fly-loincloth.cyclic.app/api/progresoJeraquia", { correo, pagina });
           // Manejo de la respuesta exitosa
           alert("Registrado correctamente");
         } catch (error) {

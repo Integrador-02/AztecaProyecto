@@ -85,7 +85,7 @@ const handleMergeSelectedOptions = () => {
       try {
         
         console.log('sd',email)
-        const url = `http://localhost:4000/api/recuperarquizd?correo=${email}`;
+        const url = `https://happy-fly-loincloth.cyclic.app/api/recuperarquizd?correo=${email}`;
         const respuesta = await axios.get(url);
         const opciones2 = respuesta.data.reduce((obj, opcion, index) => {
           obj[index] = opcion;
@@ -215,7 +215,7 @@ useEffect(() => {
   
   const handlerIngresar = async () => {
     try {
-      const url = "http://localhost:4000/api/quizd";
+      const url = "https://happy-fly-loincloth.cyclic.app/api/quizd";
       const opciones = Object.values(selectedOptions);
       console.log('aaa',opciones)
       const currentDate = new Date();
