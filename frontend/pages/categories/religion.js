@@ -243,8 +243,10 @@ const Religion = ({ data }) => {
               backgroundImage: 'url("https://www.lareserva.com/home/fimage/mw.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(80%)', // Ajusta el valor de brillo según tus preferencias
-            }}>
+
+              filter: 'brightness(90%)',
+            }}
+          >
 
 
             <Link
@@ -263,6 +265,20 @@ const Religion = ({ data }) => {
             </Link>
 
           </li>
+
+
+          <li
+            className="hover:no-underline block rounded-lg overflow-hidden transition transform hover:scale-105 hover:bg-green-400"
+            style={{
+              margin: 0,
+              padding: 0,
+              position: 'relative',
+              backgroundImage: 'url("https://hablemosdeculturas.com/wp-content/uploads/2017/11/Cultura-azteca-5.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(90%)',
+            }}
+          >
 
 
           <li

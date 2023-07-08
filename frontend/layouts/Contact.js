@@ -108,6 +108,7 @@ try {
   usuario.userId2= String(userId2);
   usuario.email2= String(email2);
   usuario.nameU2= String(nameUser)
+   Cookies.set('identif',userId2);
     Cookies.set('clave',email2);
     Cookies.set('name',nameUser);
  console.log(Cookies.get('name'))
